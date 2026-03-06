@@ -1,0 +1,15 @@
+{
+  "name": "@statisticsnorway/designsystemet-theme",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Statistics Norway theme for Digdir Designsystemet",
+  "author": "Statistics Norway",
+  "license": "MIT",
+  "files": [
+    "generated"
+  ],
+  "style": "./generated/ssb.css",
+  "exports": {
+    ".": "./generated/ssb.css"
+  }
+}
