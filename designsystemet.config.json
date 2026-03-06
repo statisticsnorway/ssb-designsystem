@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
+  "outDir": "./design-tokens",
+  "themes": {
+    "ssb": {
+      "colors": {
+        "main": {
+          "accent": "#00824D"
+        },
+        "support": {},
+        "neutral": "#C3DCDC"
+      },
+      "overrides": {
+        "colors": {
+          "accent": {
+            "base-active": {
+              "dark": "#B6E8B8"
+            },
+            "base-default": {
+              "dark": "#B6E8B8"
+            },
+            "base-hover": {
+              "dark": "#ECFEED"
+            }
+          }
+        }
+      },
+      "borderRadius": 4
+    }
+  }
+}
