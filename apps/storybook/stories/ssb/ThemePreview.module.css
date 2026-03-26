@@ -1,0 +1,126 @@
+.wrapper {
+  background-color: var(--ds-color-neutral-background-default);
+  padding: var(--ds-size-8);
+  border-radius: var(--ds-border-radius-md);
+}
+
+.innerWrapper {
+  background-color: var(--ds-color-neutral-background-tinted);
+  padding: var(--ds-size-8);
+}
+
+.controls {
+  display: flex;
+  gap: var(--ds-size-8);
+  padding-bottom: var(--ds-size-4);
+}
+
+.components {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--ds-size-8);
+  margin: 0 auto;
+  background-color: var(--ds-color-neutral-background-default-tinted);
+  border-radius: var(--ds-border-radius-md);
+}
+
+.card {
+  border-radius: var(--ds-border-radius-md);
+  background-color: var(--ds-color-neutral-background-default);
+  border: 1px solid var(--ds-color-neutral-border-subtle);
+  padding: 24px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.cardWithoutBackground {
+  border-radius: var(--ds-border-radius-md);
+  padding: 24px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.alert {
+  grid-column: span 4;
+}
+
+.form {
+  grid-column: span 1;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.tableContainer {
+  grid-column: span 3;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+
+.tableCellAvatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tableAction {
+  display: flex;
+  align-items: center;
+}
+
+.tableSelect {
+  width: 160px;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.tableSearch {
+  width: 260px;
+}
+
+.tableBtn {
+  margin-left: 20px;
+}
+
+.tablePagination {
+  display: flex;
+  justify-content: center;
+}
+
+.calculator {
+  grid-column: span 1;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.faqSection {
+  grid-column: span 2;
+}
+
+.selection {
+  grid-column: span 1;
+}
+
+.news {
+  grid-column: span 4;
+}
+
+.linksList {
+  grid-column: span 1;
+}
+.cardLinks {
+  grid-column: span 3;
+}

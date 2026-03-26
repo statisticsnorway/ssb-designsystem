@@ -5,9 +5,12 @@
     "ssb": {
       "colors": {
         "main": {
-          "accent": "#00824D"
+          "accent": "#00824D",
+          "inverted": "#B6E8B8"
         },
-        "support": {},
+        "support": {
+          "purple": "#9272FC"
+        },
         "neutral": "#C3DCDC"
       },
       "overrides": {
@@ -16,16 +19,42 @@
             "base-active": {
               "dark": "#B6E8B8"
             },
+            "base-hover": {
+              "dark": "#ECFEED"
+            },
             "base-default": {
               "dark": "#B6E8B8"
             },
-            "base-hover": {
-              "dark": "#ECFEED"
+            "text-default": {
+              "light": "#162327"
+            },
+            "text-subtle": {
+              "light": "#274247"
+            }
+          },
+          "inverted": {
+            "background-default": {
+              "light": "#274247"
+            },
+            "background-tinted": {
+              "light": "#2D6975"
+            },
+            "surface-default": {
+              "light": "#62919A"
+            },
+            "text-subtle": {
+              "light": "#B6E8B8"
+            },
+            "surface-tinted": {
+              "light": "#274247"
+            },
+            "text-default": {
+              "light": "#B6E8B8"
             }
           }
         }
       },
-      "borderRadius": 4
+      "borderRadius": 12
     }
   }
 }

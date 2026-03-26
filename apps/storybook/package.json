@@ -1,0 +1,25 @@
+{
+  "name": "@ssb/storybook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.2.19",
+    "@storybook/react-vite": "^10.2.19",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "storybook": "^10.2.19"
+  },
+  "dependencies": {
+    "@digdir/designsystemet-css": "^1.12.1",
+    "@digdir/designsystemet-react": "^1.12.1",
+    "@navikt/aksel-icons": "8.6.0",
+    "@statisticsnorway/design-theme": "0.0.1",
+    "clsx": "^2.1.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
