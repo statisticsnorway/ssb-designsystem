@@ -5,6 +5,8 @@ import type {} from '@digdir/designsystemet-types';
 declare module '@digdir/designsystemet-types' {
   export interface ColorDefinitions {
     accent: never;
+    inverted: never;
+    purple: never;
     neutral: never;
   }
   export interface SeverityColorDefinitions {

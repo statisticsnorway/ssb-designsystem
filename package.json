@@ -3,14 +3,16 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "tokens:create": "designsystemet tokens create",
     "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/generated",
-    "tokens:update": "npm run tokens:create && npm run tokens:build"
+    "tokens:update": "npm run tokens:create && npm run tokens:build",
+    "storybook": "npm run storybook -w apps/storybook"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "^1.12.1"
+    "@digdir/designsystemet": "^1.13.0"
   }
 }
