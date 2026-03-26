@@ -1,4 +1,4 @@
-import "@statisticsnorway/design-theme";
+import "../../../packages/theme/src/index.css";
 import "./preview.css";
 
 import type { Preview } from "@storybook/react";
