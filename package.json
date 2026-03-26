@@ -13,6 +13,6 @@
     "storybook": "npm run storybook -w apps/storybook"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "^1.13.0"
+    "@digdir/designsystemet": "^1.13.1"
   }
 }
