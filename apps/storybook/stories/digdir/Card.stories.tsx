@@ -1,20 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import {
-  Card,
-  Divider,
-  Heading,
-  Paragraph,
-  Link,
-} from "@digdir/designsystemet-react";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Card, Divider, Heading, Paragraph, Link } from '@digdir/designsystemet-react'
 
 const description = `
 Card fremhever informasjon eller oppgaver som hører sammen.
 
 Se full dokumentasjon: https://designsystemet.no/no/components/docs/card/overview
-`;
+`
 
 const meta: Meta<typeof Card> = {
-  title: "Digdir/Card",
+  title: 'Digdir/Card',
   component: Card,
   parameters: {
     docs: {
@@ -23,79 +17,75 @@ const meta: Meta<typeof Card> = {
       },
     },
   },
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Card>;
+type Story = StoryObj<typeof Card>
 
 export const Default: Story = {
   render: () => (
-    <Card style={{ maxWidth: "300px" }}>
-      <Heading level={3} data-size="sm">
+    <Card style={{ maxWidth: '300px' }}>
+      <Heading level={3} data-size='sm'>
         Tittel
       </Heading>
-      <Paragraph data-size="sm">
-        Dette er et eksempel på innhold i et kort.
-      </Paragraph>
+      <Paragraph data-size='sm'>Dette er et eksempel på innhold i et kort.</Paragraph>
     </Card>
   ),
-};
+}
 
 export const Variants: Story = {
   render: () => (
-    <div style={{ display: "grid", gap: "1rem", maxWidth: "300px" }}>
-      <div style={{ display: "flex", gap: "1rem" }}>
+    <div style={{ display: 'grid', gap: '1rem', maxWidth: '300px' }}>
+      <div style={{ display: 'flex', gap: '1rem' }}>
         <Card>
-          <Heading level={3} data-size="sm">
+          <Heading level={3} data-size='sm'>
             Standard
           </Heading>
-          <Paragraph data-size="sm">
-            Et enkelt kort med standard stil.
-          </Paragraph>
+          <Paragraph data-size='sm'>Et enkelt kort med standard stil.</Paragraph>
         </Card>
 
-        <Card data-variant="tinted">
-          <Heading level={3} data-size="sm">
+        <Card data-variant='tinted'>
+          <Heading level={3} data-size='sm'>
             Tinted
           </Heading>
-          <Paragraph data-size="sm">Kort med bakgrunnsfarge.</Paragraph>
+          <Paragraph data-size='sm'>Kort med bakgrunnsfarge.</Paragraph>
         </Card>
       </div>
 
       <Divider />
 
       <div>
-        <Heading level={2} data-size="xs" style={{ marginBottom: "1rem" }}>
+        <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
           Farger
         </Heading>
-        <div style={{ display: "flex", gap: "1rem" }}>
+        <div style={{ display: 'flex', gap: '1rem' }}>
           <Card>
             <Card.Block>
               <Paragraph>Standard</Paragraph>
             </Card.Block>
           </Card>
-          <Card data-variant="tinted">
+          <Card data-variant='tinted'>
             <Card.Block>
               <Paragraph>Standard:Tinted</Paragraph>
             </Card.Block>
           </Card>
-          <Card data-color="neutral">
+          <Card data-color='neutral'>
             <Card.Block>
               <Paragraph>Neutral</Paragraph>
             </Card.Block>
           </Card>
-          <Card data-variant="tinted" data-color="neutral">
+          <Card data-variant='tinted' data-color='neutral'>
             <Card.Block>
               <Paragraph>Neutral:Tinted</Paragraph>
             </Card.Block>
           </Card>
-          <Card data-color="purple">
+          <Card data-color='purple'>
             <Card.Block>
               <Paragraph>Purple</Paragraph>
             </Card.Block>
           </Card>
-          <Card data-variant="tinted" data-color="purple">
+          <Card data-variant='tinted' data-color='purple'>
             <Card.Block>
               <Paragraph>Purple:Tinted</Paragraph>
             </Card.Block>
@@ -106,18 +96,16 @@ export const Variants: Story = {
       <Divider />
 
       <div>
-        <Heading level={2} data-size="xs" style={{ marginBottom: "1rem" }}>
+        <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
           Lenkekort
         </Heading>
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <Card style={{ maxWidth: "300px" }}>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+          <Card style={{ maxWidth: '300px' }}>
             <Card.Block>
-              <Heading level={3} data-size="sm">
-                <Link href="#">Klikkbart kort</Link>
+              <Heading level={3} data-size='sm'>
+                <Link href='#'>Klikkbart kort</Link>
               </Heading>
-              <Paragraph data-size="sm">
-                Dette kortet fungerer som en lenke via overskriften.
-              </Paragraph>
+              <Paragraph data-size='sm'>Dette kortet fungerer som en lenke via overskriften.</Paragraph>
             </Card.Block>
           </Card>
         </div>
@@ -126,48 +114,42 @@ export const Variants: Story = {
       <Divider />
 
       <div>
-        <Heading level={2} data-size="xs" style={{ marginBottom: "1rem" }}>
+        <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
           Lenkekort med bilde
         </Heading>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, 320px)",
-            gap: "1rem",
-            justifyContent: "start",
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, 320px)',
+            gap: '1rem',
+            justifyContent: 'start',
           }}
         >
           <Card>
             <Card.Block>
               <Heading level={3}>
-                <Link href="#">Default</Link>
+                <Link href='#'>Default</Link>
               </Heading>
-              <Paragraph>
-                Most provide as with carried business are much better more the
-                perfected designer.
-              </Paragraph>
+              <Paragraph>Most provide as with carried business are much better more the perfected designer.</Paragraph>
             </Card.Block>
             <Card.Block>
-              <img src="/img/animals/cat-landscape.jpg" alt="Cat landscape" />
+              <img src='/img/animals/cat-landscape.jpg' alt='Cat landscape' />
             </Card.Block>
           </Card>
 
-          <Card data-variant="tinted">
+          <Card data-variant='tinted'>
             <Card.Block>
-              <img src="/img/animals/cat-landscape.jpg" alt="Cat landscape" />
+              <img src='/img/animals/cat-landscape.jpg' alt='Cat landscape' />
             </Card.Block>
             <Card.Block style={{ flex: 1 }}>
               <Heading level={3}>
-                <Link href="#">Tinted</Link>
+                <Link href='#'>Tinted</Link>
               </Heading>
-              <Paragraph>
-                Most provide as with carried business are much better more the
-                perfected designer.
-              </Paragraph>
+              <Paragraph>Most provide as with carried business are much better more the perfected designer.</Paragraph>
             </Card.Block>
           </Card>
         </div>
       </div>
     </div>
   ),
-};
+}

@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Heading, List } from "@digdir/designsystemet-react";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Heading, List } from '@digdir/designsystemet-react'
 
 const description = `
 List brukes for å presentere innhold på en oversiktlig og strukturert måtes.
 
 Se full dokumentasjon:
 https://designsystemet.no/no/components/docs/list/overview
-`;
+`
 
 const meta: Meta<typeof List.Unordered> = {
-  title: "Digdir/List",
+  title: 'Digdir/List',
   component: List.Unordered,
   parameters: {
     docs: {
@@ -18,10 +18,10 @@ const meta: Meta<typeof List.Unordered> = {
       },
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => (
@@ -31,13 +31,13 @@ export const Default: Story = {
       <List.Item>Egg</List.Item>
     </List.Unordered>
   ),
-};
+}
 
 export const Variants: Story = {
   render: () => (
-    <div style={{ display: "grid", gap: "2rem" }}>
+    <div style={{ display: 'grid', gap: '2rem' }}>
       <div>
-        <Heading level={2} data-size="xs" style={{ marginBottom: "0.5rem" }}>
+        <Heading level={2} data-size='xs' style={{ marginBottom: '0.5rem' }}>
           Usortert liste
         </Heading>
         <List.Unordered>
@@ -48,7 +48,7 @@ export const Variants: Story = {
       </div>
 
       <div>
-        <Heading level={2} data-size="xs" style={{ marginBottom: "0.5rem" }}>
+        <Heading level={2} data-size='xs' style={{ marginBottom: '0.5rem' }}>
           Sortert liste
         </Heading>
         <List.Ordered>
@@ -59,4 +59,4 @@ export const Variants: Story = {
       </div>
     </div>
   ),
-};
+}

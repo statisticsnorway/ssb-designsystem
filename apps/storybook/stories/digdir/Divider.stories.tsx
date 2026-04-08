@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Divider, Paragraph } from "@digdir/designsystemet-react";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Divider, Paragraph } from '@digdir/designsystemet-react'
 
 const description = `
 Divider brukes for å skape et visuelt skille mellom innhold.
 
 Se full dokumentasjon: https://designsystemet.no/no/components/docs/divider/overview
-`;
+`
 
 const meta: Meta<typeof Divider> = {
-  title: "Digdir/Divider",
+  title: 'Digdir/Divider',
   component: Divider,
   parameters: {
     docs: {
@@ -17,15 +17,15 @@ const meta: Meta<typeof Divider> = {
       },
     },
   },
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Divider>;
+type Story = StoryObj<typeof Divider>
 
 export const Default: Story = {
   render: () => (
-    <div style={{ maxWidth: "400px" }}>
+    <div style={{ maxWidth: '400px' }}>
       <Paragraph>Dette er innhold over en skillelinje.</Paragraph>
 
       <Divider />
@@ -33,4 +33,4 @@ export const Default: Story = {
       <Paragraph>Dette er innhold under skillelinjen.</Paragraph>
     </div>
   ),
-};
+}

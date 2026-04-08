@@ -13,9 +13,11 @@ The structure and workflow are currently being established.
 1. Update the theme configuration in `designsystemet.config.json`, usually by exporting changes from the Digdir Theme Builder.
 
 2. Run from the repository root:
-```bash 
+
+```bash
 npm run tokens:update
 ```
+
 This regenerates:
 
 - `design-tokens/` – token source files
