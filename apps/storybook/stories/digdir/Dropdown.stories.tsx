@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Dropdown } from "@digdir/designsystemet-react";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Dropdown } from '@digdir/designsystemet-react'
 
 const description = `
 Dropdown er en generisk nedtrekksliste.
 
 Se full dokumentasjon: https://designsystemet.no/no/components/docs/dropdown/overview
-`;
+`
 
 const meta: Meta<typeof Dropdown> = {
-  title: "Digdir/Dropdown",
+  title: 'Digdir/Dropdown',
   component: Dropdown,
   parameters: {
     docs: {
@@ -17,17 +17,17 @@ const meta: Meta<typeof Dropdown> = {
       },
     },
   },
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Dropdown>;
+type Story = StoryObj<typeof Dropdown>
 
 export const Default: Story = {
   render: () => (
     <Dropdown.TriggerContext>
       <Dropdown.Trigger>Åpne meny</Dropdown.Trigger>
-      <Dropdown placement="bottom-end">
+      <Dropdown placement='bottom-end'>
         <Dropdown.Heading>Valg</Dropdown.Heading>
         <Dropdown.List>
           <Dropdown.Item>
@@ -43,14 +43,14 @@ export const Default: Story = {
       </Dropdown>
     </Dropdown.TriggerContext>
   ),
-};
+}
 
 export const Variants: Story = {
   render: () => (
-    <div style={{ display: "grid", gap: "1rem", justifyItems: "start" }}>
+    <div style={{ display: 'grid', gap: '1rem', justifyItems: 'start' }}>
       <Dropdown.TriggerContext>
         <Dropdown.Trigger>Enkel meny</Dropdown.Trigger>
-        <Dropdown placement="bottom-end">
+        <Dropdown placement='bottom-end'>
           <Dropdown.List>
             <Dropdown.Item>
               <Dropdown.Button>Last ned</Dropdown.Button>
@@ -64,7 +64,7 @@ export const Variants: Story = {
 
       <Dropdown.TriggerContext>
         <Dropdown.Trigger>Med grupper</Dropdown.Trigger>
-        <Dropdown placement="bottom-end">
+        <Dropdown placement='bottom-end'>
           <Dropdown.Heading>Handlinger</Dropdown.Heading>
           <Dropdown.List>
             <Dropdown.Item>
@@ -84,4 +84,4 @@ export const Variants: Story = {
       </Dropdown.TriggerContext>
     </div>
   ),
-};
+}
