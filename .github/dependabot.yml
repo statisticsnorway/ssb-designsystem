@@ -12,6 +12,13 @@ updates:
   commit-message:
     prefix: "build: "
   groups:
+    storybook:
+      patterns:
+      - "@storybook/*"
+      - "storybook"
+    digdir:
+      patterns:
+      - "@digdir/*"
     dependencies-patch-updates:
       update-types:
       - "patch"
