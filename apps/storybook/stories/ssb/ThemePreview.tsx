@@ -251,7 +251,7 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
         >
           <Card data-variant='tinted'>
             <Card.Block>
-              <img src='/img/animals/deerChilds.jpg' alt='deer' />
+              <img src='/img/animals/roe-deer.jpg' alt='deer' />
             </Card.Block>
             <Card.Block>
               <Heading level={3}>Rådyr olje</Heading>
