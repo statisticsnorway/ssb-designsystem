@@ -1,5 +1,5 @@
-import '../../../packages/theme/src/index.css'
-import './preview.css'
+import '../../../packages/css/src/index.css'
+import '../../../packages/theme/brand/ssb.css'
 
 import type { Preview } from '@storybook/react'
 

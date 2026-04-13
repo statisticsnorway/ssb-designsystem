@@ -54,7 +54,10 @@
           }
         }
       },
-      "borderRadius": 12
+      "borderRadius": 12,
+      "typography": {
+        "fontFamily": "Roboto, sans-serif"
+      }
     }
   }
 }

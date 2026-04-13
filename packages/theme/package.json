@@ -6,11 +6,16 @@
   "author": "Statistics Norway",
   "license": "MIT",
   "files": [
-    "generated",
-    "src"
+    "brand"
   ],
-  "style": "./src/index.css",
   "exports": {
-    ".": "./src/index.css"
+    ".": {
+      "types": "./types.d.ts",
+      "default": "./brand/ssb.css"
+    },
+    "./ssb": {
+      "types": "./types.d.ts",
+      "default": "./brand/ssb.css"
+    }
   }
 }

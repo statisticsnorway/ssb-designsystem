@@ -1,0 +1,6 @@
+@import '@digdir/designsystemet-css';
+@import './fonts/fonts.css';
+
+body {
+  font-family: var(--ds-font-family);
+}

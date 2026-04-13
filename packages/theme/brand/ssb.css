@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
-build: v1.12.1
-design-tokens: v1.12.1
+build: v1.13.1
+design-tokens: v1.13.1
 */
 
 @layer ds.theme.size-mode {
@@ -381,7 +381,7 @@ design-tokens: v1.12.1
   --ds-letter-spacing-7: 0.0025em;
   --ds-letter-spacing-8: 0.005em;
   --ds-letter-spacing-9: 0.015em;
-  --ds-font-family: Inter;
+  --ds-font-family: Roboto, sans-serif;
   --ds-font-weight-medium: 500;
   --ds-font-weight-semibold: 600;
   --ds-font-weight-regular: 400;
@@ -820,7 +820,7 @@ design-tokens: v1.12.1
   --ds-letter-spacing-7: 0.0025em;
   --ds-letter-spacing-8: 0.005em;
   --ds-letter-spacing-9: 0.015em;
-  --ds-font-family: Inter;
+  --ds-font-family: Roboto, sans-serif;
   --ds-font-weight-medium: 500;
   --ds-font-weight-semibold: 600;
   --ds-font-weight-regular: 400;
