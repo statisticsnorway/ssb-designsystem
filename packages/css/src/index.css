@@ -4,3 +4,9 @@
 body {
   font-family: var(--ds-font-family);
 }
+
+/* TEMP: Testing Roboto Condensed on h1 and h2 Heading */
+h1.ds-heading,
+h2.ds-heading {
+  font-family: 'Roboto Condensed', var(--ds-font-family);
+}
