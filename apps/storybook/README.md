@@ -13,21 +13,33 @@ Storybook is published to Chromatic for easy sharing with designers and stakehol
 Chromatic is currently used for sharing Storybook previews.
 The setup may evolve as we establish a more permanent publishing solution.
 
-## Updating the preview (manual)
+## Automatic publishing
 
-To publish a new version to Chromatic:
+Storybook is automatically published to Chromatic on push when relevant files are changed.
 
-1. Make sure you are on the correct branch
-2. Run:
+This includes changes in:
 
-   npm run chromatic -w apps/storybook -- --project-token=<TOKEN>
+- `apps/storybook`
+- `packages/theme`
+
+## Local development
+
+To run Storybook locally:
+
+    npm run storybook -w apps/storybook
+
+## Manual publish (optional)
+
+It is still possible to publish manually if needed:
+
+    npm run chromatic -w apps/storybook -- --project-token=<TOKEN>
 
 > The project token must be stored locally (e.g. password manager) and should **not** be committed to the repository.
 
 ## Important
 
-- Chromatic builds are **not triggered automatically** on push
-- Preview must be published manually
+- Chromatic builds run automatically via GitHub Actions
+- Preview updates are triggered by relevant changes only
 - Do not commit the project token to the repository
 
 ## Example preview URL
