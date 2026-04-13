@@ -15,7 +15,7 @@ The setup may evolve as we establish a more permanent publishing solution.
 
 ## Automatic publishing
 
-Storybook is automatically published to Chromatic on push when relevant files are changed.
+Storybook is automatically published to Chromatic when a pull request is opened or updated.
 
 This includes changes in:
 
@@ -39,7 +39,7 @@ It is still possible to publish manually if needed:
 ## Important
 
 - Chromatic builds run automatically via GitHub Actions
-- Preview updates are triggered by relevant changes only
+- Preview updates are triggered by pull requests and relevant changes only
 - Do not commit the project token to the repository
 
 ## Example preview URL
