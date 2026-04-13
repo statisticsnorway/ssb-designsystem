@@ -18,7 +18,7 @@
     "@digdir/designsystemet-react": "^1.13.1",
     "@navikt/aksel-icons": "^8.9.1",
     "clsx": "^2.1.1",
-    "react": "^19.2.4",
+    "react": "^19.2.5",
     "react-dom": "^19.2.4"
   }
 }
