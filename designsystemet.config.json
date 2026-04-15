@@ -22,7 +22,10 @@
           }
         }
       },
-      "borderRadius": 4
+      "borderRadius": 4,
+      "typography": {
+        "fontFamily": "Roboto, sans-serif"
+      }
     }
   }
 }
