@@ -5,56 +5,24 @@
     "ssb": {
       "colors": {
         "main": {
-          "accent": "#00824D",
-          "inverted": "#B6E8B8"
+          "accent": "#00824D"
         },
         "support": {
-          "purple": "#9272FC"
+          "brand1": "#274247",
+          "brand2": "#9272FC"
         },
-        "neutral": "#C3DCDC"
+        "neutral": "#24272B"
       },
       "overrides": {
         "colors": {
           "accent": {
-            "base-active": {
-              "dark": "#B6E8B8"
-            },
-            "base-hover": {
-              "dark": "#ECFEED"
-            },
-            "base-default": {
-              "dark": "#B6E8B8"
-            },
-            "text-default": {
-              "light": "#162327"
-            },
-            "text-subtle": {
-              "light": "#274247"
-            }
-          },
-          "inverted": {
-            "background-default": {
-              "light": "#274247"
-            },
             "background-tinted": {
-              "light": "#2D6975"
-            },
-            "surface-default": {
-              "light": "#62919A"
-            },
-            "text-subtle": {
-              "light": "#B6E8B8"
-            },
-            "surface-tinted": {
-              "light": "#274247"
-            },
-            "text-default": {
-              "light": "#B6E8B8"
+              "light": "#ecf6f2"
             }
           }
         }
       },
-      "borderRadius": 12,
+      "borderRadius": 4,
       "typography": {
         "fontFamily": "Roboto, sans-serif"
       }

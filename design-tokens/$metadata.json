@@ -15,8 +15,8 @@
     "themes/ssb",
     "semantic/color",
     "semantic/modes/main-color/accent",
-    "semantic/modes/main-color/inverted",
-    "semantic/modes/support-color/purple",
+    "semantic/modes/support-color/brand1",
+    "semantic/modes/support-color/brand2",
     "semantic/style"
   ]
 }
