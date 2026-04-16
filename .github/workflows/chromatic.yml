@@ -1,12 +1,16 @@
 name: Chromatic
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'apps/storybook/**'
+      - 'packages/theme/**'
+
   push:
     branches:
       - main
-      - 'feat/**'
-      - 'fix/**'
-      - 'chore/**'
     paths:
       - 'apps/storybook/**'
       - 'packages/theme/**'

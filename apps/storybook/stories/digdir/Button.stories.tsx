@@ -49,7 +49,6 @@ export const Variants: Story = {
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Button>Primær</Button>
           <Button data-color='neutral'>Neutral</Button>
-          <Button data-color='purple'>Purple</Button>
           <Button data-color='danger'>Danger</Button>
         </div>
       </div>

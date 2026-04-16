@@ -42,7 +42,6 @@ export const Variants: Story = {
           <Badge count={9} />
           <Badge count={15} maxCount={9} variant='tinted' />
           <Badge count={15} maxCount={9} data-color='neutral' />
-          <Badge count={15} maxCount={9} data-color='purple' />
         </div>
       </div>
 

@@ -9,7 +9,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "tokens:create": "designsystemet tokens create",
-    "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/generated",
+    "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/brand",
     "tokens:update": "npm run tokens:create && npm run tokens:build",
     "storybook": "npm run storybook -w apps/storybook"
   },

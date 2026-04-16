@@ -54,7 +54,6 @@ export const Variants: Story = {
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Avatar aria-label='color default' />
           <Avatar aria-label='color neutral' data-color='neutral' />
-          <Avatar aria-label='color purple' data-color='purple' />
           <Avatar aria-label='color inverted' data-color='inverted' />
         </div>
       </div>
