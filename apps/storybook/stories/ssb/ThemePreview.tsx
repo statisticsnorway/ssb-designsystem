@@ -310,7 +310,7 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
           </Card>
         </div>
       </div>
-      <div className={cl(classes.cardWithoutBackground, classes.linkList)}>
+      <div className={cl(classes.cardWithoutBackground, classes.linksList)}>
         <Heading data-size='md'>Lenkeliste</Heading>
         <List.Unordered
           style={{
