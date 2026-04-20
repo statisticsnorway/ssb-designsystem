@@ -14,7 +14,7 @@
     "storybook": "npm run storybook -w apps/storybook"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "^1.13.1",
-    "prettier": "^3.8.2"
+    "@digdir/designsystemet": "^1.13.2",
+    "prettier": "^3.8.3"
   }
 }

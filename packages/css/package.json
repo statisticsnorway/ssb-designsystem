@@ -16,6 +16,6 @@
     }
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.13.1"
+    "@digdir/designsystemet-css": "^1.13.2"
   }
 }
