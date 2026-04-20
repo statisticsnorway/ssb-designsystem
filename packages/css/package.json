@@ -5,8 +5,10 @@
   "description": "CSS for SSBs designsystem",
   "author": "Statistics Norway",
   "license": "MIT",
+  "types": "./types.d.ts",
   "files": [
-    "src"
+    "src",
+    "types.d.ts"
   ],
   "exports": {
     ".": {
