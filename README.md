@@ -1,24 +1,37 @@
 # SSB Designsystemet
 
-Foundation for Statistics Norway’s design system.
+This repository contains the foundation of Statistics Norway’s design system.
 
-In the first phase, this repository manages SSB’s visual profile and design tokens based on Digdir’s Designsystemet.
+It is currently focused on establishing SSB’s visual profile and design tokens, based on Digdir’s Designsystemet.
 
-The structure and workflow are currently being established.
+The structure, packages, and workflows are under active development and may change.
+
+---
+
+## Current scope
+
+In this initial phase, the repository includes:
+
+- Design tokens (colors, typography, etc.)
+- Theme generation based on Digdir’s tooling
+- Early setup for future CSS and React packages
+
+---
 
 ## Design tokens
 
-### Updating design tokens
+See [TOKENS.md](./TOKENS.md) for details on how to update and build tokens.
 
-1. Update the theme configuration in `designsystemet.config.json`, usually by exporting changes from the Digdir Theme Builder.
+---
 
-2. Run from the repository root:
+## Status
 
-```bash
-npm run tokens:update
-```
+🚧 This is a work in progress.
 
-This regenerates:
+The repository will evolve to include:
 
-- `design-tokens/` – token source files
-- `packages/theme/generated/ssb.css` – the CSS theme used by applications
+- A CSS package
+- A React component package
+- Documentation and usage guidelines
+
+SSB-specific packages are not yet available.

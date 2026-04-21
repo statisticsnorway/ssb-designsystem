@@ -1,6 +1,5 @@
-@import '@digdir/designsystemet-css';
 @import './fonts/fonts.css';
+@import '@digdir/designsystemet-css';
+@import '@statisticsnorway/design-theme';
 
-body {
-  font-family: var(--ds-font-family);
-}
+/* SSB-specific overrides can be added here */

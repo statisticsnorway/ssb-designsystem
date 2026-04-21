@@ -5,15 +5,18 @@
   "description": "Statistics Norway theme for Digdir Designsystemet",
   "author": "Statistics Norway",
   "license": "MIT",
+  "private": true,
   "files": [
-    "brand"
+    "brand",
+    "types.d.ts",
+    "README.md"
   ],
   "exports": {
     ".": {
       "types": "./types.d.ts",
       "default": "./brand/ssb.css"
     },
-    "./ssb": {
+    "./ssb.css": {
       "types": "./types.d.ts",
       "default": "./brand/ssb.css"
     }

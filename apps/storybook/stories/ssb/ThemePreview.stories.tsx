@@ -4,7 +4,6 @@ import { ThemePreview } from './ThemePreview'
 import { Heading, Fieldset, ToggleGroup, Link, List, Divider, Button } from '@digdir/designsystemet-react'
 import { SunIcon, MoonIcon, ChevronUpIcon, ChevronRightIcon } from '@navikt/aksel-icons'
 import classes from './ThemePreview.module.css'
-//import type { Color } from '../../../packages/theme/brand/types.d.ts'
 
 const meta = {
   title: 'SSB/Theme Preview',
