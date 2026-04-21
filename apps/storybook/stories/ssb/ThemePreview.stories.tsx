@@ -29,7 +29,7 @@ export const Default: StoryFn = () => {
 
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
-      <div data-color-scheme={colorSchemeMode} className={classes.innerWrapper}>
+      <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
           <Fieldset style={{ display: 'grid', gap: '1rem' }}>
             <Fieldset.Legend>
