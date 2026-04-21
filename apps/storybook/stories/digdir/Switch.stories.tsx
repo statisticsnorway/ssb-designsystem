@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Divider, Field, Fieldset, Input, Label, Switch } from '@digdir/designsystemet-react'
+import { Divider, Field, Fieldset, Input, Label, Switch } from '@statisticsnorway/design-react'
 
 const description = `
 Switch gir brukerne et valg mellom to alternativer.

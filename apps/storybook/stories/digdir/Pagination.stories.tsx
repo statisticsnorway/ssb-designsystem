@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
-import { Heading, Pagination, usePagination } from '@digdir/designsystemet-react'
+import { Heading, Pagination, usePagination } from '@statisticsnorway/design-react'
 
 const description = `
 Pagination brukes til å dele opp innhold i flere sider og gjøre det lettere å navigere i store datamengder.

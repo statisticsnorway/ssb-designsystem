@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Heading, List } from '@digdir/designsystemet-react'
+import { Heading, List } from '@statisticsnorway/design-react'
 
 const description = `
 List brukes for å presentere innhold på en oversiktlig og strukturert måtes.

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Input, Field, Label, ValidationMessage } from '@digdir/designsystemet-react'
+import { Input, Field, Label, ValidationMessage } from '@statisticsnorway/design-react'
 
 const description = `
 Input lar brukeren skrive inn én linje med tekst.

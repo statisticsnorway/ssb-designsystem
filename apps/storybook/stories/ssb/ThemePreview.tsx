@@ -21,7 +21,7 @@ import {
   Select,
   Search,
   Pagination,
-} from '@digdir/designsystemet-react'
+} from '@statisticsnorway/design-react'
 import { type HTMLAttributes, useState } from 'react'
 import cl from 'clsx/lite'
 import classes from './ThemePreview.module.css'

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Chip } from '@digdir/designsystemet-react'
+import { Chip } from '@statisticsnorway/design-react'
 
 const description = `
 Chip er små, interaktive komponenter som lar brukerne styre hvordan de vil se innhold.

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Paragraph, SkipLink } from '@digdir/designsystemet-react'
+import { Paragraph, SkipLink } from '@statisticsnorway/design-react'
 
 const description = `
 SkipLink lar brukere hoppe over navigasjon og gå direkte til hovedinnholdet på siden.

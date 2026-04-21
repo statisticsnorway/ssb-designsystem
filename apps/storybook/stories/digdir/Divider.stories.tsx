@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Divider, Paragraph } from '@digdir/designsystemet-react'
+import { Divider, Paragraph } from '@statisticsnorway/design-react'
 
 const description = `
 Divider brukes for å skape et visuelt skille mellom innhold.

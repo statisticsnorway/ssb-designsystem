@@ -1,7 +1,7 @@
 import type { Meta, StoryObj, StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { ThemePreview } from './ThemePreview'
-import { Heading, Fieldset, ToggleGroup, Link, List, Divider, Button } from '@digdir/designsystemet-react'
+import { Heading, Fieldset, ToggleGroup, Link, List, Divider, Button } from '@statisticsnorway/design-react'
 import { SunIcon, MoonIcon, ChevronUpIcon, ChevronRightIcon } from '@navikt/aksel-icons'
 import classes from './ThemePreview.module.css'
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Checkbox, Fieldset, ValidationMessage } from '@digdir/designsystemet-react'
+import { Checkbox, Fieldset, ValidationMessage } from '@statisticsnorway/design-react'
 
 const description = `
 Checkbox gir brukerne mulighet til å velge ett eller flere alternativer.

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Alert } from '@digdir/designsystemet-react'
+import { Alert } from '@statisticsnorway/design-react'
 
 const description = `
 Suggestion brukes til å vise forslag basert på det brukeren skriver i et felt.

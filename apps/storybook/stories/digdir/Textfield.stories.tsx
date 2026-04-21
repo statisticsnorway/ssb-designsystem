@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Tag, Textfield } from '@digdir/designsystemet-react'
+import { Tag, Textfield } from '@statisticsnorway/design-react'
 
 const description = `
 Textfield gir brukere muligheten til å skrive fritekst eller tall.

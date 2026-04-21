@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Card, Divider, Heading, Paragraph, Link } from '@digdir/designsystemet-react'
+import { Card, Divider, Heading, Paragraph, Link } from '@statisticsnorway/design-react'
 
 const description = `
 Card fremhever informasjon eller oppgaver som hører sammen.

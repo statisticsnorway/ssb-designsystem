@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Badge, Divider, Heading } from '@digdir/designsystemet-react'
+import { Badge, Divider, Heading } from '@statisticsnorway/design-react'
 import { EnvelopeClosedFillIcon } from '@navikt/aksel-icons'
 
 const description = `

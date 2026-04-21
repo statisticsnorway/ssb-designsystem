@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Heading, Paragraph, Spinner } from '@digdir/designsystemet-react'
+import { Heading, Paragraph, Spinner } from '@statisticsnorway/design-react'
 
 const description = `
 Spinner brukes for å indikere at noe er i ferd med å lastes inn.

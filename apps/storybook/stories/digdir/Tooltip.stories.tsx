@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button, Divider, Heading, Tooltip } from '@digdir/designsystemet-react'
+import { Button, Divider, Heading, Tooltip } from '@statisticsnorway/design-react'
 import { FilesIcon } from '@navikt/aksel-icons'
 
 const description = `

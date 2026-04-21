@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { FieldDescription, Field, Label, Textarea } from '@digdir/designsystemet-react'
+import { FieldDescription, Field, Label, Textarea } from '@statisticsnorway/design-react'
 
 const description = `
 Textarea brukes når brukeren skal kunne skrive inn tekst som går over flere linjer.

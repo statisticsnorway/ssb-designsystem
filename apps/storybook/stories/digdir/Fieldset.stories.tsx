@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Fieldset, Field, Input, Label, Select } from '@digdir/designsystemet-react'
+import { Fieldset, Field, Input, Label, Select } from '@statisticsnorway/design-react'
 
 const description = `
 Fieldset brukes til å gruppere og navngi felt som naturlig hører sammen, Fieldset er et sett med Field.

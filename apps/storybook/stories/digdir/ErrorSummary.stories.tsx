@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ErrorSummary, Textfield } from '@digdir/designsystemet-react'
+import { ErrorSummary, Textfield } from '@statisticsnorway/design-react'
 
 const description = `
 ErrorSummary er en oppsummering av feil.

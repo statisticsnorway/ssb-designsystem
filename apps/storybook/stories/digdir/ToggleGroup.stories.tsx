@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { useState } from 'react'
-import { Divider, Heading, Paragraph, ToggleGroup, Tooltip } from '@digdir/designsystemet-react'
+import { Heading, ToggleGroup, Tooltip } from '@statisticsnorway/design-react'
 import { AlignLeftIcon, AlignCenterIcon, AlignRightIcon } from '@navikt/aksel-icons'
 
 const description = `

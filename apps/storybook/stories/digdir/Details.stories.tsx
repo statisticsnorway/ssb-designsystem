@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Card, Details, Paragraph } from '@digdir/designsystemet-react'
+import { Card, Details, Paragraph } from '@statisticsnorway/design-react'
 
 const description = `
 Details er en sammenleggbar komponent som lar brukeren vise eller skjule innhold.

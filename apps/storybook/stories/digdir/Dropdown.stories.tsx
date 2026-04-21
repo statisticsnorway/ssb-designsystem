@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Dropdown } from '@digdir/designsystemet-react'
+import { Dropdown } from '@statisticsnorway/design-react'
 
 const description = `
 Dropdown er en generisk nedtrekksliste.
