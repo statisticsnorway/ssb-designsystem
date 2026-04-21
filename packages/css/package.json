@@ -8,10 +8,16 @@
   "types": "./types.d.ts",
   "files": [
     "src",
-    "types.d.ts"
+    "types.d.ts",
+    "README.md"
   ],
   "exports": {
     ".": {
+      "types": "./types.d.ts",
+      "default": "./src/index.css"
+    },
+    "./index.css": {
+      "types": "./types.d.ts",
       "default": "./src/index.css"
     }
   },
