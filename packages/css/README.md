@@ -20,6 +20,8 @@ body {
 }
 ```
 
+This package includes the Roboto font, licensed under Apache License 2.0.
+
 ## Usage
 
 This package is intended to be the default styling entry point for applications using SSB’s design system.
