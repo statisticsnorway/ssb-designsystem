@@ -1,4 +1,4 @@
-import '../../../packages/css/src/index.css'
+import '@statisticsnorway/design-css'
 import './preview.css'
 
 import type { Preview } from '@storybook/react'

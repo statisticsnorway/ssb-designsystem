@@ -1,5 +1,4 @@
-// TODO: Bytt til '@statisticsnorway/design-css' når pakken er klar/publisert
-import '../../css/src/index.css'
+import '@statisticsnorway/design-css'
 
 export * from './digdir'
 
