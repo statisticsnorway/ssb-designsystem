@@ -3,3 +3,4 @@
 @import '@statisticsnorway/design-theme';
 
 /* SSB-specific overrides can be added here */
+@import './logo.css';

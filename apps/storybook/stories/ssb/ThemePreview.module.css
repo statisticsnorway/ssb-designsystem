@@ -12,6 +12,11 @@
   padding: var(--ds-size-15);
 }
 
+.header {
+  background-color: var(--ds-color-neutral-background-default);
+  padding-bottom: var(--ds-size-6);
+}
+
 .footer {
   padding: var(--ds-size-8);
 }

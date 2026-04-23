@@ -1,7 +1,17 @@
 import type { Meta, StoryObj, StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { ThemePreview } from './ThemePreview'
-import { Heading, Fieldset, ToggleGroup, Link, List, Divider, Button } from '@statisticsnorway/design-react'
+import {
+  Heading,
+  Fieldset,
+  ToggleGroup,
+  Link,
+  List,
+  Divider,
+  Button,
+  Logo,
+  LogoSymbol,
+} from '@statisticsnorway/design-react'
 import { SunIcon, MoonIcon, ChevronUpIcon, ChevronRightIcon } from '@navikt/aksel-icons'
 import classes from './ThemePreview.module.css'
 
@@ -29,6 +39,9 @@ export const Default: StoryFn = () => {
 
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
+      <div className={classes.header}>
+        <Logo />
+      </div>
       <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
           <Fieldset style={{ display: 'grid', gap: '1rem' }}>
@@ -73,6 +86,8 @@ export const Default: StoryFn = () => {
         <ThemePreview data-size={size} data-color={colorMode} data-color-scheme={colorSchemeMode} />
       </div>
       <div className={classes.footer} data-color-scheme={footerColorScheme}>
+        {/* <Logo variant='white' /> */}
+        <LogoSymbol variant='white' />
         <Button
           variant='secondary'
           style={{ float: 'right', marginBottom: '2rem' }}
