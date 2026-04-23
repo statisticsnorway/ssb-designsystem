@@ -2,7 +2,7 @@
   "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
   "outDir": "./design-tokens",
   "themes": {
-    "ssb": {
+    "test-3": {
       "colors": {
         "main": {
           "accent": "#00824D"
@@ -15,23 +15,23 @@
       "overrides": {
         "colors": {
           "accent": {
-            "surface-tinted": {
-              "light": "#ECFEED"
+            "background-default": {
+              "light": "#FFFFFF"
             },
             "background-tinted": {
               "light": "#F0F8F9"
             },
-            "background-default": {
-              "light": "#FFFFFF"
-            },
             "surface-default": {
               "light": "#FFFFFF"
             },
+            "surface-tinted": {
+              "light": "#F0F8F9"
+            },
             "surface-hover": {
-              "light": "#DCF5DD"
+              "light": "#CAE4E6"
             },
             "surface-active": {
-              "light": "#B6E8B8"
+              "light": "#9FC9CC"
             },
             "border-subtle": {
               "light": "#9FC9CC"
@@ -40,10 +40,10 @@
               "light": "#274247"
             },
             "border-strong": {
-              "light": "#016842"
+              "light": "#162327"
             },
             "text-subtle": {
-              "light": "#00824D"
+              "light": "#274247"
             },
             "text-default": {
               "light": "#162327"
@@ -59,9 +59,6 @@
             },
             "base-contrast-subtle": {
               "light": "#DCF5DD"
-            },
-            "base-contrast-default": {
-              "light": "#FFFFFF"
             }
           },
           "inverted": {
@@ -75,13 +72,13 @@
               "light": "#274247"
             },
             "surface-tinted": {
-              "light": "#024D36"
+              "light": "#315A61"
             },
             "surface-hover": {
-              "light": "#016842"
+              "light": "#467780"
             },
             "surface-active": {
-              "light": "#00824D"
+              "light": "#5C9199"
             },
             "border-subtle": {
               "light": "#315A61"
@@ -90,13 +87,13 @@
               "light": "#CAE4E6"
             },
             "border-strong": {
-              "light": "#B6E8B8"
+              "light": "#F0F8F9"
             },
             "text-subtle": {
-              "light": "#B6E8B8"
+              "light": "#CAE4E6"
             },
             "text-default": {
-              "light": "#F0F8F9"
+              "light": "#FFFFFF"
             },
             "base-default": {
               "light": "#B6E8B8"
@@ -117,7 +114,6 @@
         }
       },
       "borderRadius": 8,
-
       "typography": {
         "fontFamily": "Roboto, sans-serif"
       }
