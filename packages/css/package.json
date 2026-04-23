@@ -1,0 +1,27 @@
+{
+  "name": "@statisticsnorway/design-css",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "CSS for SSBs designsystem",
+  "author": "Statistics Norway",
+  "license": "MIT",
+  "types": "./types.d.ts",
+  "files": [
+    "src",
+    "types.d.ts",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "default": "./src/index.css"
+    },
+    "./index.css": {
+      "types": "./types.d.ts",
+      "default": "./src/index.css"
+    }
+  },
+  "dependencies": {
+    "@digdir/designsystemet-css": "^1.13.2"
+  }
+}

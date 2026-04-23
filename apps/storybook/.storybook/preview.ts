@@ -1,4 +1,4 @@
-import '../../../packages/theme/src/index.css'
+import '../../../packages/css/src/index.css'
 import './preview.css'
 
 import type { Preview } from '@storybook/react'

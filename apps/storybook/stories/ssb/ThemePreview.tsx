@@ -152,6 +152,24 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
           </Pagination.List>
         </Pagination>
       </div>
+
+      <div className={cl(classes.card, classes.typography)}>
+        <div style={{ display: 'grid', gap: '0.75rem' }}>
+          <Heading level={1} data-size='xl'>
+            Heading level 1
+          </Heading>
+          <Heading level={2} data-size='lg'>
+            Heading level 2
+          </Heading>
+          <Heading level={3} data-size='md'>
+            Heading level 3
+          </Heading>
+          <Heading level={4} data-size='sm'>
+            Heading level 4
+          </Heading>
+        </div>
+      </div>
+
       <div className={cl(classes.card, classes.calculator)}>
         <Heading data-size='md'>Beregn husleie</Heading>
         {showError && (
@@ -292,7 +310,7 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
           </Card>
         </div>
       </div>
-      <div className={cl(classes.cardWithoutBackground, classes.linkList)}>
+      <div className={cl(classes.cardWithoutBackground, classes.linksList)}>
         <Heading data-size='md'>Lenkeliste</Heading>
         <List.Unordered
           style={{
@@ -320,20 +338,11 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
       <div className={cl(classes.cardWithoutBackground, classes.cardLinks)}>
         <Heading data-size='md'>Lenkekort</Heading>
         <div style={{ display: 'flex', gap: '1rem' }}>
-          <Card style={{ width: '200px' }}>
-            <Card.Block>
-              <Heading level={3} data-size='sm'>
-                <Link href='#'>Kalkulatorer</Link>
-              </Heading>
-              <Paragraph>Her finner du alle kalkulatorene våre</Paragraph>
-            </Card.Block>
-          </Card>
           <Card
             variant='tinted'
             style={{
               display: 'grid',
               gridAutoFlow: 'column',
-              width: '700px',
             }}
           >
             <Card.Block

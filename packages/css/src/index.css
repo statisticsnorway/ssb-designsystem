@@ -1,0 +1,5 @@
+@import './fonts/fonts.css';
+@import '@digdir/designsystemet-css';
+@import '@statisticsnorway/design-theme';
+
+/* SSB-specific overrides can be added here */

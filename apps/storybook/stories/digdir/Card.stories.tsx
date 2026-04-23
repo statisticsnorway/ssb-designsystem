@@ -80,16 +80,6 @@ export const Variants: Story = {
               <Paragraph>Neutral:Tinted</Paragraph>
             </Card.Block>
           </Card>
-          <Card data-color='purple'>
-            <Card.Block>
-              <Paragraph>Purple</Paragraph>
-            </Card.Block>
-          </Card>
-          <Card data-variant='tinted' data-color='purple'>
-            <Card.Block>
-              <Paragraph>Purple:Tinted</Paragraph>
-            </Card.Block>
-          </Card>
         </div>
       </div>
 
