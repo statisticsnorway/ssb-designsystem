@@ -1,5 +1,5 @@
 {
-  "test-3": {
+  "ssb": {
     "font-family": {
       "$type": "fontFamilies",
       "$value": "Roboto, sans-serif"

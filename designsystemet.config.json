@@ -2,7 +2,7 @@
   "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
   "outDir": "./design-tokens",
   "themes": {
-    "test-3": {
+    "ssb": {
       "colors": {
         "main": {
           "accent": "#00824D"
