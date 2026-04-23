@@ -2,13 +2,14 @@
   "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
   "outDir": "./design-tokens",
   "themes": {
-    "ssb": {
+    "theme": {
       "colors": {
         "main": {
           "accent": "#00824D"
         },
         "support": {
-          "inverted": "#B6E8B8"
+          "coolgray": "#274247",
+          "magic": "#7E5EE8"
         },
         "neutral": "#24272B"
       },
@@ -19,34 +20,34 @@
               "light": "#FFFFFF"
             },
             "background-tinted": {
-              "light": "#F0F8F9"
+              "light": "#ECFEED"
             },
             "surface-default": {
               "light": "#FFFFFF"
             },
             "surface-tinted": {
-              "light": "#F0F8F9"
+              "light": "#ECFEED"
             },
             "surface-hover": {
-              "light": "#CAE4E6"
+              "light": "#DCF5DD"
             },
             "surface-active": {
-              "light": "#9FC9CC"
+              "light": "#B6E8B8"
             },
             "border-subtle": {
-              "light": "#9FC9CC"
+              "light": "#79D48D"
             },
             "border-default": {
-              "light": "#274247"
+              "light": "#00824D"
             },
             "border-strong": {
-              "light": "#162327"
+              "light": "#016842"
             },
             "text-subtle": {
-              "light": "#274247"
+              "light": "#016842"
             },
             "text-default": {
-              "light": "#162327"
+              "light": "#00331E"
             },
             "base-default": {
               "light": "#00824D"
@@ -58,57 +59,86 @@
               "light": "#03332B"
             },
             "base-contrast-subtle": {
-              "light": "#DCF5DD"
+              "light": "#B6E8B8"
             }
           },
-          "inverted": {
-            "background-default": {
-              "light": "#274247"
-            },
+          "coolgray": {
             "background-tinted": {
-              "light": "#FFFFFF"
-            },
-            "surface-default": {
-              "light": "#274247"
-            },
-            "surface-tinted": {
-              "light": "#315A61"
-            },
-            "surface-hover": {
-              "light": "#467780"
-            },
-            "surface-active": {
-              "light": "#5C9199"
-            },
-            "border-subtle": {
-              "light": "#315A61"
-            },
-            "border-default": {
-              "light": "#CAE4E6"
-            },
-            "border-strong": {
               "light": "#F0F8F9"
             },
-            "text-subtle": {
+            "surface-tinted": {
               "light": "#CAE4E6"
             },
+            "surface-hover": {
+              "light": "#B5D6D8"
+            },
+            "surface-active": {
+              "light": "#9FC9CC"
+            },
+            "border-subtle": {
+              "light": "#78ADB3"
+            },
+            "border-default": {
+              "light": "#315A61"
+            },
+            "border-strong": {
+              "light": "#274247"
+            },
+            "text-subtle": {
+              "light": "#274247"
+            },
             "text-default": {
-              "light": "#FFFFFF"
+              "light": "#162327"
             },
             "base-default": {
-              "light": "#B6E8B8"
+              "light": "#274247"
             },
             "base-hover": {
-              "light": "#79D48D"
+              "light": "#315A61"
             },
             "base-active": {
-              "light": "#3DBF6F"
+              "light": "#467780"
             },
             "base-contrast-subtle": {
-              "light": "#00824D"
+              "light": "#CAE4E6"
+            }
+          },
+          "magic": {
+            "background-tinted": {
+              "light": "#F2F0FF"
             },
-            "base-contrast-default": {
-              "light": "#274247"
+            "surface-tinted": {
+              "light": "#F2F0FF"
+            },
+            "surface-hover": {
+              "light": "#D0CEFB"
+            },
+            "surface-active": {
+              "light": "#B3A9F7"
+            },
+            "border-subtle": {
+              "light": "#C2B2F4"
+            },
+            "border-default": {
+              "light": "#8061E8"
+            },
+            "border-strong": {
+              "light": "#634AB7"
+            },
+            "text-subtle": {
+              "light": "#634AB7"
+            },
+            "text-default": {
+              "light": "#2F2356"
+            },
+            "base-default": {
+              "light": "#7E5EE8"
+            },
+            "base-hover": {
+              "light": "#9378EC"
+            },
+            "base-active": {
+              "light": "#A892EF"
             }
           }
         }

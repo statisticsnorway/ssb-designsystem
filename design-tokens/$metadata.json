@@ -8,14 +8,15 @@
     "primitives/modes/typography/size/small",
     "primitives/modes/typography/size/medium",
     "primitives/modes/typography/size/large",
-    "primitives/modes/typography/primary/ssb",
-    "primitives/modes/typography/secondary/ssb",
-    "primitives/modes/color-scheme/dark/ssb",
-    "primitives/modes/color-scheme/light/ssb",
-    "themes/ssb",
+    "primitives/modes/typography/primary/theme",
+    "primitives/modes/typography/secondary/theme",
+    "primitives/modes/color-scheme/dark/theme",
+    "primitives/modes/color-scheme/light/theme",
+    "themes/theme",
     "semantic/color",
     "semantic/modes/main-color/accent",
-    "semantic/modes/support-color/inverted",
+    "semantic/modes/support-color/coolgray",
+    "semantic/modes/support-color/magic",
     "semantic/style"
   ]
 }
