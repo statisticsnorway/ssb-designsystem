@@ -1,5 +1,5 @@
 {
-  "ssb": {
+  "test-3": {
     "accent": {
       "1": {
         "$type": "color",
@@ -15,15 +15,15 @@
       },
       "4": {
         "$type": "color",
-        "$value": "#ECFEED"
+        "$value": "#F0F8F9"
       },
       "5": {
         "$type": "color",
-        "$value": "#DCF5DD"
+        "$value": "#CAE4E6"
       },
       "6": {
         "$type": "color",
-        "$value": "#B6E8B8"
+        "$value": "#9FC9CC"
       },
       "7": {
         "$type": "color",
@@ -35,11 +35,11 @@
       },
       "9": {
         "$type": "color",
-        "$value": "#016842"
+        "$value": "#162327"
       },
       "10": {
         "$type": "color",
-        "$value": "#00824D"
+        "$value": "#274247"
       },
       "11": {
         "$type": "color",
@@ -63,7 +63,7 @@
       },
       "16": {
         "$type": "color",
-        "$value": "#FFFFFF"
+        "$value": "#ffffff"
       }
     },
     "inverted": {
@@ -81,15 +81,15 @@
       },
       "4": {
         "$type": "color",
-        "$value": "#024D36"
+        "$value": "#315A61"
       },
       "5": {
         "$type": "color",
-        "$value": "#016842"
+        "$value": "#467780"
       },
       "6": {
         "$type": "color",
-        "$value": "#00824D"
+        "$value": "#5C9199"
       },
       "7": {
         "$type": "color",
@@ -101,15 +101,15 @@
       },
       "9": {
         "$type": "color",
-        "$value": "#B6E8B8"
+        "$value": "#F0F8F9"
       },
       "10": {
         "$type": "color",
-        "$value": "#B6E8B8"
+        "$value": "#CAE4E6"
       },
       "11": {
         "$type": "color",
-        "$value": "#F0F8F9"
+        "$value": "#FFFFFF"
       },
       "12": {
         "$type": "color",
