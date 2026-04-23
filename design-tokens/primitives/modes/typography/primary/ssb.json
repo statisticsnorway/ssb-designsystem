@@ -1,5 +1,5 @@
 {
-  "theme": {
+  "ssb": {
     "font-family": {
       "$type": "fontFamilies",
       "$value": "Roboto, sans-serif"
