@@ -14,18 +14,18 @@ import {
   List,
   Paragraph,
   Table,
+  Tabs,
   Avatar,
   Tag,
   Textfield,
-  ToggleGroup,
   Select,
-  Search,
+  Skeleton,
   Pagination,
 } from '@digdir/designsystemet-react'
 import { type HTMLAttributes, useState } from 'react'
 import cl from 'clsx/lite'
 import classes from './ThemePreview.module.css'
-import { CalculatorIcon, TableIcon, AreaChartIcon } from '@navikt/aksel-icons'
+import { CalculatorIcon, TableIcon } from '@navikt/aksel-icons'
 
 type ThemePreviewProps = HTMLAttributes<HTMLDivElement>
 
@@ -41,126 +41,126 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
       </div>
 
       <div className={cl(classes.card, classes.tableContainer)}>
-        <Heading className={classes.cardTitle}>Tabell</Heading>
         <div className={classes.tableHeader}>
-          <div className={classes.tableAction}>
-            <ToggleGroup data-toggle-group='display' defaultValue='table'>
-              <ToggleGroup.Item value='table'>
-                <TableIcon aria-hidden />
-                Vis som tabell
-              </ToggleGroup.Item>
-              <ToggleGroup.Item value='graph'>
-                <AreaChartIcon aria-hidden />
-                Vis som graf
-              </ToggleGroup.Item>
-            </ToggleGroup>
-          </div>
-          <fieldset className={classes.tableOptions}>
-            <legend>Tabellvisning</legend>
+          <Heading className={classes.cardTitle}>Tabell</Heading>
+
+          <div className={classes.tableOptions}>
+            <Label>Tilpass tabellvisning:</Label>
             <Checkbox label='Zebra' checked={tableZebra} onChange={() => setTableZebra((prev) => !prev)} />
             <Checkbox label='Border' checked={tableBorder} onChange={() => setTableBorder((prev) => !prev)} />
             <Checkbox label='Hover' checked={tableHover} onChange={() => setTableHover((prev) => !prev)} />
-          </fieldset>
-          <Search className={classes.tableSearch}>
-            <Search.Input aria-label='Søk' />
-            <Search.Clear />
-          </Search>
-          <div className={classes.tableOptions}>
-            <span className={classes.tableOptionsLabel}>Visning:</span>
           </div>
         </div>
-        <Table border={tableBorder} zebra={tableZebra} hover={tableHover} className={classes.table}>
-          <Table.Head>
-            <Table.Row>
-              <Table.HeaderCell onClick={function Ya() {}} sort='none'>
-                Navn
-              </Table.HeaderCell>
-              <Table.HeaderCell>Epost</Table.HeaderCell>
-              <Table.HeaderCell>Status</Table.HeaderCell>
-            </Table.Row>
-          </Table.Head>
-          <Table.Body>
-            <Table.Row>
-              <Table.Cell className={classes.tableCellAvatar}>
-                <Avatar aria-label='Lise'>LN</Avatar>
-                Lise Nordmann
-              </Table.Cell>
-              <Table.Cell>lise@nordmann.no</Table.Cell>
-              <Table.Cell>
-                <Tag>aktiv</Tag>
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell className={classes.tableCellAvatar}>
-                <Avatar aria-label='Ola'>ON</Avatar>
-                Ola Nordmann
-              </Table.Cell>
-              <Table.Cell>ola@nordmann.no</Table.Cell>
-              <Table.Cell>
-                <Tag data-color='warning'>inaktiv</Tag>
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell className={classes.tableCellAvatar}>
-                <Avatar aria-label='Maren'>MK</Avatar>
-                Maren Knutsen
-              </Table.Cell>
-              <Table.Cell>maren.knutsen@ssb.no</Table.Cell>
-              <Table.Cell>
-                <Tag data-color='warning'>Designer</Tag>
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell className={classes.tableCellAvatar}>
-                <Avatar aria-label='mann'>IK</Avatar>
-                Ina Kristiansen
-              </Table.Cell>
-              <Table.Cell>Ina.Viktoria.Kristiansen@ssb.no</Table.Cell>
-              <Table.Cell>
-                <Tag data-color='warning'>Designer</Tag>
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell className={classes.tableCellAvatar}>
-                <Avatar aria-label='carina'>CG</Avatar>
-                Carina Nordseth
-              </Table.Cell>
-              <Table.Cell>cgn@ssb.no</Table.Cell>
-              <Table.Cell>
-                <Tag data-color='warning'>Utvikler</Tag>
-              </Table.Cell>
-            </Table.Row>
-          </Table.Body>
-        </Table>
-        <Pagination className={classes.tablePagination} aria-label='Sidenavigering'>
-          <Pagination.List>
-            <Pagination.Item>
-              <Pagination.Button aria-label='Forrige side' data-variant='tertiary'>
-                Forrige
-              </Pagination.Button>
-            </Pagination.Item>
-            <Pagination.Item>
-              <Pagination.Button aria-label='Side 1' data-variant='tertiary'>
-                1
-              </Pagination.Button>
-            </Pagination.Item>
-            <Pagination.Item>
-              <Pagination.Button aria-label='Side 2' data-variant='primary'>
-                2
-              </Pagination.Button>
-            </Pagination.Item>
-            <Pagination.Item>
-              <Pagination.Button aria-label='Side 3' data-variant='tertiary'>
-                3
-              </Pagination.Button>
-            </Pagination.Item>
-            <Pagination.Item>
-              <Pagination.Button aria-label='Neste side' data-variant='tertiary'>
-                Neste
-              </Pagination.Button>
-            </Pagination.Item>
-          </Pagination.List>
-        </Pagination>
+
+        <Tabs defaultValue='table'>
+          <Tabs.List>
+            <Tabs.Tab value='table'>Vis som tabell</Tabs.Tab>
+            <Tabs.Tab value='figure'>Vis som figur</Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel value='table'>
+            <Table border={tableBorder} zebra={tableZebra} hover={tableHover} className={classes.table}>
+              <Table.Head>
+                <Table.Row>
+                  <Table.HeaderCell onClick={function Ya() {}} sort='none'>
+                    Navn
+                  </Table.HeaderCell>
+                  <Table.HeaderCell>Epost</Table.HeaderCell>
+                  <Table.HeaderCell>Status</Table.HeaderCell>
+                </Table.Row>
+              </Table.Head>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell className={classes.tableCellAvatar}>
+                    <Avatar aria-label='Lise'>LN</Avatar>
+                    Lise Nordmann
+                  </Table.Cell>
+                  <Table.Cell>lise@nordmann.no</Table.Cell>
+                  <Table.Cell>
+                    <Tag>aktiv</Tag>
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell className={classes.tableCellAvatar}>
+                    <Avatar aria-label='Ola'>ON</Avatar>
+                    Ola Nordmann
+                  </Table.Cell>
+                  <Table.Cell>ola@nordmann.no</Table.Cell>
+                  <Table.Cell>
+                    <Tag data-color='warning'>inaktiv</Tag>
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell className={classes.tableCellAvatar}>
+                    <Avatar aria-label='Maren'>MK</Avatar>
+                    Maren Knutsen
+                  </Table.Cell>
+                  <Table.Cell>maren.knutsen@ssb.no</Table.Cell>
+                  <Table.Cell>
+                    <Tag data-color='warning'>Designer</Tag>
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell className={classes.tableCellAvatar}>
+                    <Avatar aria-label='mann'>IK</Avatar>
+                    Ina Kristiansen
+                  </Table.Cell>
+                  <Table.Cell>Ina.Viktoria.Kristiansen@ssb.no</Table.Cell>
+                  <Table.Cell>
+                    <Tag data-color='warning'>Designer</Tag>
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell className={classes.tableCellAvatar}>
+                    <Avatar aria-label='carina'>CG</Avatar>
+                    Carina Nordseth
+                  </Table.Cell>
+                  <Table.Cell>cgn@ssb.no</Table.Cell>
+                  <Table.Cell>
+                    <Tag data-color='warning'>Utvikler</Tag>
+                  </Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
+            <Pagination className={classes.tablePagination} aria-label='Sidenavigering'>
+              <Pagination.List>
+                <Pagination.Item>
+                  <Pagination.Button aria-label='Forrige side' data-variant='tertiary'>
+                    Forrige
+                  </Pagination.Button>
+                </Pagination.Item>
+                <Pagination.Item>
+                  <Pagination.Button aria-label='Side 1' data-variant='tertiary'>
+                    1
+                  </Pagination.Button>
+                </Pagination.Item>
+                <Pagination.Item>
+                  <Pagination.Button aria-label='Side 2' data-variant='primary'>
+                    2
+                  </Pagination.Button>
+                </Pagination.Item>
+                <Pagination.Item>
+                  <Pagination.Button aria-label='Side 3' data-variant='tertiary'>
+                    3
+                  </Pagination.Button>
+                </Pagination.Item>
+                <Pagination.Item>
+                  <Pagination.Button aria-label='Neste side' data-variant='tertiary'>
+                    Neste
+                  </Pagination.Button>
+                </Pagination.Item>
+              </Pagination.List>
+            </Pagination>
+          </Tabs.Panel>
+          <Tabs.Panel value='figure'>
+            <div className={classes.figureBars} aria-label='Figur laster'>
+              <Skeleton variant='rectangle' className={classes.bar} style={{ height: '120px' }} />
+              <Skeleton variant='rectangle' className={classes.bar} style={{ height: '200px' }} />
+              <Skeleton variant='rectangle' className={classes.bar} style={{ height: '160px' }} />
+              <Skeleton variant='rectangle' className={classes.bar} style={{ height: '240px' }} />
+              <Skeleton variant='rectangle' className={classes.bar} style={{ height: '180px' }} />
+            </div>
+          </Tabs.Panel>
+        </Tabs>
       </div>
 
       <div className={cl(classes.card, classes.chips)}>

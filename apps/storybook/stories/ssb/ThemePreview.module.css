@@ -111,7 +111,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 16px;
 }
 
 .tableSearch {
@@ -125,6 +124,18 @@
 .tablePagination {
   display: flex;
   justify-content: center;
+}
+.figureBars {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--ds-size-4);
+  height: 260px; /* setter “graf-høyde” */
+  margin-top: var(--ds-size-4);
+}
+
+.bar {
+  flex: 1;
+  border-radius: var(--ds-border-radius-sm);
 }
 
 .form {
