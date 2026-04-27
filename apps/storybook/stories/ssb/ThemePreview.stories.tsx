@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>
 
 const sizes = ['sm', 'md', 'lg']
 const colorSchemeModes = ['light', 'dark']
-const colorModes = ['accent', 'neutral', 'brand1', 'brand2']
+const colorModes = ['accent', 'neutral', 'inverted']
 
 export const Default: StoryFn = () => {
   const [size, setSize] = useState('sm')
