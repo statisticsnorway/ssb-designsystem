@@ -35,7 +35,6 @@ export const Default: StoryFn = () => {
   const [size, setSize] = useState('sm')
   const [colorSchemeMode, setColorSchemeMode] = useState('light')
   const [colorMode, setColorMode] = useState('accent')
-  const footerColorScheme = colorSchemeMode === 'light' ? 'dark' : 'dark'
 
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
@@ -74,7 +73,7 @@ export const Default: StoryFn = () => {
             <Fieldset.Legend>
               Fargetema <code data-size='xs'>(data-color)</code>
             </Fieldset.Legend>
-            <ToggleGroup variant='secondary' value={colorMode} onChange={setColorMode}>
+            <ToggleGroup value={colorMode} onChange={setColorMode}>
               {colorModes.map((color) => (
                 <ToggleGroup.Item key={color} value={color}>
                   {color}
@@ -85,7 +84,7 @@ export const Default: StoryFn = () => {
         </div>
         <ThemePreview data-size={size} data-color={colorMode} data-color-scheme={colorSchemeMode} />
       </div>
-      <div className={classes.footer} data-color-scheme={footerColorScheme}>
+      <div className={classes.footer} data-color-scheme='dark'>
         {/* <Logo variant='white' /> */}
         <LogoSymbol variant='white' />
         <Button

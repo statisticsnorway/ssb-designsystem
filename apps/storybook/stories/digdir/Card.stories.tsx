@@ -140,6 +140,44 @@ export const Variants: Story = {
           </Card>
         </div>
       </div>
+
+      <Divider />
+
+      <div>
+        <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
+          Lenkekort med bilde horisontalt
+        </Heading>
+        <Card
+          style={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            width: '700px',
+          }}
+        >
+          <Card.Block>
+            <img
+              src='/img/animals/moose.jpg'
+              alt='Elg som spiser lunsj'
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+          </Card.Block>
+          <Card.Block>
+            <Heading>
+              <Link href='#'>Hagearbeid</Link>
+            </Heading>
+            <Paragraph>
+              Våren er her, og hagen trenger litt stell. Godt å se at jobben allerede er i gang – med to dedikerte elger
+              på skift. <br />
+              Les mer om dette i denne spennende artikkelen.
+            </Paragraph>
+          </Card.Block>
+        </Card>
+      </div>
     </div>
   ),
 }
