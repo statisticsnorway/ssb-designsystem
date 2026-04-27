@@ -12,12 +12,12 @@
     "@storybook/react-vite": "^10.3.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "chromatic": "^16.3.0",
+    "chromatic": "^16.6.0",
     "storybook": "^10.3.5"
   },
   "dependencies": {
     "@statisticsnorway/design-react": "0.0.1",
-    "@navikt/aksel-icons": "^8.9.1",
+    "@navikt/aksel-icons": "^8.10.2",
     "clsx": "^2.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"

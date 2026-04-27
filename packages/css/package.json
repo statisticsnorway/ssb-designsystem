@@ -22,7 +22,7 @@
     }
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.13.2",
+    "@digdir/designsystemet-css": "^1.13.3",
     "@statisticsnorway/design-theme": "0.0.1"
   }
 }
