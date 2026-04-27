@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Heading, Paragraph, Tabs, Tooltip } from '@digdir/designsystemet-react'
+import { Heading, Paragraph, Tabs, Tooltip } from '@statisticsnorway/design-react'
 import { CarIcon, BicycleIcon, MotorcycleIcon } from '@navikt/aksel-icons'
 
 const description = `

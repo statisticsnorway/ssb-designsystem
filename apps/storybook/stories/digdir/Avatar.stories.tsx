@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Avatar, Divider, Heading } from '@digdir/designsystemet-react'
+import { Avatar, Divider, Heading } from '@statisticsnorway/design-react'
 import { BriefcaseIcon } from '@navikt/aksel-icons'
 
 const description = `

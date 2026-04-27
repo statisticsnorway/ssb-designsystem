@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Heading, Tag } from '@digdir/designsystemet-react'
+import { Heading, Tag } from '@statisticsnorway/design-react'
 import { RobotIcon } from '@navikt/aksel-icons'
 
 const description = `

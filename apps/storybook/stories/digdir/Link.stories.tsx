@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Link, Paragraph } from '@digdir/designsystemet-react'
+import { Link, Paragraph } from '@statisticsnorway/design-react'
 import { Chat2Icon } from '@navikt/aksel-icons'
 
 const description = `

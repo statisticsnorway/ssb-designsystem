@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Field, Label, Input, ValidationMessage } from '@digdir/designsystemet-react'
+import { Field, Label, Input, ValidationMessage } from '@statisticsnorway/design-react'
 
 const description = `
 Field er et hjelpemiddel for å automatisk koble et felt sammen med Label, Field.Description, ValidationMessage og Field.Counter.

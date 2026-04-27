@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
-import { Heading, Table, type TableHeaderCellProps } from '@digdir/designsystemet-react'
+import { Heading, Table, type TableHeaderCellProps } from '@statisticsnorway/design-react'
 
 const description = `
 Table brukes for å vise strukturert informasjon på en ryddig og oversiktlig måte.

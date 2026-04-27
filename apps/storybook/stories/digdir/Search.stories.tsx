@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Divider, Field, Label, Search } from '@digdir/designsystemet-react'
+import { Divider, Field, Label, Search } from '@statisticsnorway/design-react'
 
 const description = `
 Search lar brukere raskt finne relevant innhold på et nettsted eller i en applikasjon.

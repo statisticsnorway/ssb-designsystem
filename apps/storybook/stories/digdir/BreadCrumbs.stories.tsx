@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Breadcrumbs } from '@digdir/designsystemet-react'
+import { Breadcrumbs } from '@statisticsnorway/design-react'
 
 const description = `
 Breadcrumbs hjelper brukerne med å forstå hvor de er i en struktur, og gjør det mulig å navigere tilbake til høgere nivå.

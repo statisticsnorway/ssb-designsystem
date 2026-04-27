@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useRef, useState } from 'react'
-import { Button, Dialog, Heading, Paragraph } from '@digdir/designsystemet-react'
+import { Button, Dialog, Heading, Paragraph } from '@statisticsnorway/design-react'
 
 const description = `
 Det er to typer dialoger, en modal og en ikke-modal.

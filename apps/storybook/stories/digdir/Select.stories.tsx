@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Field, Label, Select } from '@digdir/designsystemet-react'
+import { Field, Label, Select } from '@statisticsnorway/design-react'
 
 const description = `
 Select lar brukeren velge ett alternativ fra en liste.

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Heading, Label, Paragraph } from '@digdir/designsystemet-react'
+import { Heading, Paragraph } from '@statisticsnorway/design-react'
 
 const meta = {
   title: 'SSB/Typography',

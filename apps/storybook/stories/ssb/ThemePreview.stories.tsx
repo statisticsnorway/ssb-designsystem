@@ -1,7 +1,17 @@
 import type { Meta, StoryObj, StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { ThemePreview } from './ThemePreview'
-import { Heading, Fieldset, ToggleGroup, Link, List, Divider, Button } from '@digdir/designsystemet-react'
+import {
+  Heading,
+  Fieldset,
+  ToggleGroup,
+  Link,
+  List,
+  Divider,
+  Button,
+  Logo,
+  LogoSymbol,
+} from '@statisticsnorway/design-react'
 import { SunIcon, MoonIcon, ChevronUpIcon, ChevronRightIcon } from '@navikt/aksel-icons'
 import classes from './ThemePreview.module.css'
 
@@ -25,10 +35,12 @@ export const Default: StoryFn = () => {
   const [size, setSize] = useState('sm')
   const [colorSchemeMode, setColorSchemeMode] = useState('light')
   const [colorMode, setColorMode] = useState('accent')
-  const footerColorScheme = colorSchemeMode === 'light' ? 'dark' : 'dark'
 
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
+      <div className={classes.header}>
+        <Logo />
+      </div>
       <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
           <Fieldset style={{ display: 'grid', gap: '1rem' }}>
@@ -61,7 +73,7 @@ export const Default: StoryFn = () => {
             <Fieldset.Legend>
               Fargetema <code data-size='xs'>(data-color)</code>
             </Fieldset.Legend>
-            <ToggleGroup variant='secondary' value={colorMode} onChange={setColorMode}>
+            <ToggleGroup value={colorMode} onChange={setColorMode}>
               {colorModes.map((color) => (
                 <ToggleGroup.Item key={color} value={color}>
                   {color}
@@ -72,7 +84,9 @@ export const Default: StoryFn = () => {
         </div>
         <ThemePreview data-size={size} data-color={colorMode} data-color-scheme={colorSchemeMode} />
       </div>
-      <div className={classes.footer} data-color-scheme={footerColorScheme}>
+      <div className={classes.footer} data-color-scheme='dark'>
+        {/* <Logo variant='white' /> */}
+        <LogoSymbol variant='white' />
         <Button
           variant='secondary'
           style={{ float: 'right', marginBottom: '2rem' }}

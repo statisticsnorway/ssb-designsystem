@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Divider, Heading, Paragraph, Skeleton } from '@digdir/designsystemet-react'
+import { Divider, Heading, Paragraph, Skeleton } from '@statisticsnorway/design-react'
 
 const description = `
 Skeleton brukes for å vise at innhold på en side er i ferd med å lastes inn.

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Alert, Heading, Paragraph } from '@digdir/designsystemet-react'
+import { Alert, Heading, Paragraph } from '@statisticsnorway/design-react'
 
 const description = `
 Alert gir brukeren informasjon som det er ekstra viktig at de ser og forstår.

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Fieldset, Radio, ValidationMessage, Heading } from '@digdir/designsystemet-react'
+import { Fieldset, Radio, ValidationMessage, Heading } from '@statisticsnorway/design-react'
 
 const description = `
 Radio er et alternativ brukeren kan velge. Bruk flere Radio for å vise en liste med alternativer.

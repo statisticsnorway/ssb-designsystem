@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Heading, Paragraph, Popover } from '@digdir/designsystemet-react'
+import { Heading, Paragraph, Popover } from '@statisticsnorway/design-react'
 import { TrashIcon } from '@navikt/aksel-icons'
 
 const description = `
