@@ -41,6 +41,7 @@ export const Default: StoryFn = () => {
       {/* <div className={classes.header}>
         <Logo />
       </div> */}
+      <h1>Fargevariant 5</h1>
       <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
           <Fieldset style={{ display: 'grid', gap: '1rem' }}>
