@@ -4,7 +4,7 @@ import type {} from '@digdir/designsystemet-types';
 // Augment types based on theme
 declare module '@digdir/designsystemet-types' {
   export interface ColorDefinitions {
-    'main-1': never;
+    accent: never;
     'main-2': never;
     magic: never;
     neutral: never;

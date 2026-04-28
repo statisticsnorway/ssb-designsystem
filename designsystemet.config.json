@@ -5,7 +5,7 @@
     "ssb": {
       "colors": {
         "main": {
-          "main-1": "#016842",
+          "accent": "#016842",
           "main-2": "#274247"
         },
         "support": {
@@ -15,7 +15,7 @@
       },
       "overrides": {
         "colors": {
-          "main-1": {
+          "accent": {
             "background-tinted": {
               "light": "#e8f8e9"
             },
