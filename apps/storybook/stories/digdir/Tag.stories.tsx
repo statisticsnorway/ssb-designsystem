@@ -37,10 +37,8 @@ export const Variants: Story = {
         </Heading>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Tag data-color='accent'>Standard</Tag>
-          <Tag data-color='accent' variant='outline'>
-            Outline
-          </Tag>
+          <Tag>Standard</Tag>
+          <Tag variant='outline'>Outline</Tag>
           <Tag data-color='neutral'>Neutral</Tag>
           <Tag data-color='info'>Info</Tag>
           <Tag data-color='success'>Success</Tag>

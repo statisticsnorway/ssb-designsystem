@@ -14,8 +14,9 @@
     "primitives/modes/color-scheme/light/ssb",
     "themes/ssb",
     "semantic/color",
-    "semantic/modes/main-color/accent",
-    "semantic/modes/support-color/inverted",
+    "semantic/modes/main-color/primary",
+    "semantic/modes/main-color/coolgray",
+    "semantic/modes/support-color/magic",
     "semantic/style"
   ]
 }
