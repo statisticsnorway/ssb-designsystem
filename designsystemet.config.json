@@ -5,7 +5,7 @@
     "ssb": {
       "colors": {
         "main": {
-          "primary": "#00824D"
+          "accent": "#00824D"
         },
         "support": {
           "coolgray": "#274247",
@@ -15,7 +15,7 @@
       },
       "overrides": {
         "colors": {
-          "primary": {
+          "accent": {
             "background-default": {
               "light": "#FFFFFF"
             },

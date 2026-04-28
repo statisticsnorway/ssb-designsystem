@@ -1,6 +1,6 @@
 {
   "ssb": {
-    "primary": {
+    "accent": {
       "1": {
         "$type": "color",
         "$value": "#FFFFFF"
