@@ -5,11 +5,11 @@
     "ssb": {
       "colors": {
         "main": {
-          "accent": "#016842",
-          "main-2": "#274247"
+          "accent": "#016842"
         },
         "support": {
-          "magic": "#543f9b"
+          "brand1": "#274247",
+          "brand2": "#543f9b"
         },
         "neutral": "#24272B"
       },
@@ -56,7 +56,7 @@
               "light": "#d0f0d1"
             }
           },
-          "main-2": {
+          "brand1": {
             "background-tinted": {
               "light": "#f0f8f9"
             },
@@ -97,7 +97,7 @@
               "light": "#e3f1f2"
             }
           },
-          "magic": {
+          "brand2": {
             "background-tinted": {
               "light": "#f4f2fc"
             },
