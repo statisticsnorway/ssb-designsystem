@@ -5,10 +5,10 @@
     "ssb": {
       "colors": {
         "main": {
-          "primary": "#00824D",
-          "coolgray": "#274247"
+          "primary": "#00824D"
         },
         "support": {
+          "coolgray": "#274247",
           "magic": "#7E5EE8"
         },
         "neutral": "#24272B"

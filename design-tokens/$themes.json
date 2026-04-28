@@ -109,12 +109,12 @@
     "group": "Main color"
   },
   {
-    "id": "768b0d991aa8c075efdbe3589922080390114d40",
+    "id": "51d267d9495d6c25ea2a282bf9f149e5d86bafd4",
     "name": "coolgray",
     "selectedTokenSets": {
-      "semantic/modes/main-color/coolgray": "enabled"
+      "semantic/modes/support-color/coolgray": "enabled"
     },
-    "group": "Main color"
+    "group": "Support color"
   },
   {
     "id": "2fae911e9417cc3322508692cef0415f07a8a6ca",

@@ -1,6 +1,6 @@
 {
   "color": {
-    "main": {
+    "support": {
       "background-default": {
         "$type": "color",
         "$value": "{color.coolgray.background-default}"

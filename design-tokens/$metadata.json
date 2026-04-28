@@ -15,7 +15,7 @@
     "themes/ssb",
     "semantic/color",
     "semantic/modes/main-color/primary",
-    "semantic/modes/main-color/coolgray",
+    "semantic/modes/support-color/coolgray",
     "semantic/modes/support-color/magic",
     "semantic/style"
   ]

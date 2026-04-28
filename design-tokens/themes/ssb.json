@@ -66,72 +66,6 @@
         "$value": "{ssb.primary.16}"
       }
     },
-    "coolgray": {
-      "1": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.1}"
-      },
-      "2": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.2}"
-      },
-      "3": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.3}"
-      },
-      "4": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.4}"
-      },
-      "5": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.5}"
-      },
-      "6": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.6}"
-      },
-      "7": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.7}"
-      },
-      "8": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.8}"
-      },
-      "9": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.9}"
-      },
-      "10": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.10}"
-      },
-      "11": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.11}"
-      },
-      "12": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.12}"
-      },
-      "13": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.13}"
-      },
-      "14": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.14}"
-      },
-      "15": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.15}"
-      },
-      "16": {
-        "$type": "color",
-        "$value": "{ssb.coolgray.16}"
-      }
-    },
     "neutral": {
       "1": {
         "$type": "color",
@@ -196,6 +130,72 @@
       "16": {
         "$type": "color",
         "$value": "{ssb.neutral.16}"
+      }
+    },
+    "coolgray": {
+      "1": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{ssb.coolgray.16}"
       }
     },
     "magic": {
