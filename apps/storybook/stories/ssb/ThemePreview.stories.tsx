@@ -38,9 +38,9 @@ export const Default: StoryFn = () => {
 
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
-      <div className={classes.header}>
+      {/* <div className={classes.header}>
         <Logo />
-      </div>
+      </div> */}
       <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
           <Fieldset style={{ display: 'grid', gap: '1rem' }}>
@@ -86,7 +86,6 @@ export const Default: StoryFn = () => {
       </div>
       <div className={classes.footer} data-color-scheme='dark'>
         {/* <Logo variant='white' /> */}
-        <LogoSymbol variant='white' />
         <Button
           variant='secondary'
           style={{ float: 'right', marginBottom: '2rem' }}
