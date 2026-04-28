@@ -101,18 +101,26 @@
     "group": "Semantic"
   },
   {
-    "id": "77029e975ec86efe4b92eb0be546d61959085bd1",
-    "name": "accent",
+    "id": "41e22b79c6aab4020355a32ec641f36e05c6b3c1",
+    "name": "main-1",
     "selectedTokenSets": {
-      "semantic/modes/main-color/accent": "enabled"
+      "semantic/modes/main-color/main-1": "enabled"
     },
     "group": "Main color"
   },
   {
-    "id": "119c2c050aab9d09ee88bdc008d64d7c3f9dce5a",
-    "name": "inverted",
+    "id": "feb37e089bc7cb670843bf88a0e21c44675ceb96",
+    "name": "main-2",
     "selectedTokenSets": {
-      "semantic/modes/support-color/inverted": "enabled"
+      "semantic/modes/main-color/main-2": "enabled"
+    },
+    "group": "Main color"
+  },
+  {
+    "id": "2fae911e9417cc3322508692cef0415f07a8a6ca",
+    "name": "magic",
+    "selectedTokenSets": {
+      "semantic/modes/support-color/magic": "enabled"
     },
     "group": "Support color"
   }
