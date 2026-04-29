@@ -91,7 +91,7 @@ design-tokens: v1.13.3
 }
 @layer ds.theme.color-scheme.light {
 :root, [data-color-scheme="light"] {
-  --ds-color-accent-background-default: #FFFFFF;
+  --ds-color-accent-background-default: #A892EF;
   --ds-color-accent-background-tinted: #ECFEED;
   --ds-color-accent-surface-default: #FFFFFF;
   --ds-color-accent-surface-tinted: #ECFEED;
@@ -228,7 +228,7 @@ design-tokens: v1.13.3
  
 @media (prefers-color-scheme: light) {
   [data-color-scheme="auto"] {
-  --ds-color-accent-background-default: #FFFFFF;
+  --ds-color-accent-background-default: #A892EF;
   --ds-color-accent-background-tinted: #ECFEED;
   --ds-color-accent-surface-default: #FFFFFF;
   --ds-color-accent-surface-tinted: #ECFEED;
