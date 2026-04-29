@@ -3,7 +3,9 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "strict": true
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true
   },
   "include": ["src", "global.d.ts"]
 }
