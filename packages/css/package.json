@@ -5,21 +5,33 @@
   "description": "CSS for SSBs designsystem",
   "author": "Statistics Norway",
   "license": "MIT",
-  "types": "./types.d.ts",
+  "private": true,
+  "types": "./dist/types.d.ts",
   "files": [
-    "src",
-    "types.d.ts",
+    "dist",
     "README.md"
   ],
   "exports": {
     ".": {
-      "types": "./types.d.ts",
-      "default": "./src/index.css"
+      "development": {
+        "types": "./types.d.ts",
+        "default": "./src/index.css"
+      },
+      "types": "./dist/types.d.ts",
+      "default": "./dist/src/index.css"
     },
     "./index.css": {
-      "types": "./types.d.ts",
-      "default": "./src/index.css"
+      "development": {
+        "types": "./types.d.ts",
+        "default": "./src/index.css"
+      },
+      "types": "./dist/types.d.ts",
+      "default": "./dist/src/index.css"
     }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir -p dist && cp -R src dist/src && cp types.d.ts dist/types.d.ts"
   },
   "dependencies": {
     "@digdir/designsystemet-css": "^1.13.3",
