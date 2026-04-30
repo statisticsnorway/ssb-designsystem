@@ -34,3 +34,7 @@ The repository will evolve to include:
 - Documentation and usage guidelines
 
 Packages are not yet published and may change.
+
+## Release (planned)
+
+Publishing is not set up yet, and packages are currently private.

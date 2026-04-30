@@ -10,8 +10,11 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "tokens:create": "designsystemet tokens create",
     "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/brand",
-    "tokens:update": "npm run tokens:create && npm run tokens:build",
-    "storybook": "npm run storybook -w apps/storybook"
+    "tokens:update": "rm -rf design-tokens && npm run tokens:create && npm run tokens:build",
+    "storybook": "npm run storybook -w apps/storybook",
+    "build:css": "npm run build -w @statisticsnorway/design-css",
+    "build:react": "npm run build -w @statisticsnorway/design-react",
+    "build": "npm run build:css && npm run build:react"
   },
   "devDependencies": {
     "@digdir/designsystemet": "^1.13.3",

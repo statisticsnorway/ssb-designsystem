@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "files": [
-    "brand",
     "types.d.ts",
+    "brand/**",
     "README.md"
   ],
   "exports": {
@@ -19,6 +19,11 @@
     "./ssb.css": {
       "types": "./types.d.ts",
       "default": "./brand/ssb.css"
+    },
+    "./*": {
+      "types": "./types.d.ts",
+      "default": "./brand/*"
     }
-  }
+  },
+  "scripts": {}
 }
