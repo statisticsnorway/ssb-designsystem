@@ -2,9 +2,12 @@
   "name": "@statisticsnorway/design-theme",
   "version": "0.0.1",
   "type": "module",
-  "description": "Statistics Norway theme for Digdir Designsystemet",
+  "description": "Design tokens and theme for SSB’s design system",
   "author": "Statistics Norway",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
+  },
   "private": true,
   "files": [
     "types.d.ts",

@@ -13,8 +13,29 @@ The structure, packages, and workflows are under active development and may chan
 In this initial phase, the repository includes:
 
 - Design tokens (colors, typography, etc.)
-- A theme package based on Digdir’s tooling
-- A CSS package combining Digdir base styles and SSB theme
+- A theme package containing generated design tokens and theme CSS
+- A CSS package that combines Digdir base styles, SSB theme, and fonts
+- A React package that re-exports components from Digdir and includes styling for SSB usage
+
+---
+
+## Development
+
+### Package manager
+
+This project uses pnpm.
+
+Install dependencies:
+
+    pnpm install
+
+Run Storybook:
+
+    pnpm storybook
+
+Build packages:
+
+    pnpm build
 
 ---
 
