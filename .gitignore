@@ -1,6 +1,16 @@
+# Dependencies
 node_modules
-.DS_Store
+
+# Build output
+dist/
+storybook-static
+
+# Logs
 debug-storybook.log
 build-storybook.log
-dist/
+
+# OS
+.DS_Store
+
+# Package artifacts
 *.tgz
