@@ -20,7 +20,7 @@
     "@statisticsnorway/design-react": "workspace:^",
     "@navikt/aksel-icons": "^8.10.4",
     "clsx": "^2.1.1",
-    "react": "^19.2.5",
+    "react": "^19.2.6",
     "react-dom": "^19.2.5"
   }
 }
