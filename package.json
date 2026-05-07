@@ -19,8 +19,8 @@
     "build:react": "pnpm --filter @statisticsnorway/design-react build",
     "build": "pnpm build:css && pnpm build:react",
     "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "changeset:version": "changeset version",
+    "changeset:release": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
