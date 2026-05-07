@@ -20,6 +20,7 @@
     "build": "pnpm build:css && pnpm build:react"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@digdir/designsystemet": "^1.13.3",
     "prettier": "^3.8.3"
   }
