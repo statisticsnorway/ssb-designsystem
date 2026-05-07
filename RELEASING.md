@@ -6,20 +6,24 @@ This repository uses Changesets to manage versioning and releases.
 
 ### Strategy
 
-All design system packages are versioned together:
+Packages are versioned independently.
 
 - `@statisticsnorway/design-theme`
 - `@statisticsnorway/design-css`
 - `@statisticsnorway/design-react`
 
-These packages are tightly coupled:
+These packages have a dependency chain:
 
 - `design-css` depends on `design-theme`
 - `design-react` depends on `design-css`
 
-For this reason, they are released as a single unit and always share the same version.
+When a package changes, only that package is versioned accordingly.
 
-> Note: This strategy may evolve as the design system matures.
+Dependent packages may receive a patch version bump when internal dependencies are updated. This is handled automatically by Changesets.
+
+If a change affects both React components and component styling, both `design-react` and `design-css` should be selected when creating a changeset.
+
+This ensures that versioning reflects actual changes while keeping internal dependencies in sync.
 
 ### Creating a changeset
 

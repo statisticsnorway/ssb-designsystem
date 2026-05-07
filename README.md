@@ -62,6 +62,6 @@ Publishing is not set up yet, and packages are currently private.
 
 ## Versioning
 
-All design system packages share the same version and are released together.
+Design system packages are versioned independently, with internal dependencies kept in sync automatically.
 
 See [RELEASING.md](./RELEASING.md) for details.
