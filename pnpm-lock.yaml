@@ -21,8 +21,8 @@ importers:
   apps/storybook:
     dependencies:
       '@navikt/aksel-icons':
-        specifier: ^8.10.4
-        version: 8.10.4
+        specifier: ^8.10.5
+        version: 8.10.5
       '@statisticsnorway/design-css':
         specifier: workspace:^
         version: link:../../packages/css
@@ -76,8 +76,8 @@ importers:
         specifier: ^1.13.3
         version: 1.13.3
       '@navikt/aksel-icons':
-        specifier: ^8.10.3
-        version: 8.10.4
+        specifier: ^8.10.5
+        version: 8.10.5
       '@statisticsnorway/design-css':
         specifier: workspace:^
         version: link:../css
@@ -645,8 +645,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@navikt/aksel-icons@8.10.4':
-    resolution: {integrity: sha512-LBfZN6plrHcodbK48SU7jwU9i51WQhLLOWgVa96fJsSHDEz/1nntlRsCuw5Jekubo8/TMrT9WgnJuWgtK5OS1w==}
+  '@navikt/aksel-icons@8.10.5':
+    resolution: {integrity: sha512-XDmygarYMyGhGxE5x5uVDCxPPW5dty2A0yVvdT+I6VyRjvDDY/jtAw0NU/HV5itAm7prCwO19IKf1DvjuzU31g==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2620,7 +2620,7 @@ snapshots:
       '@digdir/designsystemet-web': 1.13.3
       '@floating-ui/dom': 1.7.6
       '@floating-ui/react': 0.26.23(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
-      '@navikt/aksel-icons': 8.10.4
+      '@navikt/aksel-icons': 8.10.5
       '@radix-ui/react-slot': 1.2.4(@types/react@19.2.14)(react@19.2.5)
       '@tanstack/react-virtual': 3.13.24(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       clsx: 2.1.1
@@ -3001,7 +3001,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@navikt/aksel-icons@8.10.4': {}
+  '@navikt/aksel-icons@8.10.5': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

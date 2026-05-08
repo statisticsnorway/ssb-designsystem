@@ -39,7 +39,7 @@
   "dependencies": {
     "@digdir/designsystemet-react": "^1.13.3",
     "@digdir/designsystemet-types": "^1.13.3",
-    "@navikt/aksel-icons": "^8.10.3",
+    "@navikt/aksel-icons": "^8.10.5",
     "@statisticsnorway/design-css": "workspace:^"
   },
   "devDependencies": {
