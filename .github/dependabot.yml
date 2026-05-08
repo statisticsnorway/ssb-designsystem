@@ -20,6 +20,13 @@ updates:
         patterns:
           - '@storybook/*'
           - 'storybook'
+          - 'chromatic'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom
       digdir:
         patterns:
           - '@digdir/*'
