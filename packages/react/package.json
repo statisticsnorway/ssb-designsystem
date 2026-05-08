@@ -37,8 +37,8 @@
     "react-dom": ">=18.3.1 || ^19.0.0"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.13.3",
-    "@digdir/designsystemet-types": "^1.13.3",
+    "@digdir/designsystemet-react": "^1.14.0",
+    "@digdir/designsystemet-types": "^1.14.0",
     "@navikt/aksel-icons": "^8.10.3",
     "@statisticsnorway/design-css": "workspace:^"
   },

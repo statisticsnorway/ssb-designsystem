@@ -40,7 +40,7 @@
     "build": "pnpm clean && mkdir -p dist && cp -R src dist/src && cp types.d.ts dist/types.d.ts"
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.13.3",
+    "@digdir/designsystemet-css": "^1.14.0",
     "@statisticsnorway/design-theme": "workspace:^"
   }
 }

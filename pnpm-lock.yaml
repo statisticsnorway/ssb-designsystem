@@ -12,8 +12,8 @@ importers:
         specifier: ^2.31.0
         version: 2.31.0
       '@digdir/designsystemet':
-        specifier: ^1.13.3
-        version: 1.13.3(tslib@2.8.1)
+        specifier: ^1.14.0
+        version: 1.14.0(tslib@2.8.1)
       prettier:
         specifier: ^3.8.3
         version: 3.8.3
@@ -61,8 +61,8 @@ importers:
   packages/css:
     dependencies:
       '@digdir/designsystemet-css':
-        specifier: ^1.13.3
-        version: 1.13.3
+        specifier: ^1.14.0
+        version: 1.14.0
       '@statisticsnorway/design-theme':
         specifier: workspace:^
         version: link:../theme
@@ -70,11 +70,11 @@ importers:
   packages/react:
     dependencies:
       '@digdir/designsystemet-react':
-        specifier: ^1.13.3
-        version: 1.13.3(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+        specifier: ^1.14.0
+        version: 1.14.0(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@digdir/designsystemet-types':
-        specifier: ^1.13.3
-        version: 1.13.3
+        specifier: ^1.14.0
+        version: 1.14.0
       '@navikt/aksel-icons':
         specifier: ^8.10.3
         version: 8.10.4
@@ -254,23 +254,23 @@ packages:
     peerDependencies:
       commander: ~14.0.0
 
-  '@digdir/designsystemet-css@1.13.3':
-    resolution: {integrity: sha512-ZtuygHy9xm6DVBi59pGKdbiR7vPNcwHx6e4E3xRgxL0nT6262vbYpaU+woiMS0a+krPpvkJ6K6CBmNcIqsV8IQ==}
+  '@digdir/designsystemet-css@1.14.0':
+    resolution: {integrity: sha512-qAIpcrFgO80p5TrVWcRUC8xO1ZAEp1j39kQ+WLyBuM/BBsgLXBZVIUaju3ZI1rsQFNyY/QZ9CKQslnoOVAeCkQ==}
 
-  '@digdir/designsystemet-react@1.13.3':
-    resolution: {integrity: sha512-RwCrXiKxvFMLJAwtpiRl26PHecRlwXFu1155vJE8oVuxY1nFW/5xqUbBtuX3MsSBoy6SN2byxN22hoJhJC4q/Q==}
+  '@digdir/designsystemet-react@1.14.0':
+    resolution: {integrity: sha512-m4lYxbWv0bY5ayg0L+DueSrrhk2W+A0ovs443MteABwcx6pLDYPQMVl0FGZ/Wtn2gB92ZivvWuVhUxdom13dKg==}
     peerDependencies:
       react: '>=18.3.1 || ^19.0.0'
       react-dom: '>=18.3.1 || ^19.0.0'
 
-  '@digdir/designsystemet-types@1.13.3':
-    resolution: {integrity: sha512-yGhZoQmHhRmUGw8isyS2k3xgtI8yB+7s2wWnstdemVpls+SSZmDs3g1d3+Cj16PNNOnevDUDS6oxd+txF1zGBQ==}
+  '@digdir/designsystemet-types@1.14.0':
+    resolution: {integrity: sha512-d/JZhwebAgclFsE7ax0Z8mWotEk3GE4e9+iC8Cq8EN5BQ+bOptwFrVipSrL+NAt8/7AX9WzrnAScPuxCb4vvgQ==}
 
-  '@digdir/designsystemet-web@1.13.3':
-    resolution: {integrity: sha512-lzyMa7uIdbd5t5C74GffZIahzQyoidJCD/eiUQXustVvI/2JxNP36rTyM6QRZcsfNMr3I5s0hewGBsGhq/ab2w==}
+  '@digdir/designsystemet-web@1.14.0':
+    resolution: {integrity: sha512-dmUnV/0wzTOSPnSGqQwjYyneuO+/QqfugAr2SP1N1m/VzfMal3Y5hD+AkDWWzWhJ7EJrhGtYwG5JVRM8iYuVeQ==}
 
-  '@digdir/designsystemet@1.13.3':
-    resolution: {integrity: sha512-Clr56SrOku6VaiUmAKkXM/e5Xvqrkp6eFdlLYto//rWjkbQnlLHkKu842H4ae9x0HSxPHXmXtuq6SH0zoq3FXA==}
+  '@digdir/designsystemet@1.14.0':
+    resolution: {integrity: sha512-y+CWrrjzlEBbu0DmcdhwC5167rz+l5qUIb0l4dLMkxIrkQKXSC0dt/aoxATFsHhVTehbKuYUrGZdCkZTW+/bSA==}
     engines: {node: '>=20.20.2'}
     hasBin: true
 
@@ -961,11 +961,11 @@ packages:
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
 
-  '@u-elements/u-combobox@1.0.7':
-    resolution: {integrity: sha512-rueG+Wof9ycmbjIW2omS4bLite5BkH87SWfkBrvSjrR1GWn4wgpjnUQ1lORDRalYcPYlgFWy2uGFEqqKPx3Yqw==}
+  '@u-elements/u-combobox@2.0.4':
+    resolution: {integrity: sha512-+X4w54dgySFJWer2n5Q5wYm48vSYW2kiM0fibjFINU8hXeejf+A4qYy4s56g9StHyH3b2Ar/2ZEWgZALGE2zLA==}
 
-  '@u-elements/u-datalist@1.1.0':
-    resolution: {integrity: sha512-t8H3OddziXmq0YBuXodVWnvRi56WW4sfbJEIO1fx4i39sZ0s/0xjHBsoAsTZkb9mXJEtpgrsH8IkDYP0ZSgSXQ==}
+  '@u-elements/u-datalist@2.0.1':
+    resolution: {integrity: sha512-xfbSiTZApvbqCt6W3LUtoyAArxOYq17Em9mYyjStiq5/XpshTVsN1JkqSqo+OjVOwDieggyAQsRwgloZgtHB7Q==}
 
   '@u-elements/u-details@1.0.0':
     resolution: {integrity: sha512-CA0w0VTH/vWWouFWEw7XIws3RUCBm2dh7ity+sbDXgpc6yz5NkoMpeDTdB/DHpI+/YInULz0XLOTrw8b7KX3Qg==}
@@ -2610,14 +2610,14 @@ snapshots:
     dependencies:
       commander: 14.0.3
 
-  '@digdir/designsystemet-css@1.13.3':
+  '@digdir/designsystemet-css@1.14.0':
     dependencies:
-      '@digdir/designsystemet-types': 1.13.3
+      '@digdir/designsystemet-types': 1.14.0
 
-  '@digdir/designsystemet-react@1.13.3(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)':
+  '@digdir/designsystemet-react@1.14.0(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)':
     dependencies:
-      '@digdir/designsystemet-types': 1.13.3
-      '@digdir/designsystemet-web': 1.13.3
+      '@digdir/designsystemet-types': 1.14.0
+      '@digdir/designsystemet-web': 1.14.0
       '@floating-ui/dom': 1.7.6
       '@floating-ui/react': 0.26.23(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@navikt/aksel-icons': 8.10.4
@@ -2629,20 +2629,20 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@digdir/designsystemet-types@1.13.3': {}
+  '@digdir/designsystemet-types@1.14.0': {}
 
-  '@digdir/designsystemet-web@1.13.3':
+  '@digdir/designsystemet-web@1.14.0':
     dependencies:
       '@floating-ui/dom': 1.7.6
-      '@u-elements/u-combobox': 1.0.7
-      '@u-elements/u-datalist': 1.1.0
+      '@u-elements/u-combobox': 2.0.4
+      '@u-elements/u-datalist': 2.0.1
       '@u-elements/u-details': 1.0.0
       '@u-elements/u-tabs': 1.0.3
 
-  '@digdir/designsystemet@1.13.3(tslib@2.8.1)':
+  '@digdir/designsystemet@1.14.0(tslib@2.8.1)':
     dependencies:
       '@commander-js/extra-typings': 14.0.0(commander@14.0.3)
-      '@digdir/designsystemet-types': 1.13.3
+      '@digdir/designsystemet-types': 1.14.0
       '@tokens-studio/sd-transforms': 2.0.3(style-dictionary@5.4.0(tslib@2.8.1))
       chroma-js: 3.2.0
       colorjs.io: 0.6.1
@@ -3306,9 +3306,9 @@ snapshots:
 
   '@types/resolve@1.20.6': {}
 
-  '@u-elements/u-combobox@1.0.7': {}
+  '@u-elements/u-combobox@2.0.4': {}
 
-  '@u-elements/u-datalist@1.1.0': {}
+  '@u-elements/u-datalist@2.0.1': {}
 
   '@u-elements/u-details@1.0.0': {}
 
