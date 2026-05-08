@@ -52,8 +52,8 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
       chromatic:
-        specifier: ^16.7.0
-        version: 16.8.0
+        specifier: ^16.9.1
+        version: 16.9.1
       storybook:
         specifier: ^10.3.5
         version: 10.3.6(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -1183,8 +1183,8 @@ packages:
   chroma-js@3.2.0:
     resolution: {integrity: sha512-os/OippSlX1RlWWr+QDPcGUZs0uoqr32urfxESG9U93lhUfbnlyckte84Q8P1UQY/qth983AS1JONKmLS4T0nw==}
 
-  chromatic@16.8.0:
-    resolution: {integrity: sha512-61Ma2LBOB8x2uyVnVn0RkPxtPNlg6crXmOn9X3gEcKuRDbJQUfNSKTjRCX18YSOW0lxGrzmkQO5Qj+P0l4GEkQ==}
+  chromatic@16.9.1:
+    resolution: {integrity: sha512-+EkBJqLfeCfSqC3rz1H8GDwT9OoHRB/iX3qbjtW9wu3BeySnDjumD8E/BflEsHV7RoCzeKcp85zKGR/ZKcX7rw==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -3525,7 +3525,7 @@ snapshots:
 
   chroma-js@3.2.0: {}
 
-  chromatic@16.8.0:
+  chromatic@16.9.1:
     dependencies:
       semver: 7.7.4
 
