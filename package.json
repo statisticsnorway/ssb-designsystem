@@ -13,8 +13,8 @@
     "tokens:create": "designsystemet tokens create",
     "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/brand",
     "tokens:update": "rm -rf design-tokens && pnpm tokens:create && pnpm tokens:build",
-    "storybook": "pnpm --filter @ssb/storybook storybook",
-    "storybook:build": "pnpm --filter @ssb/storybook build-storybook",
+    "storybook": "pnpm --filter @statisticsnorway/storybook storybook",
+    "storybook:build": "pnpm --filter @statisticsnorway/storybook build-storybook",
     "build:css": "pnpm --filter @statisticsnorway/design-css build",
     "build:react": "pnpm --filter @statisticsnorway/design-react build",
     "build": "pnpm build:css && pnpm build:react",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
-    "@digdir/designsystemet": "^1.13.3",
+    "@digdir/designsystemet": "^1.14.0",
     "prettier": "^3.8.3"
   }
 }

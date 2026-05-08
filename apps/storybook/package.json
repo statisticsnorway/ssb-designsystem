@@ -12,15 +12,15 @@
     "@storybook/react-vite": "^10.3.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "chromatic": "^16.7.0",
+    "chromatic": "^16.9.1",
     "storybook": "^10.3.5"
   },
   "dependencies": {
+    "@navikt/aksel-icons": "^8.10.5",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
-    "@navikt/aksel-icons": "^8.10.4",
     "clsx": "^2.1.1",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   }
 }
