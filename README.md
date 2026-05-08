@@ -59,3 +59,9 @@ Packages are not yet published and may change.
 ## Release (planned)
 
 Publishing is not set up yet, and packages are currently private.
+
+## Versioning
+
+Design system packages are versioned independently, with internal dependencies kept in sync automatically.
+
+See [RELEASING.md](./RELEASING.md) for details.
