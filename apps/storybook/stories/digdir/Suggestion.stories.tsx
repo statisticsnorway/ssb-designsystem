@@ -1,17 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Alert } from '@statisticsnorway/design-react'
+import { Field, Label, EXPERIMENTAL_Suggestion } from '@statisticsnorway/design-react'
+
+const DATA_PLACES = ['Rana', 'Oslo', 'Akershus', 'Karmøy', 'Trondheim', 'Bergen', 'Lillestrøm']
 
 const description = `
-Suggestion brukes til å vise forslag basert på det brukeren skriver i et felt.
+⚠️ Suggestion er under utvikling hos Digdir, og kan fortsatt få endringer og forbedringer.
 
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/suggestion/overview
+Suggestion er en søkbar select med mulighet for å velge ett eller flere alternativer.
+
+Se full dokumentasjon: https://designsystemet.no/no/components/docs/suggestion/overview
 `
 
-const meta: Meta<typeof Alert> = {
+const meta: Meta<typeof EXPERIMENTAL_Suggestion> = {
   title: 'Digdir/Suggestion',
-  component: Alert,
+  component: EXPERIMENTAL_Suggestion,
   parameters: {
+    layout: 'centered',
     docs: {
       description: {
         component: description,
@@ -21,13 +25,46 @@ const meta: Meta<typeof Alert> = {
 }
 
 export default meta
-type Story = StoryObj<typeof meta>
+
+type Story = StoryObj<typeof EXPERIMENTAL_Suggestion>
 
 export const Default: Story = {
   render: () => (
-    <Alert data-color='warning'>
-      Suggestion er en eksperimentell komponent hos Digdir. Vi viser derfor foreløpig ikke egne eksempler her. Se lenken
-      til Digdir for oppdatert dokumentasjon og eksempelbruk.
-    </Alert>
+    <Field>
+      <Label>Velg en destinasjon</Label>
+      <EXPERIMENTAL_Suggestion>
+        <EXPERIMENTAL_Suggestion.Input />
+        <EXPERIMENTAL_Suggestion.Clear />
+        <EXPERIMENTAL_Suggestion.List>
+          <EXPERIMENTAL_Suggestion.Empty>Ingen treff</EXPERIMENTAL_Suggestion.Empty>
+          {DATA_PLACES.map((place) => (
+            <EXPERIMENTAL_Suggestion.Option key={place} label={place} value={place}>
+              {place}
+              <div>Kommune</div>
+            </EXPERIMENTAL_Suggestion.Option>
+          ))}
+        </EXPERIMENTAL_Suggestion.List>
+      </EXPERIMENTAL_Suggestion>
+    </Field>
+  ),
+}
+
+export const Multiple: Story = {
+  render: () => (
+    <Field>
+      <Label>Velg en eller flere destinasjoner</Label>
+      <EXPERIMENTAL_Suggestion multiple>
+        <EXPERIMENTAL_Suggestion.Input />
+        <EXPERIMENTAL_Suggestion.Clear />
+        <EXPERIMENTAL_Suggestion.List>
+          <EXPERIMENTAL_Suggestion.Empty>Ingen treff</EXPERIMENTAL_Suggestion.Empty>
+          {DATA_PLACES.map((place) => (
+            <EXPERIMENTAL_Suggestion.Option key={place} value={place}>
+              {place}
+            </EXPERIMENTAL_Suggestion.Option>
+          ))}
+        </EXPERIMENTAL_Suggestion.List>
+      </EXPERIMENTAL_Suggestion>
+    </Field>
   ),
 }
