@@ -1,0 +1,31 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks'
+import * as LogoStories from './Logo.stories'
+import * as LogoSymbolStories from './LogoSymbol.stories'
+
+<Meta title='SSB/Logo/Documentation' />
+
+# Logo
+
+## Slik bruker du Logo
+
+<Canvas of={LogoStories.Default} />
+<Controls of={LogoStories.Default} />
+
+{/* prettier-ignore */}
+```tsx
+import { Logo } from '@statisticsnorway/design-react'
+
+<Logo />
+```
+
+## Slik bruker du LogoSymbol
+
+<Canvas of={LogoSymbolStories.Default} />
+<Controls of={LogoStories.Default} />
+
+{/* prettier-ignore */}
+```tsx
+import { LogoSymbol } from '@statisticsnorway/design-react'
+
+<Logo />
+```

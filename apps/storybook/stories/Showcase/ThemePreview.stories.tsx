@@ -16,7 +16,7 @@ import { SunIcon, MoonIcon, ChevronUpIcon, ChevronRightIcon } from '@navikt/akse
 import classes from './ThemePreview.module.css'
 
 const meta = {
-  title: 'SSB/Theme Preview',
+  title: 'Showcase/Theme Preview',
   tags: ['!autodocs'],
   parameters: {
     layout: 'fullscreen',
