@@ -6,7 +6,8 @@
     "jsx": "react-jsx",
     "strict": true,
     "declaration": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": ["src", "global.d.ts"]
 }
