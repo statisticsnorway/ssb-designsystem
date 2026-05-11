@@ -18,6 +18,7 @@
     "build:css": "pnpm --filter @statisticsnorway/design-css build",
     "build:react": "pnpm --filter @statisticsnorway/design-react build",
     "build": "pnpm build:css && pnpm build:react",
+    "test": "pnpm --filter @statisticsnorway/design-react test:run",
     "changeset": "changeset",
     "changeset:version": "changeset version",
     "changeset:release": "pnpm build && changeset publish"

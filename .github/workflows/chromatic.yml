@@ -6,14 +6,18 @@ on:
       - main
     paths:
       - 'apps/storybook/**'
-      - 'packages/**'
+      - 'packages/react/src/**'
+      - 'packages/css/**'
+      - 'packages/theme/**'
 
   push:
     branches:
       - main
     paths:
       - 'apps/storybook/**'
-      - 'packages/**'
+      - 'packages/react/src/**'
+      - 'packages/css/**'
+      - 'packages/theme/**'
 
 permissions:
   contents: read
