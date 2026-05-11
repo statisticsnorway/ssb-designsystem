@@ -8,7 +8,7 @@ const preview: Preview = {
     layout: 'padded',
     options: {
       storySort: {
-        order: ['SSB', 'Digdir'],
+        order: ['Showcase', 'SSB', 'Digdir'],
         method: 'alphabetical',
       },
     },
