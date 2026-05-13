@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Heading, Tag } from '@statisticsnorway/design-react'
 import { RobotIcon } from '@navikt/aksel-icons'
 

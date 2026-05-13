@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Card, Divider, Heading, Paragraph, Link } from '@statisticsnorway/design-react'
 
 const description = `
