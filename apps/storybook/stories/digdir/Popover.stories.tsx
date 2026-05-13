@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Heading, Paragraph, Popover } from '@statisticsnorway/design-react'
 import { TrashIcon } from '@navikt/aksel-icons'
 

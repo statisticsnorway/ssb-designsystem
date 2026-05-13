@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Heading, Paragraph, Tabs, Tooltip } from '@statisticsnorway/design-react'
 import { CarIcon, BicycleIcon, MotorcycleIcon } from '@navikt/aksel-icons'
 

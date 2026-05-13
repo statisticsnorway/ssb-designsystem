@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Heading, ToggleGroup, Tooltip } from '@statisticsnorway/design-react'
 import { AlignLeftIcon, AlignCenterIcon, AlignRightIcon } from '@navikt/aksel-icons'
 
