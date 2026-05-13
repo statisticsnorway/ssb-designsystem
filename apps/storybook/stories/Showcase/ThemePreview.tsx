@@ -20,6 +20,7 @@ import {
   Textfield,
   Select,
   Skeleton,
+  Switch,
   Pagination,
 } from '@statisticsnorway/design-react'
 import { type HTMLAttributes, useState } from 'react'
@@ -58,69 +59,71 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             <Tabs.Tab value='figure'>Vis som figur</Tabs.Tab>
           </Tabs.List>
           <Tabs.Panel value='table'>
-            <Table border={tableBorder} zebra={tableZebra} hover={tableHover} className={classes.table}>
-              <Table.Head>
-                <Table.Row>
-                  <Table.HeaderCell onClick={function Ya() {}} sort='none'>
-                    Navn
-                  </Table.HeaderCell>
-                  <Table.HeaderCell>Epost</Table.HeaderCell>
-                  <Table.HeaderCell>Status</Table.HeaderCell>
-                </Table.Row>
-              </Table.Head>
-              <Table.Body>
-                <Table.Row>
-                  <Table.Cell className={classes.tableCellAvatar}>
-                    <Avatar aria-label='Lise'>LN</Avatar>
-                    Lise Nordmann
-                  </Table.Cell>
-                  <Table.Cell>lise@nordmann.no</Table.Cell>
-                  <Table.Cell>
-                    <Tag>aktiv</Tag>
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell className={classes.tableCellAvatar}>
-                    <Avatar aria-label='Ola'>ON</Avatar>
-                    Ola Nordmann
-                  </Table.Cell>
-                  <Table.Cell>ola@nordmann.no</Table.Cell>
-                  <Table.Cell>
-                    <Tag data-color='warning'>inaktiv</Tag>
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell className={classes.tableCellAvatar}>
-                    <Avatar aria-label='Maren'>MK</Avatar>
-                    Maren Knutsen
-                  </Table.Cell>
-                  <Table.Cell>maren.knutsen@ssb.no</Table.Cell>
-                  <Table.Cell>
-                    <Tag data-color='warning'>Designer</Tag>
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell className={classes.tableCellAvatar}>
-                    <Avatar aria-label='mann'>IK</Avatar>
-                    Ina Kristiansen
-                  </Table.Cell>
-                  <Table.Cell>Ina.Viktoria.Kristiansen@ssb.no</Table.Cell>
-                  <Table.Cell>
-                    <Tag data-color='warning'>Designer</Tag>
-                  </Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell className={classes.tableCellAvatar}>
-                    <Avatar aria-label='carina'>CG</Avatar>
-                    Carina Nordseth
-                  </Table.Cell>
-                  <Table.Cell>cgn@ssb.no</Table.Cell>
-                  <Table.Cell>
-                    <Tag data-color='warning'>Utvikler</Tag>
-                  </Table.Cell>
-                </Table.Row>
-              </Table.Body>
-            </Table>
+            <div className={classes.tableScroll}>
+              <Table border={tableBorder} zebra={tableZebra} hover={tableHover} className={classes.table}>
+                <Table.Head>
+                  <Table.Row>
+                    <Table.HeaderCell onClick={function Ya() {}} sort='none'>
+                      Navn
+                    </Table.HeaderCell>
+                    <Table.HeaderCell>Epost</Table.HeaderCell>
+                    <Table.HeaderCell>Status</Table.HeaderCell>
+                  </Table.Row>
+                </Table.Head>
+                <Table.Body>
+                  <Table.Row>
+                    <Table.Cell className={classes.tableCellAvatar}>
+                      <Avatar aria-label='Lise'>LN</Avatar>
+                      Lise Nordmann
+                    </Table.Cell>
+                    <Table.Cell>lise@nordmann.no</Table.Cell>
+                    <Table.Cell>
+                      <Tag>aktiv</Tag>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell className={classes.tableCellAvatar}>
+                      <Avatar aria-label='Ola'>ON</Avatar>
+                      Ola Nordmann
+                    </Table.Cell>
+                    <Table.Cell>ola@nordmann.no</Table.Cell>
+                    <Table.Cell>
+                      <Tag data-color='warning'>inaktiv</Tag>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell className={classes.tableCellAvatar}>
+                      <Avatar aria-label='Maren'>MK</Avatar>
+                      Maren Knutsen
+                    </Table.Cell>
+                    <Table.Cell>maren.knutsen@ssb.no</Table.Cell>
+                    <Table.Cell>
+                      <Tag data-color='warning'>Designer</Tag>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell className={classes.tableCellAvatar}>
+                      <Avatar aria-label='mann'>IK</Avatar>
+                      Ina Kristiansen
+                    </Table.Cell>
+                    <Table.Cell>Ina.Viktoria.Kristiansen@ssb.no</Table.Cell>
+                    <Table.Cell>
+                      <Tag data-color='warning'>Designer</Tag>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell className={classes.tableCellAvatar}>
+                      <Avatar aria-label='carina'>CG</Avatar>
+                      Carina Nordseth
+                    </Table.Cell>
+                    <Table.Cell>cgn@ssb.no</Table.Cell>
+                    <Table.Cell>
+                      <Tag data-color='warning'>Utvikler</Tag>
+                    </Table.Cell>
+                  </Table.Row>
+                </Table.Body>
+              </Table>
+            </div>
             <Pagination className={classes.tablePagination} aria-label='Sidenavigering'>
               <Pagination.List>
                 <Pagination.Item>
@@ -161,39 +164,6 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             </div>
           </Tabs.Panel>
         </Tabs>
-      </div>
-
-      <div className={cl(classes.card, classes.chips)}>
-        <Heading className={classes.cardTitle}>Chips</Heading>
-        <div
-          style={{
-            display: 'flex',
-            gap: '1rem',
-          }}
-        >
-          <Chip.Radio name='my-radio' value='av'>
-            Av
-          </Chip.Radio>
-          <Chip.Radio name='my-radio' value='paa' defaultChecked>
-            På
-          </Chip.Radio>
-
-          <Chip.Checkbox>Checkbox</Chip.Checkbox>
-          <Chip.Removable>Removable</Chip.Removable>
-          <Chip.Button>Button</Chip.Button>
-        </div>
-
-        <Heading level={2}>Buttons</Heading>
-        <div
-          style={{
-            display: 'flex',
-            gap: '1rem',
-          }}
-        >
-          <Button variant='primary'>Primary</Button>
-          <Button variant='secondary'>Secondary</Button>
-          <Button variant='tertiary'>Tertiary</Button>
-        </div>
       </div>
 
       <div className={cl(classes.card, classes.calculator)}>
@@ -249,50 +219,38 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
         </Fieldset>
         <Button onClick={() => setShowError(true)}>Se ny husleie</Button>
       </div>
-      <div className={cl(classes.cardWithoutBackground, classes.faqSection)}>
-        <Heading data-size='md'>Ofte stillte spørsmål</Heading>
-        <Card>
-          <Details>
-            <Details.Summary>Hvordan beregnes ny husleie?</Details.Summary>
-            <Details.Content>
-              Ny husleie beregnes ut fra endringen i konsumprisindeksen fra tidspunktet du sist justerte husleien.
-            </Details.Content>
-          </Details>
 
-          <Details>
-            <Details.Summary>Hvor ofte kan husleien justeres?</Details.Summary>
-            <Details.Content>
-              Husleien kan normalt justeres én gang i året, så lenge reglene i husleieloven blir fulgt.
-            </Details.Content>
-          </Details>
+      <div className={cl(classes.card, classes.chips)}>
+        <Heading data-size='sm'>Chips</Heading>
+        <div className={classes.chipGroup}>
+          <Chip.Radio name='my-radio' value='av'>
+            Av
+          </Chip.Radio>
+          <Chip.Radio name='my-radio' value='paa' defaultChecked>
+            På
+          </Chip.Radio>
 
-          <Details>
-            <Details.Summary>Må leietakeren varsles på forhånd?</Details.Summary>
-            <Details.Content>
-              Ja, leietakeren skal få skriftlig varsel minst én måned før ny husleie trer i kraft.
-            </Details.Content>
-          </Details>
+          <Chip.Checkbox>Checkbox</Chip.Checkbox>
+          <Chip.Removable>Removable</Chip.Removable>
+          <Chip.Button>Button</Chip.Button>
+        </div>
 
-          <Details>
-            <Details.Summary>Hvor kan jeg lese mer om reglene?</Details.Summary>
-            <Details.Content>
-              <Paragraph>
-                Du kan lese mer hos <Link href='#'>Husleietvistutvalget</Link>.
-              </Paragraph>
-            </Details.Content>
-          </Details>
-        </Card>
+        <Heading data-size='sm'>Buttons</Heading>
+        <div className={classes.buttonGroup}>
+          <Button variant='primary'>Primary</Button>
+          <Button variant='secondary'>Secondary</Button>
+          <Button variant='tertiary'>Tertiary</Button>
+        </div>
+        <Heading data-size='sm'>Switch </Heading>
+        <div className={classes.buttonGroup}>
+          <Switch label='Switch default' checked />
+          <Switch variant='outline' label='Switch outlined' checked />
+        </div>
       </div>
-      <div className={cl(classes.cardWithMainBackground, classes.news)}>
+
+      <div className={cl(classes.cardWithMainBackground, classes.cards)}>
         <Heading data-size='md'>Card</Heading>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '320px 320px 320px',
-            gap: '2rem',
-            alignItems: 'start',
-          }}
-        >
+        <div className={classes.cardsGrid}>
           <Card data-variant='tinted'>
             <Card.Block>
               <img src='/img/animals/roe-deer.jpg' alt='deer' />
@@ -320,36 +278,22 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             </Card.Block>
           </Card>
 
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1rem',
-            }}
-          >
-            <Card>
+          <Card asChild data-color='neutral'>
+            <button type='button'>
               <Card.Block>
-                <Heading>
-                  <Link href='#'>Lenkekort</Link>
-                </Heading>
+                <Heading>Innstillinger og personvern</Heading>
+              </Card.Block>
+              <Card.Block>
                 <Paragraph>
-                  Her finner du en kort oppsummering av innholdet. Tittelen fungerer som lenke til mer informasjon.
+                  Dette åpner en dialog der du kan oppdatere personvernvalg, justere innstillinger og tilpasse hvordan
+                  tjenesten behandler informasjonen din. Du kan se gjennom endringene før du lagrer.
                 </Paragraph>
               </Card.Block>
-            </Card>
-            <Card variant='tinted'>
-              <Card.Block>
-                <Heading>
-                  <Link href='#'>Lenkekort Tinted</Link>
-                </Heading>
-                <Paragraph>
-                  Her finner du en kort oppsummering av innholdet. Tittelen fungerer som lenke til mer informasjon.
-                </Paragraph>
-              </Card.Block>
-            </Card>
-          </div>
+            </button>
+          </Card>
         </div>
       </div>
+
       <div className={cl(classes.cardWithoutBackground, classes.linksList)}>
         <Heading data-size='md'>Lenkeliste</Heading>
         <List.Unordered
@@ -375,9 +319,40 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
           </List.Item>
         </List.Unordered>
       </div>
+
       <div className={cl(classes.cardWithoutBackground, classes.cardLinks)}>
         <Heading data-size='md'>Lenkekort</Heading>
-        <div style={{ display: 'flex', gap: '1rem' }}>
+
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+          }}
+        >
+          <Card>
+            <Card.Block>
+              <Heading>
+                <Link href='#'>Lenkekort</Link>
+              </Heading>
+              <Paragraph>
+                Her finner du en kort oppsummering av innholdet. Tittelen fungerer som lenke til mer informasjon.
+              </Paragraph>
+            </Card.Block>
+          </Card>
+          <Card variant='tinted'>
+            <Card.Block>
+              <Heading>
+                <Link href='#'>Lenkekort Tinted</Link>
+              </Heading>
+              <Paragraph>
+                Her finner du en kort oppsummering av innholdet. Tittelen fungerer som lenke til mer informasjon.
+              </Paragraph>
+            </Card.Block>
+          </Card>
+        </div>
+
+        {/* <div style={{ display: 'flex', gap: '1rem' }}>
           <Card
             variant='tinted'
             style={{
@@ -411,7 +386,38 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
               </Paragraph>
             </Card.Block>
           </Card>
-        </div>
+        </div> */}
+      </div>
+
+      <div className={cl(classes.cardWithoutBackground, classes.details)}>
+        <Heading data-size='md'>Details</Heading>
+        <Card>
+          <Details>
+            <Details.Summary>Hvordan beregnes ny husleie?</Details.Summary>
+            <Details.Content>
+              Ny husleie beregnes ut fra endringen i konsumprisindeksen fra tidspunktet du sist justerte husleien.
+            </Details.Content>
+          </Details>
+
+          <Details>
+            <Details.Summary>Hvor ofte kan husleien justeres?</Details.Summary>
+            <Details.Content>
+              Husleien kan normalt justeres én gang i året, så lenge reglene i husleieloven blir fulgt.
+            </Details.Content>
+          </Details>
+
+          <Details>
+            <Details.Summary>Må leietakeren varsles på forhånd?</Details.Summary>
+            <Details.Content>
+              Ja, leietakeren skal få skriftlig varsel minst én måned før ny husleie trer i kraft.
+            </Details.Content>
+          </Details>
+
+          <Details data-variant='tinted'>
+            <Details.Summary>Vedlegg (Tinted)</Details.Summary>
+            <Details.Content>Vedlegg 1, vedlegg 2, vedlegg 3</Details.Content>
+          </Details>
+        </Card>
       </div>
     </div>
   )
