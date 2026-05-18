@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Input, Field, Label, ValidationMessage } from '@statisticsnorway/design-react'
 
 const description = `

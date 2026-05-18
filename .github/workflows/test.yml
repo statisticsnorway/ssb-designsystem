@@ -1,18 +1,21 @@
 name: Test
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
-
-  push:
-    branches:
-      - main
-
+    paths:
+      - '.github/workflows/test.yml'
+      - 'packages/react/**'
+      - 'pnpm-lock.yaml'
+      - 'package.json'
+      - 'pnpm-workspace.yaml'
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -23,11 +26,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 22.x
           cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run tests
-        run: pnpm test
+      - name: Run React tests
+        run: pnpm --filter @statisticsnorway/design-react test

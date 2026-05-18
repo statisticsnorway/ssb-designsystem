@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Field, Label, EXPERIMENTAL_Suggestion } from '@statisticsnorway/design-react'
 
 const DATA_PLACES = ['Rana', 'Oslo', 'Akershus', 'Karmøy', 'Trondheim', 'Bergen', 'Lillestrøm']
