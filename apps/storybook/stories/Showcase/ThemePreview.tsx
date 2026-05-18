@@ -2,7 +2,6 @@ import {
   Alert,
   Button,
   Card,
-  Checkbox,
   Chip,
   Details,
   Heading,
@@ -291,36 +290,46 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             <Paragraph>Med SSBs husleiekalkulator kan du regne ut ny husleie.</Paragraph>
           </Card>
 
-          <div className={cl(classes.cardWithoutBackground, classes.linksList)}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '2rem',
+            }}
+          >
             <Card variant='tinted'>
               <Heading level={3}>
                 <Link href='#'>Navnestatistikken</Link>
               </Heading>
               <Paragraph>Med SSBs husleiekalkulator kan du regne ut ny husleie.</Paragraph>
             </Card>
-            <Heading data-size='md'>Lenkeliste</Heading>
-            <List.Unordered
-              style={{
-                listStyle: 'none',
-                padding: 0,
-              }}
-            >
-              <List.Item>
-                <Link href=''>
-                  <TableIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
-                  <span>Statistikkbanken</span>
-                </Link>
-              </List.Item>
-              <List.Item>
-                <Link href=''>
-                  <CalculatorIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
-                  <span>Våre kalkulatorer</span>
-                </Link>
-              </List.Item>
-              <List.Item>
-                <Link href=''>Svare på undersøkelse</Link>
-              </List.Item>
-            </List.Unordered>
+
+            <div>
+              <Heading data-size='sm'>Lenkeliste</Heading>
+              <List.Unordered
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  marginTop: '0.5rem',
+                }}
+              >
+                <List.Item>
+                  <Link href=''>
+                    <TableIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
+                    <span>Statistikkbanken</span>
+                  </Link>
+                </List.Item>
+                <List.Item>
+                  <Link href=''>
+                    <CalculatorIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
+                    <span>Våre kalkulatorer</span>
+                  </Link>
+                </List.Item>
+                <List.Item>
+                  <Link href=''>Svare på undersøkelse</Link>
+                </List.Item>
+              </List.Unordered>
+            </div>
           </div>
         </div>
       </div>

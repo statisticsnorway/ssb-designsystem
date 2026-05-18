@@ -30,7 +30,7 @@ export const Default: StoryFn = () => {
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
       <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
-          <Fieldset style={{ display: 'grid', gap: '1rem' }}>
+          <Fieldset className={classes.controlFieldset}>
             <Fieldset.Legend>
               Størrelse <code data-size='xs'>(data-size)</code>
             </Fieldset.Legend>
@@ -43,7 +43,7 @@ export const Default: StoryFn = () => {
             </ToggleGroup>
           </Fieldset>
 
-          <Fieldset>
+          <Fieldset className={classes.controlFieldset}>
             <Fieldset.Legend>
               Fargemodus <code data-size='xs'>(data-color-scheme)</code>
             </Fieldset.Legend>
@@ -56,7 +56,7 @@ export const Default: StoryFn = () => {
               ))}
             </ToggleGroup>
           </Fieldset>
-          <Fieldset>
+          <Fieldset className={classes.controlFieldset}>
             <Fieldset.Legend>
               Fargetema <code data-size='xs'>(data-color)</code>
             </Fieldset.Legend>
@@ -72,29 +72,23 @@ export const Default: StoryFn = () => {
         <ThemePreview data-size={size} data-color={colorMode} data-color-scheme={colorSchemeMode} />
       </div>
       <div className={classes.footer} data-color-scheme='dark'>
-        <Button
-          variant='secondary'
-          style={{ float: 'right', marginBottom: '2rem' }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <ChevronUpIcon aria-hidden />
-          Til Toppen
-        </Button>
+        <div className={classes.footerTop}>
+          <Button variant='secondary' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <ChevronUpIcon aria-hidden />
+            Til toppen
+          </Button>
+        </div>
 
         <Divider />
 
         <div className={classes.footerList}>
-          {' '}
           {Array.from({ length: 5 }).map((_, index) => (
             <div key={index}>
-              <Heading>Lenkeliste</Heading>
+              <Heading level={3} data-size='sm'>
+                Lenkeliste
+              </Heading>
 
-              <List.Unordered
-                style={{
-                  listStyle: 'none',
-                  padding: 0,
-                }}
-              >
+              <List.Unordered className={classes.footerLinks}>
                 {[1, 2, 3, 4].map((nr) => (
                   <List.Item key={nr}>
                     <Link href=''>
