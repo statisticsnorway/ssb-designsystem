@@ -163,9 +163,12 @@
 .chipGroup,
 .buttonGroup {
   display: flex;
+  gap: var(--ds-size-2);
   flex-wrap: wrap;
-  gap: var(--ds-size-4);
-  align-items: center;
+}
+
+.buttonGroup button:last-child {
+  margin-left: auto;
 }
 
 .details {
