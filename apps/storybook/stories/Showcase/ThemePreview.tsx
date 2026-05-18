@@ -12,7 +12,6 @@ import {
   Label,
   Link,
   List,
-  Logo,
   Paragraph,
   Table,
   Tabs,
@@ -32,7 +31,6 @@ import { CalculatorIcon, TableIcon } from '@navikt/aksel-icons'
 type ThemePreviewProps = HTMLAttributes<HTMLDivElement>
 
 export function ThemePreview({ ...props }: ThemePreviewProps) {
-  const [showError, setShowError] = useState(false)
   const [tableZebra, setTableZebra] = useState(false)
   const [tableBorder, setTableBorder] = useState(false)
   const [tableHover, setTableHover] = useState(false)
@@ -172,19 +170,7 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
 
       <div className={cl(classes.card, classes.calculator)}>
         <Heading data-size='md'>Beregn husleie</Heading>
-        {showError && (
-          <ErrorSummary>
-            <ErrorSummary.Heading>For å gå videre må du rette opp følgende feil:</ErrorSummary.Heading>
-            <ErrorSummary.List>
-              <ErrorSummary.Item>
-                <ErrorSummary.Link href='#month'>Må velge måned</ErrorSummary.Link>
-              </ErrorSummary.Item>
-              <ErrorSummary.Item>
-                <ErrorSummary.Link href='#year'>Fra år må være et gyldig år</ErrorSummary.Link>
-              </ErrorSummary.Item>
-            </ErrorSummary.List>
-          </ErrorSummary>
-        )}
+
         <Textfield prefix='NOK' suffix='pr. mnd' label='Hva er husleien idag?' />
         <Fieldset
           style={{
@@ -214,18 +200,15 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
               <Select.Option value='desember'>Desember</Select.Option>
             </Select>
           </Field>
-          <Textfield
-            label='Fra år'
-            placeholder='YYYY'
-            inputMode='numeric'
-            error={showError ? 'Oppgi et gyldig år' : undefined}
-          />
+          <Textfield label='Fra år' placeholder='YYYY' inputMode='numeric' />
         </Fieldset>
         <div className={classes.buttonGroup}>
           <Button variant='tertiary'>Hjelp</Button>
           <Button variant='secondary'>Nullstill</Button>
           <Button>Se ny husleie</Button>
         </div>
+
+        <Alert data-color='warning'>Beregningen bruker sist tilgjengelige KPI-tall.</Alert>
       </div>
 
       <div className={cl(classes.cardWithoutBackground, classes.details)}>
@@ -237,15 +220,12 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
           <Chip.Radio name='faq-filter' value='alle' defaultChecked>
             Alle
           </Chip.Radio>
-
           <Chip.Radio name='faq-filter' value='beregning'>
             Beregning
           </Chip.Radio>
-
           <Chip.Radio name='faq-filter' value='regler'>
             Regler
           </Chip.Radio>
-
           <Chip.Radio name='faq-filter' value='varsling'>
             Varsling
           </Chip.Radio>
@@ -277,10 +257,12 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             <Details.Content>Vedlegg 1, vedlegg 2, vedlegg 3</Details.Content>
           </Details>
         </Card>
+
+        <Alert data-color='success'>Så bra du fant svarene du lette etter!</Alert>
       </div>
 
       <div className={cl(classes.cardWithMainBackground, classes.cards)}>
-        <Heading data-size='md'>Card</Heading>
+        <Heading data-size='md'>Aktuelt</Heading>
         <div className={classes.chipGroup}>
           <Chip.Button>Rådyr</Chip.Button>
           <Chip.Button>Husleie</Chip.Button>
@@ -310,39 +292,38 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             <Paragraph>Med SSBs husleiekalkulator kan du regne ut ny husleie.</Paragraph>
           </Card>
 
-          <Card variant='tinted'>
-            <Heading level={3}>
-              <Link href='#'>Navnestatistikken</Link>
-            </Heading>
-            <Paragraph>Med SSBs husleiekalkulator kan du regne ut ny husleie.</Paragraph>
-          </Card>
+          <div className={cl(classes.cardWithoutBackground, classes.linksList)}>
+            <Card variant='tinted'>
+              <Heading level={3}>
+                <Link href='#'>Navnestatistikken</Link>
+              </Heading>
+              <Paragraph>Med SSBs husleiekalkulator kan du regne ut ny husleie.</Paragraph>
+            </Card>
+            <Heading data-size='md'>Lenkeliste</Heading>
+            <List.Unordered
+              style={{
+                listStyle: 'none',
+                padding: 0,
+              }}
+            >
+              <List.Item>
+                <Link href=''>
+                  <TableIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
+                  <span>Statistikkbanken</span>
+                </Link>
+              </List.Item>
+              <List.Item>
+                <Link href=''>
+                  <CalculatorIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
+                  <span>Våre kalkulatorer</span>
+                </Link>
+              </List.Item>
+              <List.Item>
+                <Link href=''>Svare på undersøkelse</Link>
+              </List.Item>
+            </List.Unordered>
+          </div>
         </div>
-      </div>
-
-      <div className={cl(classes.cardWithoutBackground, classes.linksList)}>
-        <Heading data-size='md'>Lenkeliste</Heading>
-        <List.Unordered
-          style={{
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          <List.Item>
-            <Link href=''>
-              <TableIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
-              <span>Statistikkbanken</span>
-            </Link>
-          </List.Item>
-          <List.Item>
-            <Link href=''>
-              <CalculatorIcon aria-hidden height={'1.5rem'} width={'1.5rem'} />
-              <span>Våre kalkulatorer</span>
-            </Link>
-          </List.Item>
-          <List.Item>
-            <Link href=''>Svare på undersøkelse</Link>
-          </List.Item>
-        </List.Unordered>
       </div>
     </div>
   )
