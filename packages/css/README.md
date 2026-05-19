@@ -1,18 +1,38 @@
 # @statisticsnorway/design-css
 
-This package provides the main CSS entry point for SSB’s designsystem.
+This package provides the main CSS entry point for applications built with SSB's design system.
 
 It combines:
 
-- font definitions
-- Digdir’s base CSS
-- SSB’s theme package
+- Digdir's base CSS (`@digdir/designsystemet-css`)
+- SSB's design tokens (via `@statisticsnorway/design-theme`)
+- Roboto font definitions
+
+## Installation
+
+```bash
+npm install @statisticsnorway/design-css
+```
+
+## Usage
+
+Import the package in your application entry file:
+
+```js
+import '@statisticsnorway/design-css'
+```
+
+Or in CSS:
+
+```css
+@import '@statisticsnorway/design-css';
+```
+
+If you are using `@statisticsnorway/design-react`, you do not need to install this package separately.
 
 ## Fonts
 
-This package includes font definitions, but does not apply them globally.
-
-To use the SSB font across your application, you can add:
+The Roboto font is defined but not applied globally. To use it across your application, add the following to your global styles:
 
 ```css
 body {
@@ -20,12 +40,9 @@ body {
 }
 ```
 
-This package includes the Roboto font, licensed under Apache License 2.0.
-
-## Usage
-
-This package is intended to be the default styling entry point for applications using SSB’s design system.
+The included Roboto font files are licensed under Apache License 2.0.
+See `LICENSE-ROBOTO` for details.
 
 ## Status
 
-🚧 Under development and not yet published.
+🚧 Under active development. APIs, tokens, and styles may change.

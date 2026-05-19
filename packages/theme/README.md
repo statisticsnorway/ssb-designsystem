@@ -16,7 +16,7 @@ Import in your entry file:
 import '@statisticsnorway/design-theme'
 ```
 
-Or explicitly:
+Or import the theme file directly:
 
 ```js
 import '@statisticsnorway/design-theme/ssb.css'
