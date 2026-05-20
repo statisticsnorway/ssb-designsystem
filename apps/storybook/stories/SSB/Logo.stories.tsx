@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Logo, Link } from '@statisticsnorway/design-react'
+import { Link } from '@statisticsnorway/design-react'
+
+// Logo is not part of the public API yet.
+// Import directly while the component is under development.
+import { Logo } from '../../../../packages/react/src/components/Logo/Logo'
 
 const description = `
 Logo representerer SSBs visuelle identitet.
@@ -10,8 +14,15 @@ Den skal ikke styre layout selv, men tilpasses konteksten den brukes i.
 `
 
 const meta: Meta<typeof Logo> = {
-  title: 'SSB/Logo/Logo',
+  title: 'SSB/Logo',
   component: Logo,
+  parameters: {
+    docs: {
+      description: {
+        component: '🚧 This component is under development and is not part of the public React package API yet.',
+      },
+    },
+  },
 }
 
 export default meta
