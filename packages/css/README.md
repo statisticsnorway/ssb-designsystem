@@ -45,4 +45,4 @@ See `LICENSE-ROBOTO` for details.
 
 ## Status
 
-🚧 Under active development. APIs, tokens, and styles may change.
+🚧 Under active development.

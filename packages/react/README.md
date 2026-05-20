@@ -2,11 +2,16 @@
 
 React components for SSB’s design system.
 
-This package re-exports components from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components, styling, and customizations.
-
-The goal is to provide a single React package for consumers of the SSB design system.
+This package re-exports components from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components.
+All necessary styling is included — you do not need to install `@statisticsnorway/design-css` or `@statisticsnorway/design-theme` separately.
 
 ---
+
+## Installation
+
+```bash
+npm install @statisticsnorway/design-react
+```
 
 ## Usage
 
@@ -14,50 +19,19 @@ The goal is to provide a single React package for consumers of the SSB design sy
 import { Button, Heading, Paragraph } from '@statisticsnorway/design-react'
 ```
 
-## Styling
+## Fonts
 
-This package includes the styling needed for React usage.
+The Roboto font is included but not applied globally.
+To use it across your application, add the following to your global styles:
 
-You do **not** need to install or import `@statisticsnorway/design-css` or `@statisticsnorway/design-theme` separately when using this package.
-
-## SSB Components
-
-The package currently includes the following SSB-specific component:
-
-- `Logo`
-
-Example:
-
-```tsx
-import { Logo } from '@statisticsnorway/design-react'
-
-function App() {
-  return <Logo height={50} />
+```css
+body {
+  font-family: var(--ds-font-family);
 }
 ```
 
-## Testing
+The included Roboto font files are licensed under Apache License 2.0.
 
-Run all tests from the workspace root:
+## Status
 
-```bash
-pnpm test
-```
-
-Run tests for the React package only:
-
-```bash
-pnpm --filter @statisticsnorway/design-react test
-```
-
-Run tests once without watch mode:
-
-```bash
-pnpm --filter @statisticsnorway/design-react test:run
-```
-
-The package uses:
-
-- Vitest
-- Testing Library
-- jsdom
+🚧 Under active development.

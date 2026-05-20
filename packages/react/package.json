@@ -1,13 +1,16 @@
 {
   "name": "@statisticsnorway/design-react",
   "version": "0.0.1",
-  "description": "React components for SSB’s design system, based on Digdir Designsystemet",
-  "author": "Statistics Norway (SSB)",
+  "description": "React package for SSB’s design system, based on Digdir’s Designsystemet",
+  "license": "MIT",
+  "author": "Statistics Norway",
   "repository": {
     "type": "git",
     "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
   },
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "sideEffects": [
     "**/*.css"

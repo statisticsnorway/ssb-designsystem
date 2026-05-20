@@ -32,4 +32,4 @@ If you are using `@statisticsnorway/design-css` or `@statisticsnorway/design-rea
 
 ## Status
 
-🚧 Under active development. Token names and values may change.
+🚧 Under active development.

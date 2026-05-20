@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": [
     "**/*.css"
   ],
@@ -34,9 +37,6 @@
       "types": "./dist/types.d.ts",
       "default": "./dist/src/index.css"
     }
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "scripts": {
     "clean": "rm -rf dist",
