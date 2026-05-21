@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSS entry point for SSB’s design system with Digdir base styles, SSB theme, and fonts",
   "license": "MIT",
   "author": "Statistics Norway",
@@ -16,25 +16,14 @@
   ],
   "types": "./dist/types.d.ts",
   "files": [
+    "./types.d.ts",
     "dist",
     "README.md",
     "LICENSE-ROBOTO"
   ],
   "exports": {
     ".": {
-      "development": {
-        "types": "./types.d.ts",
-        "default": "./src/index.css"
-      },
-      "types": "./dist/types.d.ts",
-      "default": "./dist/src/index.css"
-    },
-    "./index.css": {
-      "development": {
-        "types": "./types.d.ts",
-        "default": "./src/index.css"
-      },
-      "types": "./dist/types.d.ts",
+      "types": "./types.d.ts",
       "default": "./dist/src/index.css"
     }
   },
