@@ -1,29 +1,63 @@
 {
   "name": "@statisticsnorway/design-react",
   "version": "0.0.1",
-  "private": true,
+  "description": "React package for SSB’s design system, based on Digdir’s Designsystemet",
+  "license": "MIT",
+  "author": "Statistics Norway",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "import": "./src/index.ts",
-      "default": "./src/index.ts"
+      "development": {
+        "types": "./src/index.ts",
+        "import": "./src/index.ts"
+      },
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.js"
     }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && vite build",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "peerDependencies": {
     "react": ">=18.3.1 || ^19.0.0",
     "react-dom": ">=18.3.1 || ^19.0.0"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.13.3",
-    "@digdir/designsystemet-types": "^1.13.3",
-    "@statisticsnorway/design-css": "0.0.1",
-    "@navikt/aksel-icons": "^8.9.1"
+    "@digdir/designsystemet-react": "^1.14.0",
+    "@digdir/designsystemet-types": "^1.14.0",
+    "@navikt/aksel-icons": "^8.10.5",
+    "@statisticsnorway/design-css": "workspace:^"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "jsdom": "^29.1.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "vite": "^8.0.13",
+    "vite-plugin-dts": "^5.0.0",
+    "vitest": "^4.1.6"
   }
 }

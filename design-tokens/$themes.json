@@ -109,18 +109,18 @@
     "group": "Main color"
   },
   {
-    "id": "51d267d9495d6c25ea2a282bf9f149e5d86bafd4",
-    "name": "coolgray",
+    "id": "77270e21ea69e87b1111ab73f82f2c9501ffb509",
+    "name": "brand1",
     "selectedTokenSets": {
-      "semantic/modes/support-color/coolgray": "enabled"
+      "semantic/modes/support-color/brand1": "enabled"
     },
     "group": "Support color"
   },
   {
-    "id": "2fae911e9417cc3322508692cef0415f07a8a6ca",
-    "name": "magic",
+    "id": "f048e6cbea788b19c6789b0d2d9307adbcb6efe9",
+    "name": "brand2",
     "selectedTokenSets": {
-      "semantic/modes/support-color/magic": "enabled"
+      "semantic/modes/support-color/brand2": "enabled"
     },
     "group": "Support color"
   }

@@ -1,18 +1,35 @@
 # @statisticsnorway/design-theme
 
-This package contains the generated theme and design tokens for SSB’s design system.
+This package contains CSS variables and generated design tokens for SSB’s design system.
 
-The contents of `brand/` are generated from the design token build process.
+## Installation
 
-## Contents
-
-- Generated CSS theme
-- Token-related type definitions
+```bash
+npm install @statisticsnorway/design-theme
+```
 
 ## Usage
 
-This package can be used together with Digdir’s base CSS, or through `@statisticsnorway/design-css`.
+Import in your entry file:
+
+```js
+import '@statisticsnorway/design-theme'
+```
+
+Or import the theme file directly:
+
+```js
+import '@statisticsnorway/design-theme/ssb.css'
+```
+
+Or in CSS:
+
+```css
+@import '@statisticsnorway/design-theme/ssb.css';
+```
+
+If you are using `@statisticsnorway/design-css` or `@statisticsnorway/design-react`, you do not need to install this package separately.
 
 ## Status
 
-🚧 Under development and not yet published.
+🚧 Under active development.

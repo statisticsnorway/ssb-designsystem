@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Badge, Divider, Heading } from '@statisticsnorway/design-react'
 import { EnvelopeClosedFillIcon } from '@navikt/aksel-icons'
 

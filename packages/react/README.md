@@ -2,15 +2,16 @@
 
 React components for SSB’s design system.
 
-This package is currently a thin wrapper around `@digdir/designsystemet-react` and will be extended with SSB-specific components and customizations over time.
+This package re-exports components from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components.
+All necessary styling is included — you do not need to install `@statisticsnorway/design-css` or `@statisticsnorway/design-theme` separately.
 
 ---
 
-## Status
+## Installation
 
-🚧 Work in progress (not yet published)
-
----
+```bash
+npm install @statisticsnorway/design-react
+```
 
 ## Usage
 
@@ -18,10 +19,19 @@ This package is currently a thin wrapper around `@digdir/designsystemet-react` a
 import { Button, Heading, Paragraph } from '@statisticsnorway/design-react'
 ```
 
----
+## Fonts
 
-## Styling
+The Roboto font is included but not applied globally.
+To use it across your application, add the following to your global styles:
 
-This package includes the styling needed for React usage.
+```css
+body {
+  font-family: var(--ds-font-family);
+}
+```
 
-You do **not** need to install or import `@statisticsnorway/design-css` or `@statisticsnorway/design-theme` separately when using this package.
+The included Roboto font files are licensed under Apache License 2.0.
+
+## Status
+
+🚧 Under active development.

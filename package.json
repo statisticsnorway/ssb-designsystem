@@ -1,20 +1,31 @@
 {
   "name": "ssb-designsystem",
+  "author": "Statistics Norway (SSB)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
+  },
   "private": true,
+  "packageManager": "pnpm@10.22.0",
   "type": "module",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "tokens:create": "designsystemet tokens create",
     "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/brand",
-    "tokens:update": "rm -rf design-tokens && npm run tokens:create && npm run tokens:build",
-    "storybook": "npm run storybook -w apps/storybook"
+    "tokens:update": "rm -rf design-tokens && pnpm tokens:create && pnpm tokens:build",
+    "storybook": "pnpm --filter @statisticsnorway/storybook storybook",
+    "storybook:build": "pnpm --filter @statisticsnorway/storybook build-storybook",
+    "build:css": "pnpm --filter @statisticsnorway/design-css build",
+    "build:react": "pnpm --filter @statisticsnorway/design-react build",
+    "build": "pnpm build:css && pnpm build:react",
+    "test": "pnpm --filter @statisticsnorway/design-react test:run",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:release": "pnpm build && changeset publish"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "^1.13.3",
+    "@changesets/cli": "^2.31.0",
+    "@digdir/designsystemet": "^1.14.0",
     "prettier": "^3.8.3"
   }
 }

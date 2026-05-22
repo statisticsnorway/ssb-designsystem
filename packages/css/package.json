@@ -1,28 +1,38 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.0.1",
-  "type": "module",
-  "description": "CSS for SSBs designsystem",
-  "author": "Statistics Norway",
+  "version": "0.0.2",
+  "description": "CSS entry point for SSB’s design system with Digdir base styles, SSB theme, and fonts",
   "license": "MIT",
-  "types": "./types.d.ts",
+  "author": "Statistics Norway",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "types": "./dist/types.d.ts",
   "files": [
-    "src",
-    "types.d.ts",
-    "README.md"
+    "./types.d.ts",
+    "dist",
+    "README.md",
+    "LICENSE-ROBOTO"
   ],
   "exports": {
     ".": {
       "types": "./types.d.ts",
-      "default": "./src/index.css"
-    },
-    "./index.css": {
-      "types": "./types.d.ts",
-      "default": "./src/index.css"
+      "default": "./dist/src/index.css"
     }
   },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && mkdir -p dist && cp -R src dist/src && cp types.d.ts dist/types.d.ts"
+  },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.13.3",
-    "@statisticsnorway/design-theme": "0.0.1"
+    "@digdir/designsystemet-css": "^1.14.0",
+    "@statisticsnorway/design-theme": "workspace:^"
   }
 }

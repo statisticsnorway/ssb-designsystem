@@ -132,136 +132,136 @@
         "$value": "{ssb.neutral.16}"
       }
     },
-    "coolgray": {
+    "brand1": {
       "1": {
         "$type": "color",
-        "$value": "{ssb.coolgray.1}"
+        "$value": "{ssb.brand1.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{ssb.coolgray.2}"
+        "$value": "{ssb.brand1.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{ssb.coolgray.3}"
+        "$value": "{ssb.brand1.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{ssb.coolgray.4}"
+        "$value": "{ssb.brand1.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{ssb.coolgray.5}"
+        "$value": "{ssb.brand1.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{ssb.coolgray.6}"
+        "$value": "{ssb.brand1.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{ssb.coolgray.7}"
+        "$value": "{ssb.brand1.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{ssb.coolgray.8}"
+        "$value": "{ssb.brand1.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{ssb.coolgray.9}"
+        "$value": "{ssb.brand1.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{ssb.coolgray.10}"
+        "$value": "{ssb.brand1.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{ssb.coolgray.11}"
+        "$value": "{ssb.brand1.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{ssb.coolgray.12}"
+        "$value": "{ssb.brand1.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{ssb.coolgray.13}"
+        "$value": "{ssb.brand1.13}"
       },
       "14": {
         "$type": "color",
-        "$value": "{ssb.coolgray.14}"
+        "$value": "{ssb.brand1.14}"
       },
       "15": {
         "$type": "color",
-        "$value": "{ssb.coolgray.15}"
+        "$value": "{ssb.brand1.15}"
       },
       "16": {
         "$type": "color",
-        "$value": "{ssb.coolgray.16}"
+        "$value": "{ssb.brand1.16}"
       }
     },
-    "magic": {
+    "brand2": {
       "1": {
         "$type": "color",
-        "$value": "{ssb.magic.1}"
+        "$value": "{ssb.brand2.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{ssb.magic.2}"
+        "$value": "{ssb.brand2.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{ssb.magic.3}"
+        "$value": "{ssb.brand2.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{ssb.magic.4}"
+        "$value": "{ssb.brand2.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{ssb.magic.5}"
+        "$value": "{ssb.brand2.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{ssb.magic.6}"
+        "$value": "{ssb.brand2.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{ssb.magic.7}"
+        "$value": "{ssb.brand2.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{ssb.magic.8}"
+        "$value": "{ssb.brand2.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{ssb.magic.9}"
+        "$value": "{ssb.brand2.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{ssb.magic.10}"
+        "$value": "{ssb.brand2.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{ssb.magic.11}"
+        "$value": "{ssb.brand2.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{ssb.magic.12}"
+        "$value": "{ssb.brand2.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{ssb.magic.13}"
+        "$value": "{ssb.brand2.13}"
       },
       "14": {
         "$type": "color",
-        "$value": "{ssb.magic.14}"
+        "$value": "{ssb.brand2.14}"
       },
       "15": {
         "$type": "color",
-        "$value": "{ssb.magic.15}"
+        "$value": "{ssb.brand2.15}"
       },
       "16": {
         "$type": "color",
-        "$value": "{ssb.magic.16}"
+        "$value": "{ssb.brand2.16}"
       }
     },
     "info": {
@@ -590,7 +590,7 @@
     },
     "base": {
       "$type": "dimension",
-      "$value": "8"
+      "$value": "6"
     },
     "scale": {
       "$type": "dimension",

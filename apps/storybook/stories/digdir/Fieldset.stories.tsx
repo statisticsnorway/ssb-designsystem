@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Fieldset, Field, Input, Label, Select } from '@statisticsnorway/design-react'
 
 const description = `

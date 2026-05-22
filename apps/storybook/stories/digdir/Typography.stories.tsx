@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Heading, Paragraph } from '@statisticsnorway/design-react'
 
 const meta = {
-  title: 'SSB/Typography',
+  title: 'Digdir/Typography',
   parameters: {
     layout: 'padded',
   },

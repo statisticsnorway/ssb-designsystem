@@ -2,9 +2,7 @@ version: 2
 
 updates:
   - package-ecosystem: 'npm'
-    directories:
-      - '/'
-      - '/apps/storybook'
+    directory: '/'
     schedule:
       interval: 'weekly'
     open-pull-requests-limit: 10
@@ -22,6 +20,13 @@ updates:
         patterns:
           - '@storybook/*'
           - 'storybook'
+          - 'chromatic'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom
       digdir:
         patterns:
           - '@digdir/*'

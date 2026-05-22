@@ -20,19 +20,25 @@ Storybook is automatically published to Chromatic when a pull request is opened 
 This includes changes in:
 
 - `apps/storybook`
-- `packages/theme`
+- `packages/**`
 
 ## Local development
 
-To run Storybook locally:
+To run Storybook locally (from the root of the repository):
 
-    npm run storybook -w apps/storybook
+    pnpm storybook
+
+## Build locally (Chromatic equivalent)
+
+To verify that Storybook builds correctly (same step used by Chromatic):
+
+    pnpm storybook:build
 
 ## Manual publish (optional)
 
 It is still possible to publish manually if needed:
 
-    npm run chromatic -w apps/storybook -- --project-token=<TOKEN>
+    pnpm --filter @ssb/storybook chromatic -- --project-token=<TOKEN>
 
 > The project token must be stored locally (e.g. password manager) and should **not** be committed to the repository.
 

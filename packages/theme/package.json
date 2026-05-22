@@ -2,13 +2,19 @@
   "name": "@statisticsnorway/design-theme",
   "version": "0.0.1",
   "type": "module",
-  "description": "Statistics Norway theme for Digdir Designsystemet",
-  "author": "Statistics Norway",
+  "description": "Predefined themes for the SSB (Statistics Norway) design system",
   "license": "MIT",
-  "private": true,
+  "author": "Statistics Norway",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "brand",
     "types.d.ts",
+    "brand/**",
     "README.md"
   ],
   "exports": {
@@ -19,6 +25,11 @@
     "./ssb.css": {
       "types": "./types.d.ts",
       "default": "./brand/ssb.css"
+    },
+    "./*": {
+      "types": "./types.d.ts",
+      "default": "./brand/*"
     }
-  }
+  },
+  "scripts": {}
 }
