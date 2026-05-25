@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "storybook": "storybook dev -p 6006",
+    "dev": "concurrently \"pnpm --filter @statisticsnorway/design-css dev\" \"pnpm dev:only\"",
+    "dev:only": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "chromatic"
   },
@@ -13,6 +14,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "chromatic": "^16.10.1",
+    "concurrently": "^9.2.1",
     "storybook": "^10.4.0"
   },
   "dependencies": {
