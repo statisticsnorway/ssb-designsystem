@@ -13,7 +13,7 @@
     "@storybook/react-vite": "^10.4.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "chromatic": "^16.10.1",
+    "chromatic": "^17.0.0",
     "concurrently": "^9.2.1",
     "storybook": "^10.4.0"
   },
