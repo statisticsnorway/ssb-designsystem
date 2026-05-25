@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CSS entry point for SSB’s design system with Digdir base styles, SSB theme, and fonts",
   "license": "MIT",
   "author": "Statistics Norway",
@@ -29,10 +29,15 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm clean && mkdir -p dist && cp -R src dist/src && cp types.d.ts dist/types.d.ts"
+    "build": "pnpm clean && postcss \"src/**/*.css\" --base src --dir dist/src && cp src/fonts/*.woff2 dist/src/fonts && cp types.d.ts dist/types.d.ts",
+    "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && cp types.d.ts dist/types.d.ts && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
     "@digdir/designsystemet-css": "^1.14.0",
     "@statisticsnorway/design-theme": "workspace:^"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.15",
+    "postcss-cli": "^11.0.1"
   }
 }
