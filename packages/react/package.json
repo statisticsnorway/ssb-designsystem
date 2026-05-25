@@ -23,7 +23,7 @@
         "types": "./src/index.ts",
         "import": "./src/index.ts"
       },
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
