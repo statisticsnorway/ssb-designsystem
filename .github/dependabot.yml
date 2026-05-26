@@ -26,7 +26,7 @@ updates:
           - 'react'
           - 'react-dom'
           - '@types/react'
-          - '@types/react-dom
+          - '@types/react-dom'
       digdir:
         patterns:
           - '@digdir/*'
