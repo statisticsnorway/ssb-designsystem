@@ -2,13 +2,16 @@
   "name": "@statisticsnorway/design-theme",
   "version": "0.0.1",
   "type": "module",
-  "description": "Design tokens and theme for SSB’s design system",
+  "description": "Predefined themes for the SSB (Statistics Norway) design system",
+  "license": "MIT",
   "author": "Statistics Norway",
   "repository": {
     "type": "git",
     "url": "https://github.com/statisticsnorway/ssb-designsystem.git"
   },
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "types.d.ts",
     "brand/**",

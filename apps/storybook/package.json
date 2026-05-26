@@ -3,20 +3,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "storybook": "storybook dev -p 6006",
+    "dev": "concurrently \"pnpm --filter @statisticsnorway/design-css dev\" \"pnpm dev:only\"",
+    "dev:only": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "chromatic"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^10.3.5",
-    "@storybook/react-vite": "^10.3.5",
-    "@types/react": "^19.2.14",
+    "@storybook/addon-docs": "^10.4.1",
+    "@storybook/react-vite": "^10.4.1",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "chromatic": "^16.9.1",
-    "storybook": "^10.3.5"
+    "chromatic": "^17.0.0",
+    "concurrently": "^9.2.1",
+    "storybook": "^10.4.1"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^8.10.5",
+    "@navikt/aksel-icons": "^8.11.0",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
     "clsx": "^2.1.1",
