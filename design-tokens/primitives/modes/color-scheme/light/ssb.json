@@ -191,11 +191,11 @@
       },
       "15": {
         "$type": "color",
-        "$value": "#000000"
+        "$value": "#FFFFFF"
       },
       "16": {
         "$type": "color",
-        "$value": "#000000"
+        "$value": "#FFFFFF"
       }
     },
     "neutral": {
