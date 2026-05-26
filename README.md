@@ -56,18 +56,6 @@ Run tests for the React package only:
 pnpm --filter @statisticsnorway/design-react test
 ```
 
-Run tests once without watch mode:
-
-```bash
-pnpm --filter @statisticsnorway/design-react test:run
-```
-
-The package uses:
-
-- Vitest
-- Testing Library
-- jsdom
-
 ---
 
 ## Design tokens
