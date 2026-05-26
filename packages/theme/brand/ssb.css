@@ -153,8 +153,8 @@ design-tokens: v1.14.0
   --ds-color-brand2-base-default: #7E5EE8;
   --ds-color-brand2-base-hover: #694EC1;
   --ds-color-brand2-base-active: #543F9B;
-  --ds-color-brand2-base-contrast-subtle: #000000;
-  --ds-color-brand2-base-contrast-default: #000000;
+  --ds-color-brand2-base-contrast-subtle: #FFFFFF;
+  --ds-color-brand2-base-contrast-default: #FFFFFF;
   --ds-color-info-background-default: #ffffff;
   --ds-color-info-background-tinted: #edf5fa;
   --ds-color-info-surface-default: #ffffff;
@@ -290,8 +290,8 @@ design-tokens: v1.14.0
   --ds-color-brand2-base-default: #7E5EE8;
   --ds-color-brand2-base-hover: #694EC1;
   --ds-color-brand2-base-active: #543F9B;
-  --ds-color-brand2-base-contrast-subtle: #000000;
-  --ds-color-brand2-base-contrast-default: #000000;
+  --ds-color-brand2-base-contrast-subtle: #FFFFFF;
+  --ds-color-brand2-base-contrast-default: #FFFFFF;
   --ds-color-info-background-default: #ffffff;
   --ds-color-info-background-tinted: #edf5fa;
   --ds-color-info-surface-default: #ffffff;
