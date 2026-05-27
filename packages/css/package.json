@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CSS for SSB Designsystem",
   "license": "MIT",
   "author": "Statistics Norway",
@@ -14,9 +14,10 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "types": "./dist/types.d.ts",
+  "types": "./types.d.ts",
   "files": [
-    "./types.d.ts",
+    "types.d.ts",
+    "theme.d.ts",
     "dist",
     "README.md",
     "LICENSE-ROBOTO"
@@ -25,12 +26,15 @@
     ".": {
       "types": "./types.d.ts",
       "default": "./dist/src/index.css"
+    },
+    "./theme": {
+      "types": "./theme.d.ts"
     }
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm clean && postcss \"src/**/*.css\" --base src --dir dist/src && cp src/fonts/*.woff2 dist/src/fonts && cp types.d.ts dist/types.d.ts",
-    "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && cp types.d.ts dist/types.d.ts && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
+    "build": "pnpm clean && postcss \"src/**/*.css\" --base src --dir dist/src && cp src/fonts/*.woff2 dist/src/fonts",
+    "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
     "@digdir/designsystemet-css": "^1.14.0",
