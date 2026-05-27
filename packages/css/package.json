@@ -1,7 +1,7 @@
 {
   "name": "@statisticsnorway/design-css",
   "version": "0.0.3",
-  "description": "CSS entry point for SSB’s design system with Digdir base styles, SSB theme, and fonts",
+  "description": "CSS for SSB Designsystem",
   "license": "MIT",
   "author": "Statistics Norway",
   "repository": {
