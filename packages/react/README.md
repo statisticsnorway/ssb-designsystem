@@ -1,28 +1,38 @@
 # SSB Designsystem – React
 
-React components for SSB’s design system.
+React components for SSB Designsystem.
 
-This package re-exports components from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components.
-All necessary styling is included — you do not need to install `@statisticsnorway/design-css` or `@statisticsnorway/design-theme` separately.
-
----
+This package currently re-exports components from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components.
 
 ## Installation
 
 ```bash
-npm install @statisticsnorway/design-react
+npm install @statisticsnorway/design-react @statisticsnorway/design-css
 ```
 
-## Usage
+## Setup
+
+### Load styles
+
+You must load the design system stylesheet once in your application.
+
+Import it from your JavaScript or TypeScript entrypoint, for example `main.tsx`:
 
 ```tsx
-import { Button, Heading, Paragraph } from '@statisticsnorway/design-react'
+import '@statisticsnorway/design-css'
 ```
 
-## Fonts
+Alternatively, import it from your main CSS file:
 
-The Roboto font is included but not applied globally.
-To use it across your application, add the following to your global styles:
+```css
+@import '@statisticsnorway/design-css';
+```
+
+### Fonts
+
+The Roboto font is included in the stylesheet package but is not applied globally.
+
+To use it across your application, add the following to your global CSS:
 
 ```css
 body {
@@ -32,6 +42,22 @@ body {
 
 The included Roboto font files are licensed under Apache License 2.0.
 
+## Usage
+
+```tsx
+import { Button, Heading, Paragraph } from '@statisticsnorway/design-react'
+
+export function App() {
+  return (
+    <>
+      <Heading level={1}>Hello from SSB Designsystem</Heading>
+      <Paragraph>Use SSB-styled components based on Digdir’s Designsystemet.</Paragraph>
+      <Button>Continue</Button>
+    </>
+  )
+}
+```
+
 ## Status
 
-🚧 Under active development.
+🚧 This package is under active development.

@@ -137,6 +137,12 @@
             },
             "base-active": {
               "light": "#543F9B"
+            },
+            "base-contrast-subtle": {
+              "light": "#FFFFFF"
+            },
+            "base-contrast-default": {
+              "light": "#FFFFFF"
             }
           }
         }

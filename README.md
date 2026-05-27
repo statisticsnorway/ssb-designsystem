@@ -16,11 +16,11 @@ Contains generated design tokens and theme CSS for SSB’s visual profile.
 
 ### `@statisticsnorway/design-css`
 
-Combines Digdir base styles, SSB theme styles, and fonts into a shared CSS package.
+Shared CSS package containing Digdir base styles, SSB theme styles, and fonts.
 
 ### `@statisticsnorway/design-react`
 
-React package that currently re-exports components from Digdir’s Designsystemet, while adding SSB-specific styling and custom components over time.
+React components for SSB Designsystem, based on Digdir’s Designsystemet.
 
 ---
 
@@ -55,18 +55,6 @@ Run tests for the React package only:
 ```bash
 pnpm --filter @statisticsnorway/design-react test
 ```
-
-Run tests once without watch mode:
-
-```bash
-pnpm --filter @statisticsnorway/design-react test:run
-```
-
-The package uses:
-
-- Vitest
-- Testing Library
-- jsdom
 
 ---
 

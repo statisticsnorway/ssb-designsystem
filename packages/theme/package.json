@@ -2,7 +2,7 @@
   "name": "@statisticsnorway/design-theme",
   "version": "0.0.1",
   "type": "module",
-  "description": "Predefined themes for the SSB (Statistics Norway) design system",
+  "description": "Themes for SSB Designsystem",
   "license": "MIT",
   "author": "Statistics Norway",
   "repository": {
