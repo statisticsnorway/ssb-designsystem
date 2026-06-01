@@ -37,7 +37,7 @@
     "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.14.0",
+    "@digdir/designsystemet-css": "^1.15.0",
     "@statisticsnorway/design-theme": "workspace:^"
   },
   "devDependencies": {
