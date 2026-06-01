@@ -39,8 +39,8 @@
     "@statisticsnorway/design-css": "workspace:^"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.14.0",
-    "@digdir/designsystemet-types": "^1.14.0",
+    "@digdir/designsystemet-react": "^1.15.0",
+    "@digdir/designsystemet-types": "^1.15.0",
     "@navikt/aksel-icons": "^8.11.0"
   },
   "devDependencies": {
