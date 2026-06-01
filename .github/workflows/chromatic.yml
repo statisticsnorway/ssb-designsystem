@@ -9,6 +9,9 @@ on:
       - 'packages/react/src/**'
       - 'packages/css/**'
       - 'packages/theme/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
 
   push:
     branches:
@@ -18,13 +21,15 @@ on:
       - 'packages/react/src/**'
       - 'packages/css/**'
       - 'packages/theme/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
 
 permissions:
   contents: read
 
 jobs:
   chromatic:
-    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
 
     steps:
