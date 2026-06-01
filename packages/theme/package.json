@@ -19,11 +19,11 @@
   ],
   "exports": {
     ".": {
-      "types": "./types.d.ts",
+      "types": "./brand/types.d.ts",
       "default": "./brand/ssb.css"
     },
     "./ssb.css": {
-      "types": "./types.d.ts",
+      "types": "./brand/types.d.ts",
       "default": "./brand/ssb.css"
     },
     "./*": {

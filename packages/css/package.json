@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CSS for SSB Designsystem",
   "license": "MIT",
   "author": "Statistics Norway",
@@ -17,7 +17,6 @@
   "types": "./types.d.ts",
   "files": [
     "types.d.ts",
-    "theme.d.ts",
     "dist",
     "README.md",
     "LICENSE-ROBOTO"
@@ -26,9 +25,6 @@
     ".": {
       "types": "./types.d.ts",
       "default": "./dist/src/index.css"
-    },
-    "./theme": {
-      "types": "./theme.d.ts"
     }
   },
   "scripts": {

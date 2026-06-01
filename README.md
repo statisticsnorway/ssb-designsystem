@@ -12,11 +12,11 @@ The repository is organized as a monorepo using pnpm workspaces.
 
 ### `@statisticsnorway/design-theme`
 
-Contains generated design tokens and theme CSS for SSB’s visual profile.
+Contains generated design tokens, theme CSS, and TypeScript theme definitions for SSB’s visual profile.
 
 ### `@statisticsnorway/design-css`
 
-Shared CSS package containing Digdir base styles, SSB theme styles, and fonts.
+Shared CSS package containing Digdir base styles, fonts, and SSB-specific CSS overrides.
 
 ### `@statisticsnorway/design-react`
 
@@ -32,15 +32,21 @@ This project uses pnpm.
 
 Install dependencies:
 
-    pnpm install
+```bash
+pnpm install
+```
 
 Run Storybook:
 
-    pnpm storybook
+```bash
+pnpm storybook
+```
 
 Build packages:
 
-    pnpm build
+```bash
+pnpm build
+```
 
 ### Testing
 
@@ -76,4 +82,4 @@ See RELEASING.md for release details.
 
 🚧 This project is under active development.
 
-Packages are not yet publicly available and APIs may change.
+The packages are published, but APIs and package structure may change while the design system is being established.
