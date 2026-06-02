@@ -24,7 +24,6 @@ export default defineConfig({
         '@digdir/designsystemet-react',
         '@digdir/designsystemet-types',
         '@navikt/aksel-icons',
-        '@statisticsnorway/design-css',
       ],
     },
   },

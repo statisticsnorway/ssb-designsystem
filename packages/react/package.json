@@ -12,9 +12,6 @@
     "access": "public"
   },
   "type": "module",
-  "sideEffects": [
-    "**/*.css"
-  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -35,8 +32,7 @@
   },
   "peerDependencies": {
     "react": ">=18.3.1 || ^19.0.0",
-    "react-dom": ">=18.3.1 || ^19.0.0",
-    "@statisticsnorway/design-css": "workspace:^"
+    "react-dom": ">=18.3.1 || ^19.0.0"
   },
   "dependencies": {
     "@digdir/designsystemet-react": "^1.15.0",
@@ -44,7 +40,6 @@
     "@navikt/aksel-icons": "^8.11.0"
   },
   "devDependencies": {
-    "@statisticsnorway/design-css": "workspace:^",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.15",
