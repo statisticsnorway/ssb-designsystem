@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@navikt/aksel-icons": "^8.11.0",
+    "@statisticsnorway/design-theme": "workspace:^",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
     "clsx": "^2.1.1",

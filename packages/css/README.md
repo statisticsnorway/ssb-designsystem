@@ -2,33 +2,35 @@
 
 This package provides the main CSS entry point for applications built with SSB's design system.
 
-It combines:
+It includes:
 
 - Digdir's base CSS (`@digdir/designsystemet-css`)
-- SSB's design tokens (via `@statisticsnorway/design-theme`)
 - Roboto font definitions
+- SSB-specific CSS overrides
+
+This package is intended to be used together with `@statisticsnorway/design-theme`.
 
 ## Installation
 
 ```bash
-npm install @statisticsnorway/design-css
+npm install @statisticsnorway/design-css @statisticsnorway/design-theme
 ```
 
 ## Usage
 
-Import the package in your application entry file:
+Import both packages once in your application entry file:
 
 ```js
 import '@statisticsnorway/design-css'
+import '@statisticsnorway/design-theme'
 ```
 
 Or in CSS:
 
 ```css
 @import '@statisticsnorway/design-css';
+@import '@statisticsnorway/design-theme';
 ```
-
-If you are using `@statisticsnorway/design-react`, you do not need to install this package separately.
 
 ## Fonts
 

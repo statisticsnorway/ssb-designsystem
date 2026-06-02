@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CSS for SSB Designsystem",
   "license": "MIT",
   "author": "Statistics Norway",
@@ -17,7 +17,6 @@
   "types": "./types.d.ts",
   "files": [
     "types.d.ts",
-    "theme.d.ts",
     "dist",
     "README.md",
     "LICENSE-ROBOTO"
@@ -26,9 +25,6 @@
     ".": {
       "types": "./types.d.ts",
       "default": "./dist/src/index.css"
-    },
-    "./theme": {
-      "types": "./theme.d.ts"
     }
   },
   "scripts": {
@@ -37,8 +33,7 @@
     "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.15.0",
-    "@statisticsnorway/design-theme": "workspace:^"
+    "@digdir/designsystemet-css": "^1.15.0"
   },
   "devDependencies": {
     "postcss": "^8.5.15",

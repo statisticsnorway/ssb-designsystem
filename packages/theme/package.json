@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "Themes for SSB Designsystem",
   "license": "MIT",
@@ -25,10 +25,6 @@
     "./ssb.css": {
       "types": "./types.d.ts",
       "default": "./brand/ssb.css"
-    },
-    "./*": {
-      "types": "./types.d.ts",
-      "default": "./brand/*"
     }
   },
   "scripts": {}

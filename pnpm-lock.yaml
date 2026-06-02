@@ -32,6 +32,9 @@ importers:
       '@statisticsnorway/design-react':
         specifier: workspace:^
         version: link:../../packages/react
+      '@statisticsnorway/design-theme':
+        specifier: workspace:^
+        version: link:../../packages/theme
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -69,9 +72,6 @@ importers:
       '@digdir/designsystemet-css':
         specifier: ^1.15.0
         version: 1.15.0
-      '@statisticsnorway/design-theme':
-        specifier: workspace:^
-        version: link:../theme
     devDependencies:
       postcss:
         specifier: ^8.5.15
@@ -92,9 +92,6 @@ importers:
         specifier: ^8.11.0
         version: 8.11.0
     devDependencies:
-      '@statisticsnorway/design-css':
-        specifier: workspace:^
-        version: link:../css
       '@testing-library/jest-dom':
         specifier: ^6.9.1
         version: 6.9.1
