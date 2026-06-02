@@ -8,6 +8,8 @@ It includes:
 - Roboto font definitions
 - SSB-specific CSS overrides
 
+This package is intended to be used together with `@statisticsnorway/design-theme`.
+
 ## Installation
 
 ```bash
@@ -16,7 +18,7 @@ npm install @statisticsnorway/design-css @statisticsnorway/design-theme
 
 ## Usage
 
-Import both packages in your application entry file:
+Import both packages once in your application entry file:
 
 ```js
 import '@statisticsnorway/design-css'

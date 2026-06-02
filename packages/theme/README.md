@@ -1,6 +1,6 @@
 # @statisticsnorway/design-theme
 
-This package contains CSS variables, generated design tokens, and TypeScript theme definitions for SSB’s design system.
+This package provides the SSB theme, including design tokens and theme definitions for Designsystemet.
 
 ## Installation
 
