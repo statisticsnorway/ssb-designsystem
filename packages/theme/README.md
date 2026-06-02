@@ -44,19 +44,8 @@ This enables type support for SSB-specific theme colors such as `accent`, `brand
 
 ## Related packages
 
-For a complete setup, install:
-
-```bash
-npm install @statisticsnorway/design-css @statisticsnorway/design-theme
-```
-
-Or when using React:
-
-```bash
-npm install @statisticsnorway/design-react @statisticsnorway/design-css @statisticsnorway/design-theme
-```
-
-`@statisticsnorway/design-theme` provides the SSB theme and TypeScript theme definitions, while `@statisticsnorway/design-css` provides fonts and base styling.
+- `@statisticsnorway/design-css` – fonts and base styling
+- `@statisticsnorway/design-react` – React components
 
 ## Status
 
