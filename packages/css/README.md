@@ -30,20 +30,6 @@ Or in CSS:
 @import '@statisticsnorway/design-theme';
 ```
 
-## TypeScript
-
-If you are using TypeScript and SSB theme colors, add the theme types to your `tsconfig.json`:
-
-```json
-{
-  "compilerOptions": {
-    "types": ["@statisticsnorway/design-theme"]
-  }
-}
-```
-
-This enables type support for SSB-specific theme colors such as `accent`, `brand1`, `brand2`, and `neutral`.
-
 ## Fonts
 
 The Roboto font is defined but not applied globally. To use it across your application, add the following to your global styles:
