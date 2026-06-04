@@ -24,8 +24,8 @@ importers:
   apps/storybook:
     dependencies:
       '@navikt/aksel-icons':
-        specifier: ^8.11.0
-        version: 8.11.0
+        specifier: ^8.11.1
+        version: 8.11.1
       '@statisticsnorway/design-css':
         specifier: workspace:^
         version: link:../../packages/css
@@ -89,8 +89,8 @@ importers:
         specifier: ^1.15.0
         version: 1.15.0
       '@navikt/aksel-icons':
-        specifier: ^8.11.0
-        version: 8.11.0
+        specifier: ^8.11.1
+        version: 8.11.1
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.9.1
@@ -749,8 +749,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@navikt/aksel-icons@8.11.0':
-    resolution: {integrity: sha512-enprSpDl7j4yDEAtVtp/BPby2McZKtgXIgarTVDeZ0pmiqnYbXFyCTgzl/ZMg2/EV+hd2DXpLsKzU73PDljpmw==}
+  '@navikt/aksel-icons@8.11.1':
+    resolution: {integrity: sha512-hXvm/5T8s7fcSlZpg2RWrs870PkH2SeCSQBMmDgI4rm+t5gsw+nDa4qOSCrQQJLiNjMx3jbCO10rL4po9QtfdQ==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1578,6 +1578,7 @@ packages:
   chromatic@17.1.0:
     resolution: {integrity: sha512-TApQvyoFJHmeSqgvtGQ8JVQmHcPENub76B/uJGBx+G2Ju6AVo2f4Buh3Rhe0IcBh2N/fBdqEU4MDavhJeVnS+Q==}
     engines: {node: '>=22.0.0'}
+    deprecated: Deprecating backend data format
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -3452,7 +3453,7 @@ snapshots:
       '@digdir/designsystemet-web': 1.15.0
       '@floating-ui/dom': 1.7.6
       '@floating-ui/react': 0.26.23(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@navikt/aksel-icons': 8.11.0
+      '@navikt/aksel-icons': 8.11.1
       '@radix-ui/react-slot': 1.2.4(@types/react@19.2.15)(react@19.2.6)
       '@tanstack/react-virtual': 3.13.26(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       clsx: 2.1.1
@@ -3859,7 +3860,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@navikt/aksel-icons@8.11.0': {}
+  '@navikt/aksel-icons@8.11.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

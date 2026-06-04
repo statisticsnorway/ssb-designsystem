@@ -37,7 +37,7 @@
   "dependencies": {
     "@digdir/designsystemet-react": "^1.15.0",
     "@digdir/designsystemet-types": "^1.15.0",
-    "@navikt/aksel-icons": "^8.11.0"
+    "@navikt/aksel-icons": "^8.11.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
