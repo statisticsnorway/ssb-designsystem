@@ -9,21 +9,21 @@
     "chromatic": "chromatic"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^10.4.1",
-    "@storybook/react-vite": "^10.4.1",
-    "@types/react": "^19.2.15",
+    "@storybook/addon-docs": "^10.4.2",
+    "@storybook/react-vite": "^10.4.2",
+    "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
-    "chromatic": "^17.1.0",
-    "concurrently": "^10.0.1",
-    "storybook": "^10.4.1"
+    "chromatic": "^17.2.0",
+    "concurrently": "^10.0.3",
+    "storybook": "^10.4.2"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^8.11.0",
-    "@statisticsnorway/design-theme": "workspace:^",
+    "@navikt/aksel-icons": "^8.11.1",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
+    "@statisticsnorway/design-theme": "workspace:^",
     "clsx": "^2.1.1",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }
