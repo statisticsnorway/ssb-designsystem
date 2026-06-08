@@ -32,6 +32,13 @@ Alternatively, import them from your main CSS file:
 @import '@statisticsnorway/design-theme';
 ```
 
+### Icons
+
+If your application imports icons from `@navikt/aksel-icons`, install the package separately:
+
+````bash
+npm install @navikt/aksel-icons
+
 ### Fonts
 
 The Roboto font is included in the stylesheet package but is not applied globally.
@@ -42,7 +49,7 @@ To use it across your application, add the following to your global CSS:
 body {
   font-family: var(--ds-font-family);
 }
-```
+````
 
 The included Roboto font files are licensed under Apache License 2.0.
 
