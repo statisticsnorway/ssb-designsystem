@@ -1,69 +1,69 @@
 {
   "color": {
-    "accent": {
+    "primary": {
       "background-default": {
         "$type": "color",
-        "$value": "{color.accent.1}"
+        "$value": "{color.primary.1}"
       },
       "background-tinted": {
         "$type": "color",
-        "$value": "{color.accent.2}"
+        "$value": "{color.primary.2}"
       },
       "surface-default": {
         "$type": "color",
-        "$value": "{color.accent.3}"
+        "$value": "{color.primary.3}"
       },
       "surface-tinted": {
         "$type": "color",
-        "$value": "{color.accent.4}"
+        "$value": "{color.primary.4}"
       },
       "surface-hover": {
         "$type": "color",
-        "$value": "{color.accent.5}"
+        "$value": "{color.primary.5}"
       },
       "surface-active": {
         "$type": "color",
-        "$value": "{color.accent.6}"
+        "$value": "{color.primary.6}"
       },
       "border-subtle": {
         "$type": "color",
-        "$value": "{color.accent.7}"
+        "$value": "{color.primary.7}"
       },
       "border-default": {
         "$type": "color",
-        "$value": "{color.accent.8}"
+        "$value": "{color.primary.8}"
       },
       "border-strong": {
         "$type": "color",
-        "$value": "{color.accent.9}"
+        "$value": "{color.primary.9}"
       },
       "text-subtle": {
         "$type": "color",
-        "$value": "{color.accent.10}"
+        "$value": "{color.primary.10}"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{color.accent.11}"
+        "$value": "{color.primary.11}"
       },
       "base-default": {
         "$type": "color",
-        "$value": "{color.accent.12}"
+        "$value": "{color.primary.12}"
       },
       "base-hover": {
         "$type": "color",
-        "$value": "{color.accent.13}"
+        "$value": "{color.primary.13}"
       },
       "base-active": {
         "$type": "color",
-        "$value": "{color.accent.14}"
+        "$value": "{color.primary.14}"
       },
       "base-contrast-subtle": {
         "$type": "color",
-        "$value": "{color.accent.15}"
+        "$value": "{color.primary.15}"
       },
       "base-contrast-default": {
         "$type": "color",
-        "$value": "{color.accent.16}"
+        "$value": "{color.primary.16}"
       }
     },
     "neutral": {
@@ -132,136 +132,136 @@
         "$value": "{color.neutral.16}"
       }
     },
-    "brand1": {
+    "secondary": {
       "background-default": {
         "$type": "color",
-        "$value": "{color.brand1.1}"
+        "$value": "{color.secondary.1}"
       },
       "background-tinted": {
         "$type": "color",
-        "$value": "{color.brand1.2}"
+        "$value": "{color.secondary.2}"
       },
       "surface-default": {
         "$type": "color",
-        "$value": "{color.brand1.3}"
+        "$value": "{color.secondary.3}"
       },
       "surface-tinted": {
         "$type": "color",
-        "$value": "{color.brand1.4}"
+        "$value": "{color.secondary.4}"
       },
       "surface-hover": {
         "$type": "color",
-        "$value": "{color.brand1.5}"
+        "$value": "{color.secondary.5}"
       },
       "surface-active": {
         "$type": "color",
-        "$value": "{color.brand1.6}"
+        "$value": "{color.secondary.6}"
       },
       "border-subtle": {
         "$type": "color",
-        "$value": "{color.brand1.7}"
+        "$value": "{color.secondary.7}"
       },
       "border-default": {
         "$type": "color",
-        "$value": "{color.brand1.8}"
+        "$value": "{color.secondary.8}"
       },
       "border-strong": {
         "$type": "color",
-        "$value": "{color.brand1.9}"
+        "$value": "{color.secondary.9}"
       },
       "text-subtle": {
         "$type": "color",
-        "$value": "{color.brand1.10}"
+        "$value": "{color.secondary.10}"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{color.brand1.11}"
+        "$value": "{color.secondary.11}"
       },
       "base-default": {
         "$type": "color",
-        "$value": "{color.brand1.12}"
+        "$value": "{color.secondary.12}"
       },
       "base-hover": {
         "$type": "color",
-        "$value": "{color.brand1.13}"
+        "$value": "{color.secondary.13}"
       },
       "base-active": {
         "$type": "color",
-        "$value": "{color.brand1.14}"
+        "$value": "{color.secondary.14}"
       },
       "base-contrast-subtle": {
         "$type": "color",
-        "$value": "{color.brand1.15}"
+        "$value": "{color.secondary.15}"
       },
       "base-contrast-default": {
         "$type": "color",
-        "$value": "{color.brand1.16}"
+        "$value": "{color.secondary.16}"
       }
     },
-    "brand2": {
+    "magic": {
       "background-default": {
         "$type": "color",
-        "$value": "{color.brand2.1}"
+        "$value": "{color.magic.1}"
       },
       "background-tinted": {
         "$type": "color",
-        "$value": "{color.brand2.2}"
+        "$value": "{color.magic.2}"
       },
       "surface-default": {
         "$type": "color",
-        "$value": "{color.brand2.3}"
+        "$value": "{color.magic.3}"
       },
       "surface-tinted": {
         "$type": "color",
-        "$value": "{color.brand2.4}"
+        "$value": "{color.magic.4}"
       },
       "surface-hover": {
         "$type": "color",
-        "$value": "{color.brand2.5}"
+        "$value": "{color.magic.5}"
       },
       "surface-active": {
         "$type": "color",
-        "$value": "{color.brand2.6}"
+        "$value": "{color.magic.6}"
       },
       "border-subtle": {
         "$type": "color",
-        "$value": "{color.brand2.7}"
+        "$value": "{color.magic.7}"
       },
       "border-default": {
         "$type": "color",
-        "$value": "{color.brand2.8}"
+        "$value": "{color.magic.8}"
       },
       "border-strong": {
         "$type": "color",
-        "$value": "{color.brand2.9}"
+        "$value": "{color.magic.9}"
       },
       "text-subtle": {
         "$type": "color",
-        "$value": "{color.brand2.10}"
+        "$value": "{color.magic.10}"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{color.brand2.11}"
+        "$value": "{color.magic.11}"
       },
       "base-default": {
         "$type": "color",
-        "$value": "{color.brand2.12}"
+        "$value": "{color.magic.12}"
       },
       "base-hover": {
         "$type": "color",
-        "$value": "{color.brand2.13}"
+        "$value": "{color.magic.13}"
       },
       "base-active": {
         "$type": "color",
-        "$value": "{color.brand2.14}"
+        "$value": "{color.magic.14}"
       },
       "base-contrast-subtle": {
         "$type": "color",
-        "$value": "{color.brand2.15}"
+        "$value": "{color.magic.15}"
       },
       "base-contrast-default": {
         "$type": "color",
-        "$value": "{color.brand2.16}"
+        "$value": "{color.magic.16}"
       }
     },
     "info": {

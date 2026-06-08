@@ -19,15 +19,16 @@ type Story = StoryObj<typeof meta>
 
 const sizes = ['sm', 'md', 'lg']
 const colorSchemeModes = ['light', 'dark']
-const colorModes = ['accent', 'neutral', 'brand1', 'brand2']
+const colorModes = ['primary', 'neutral', 'secondary', 'magic']
 
 export const Default: StoryFn = () => {
   const [size, setSize] = useState('sm')
   const [colorSchemeMode, setColorSchemeMode] = useState('light')
-  const [colorMode, setColorMode] = useState('accent')
+  const [colorMode, setColorMode] = useState('primary')
 
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
+      <h1>Fargevariant 7</h1>
       <div className={classes.innerWrapper}>
         <div className={classes.controls} data-size='sm'>
           <Fieldset className={classes.controlFieldset}>

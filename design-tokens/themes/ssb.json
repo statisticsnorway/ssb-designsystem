@@ -1,69 +1,69 @@
 {
   "color": {
-    "accent": {
+    "primary": {
       "1": {
         "$type": "color",
-        "$value": "{ssb.accent.1}"
+        "$value": "{ssb.primary.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{ssb.accent.2}"
+        "$value": "{ssb.primary.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{ssb.accent.3}"
+        "$value": "{ssb.primary.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{ssb.accent.4}"
+        "$value": "{ssb.primary.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{ssb.accent.5}"
+        "$value": "{ssb.primary.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{ssb.accent.6}"
+        "$value": "{ssb.primary.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{ssb.accent.7}"
+        "$value": "{ssb.primary.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{ssb.accent.8}"
+        "$value": "{ssb.primary.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{ssb.accent.9}"
+        "$value": "{ssb.primary.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{ssb.accent.10}"
+        "$value": "{ssb.primary.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{ssb.accent.11}"
+        "$value": "{ssb.primary.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{ssb.accent.12}"
+        "$value": "{ssb.primary.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{ssb.accent.13}"
+        "$value": "{ssb.primary.13}"
       },
       "14": {
         "$type": "color",
-        "$value": "{ssb.accent.14}"
+        "$value": "{ssb.primary.14}"
       },
       "15": {
         "$type": "color",
-        "$value": "{ssb.accent.15}"
+        "$value": "{ssb.primary.15}"
       },
       "16": {
         "$type": "color",
-        "$value": "{ssb.accent.16}"
+        "$value": "{ssb.primary.16}"
       }
     },
     "neutral": {
@@ -132,136 +132,136 @@
         "$value": "{ssb.neutral.16}"
       }
     },
-    "brand1": {
+    "secondary": {
       "1": {
         "$type": "color",
-        "$value": "{ssb.brand1.1}"
+        "$value": "{ssb.secondary.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{ssb.brand1.2}"
+        "$value": "{ssb.secondary.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{ssb.brand1.3}"
+        "$value": "{ssb.secondary.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{ssb.brand1.4}"
+        "$value": "{ssb.secondary.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{ssb.brand1.5}"
+        "$value": "{ssb.secondary.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{ssb.brand1.6}"
+        "$value": "{ssb.secondary.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{ssb.brand1.7}"
+        "$value": "{ssb.secondary.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{ssb.brand1.8}"
+        "$value": "{ssb.secondary.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{ssb.brand1.9}"
+        "$value": "{ssb.secondary.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{ssb.brand1.10}"
+        "$value": "{ssb.secondary.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{ssb.brand1.11}"
+        "$value": "{ssb.secondary.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{ssb.brand1.12}"
+        "$value": "{ssb.secondary.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{ssb.brand1.13}"
+        "$value": "{ssb.secondary.13}"
       },
       "14": {
         "$type": "color",
-        "$value": "{ssb.brand1.14}"
+        "$value": "{ssb.secondary.14}"
       },
       "15": {
         "$type": "color",
-        "$value": "{ssb.brand1.15}"
+        "$value": "{ssb.secondary.15}"
       },
       "16": {
         "$type": "color",
-        "$value": "{ssb.brand1.16}"
+        "$value": "{ssb.secondary.16}"
       }
     },
-    "brand2": {
+    "magic": {
       "1": {
         "$type": "color",
-        "$value": "{ssb.brand2.1}"
+        "$value": "{ssb.magic.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{ssb.brand2.2}"
+        "$value": "{ssb.magic.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{ssb.brand2.3}"
+        "$value": "{ssb.magic.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{ssb.brand2.4}"
+        "$value": "{ssb.magic.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{ssb.brand2.5}"
+        "$value": "{ssb.magic.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{ssb.brand2.6}"
+        "$value": "{ssb.magic.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{ssb.brand2.7}"
+        "$value": "{ssb.magic.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{ssb.brand2.8}"
+        "$value": "{ssb.magic.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{ssb.brand2.9}"
+        "$value": "{ssb.magic.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{ssb.brand2.10}"
+        "$value": "{ssb.magic.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{ssb.brand2.11}"
+        "$value": "{ssb.magic.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{ssb.brand2.12}"
+        "$value": "{ssb.magic.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{ssb.brand2.13}"
+        "$value": "{ssb.magic.13}"
       },
       "14": {
         "$type": "color",
-        "$value": "{ssb.brand2.14}"
+        "$value": "{ssb.magic.14}"
       },
       "15": {
         "$type": "color",
-        "$value": "{ssb.brand2.15}"
+        "$value": "{ssb.magic.15}"
       },
       "16": {
         "$type": "color",
-        "$value": "{ssb.brand2.16}"
+        "$value": "{ssb.magic.16}"
       }
     },
     "info": {

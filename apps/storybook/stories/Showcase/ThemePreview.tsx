@@ -286,7 +286,7 @@ export function ThemePreview({ ...props }: ThemePreviewProps) {
             <Heading level={3}>
               <Link href='#'>Husleiekalkulator</Link>
             </Heading>
-            <Tag data-color='accent'>Kalkulator</Tag>
+            <Tag>Kalkulator</Tag>
             <Paragraph>Med SSBs husleiekalkulator kan du regne ut ny husleie.</Paragraph>
           </Card>
 
