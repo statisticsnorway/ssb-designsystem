@@ -36,8 +36,9 @@ Alternatively, import them from your main CSS file:
 
 If your application imports icons from `@navikt/aksel-icons`, install the package separately:
 
-````bash
+```bash
 npm install @navikt/aksel-icons
+```
 
 ### Fonts
 
@@ -49,7 +50,7 @@ To use it across your application, add the following to your global CSS:
 body {
   font-family: var(--ds-font-family);
 }
-````
+```
 
 The included Roboto font files are licensed under Apache License 2.0.
 

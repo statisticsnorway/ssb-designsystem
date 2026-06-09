@@ -27,6 +27,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "pnpm clean && vite build",
+    "prepack": "pnpm build",
     "test": "vitest",
     "test:run": "vitest run"
   },
