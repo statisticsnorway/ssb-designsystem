@@ -12,18 +12,23 @@ Packages are versioned independently.
 - `@statisticsnorway/design-css`
 - `@statisticsnorway/design-react`
 
-These packages have a dependency chain:
+These packages can be used independently or together, depending on the integration.
 
-- `design-css` depends on `design-theme`
-- `design-react` depends on `design-css`
+Typical combinations:
+
+- `design-theme` + Digdir packages
+- `design-theme` + `design-css` + Digdir packages
+- `design-theme` + `design-css` + `design-react`
+
+No package installs another package automatically. The consuming application must explicitly install and import the packages it needs.
 
 When a package changes, only that package is versioned accordingly.
 
-Dependent packages may receive a patch version bump when internal dependencies are updated. This is handled automatically by Changesets.
+Packages are published independently, so Changesets does not automatically bump other packages unless they are selected in the same changeset.
 
-If a change affects both React components and component styling, both `design-react` and `design-css` should be selected when creating a changeset.
+If a change affects multiple packages (for example React components and styling), select all affected packages in the changeset.
 
-This ensures that versioning reflects actual changes while keeping internal dependencies in sync.
+This ensures that versioning reflects actual changes across the packages users need to upgrade together.
 
 ### Creating a changeset
 
@@ -50,7 +55,7 @@ This file should be committed together with your changes.
 To apply changesets and update package versions and changelogs:
 
 ```bash
-pnpm version-packages
+pnpm changeset:version
 ```
 
 This will:
@@ -64,7 +69,7 @@ This will:
 To publish packages to npm:
 
 ```bash
-pnpm release
+pnpm changeset:release
 ```
 
 This builds and publishes all updated packages.

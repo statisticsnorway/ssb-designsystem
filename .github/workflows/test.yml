@@ -7,9 +7,13 @@ on:
       - main
     paths:
       - '.github/workflows/test.yml'
-      - 'packages/react/**'
-      - 'pnpm-lock.yaml'
+      - '.github/workflows/chromatic.yml'
+      - 'packages/**'
+      - 'apps/storybook/**'
+      - 'design-tokens/**'
+      - 'designsystemet.config.json'
       - 'package.json'
+      - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
 permissions:
   contents: read
@@ -32,5 +36,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build packages
+        run: pnpm build
+
       - name: Run React tests
         run: pnpm --filter @statisticsnorway/design-react test
+
+      - name: Pack React package
+        run: pnpm -C packages/react pack
+
+      - name: Pack CSS package
+        run: pnpm -C packages/css pack
+
+      - name: Remove tarballs
+        run: rm -f packages/react/*.tgz packages/css/*.tgz

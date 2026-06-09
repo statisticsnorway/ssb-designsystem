@@ -27,6 +27,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "pnpm clean && vite build",
+    "prepack": "pnpm build",
     "test": "vitest",
     "test:run": "vitest run"
   },
@@ -36,8 +37,7 @@
   },
   "dependencies": {
     "@digdir/designsystemet-react": "^1.15.0",
-    "@digdir/designsystemet-types": "^1.15.0",
-    "@navikt/aksel-icons": "^8.11.1"
+    "@digdir/designsystemet-types": "^1.15.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",

@@ -30,6 +30,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "pnpm clean && postcss \"src/**/*.css\" --base src --dir dist/src && cp src/fonts/*.woff2 dist/src/fonts",
+    "prepack": "pnpm build",
     "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
