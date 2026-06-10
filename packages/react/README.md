@@ -66,7 +66,7 @@ If you are using TypeScript, add the Designsystemet React types and SSB theme ty
 }
 ```
 
-This enables type support for Designsystemet React components and SSB-specific theme colors such as `accent`, `brand1`, `brand2`, and `neutral`.
+This enables type support for Designsystemet React components and SSB-specific theme colors such as `primary`, `secondary`, `magic`, and `neutral`.
 
 ## Usage
 

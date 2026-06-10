@@ -5,7 +5,8 @@ This package provides the main CSS entry point for applications built with SSB's
 It includes:
 
 - Digdir's base CSS (`@digdir/designsystemet-css`)
-- SSB theme definitions (`@statisticsnorway/design-css/theme`)
+- SSB theme wrapper (`@statisticsnorway/design-css/theme`)
+- SSB theme overrides, including semibold heading font weights
 - Roboto font definitions
 - SSB-specific CSS overrides
 
@@ -36,6 +37,12 @@ Or in CSS:
 ```css
 @import '@statisticsnorway/design-css';
 @import '@statisticsnorway/design-css/theme.css';
+```
+
+If you need the raw generated theme tokens without SSB overrides, import:
+
+```css
+@import '@statisticsnorway/design-css/theme/ssb.css';
 ```
 
 `@statisticsnorway/design-theme` still works during transition, but new integrations should use `@statisticsnorway/design-css/theme`.
