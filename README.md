@@ -2,7 +2,7 @@
 
 This repository contains the source code for Statistics Norway’s design system.
 
-The design system is built on top of Digdir’s Designsystemet and includes design tokens, themes, shared CSS, and React components.
+The design system is built on top of Digdir’s Designsystemet and includes design tokens, shared CSS, and React components.
 
 The repository is organized as a monorepo using pnpm workspaces.
 
@@ -12,11 +12,11 @@ The repository is organized as a monorepo using pnpm workspaces.
 
 ### `@statisticsnorway/design-theme`
 
-Contains generated design tokens, theme CSS, and TypeScript theme definitions for SSB’s visual profile.
+Legacy package for SSB theme CSS and theme type definitions. New integrations should use `@statisticsnorway/design-css/theme`.
 
 ### `@statisticsnorway/design-css`
 
-Shared CSS package containing Digdir base styles, fonts, and SSB-specific CSS overrides.
+Shared CSS package containing Digdir base styles, SSB theme entrypoint (`@statisticsnorway/design-css/theme`), fonts, and SSB-specific CSS overrides.
 
 ### `@statisticsnorway/design-react`
 

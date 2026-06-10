@@ -32,9 +32,6 @@ importers:
       '@statisticsnorway/design-react':
         specifier: workspace:^
         version: link:../../packages/react
-      '@statisticsnorway/design-theme':
-        specifier: workspace:^
-        version: link:../../packages/theme
       clsx:
         specifier: ^2.1.1
         version: 2.1.1

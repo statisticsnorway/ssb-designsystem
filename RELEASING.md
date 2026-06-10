@@ -6,29 +6,12 @@ This repository uses Changesets to manage versioning and releases.
 
 ### Strategy
 
-Packages are versioned independently.
+Packages are versioned independently:
 
-- `@statisticsnorway/design-theme`
 - `@statisticsnorway/design-css`
 - `@statisticsnorway/design-react`
 
-These packages can be used independently or together, depending on the integration.
-
-Typical combinations:
-
-- `design-theme` + Digdir packages
-- `design-theme` + `design-css` + Digdir packages
-- `design-theme` + `design-css` + `design-react`
-
-No package installs another package automatically. The consuming application must explicitly install and import the packages it needs.
-
-When a package changes, only that package is versioned accordingly.
-
-Packages are published independently, so Changesets does not automatically bump other packages unless they are selected in the same changeset.
-
-If a change affects multiple packages (for example React components and styling), select all affected packages in the changeset.
-
-This ensures that versioning reflects actual changes across the packages users need to upgrade together.
+Changesets should include all affected packages.
 
 ### Creating a changeset
 

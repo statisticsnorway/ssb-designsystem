@@ -1,5 +1,5 @@
 import '@statisticsnorway/design-css'
-import '@statisticsnorway/design-theme'
+import '@statisticsnorway/design-css/theme'
 import './preview.css'
 
 import type { Preview } from '@storybook/react-vite'

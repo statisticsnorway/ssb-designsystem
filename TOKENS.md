@@ -13,4 +13,4 @@ npm run tokens:update
 This regenerates:
 
 - `design-tokens/` – token source files
-- `packages/theme/brand/ssb.css` – the CSS theme used by applications
+- `packages/css/theme/ssb.css` – the CSS theme used by applications
