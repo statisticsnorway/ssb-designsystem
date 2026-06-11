@@ -1,3 +1,5 @@
+@layer ds, ssb.overrides;
+
 @import './fonts/fonts.css';
 @import '@digdir/designsystemet-css/index.css';
 @import './overrides.css';
