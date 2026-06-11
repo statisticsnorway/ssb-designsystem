@@ -1,6 +1,5 @@
 @layer ds.theme.overrides {
   :root {
-    --ds-font-weight-semibold: 700;
     --ds-heading-2xs-font-weight: var(--ds-font-weight-semibold);
     --ds-heading-xs-font-weight: var(--ds-font-weight-semibold);
     --ds-heading-sm-font-weight: var(--ds-font-weight-semibold);
