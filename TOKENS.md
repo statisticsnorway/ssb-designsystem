@@ -7,10 +7,14 @@
 2. Run from the repository root:
 
 ```bash
-npm run tokens:update
+pnpm tokens:update
 ```
 
 This regenerates:
 
 - `design-tokens/` – token source files
-- `packages/css/theme/ssb.css` – the CSS theme used by applications
+- `packages/css/theme/` – generated CSS theme files used by applications
+
+Then commit the generated updates together with the config change.
+
+If you have made manual changes in generated token files, review them before commit and avoid committing unintended manual edits.
