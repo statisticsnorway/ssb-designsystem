@@ -18,7 +18,7 @@
     "storybook": "^10.4.2"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^8.11.1",
+    "@navikt/aksel-icons": "^8.12.1",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
     "clsx": "^2.1.1",
