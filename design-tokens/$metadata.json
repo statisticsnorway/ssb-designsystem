@@ -14,9 +14,9 @@
     "primitives/modes/color-scheme/light/ssb",
     "themes/ssb",
     "semantic/color",
-    "semantic/modes/main-color/accent",
-    "semantic/modes/support-color/brand1",
-    "semantic/modes/support-color/brand2",
+    "semantic/modes/main-color/primary",
+    "semantic/modes/support-color/secondary",
+    "semantic/modes/support-color/magic",
     "semantic/style"
   ]
 }

@@ -21,7 +21,6 @@
     "@navikt/aksel-icons": "^8.11.1",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
-    "@statisticsnorway/design-theme": "workspace:^",
     "clsx": "^2.1.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

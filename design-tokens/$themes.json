@@ -101,26 +101,26 @@
     "group": "Semantic"
   },
   {
-    "id": "77029e975ec86efe4b92eb0be546d61959085bd1",
-    "name": "accent",
+    "id": "593774a74235b661fff40693ca7bda160aadfb74",
+    "name": "primary",
     "selectedTokenSets": {
-      "semantic/modes/main-color/accent": "enabled"
+      "semantic/modes/main-color/primary": "enabled"
     },
     "group": "Main color"
   },
   {
-    "id": "77270e21ea69e87b1111ab73f82f2c9501ffb509",
-    "name": "brand1",
+    "id": "1b29155ecbe46a981b1eafbf7073e2f258d9aa92",
+    "name": "secondary",
     "selectedTokenSets": {
-      "semantic/modes/support-color/brand1": "enabled"
+      "semantic/modes/support-color/secondary": "enabled"
     },
     "group": "Support color"
   },
   {
-    "id": "f048e6cbea788b19c6789b0d2d9307adbcb6efe9",
-    "name": "brand2",
+    "id": "2fae911e9417cc3322508692cef0415f07a8a6ca",
+    "name": "magic",
     "selectedTokenSets": {
-      "semantic/modes/support-color/brand2": "enabled"
+      "semantic/modes/support-color/magic": "enabled"
     },
     "group": "Support color"
   }

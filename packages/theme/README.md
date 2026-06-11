@@ -1,6 +1,12 @@
 # @statisticsnorway/design-theme
 
-This package provides the SSB theme, including design tokens and theme definitions for Designsystemet.
+Deprecated: use `@statisticsnorway/design-css/theme` instead.
+
+This package is kept temporarily while the theme is being moved under `@statisticsnorway/design-css`.
+
+## Legacy usage
+
+This package still provides the SSB theme, including design tokens and theme definitions for Designsystemet.
 
 ## Installation
 
@@ -44,9 +50,9 @@ This enables type support for SSB-specific theme colors such as `accent`, `brand
 
 ## Related packages
 
-- `@statisticsnorway/design-css` – fonts and base styling
+- `@statisticsnorway/design-css` – base styling, theme, and fonts
 - `@statisticsnorway/design-react` – React components
 
 ## Status
 
-🚧 Under active development.
+Deprecated and pending removal in a future release.
