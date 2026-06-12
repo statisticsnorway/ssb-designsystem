@@ -10,9 +10,8 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
-    "tokens:create": "designsystemet tokens create",
+    "tokens:create": "designsystemet tokens create --clean",
     "tokens:build": "designsystemet tokens build --clean -o ./packages/css/theme",
-    "tokens:update": "rm -rf design-tokens && pnpm tokens:create && pnpm tokens:build",
     "storybook": "pnpm --filter @statisticsnorway/storybook dev",
     "storybook:build": "pnpm --filter @statisticsnorway/storybook build-storybook",
     "build:css": "pnpm --filter @statisticsnorway/design-css build",
