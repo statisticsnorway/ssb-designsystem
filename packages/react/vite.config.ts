@@ -17,14 +17,7 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
-        '@digdir/designsystemet-react',
-        '@digdir/designsystemet-types',
-        '@navikt/aksel-icons',
-      ],
+      external: ['react', 'react-dom', 'react/jsx-runtime', '@digdir/designsystemet-react'],
     },
   },
 })
