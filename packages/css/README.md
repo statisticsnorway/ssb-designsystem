@@ -7,7 +7,6 @@ It includes:
 - Digdir's base CSS (`@digdir/designsystemet-css`)
 - SSB theme (`@statisticsnorway/design-css/theme`)
 - Roboto font definitions
-- SSB-specific CSS overrides (semibold headings)
 
 ## Installation
 

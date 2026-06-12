@@ -13,6 +13,10 @@
         "$type": "fontWeights",
         "$value": "Semi bold"
       },
+      "bold": {
+        "$type": "fontWeights",
+        "$value": "Bold"
+      },
       "regular": {
         "$type": "fontWeights",
         "$value": "Regular"
