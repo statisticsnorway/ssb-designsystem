@@ -1,7 +1,12 @@
-import { Button } from './index'
+import { describe, expect, it } from 'vitest'
+import { Button, usePagination } from './index'
 
-describe('package root exports', () => {
-  it('re-exports digdir components', () => {
+describe('exports', () => {
+  it('exports Button', () => {
     expect(Button).toBeDefined()
+  })
+
+  it('exports utilities', () => {
+    expect(usePagination).toBeTypeOf('function')
   })
 })

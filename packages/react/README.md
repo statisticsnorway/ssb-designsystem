@@ -2,11 +2,11 @@
 
 React components for SSB Designsystem.
 
-This package currently re-exports components from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components.
+This package currently re-exports components and utilities from `@digdir/designsystemet-react` and will gradually be extended with SSB-specific components.
 
 ## Installation
 
-Install the React package together with the CSS package:
+Install the React and CSS packages:
 
 ```bash
 npm install @statisticsnorway/design-css @statisticsnorway/design-react
@@ -16,9 +16,7 @@ npm install @statisticsnorway/design-css @statisticsnorway/design-react
 
 ### Load styles
 
-You must load the design system styles once in your application.
-
-Import them from your JavaScript or TypeScript entrypoint, for example `main.tsx`:
+Import the base styles and theme in your application entrypoint, for example `main.tsx`:
 
 ```tsx
 import '@statisticsnorway/design-css'
