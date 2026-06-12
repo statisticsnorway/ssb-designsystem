@@ -14,6 +14,8 @@ This regenerates:
 - `design-tokens/`
 - `packages/css/theme/`
 
+> Manual changes in `design-tokens/` may be overwritten when running `pnpm tokens:create`.
+
 ## Build CSS theme
 
 When token source files have changed and you only want to regenerate the CSS theme, run:

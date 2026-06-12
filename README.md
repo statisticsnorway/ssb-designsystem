@@ -10,13 +10,9 @@ The repository is organized as a monorepo using pnpm workspaces.
 
 ## Packages
 
-### `@statisticsnorway/design-theme`
-
-Legacy package for SSB theme CSS and theme type definitions. New integrations should use `@statisticsnorway/design-css/theme`.
-
 ### `@statisticsnorway/design-css`
 
-Shared CSS package containing Digdir base styles, SSB theme entrypoint (`@statisticsnorway/design-css/theme`), fonts, and SSB-specific CSS overrides.
+Shared CSS package containing Digdir base styles, SSB theme entrypoint (`@statisticsnorway/design-css/theme`), and fonts.
 
 ### `@statisticsnorway/design-react`
 
@@ -67,6 +63,8 @@ pnpm --filter @statisticsnorway/design-react test
 ## Design tokens
 
 See [TOKENS.md](./TOKENS.md) for details on how to update and build tokens.
+
+Important: `design-tokens/` is generated output. Prefer source/config changes and `pnpm tokens:build` for normal updates.
 
 ---
 
