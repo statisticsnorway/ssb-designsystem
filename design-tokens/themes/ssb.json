@@ -558,6 +558,10 @@
       "$type": "fontWeights",
       "$value": "{ssb.font-weight.semibold}"
     },
+    "bold": {
+      "$type": "fontWeights",
+      "$value": "{ssb.font-weight.bold}"
+    },
     "regular": {
       "$type": "fontWeights",
       "$value": "{ssb.font-weight.regular}"

@@ -6,24 +6,12 @@ This repository uses Changesets to manage versioning and releases.
 
 ### Strategy
 
-Packages are versioned independently.
+Packages are versioned independently:
 
-- `@statisticsnorway/design-theme`
 - `@statisticsnorway/design-css`
 - `@statisticsnorway/design-react`
 
-These packages have a dependency chain:
-
-- `design-css` depends on `design-theme`
-- `design-react` depends on `design-css`
-
-When a package changes, only that package is versioned accordingly.
-
-Dependent packages may receive a patch version bump when internal dependencies are updated. This is handled automatically by Changesets.
-
-If a change affects both React components and component styling, both `design-react` and `design-css` should be selected when creating a changeset.
-
-This ensures that versioning reflects actual changes while keeping internal dependencies in sync.
+Changesets should include all affected packages.
 
 ### Creating a changeset
 
@@ -50,7 +38,7 @@ This file should be committed together with your changes.
 To apply changesets and update package versions and changelogs:
 
 ```bash
-pnpm version-packages
+pnpm changeset:version
 ```
 
 This will:
@@ -64,7 +52,7 @@ This will:
 To publish packages to npm:
 
 ```bash
-pnpm release
+pnpm changeset:release
 ```
 
 This builds and publishes all updated packages.

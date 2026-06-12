@@ -10,9 +10,8 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
-    "tokens:create": "designsystemet tokens create",
-    "tokens:build": "designsystemet tokens build --clean -o ./packages/theme/brand",
-    "tokens:update": "rm -rf design-tokens && pnpm tokens:create && pnpm tokens:build",
+    "tokens:create": "designsystemet tokens create --clean",
+    "tokens:build": "designsystemet tokens build --clean -o ./packages/css/theme",
     "storybook": "pnpm --filter @statisticsnorway/storybook dev",
     "storybook:build": "pnpm --filter @statisticsnorway/storybook build-storybook",
     "build:css": "pnpm --filter @statisticsnorway/design-css build",
@@ -26,7 +25,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "@digdir/designsystemet": "^1.15.0",
-    "@types/node": "^25.9.1",
-    "prettier": "^3.8.3"
+    "@types/node": "^25.9.3",
+    "prettier": "^3.8.4"
   }
 }

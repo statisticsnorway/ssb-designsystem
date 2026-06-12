@@ -1,16 +1,29 @@
-## Design tokens
+# Design tokens
 
-### Updating design tokens
+## Update tokens
 
-1. Update the theme configuration in `designsystemet.config.json`, usually by exporting changes from the Digdir Theme Builder.
-
-2. Run from the repository root:
+When `designsystemet.config.json` changes, run:
 
 ```bash
-npm run tokens:update
+pnpm tokens:create
+pnpm tokens:build
 ```
 
 This regenerates:
 
-- `design-tokens/` – token source files
-- `packages/theme/brand/ssb.css` – the CSS theme used by applications
+- `design-tokens/`
+- `packages/css/theme/`
+
+> Manual changes in `design-tokens/` may be overwritten when running `pnpm tokens:create`.
+
+## Build CSS theme
+
+When token source files have changed and you only want to regenerate the CSS theme, run:
+
+```bash
+pnpm tokens:build
+```
+
+This updates the generated CSS files without recreating `design-tokens/`.
+
+Use `pnpm tokens:create` when token config/sources change and `design-tokens/` must be regenerated.

@@ -1,5 +1,2 @@
 @import './fonts/fonts.css';
 @import '@digdir/designsystemet-css/index.css';
-
-/* SSB-specific overrides can be added here */
-@import './logo.css';
