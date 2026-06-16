@@ -27,3 +27,8 @@ pnpm tokens:build
 This updates the generated CSS files without recreating `design-tokens/`.
 
 Use `pnpm tokens:create` when token config/sources change and `design-tokens/` must be regenerated.
+
+## When to run which command
+
+- Use `pnpm tokens:create` when token config/sources change and `design-tokens/` must be regenerated.
+- Use `pnpm tokens:build` when you only need to regenerate CSS theme files from existing token sources.

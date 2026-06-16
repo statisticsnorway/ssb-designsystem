@@ -12,7 +12,6 @@ updates:
 
     ignore:
       - dependency-name: '@statisticsnorway/design-css'
-      - dependency-name: '@statisticsnorway/design-theme'
       - dependency-name: '@statisticsnorway/design-react'
 
     groups:
