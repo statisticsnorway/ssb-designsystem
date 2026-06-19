@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/**'
       - 'apps/storybook/**'
       - 'packages/react/src/**'
       - 'packages/css/**'
@@ -16,6 +17,7 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/**'
       - 'apps/storybook/**'
       - 'packages/react/src/**'
       - 'packages/css/**'

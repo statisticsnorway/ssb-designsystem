@@ -6,8 +6,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/test.yml'
-      - '.github/workflows/chromatic.yml'
+      - '.github/workflows/**'
       - 'packages/**'
       - 'apps/storybook/**'
       - 'design-tokens/**'

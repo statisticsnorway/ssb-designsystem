@@ -30,13 +30,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Update npm
-        run: npm install -g npm@latest
-
-      - name: Check tool versions
-        run: |
-          node --version
-          npm --version
-          pnpm --version
+        run: npm install -g npm@11 # Pinned: required for npm Trusted Publisher support
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
