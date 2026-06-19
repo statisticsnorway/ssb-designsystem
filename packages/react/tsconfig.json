@@ -7,7 +7,7 @@
     "strict": true,
     "declaration": true,
     "skipLibCheck": true,
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
+    "types": ["vitest/globals"]
   },
   "include": ["src"]
 }

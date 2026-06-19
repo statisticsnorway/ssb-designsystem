@@ -36,8 +36,8 @@
     "react-dom": ">=18.3.1 || ^19.0.0"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.15.0",
-    "@digdir/designsystemet-types": "^1.15.0",
+    "@digdir/designsystemet-react": "^1.16.1",
+    "@digdir/designsystemet-types": "^1.16.1",
     "@navikt/aksel-icons": "^8.13.0"
   },
   "devDependencies": {
@@ -46,7 +46,6 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
-    "jsdom": "^29.1.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "vite": "^8.0.16",
