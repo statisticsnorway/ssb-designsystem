@@ -26,6 +26,7 @@
     "@changesets/cli": "^2.31.0",
     "@digdir/designsystemet": "^1.15.0",
     "@types/node": "^25.9.4",
-    "prettier": "^3.8.4"
+    "prettier": "^3.8.4",
+    "jsdom": "^29.1.1"
   }
 }

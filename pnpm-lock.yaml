@@ -17,6 +17,9 @@ importers:
       '@types/node':
         specifier: ^25.9.4
         version: 25.9.4
+      jsdom:
+        specifier: ^29.1.1
+        version: 29.1.1
       prettier:
         specifier: ^3.8.4
         version: 3.8.4
@@ -104,9 +107,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.2
         version: 6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.27.7)(yaml@2.9.0))
-      jsdom:
-        specifier: ^29.1.1
-        version: 29.1.1
       react:
         specifier: ^19.2.7
         version: 19.2.7
