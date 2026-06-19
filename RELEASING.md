@@ -49,7 +49,9 @@ This will:
 
 ### Publishing
 
-To publish packages to npm:
+Normal publishing is automated via GitHub Actions after merge to `main`.
+
+Use manual publish only when needed (for example a controlled fallback if CI publish is unavailable):
 
 ```bash
 pnpm changeset:release
