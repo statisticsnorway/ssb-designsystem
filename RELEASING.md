@@ -57,4 +57,23 @@ pnpm changeset:release
 
 This builds and publishes all updated packages.
 
-> Note: Publishing is not fully set up yet.
+> Publishing is automated via GitHub Actions + Changesets.
+
+---
+
+## Automated release with Trusted Publisher
+
+This repository now uses Changesets in CI for both release PR creation and npm publish.
+
+Flow on `main`:
+
+- If unreleased changesets exist, CI updates or creates a release PR.
+- When that PR is merged to `main`, CI publishes updated packages to npm.
+
+### Release checklist
+
+1. Create changeset(s): `pnpm changeset`
+2. Merge to `main`
+3. Merge the generated release PR
+4. Verify publish job succeeded in GitHub Actions
+5. Verify versions on npm
