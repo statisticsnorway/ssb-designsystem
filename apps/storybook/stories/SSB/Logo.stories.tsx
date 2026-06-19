@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Link } from '@statisticsnorway/design-react'
 
 // Logo is not part of the public API yet.
 // Import directly while the component is under development.
@@ -42,14 +41,6 @@ export const Default: Story = {
       control: { type: 'number' },
     },
   },
-}
-
-export const AsLink: Story = {
-  render: () => (
-    <Link href=''>
-      <Logo height={40} />
-    </Link>
-  ),
 }
 
 export const WhiteLogo: Story = {
