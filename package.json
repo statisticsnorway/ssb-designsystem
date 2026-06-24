@@ -7,11 +7,16 @@
   },
   "private": true,
   "packageManager": "pnpm@10.22.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "type": "module",
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "tokens:create": "designsystemet tokens create --clean",
+    "tokens:inject": "node scripts/inject-token-overrides.ts",
     "tokens:build": "designsystemet tokens build --clean -o ./packages/css/theme",
+    "tokens:update": "pnpm tokens:create && pnpm tokens:inject && pnpm tokens:build",
     "storybook": "pnpm --filter @statisticsnorway/storybook dev",
     "storybook:build": "pnpm --filter @statisticsnorway/storybook build-storybook",
     "build:css": "pnpm --filter @statisticsnorway/design-css build",

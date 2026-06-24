@@ -64,8 +64,6 @@ pnpm --filter @statisticsnorway/design-react test
 
 See [TOKENS.md](./TOKENS.md) for details on how to update and build tokens.
 
-Important: `design-tokens/` is generated output. Prefer source/config changes and `pnpm tokens:build` for normal updates.
-
 ---
 
 ## Versioning
