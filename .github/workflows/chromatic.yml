@@ -4,14 +4,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - '.github/workflows/**'
-      - 'apps/storybook/**'
-      - 'packages/react/src/**'
-      - 'packages/css/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - 'pnpm-workspace.yaml'
 
   push:
     branches:
