@@ -12,7 +12,3 @@
 A changeset is needed if this change affects consumers of the design system.
 
 If unsure, it is usually better to include one.
-
-## Generated files
-
-- [ ] Generated token changes have been reviewed (if any)
