@@ -9,6 +9,17 @@ It is built on top of [Digdir's Designsystemet](https://github.com/digdir/design
 
 The repository is a **pnpm monorepo** with two public packages and one internal Storybook app.
 
+## Stack
+
+- Runtime and workspace: Node.js + pnpm workspaces (monorepo)
+- Languages: TypeScript and CSS
+- UI: React
+- Build and packaging: Vite (React package), PostCSS (CSS package)
+- Testing: Vitest + Testing Library
+- Docs and visual validation: Storybook + Chromatic
+- Release management: Changesets
+- Design tokens: `@digdir/designsystemet` token tooling + custom inject script
+
 ---
 
 ## Repository structure
@@ -84,5 +95,20 @@ See [RELEASING.md](./RELEASING.md) for the full release flow.
 - Treat generated files as build artifacts: edit source files and scripts, then regenerate outputs.
 - Minimize breaking changes; when unavoidable, document migration impact and include a Changeset.
 - Keep implementation practical and maintainable; avoid premature abstraction.
-- Validate changes in Storybook and tests before release.
 - Update Storybook examples and documentation when public APIs change.
+
+## Before completing changes:
+
+- Run relevant tests.
+- Run `pnpm build` when package output may be affected.
+- Verify Storybook examples when component APIs change.
+- Add or update tests when changing behavior.
+
+## Useful references
+
+- README.md
+- RELEASING.md
+- TOKENS.md
+- packages/css/README.md
+- packages/react/README.md
+- apps/storybook/README.md
