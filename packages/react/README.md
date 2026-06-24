@@ -1,4 +1,4 @@
-# SSB Designsystem – React
+# @statisticsnorway/design-react
 
 React components for SSB Designsystem.
 
@@ -32,11 +32,7 @@ Alternatively, import them from your main CSS file:
 
 ### Icons
 
-If your application imports icons from `@navikt/aksel-icons`, install the package separately:
-
-```bash
-npm install @navikt/aksel-icons
-```
+Icons from `@navikt/aksel-icons` are included as a dependency and do not need to be installed separately.
 
 ### Fonts
 
