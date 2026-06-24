@@ -22,26 +22,37 @@ type TypographyToken = {
  * Make sure to run this script after `designsystemet tokens create`,
  * but before `designsystemet tokens build`.
  *
- * Injects a bold font-weight token and updates heading typography
- * to use it.
+ * Injects typography overrides:
+ * - Adds a bold font-weight token in primary and secondary
+ * - Sets secondary font-family to Open Sans
+ * - Updates heading typography to use bold
  */
 function injectTypography(): void {
   for (const file of [PRIMARY_FILE, SECONDARY_FILE]) {
     const raw = readFileSync(file, 'utf8')
     const tokens = JSON.parse(raw)
 
-    const updatedTokens = {
-      ...tokens,
-      ssb: {
-        ...tokens.ssb,
-        'font-weight': {
-          ...tokens.ssb['font-weight'],
-          bold: {
-            $type: 'fontWeights',
-            $value: 'Bold',
-          },
+    const ssbTokens: Record<string, unknown> = {
+      ...tokens.ssb,
+      'font-weight': {
+        ...tokens.ssb['font-weight'],
+        bold: {
+          $type: 'fontWeights',
+          $value: 'Bold',
         },
       },
+    }
+
+    if (file === SECONDARY_FILE) {
+      ssbTokens['font-family'] = {
+        $type: 'fontFamilies',
+        $value: 'Open Sans, sans-serif',
+      }
+    }
+
+    const updatedTokens = {
+      ...tokens,
+      ssb: ssbTokens,
     }
 
     writeFileSync(file, JSON.stringify(updatedTokens, null, 2) + '\n', 'utf8')
@@ -73,7 +84,7 @@ function injectTypography(): void {
 
   writeFileSync(THEME_FILE, JSON.stringify(themeTokens, null, 2) + '\n', 'utf8')
 
-  console.log('Injected bold font-weight token')
+  console.log('Injected typography token overrides')
 }
 
 injectTypography()

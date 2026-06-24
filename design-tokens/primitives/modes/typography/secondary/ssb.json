@@ -2,7 +2,7 @@
   "ssb": {
     "font-family": {
       "$type": "fontFamilies",
-      "$value": "Roboto, sans-serif"
+      "$value": "Open Sans, sans-serif"
     },
     "font-weight": {
       "medium": {
