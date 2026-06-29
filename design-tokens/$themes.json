@@ -93,7 +93,6 @@
     "name": "Semantic",
     "selectedTokenSets": {
       "semantic/style": "enabled",
-      "semantic/color": "enabled",
       "primitives/globals": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:34811:5976",
@@ -101,27 +100,67 @@
     "group": "Semantic"
   },
   {
-    "id": "593774a74235b661fff40693ca7bda160aadfb74",
+    "id": "e3b7c980d763196e9d134c3ec1c3de0ded54e5ce",
     "name": "primary",
     "selectedTokenSets": {
-      "semantic/modes/main-color/primary": "enabled"
+      "semantic/color/primary": "enabled"
     },
-    "group": "Main color"
+    "group": "Color"
   },
   {
-    "id": "1b29155ecbe46a981b1eafbf7073e2f258d9aa92",
+    "id": "e059fc6904f0a3146139802d09bc08d1c34f0e25",
     "name": "secondary",
     "selectedTokenSets": {
-      "semantic/modes/support-color/secondary": "enabled"
+      "semantic/color/secondary": "enabled"
     },
-    "group": "Support color"
+    "group": "Color"
   },
   {
-    "id": "2fae911e9417cc3322508692cef0415f07a8a6ca",
+    "id": "b40981aab75932c5b2f555f50769d878e44913d7",
     "name": "magic",
     "selectedTokenSets": {
-      "semantic/modes/support-color/magic": "enabled"
+      "semantic/color/magic": "enabled"
     },
-    "group": "Support color"
+    "group": "Color"
+  },
+  {
+    "id": "e7fb41a6a0544d8a8aa178232034311f9d725555",
+    "name": "neutral",
+    "selectedTokenSets": {
+      "semantic/color/neutral": "enabled"
+    },
+    "group": "Color"
+  },
+  {
+    "id": "59bd0a3ff43b32849b319e645d4798d8a5d1e889",
+    "name": "info",
+    "selectedTokenSets": {
+      "semantic/color/info": "enabled"
+    },
+    "group": "Color"
+  },
+  {
+    "id": "53a5687cb26dc41f2ab4033e97e13adefd3740d6",
+    "name": "success",
+    "selectedTokenSets": {
+      "semantic/color/success": "enabled"
+    },
+    "group": "Color"
+  },
+  {
+    "id": "383fd7bf84aa027bdc40159c5d7c5805664a8eb2",
+    "name": "warning",
+    "selectedTokenSets": {
+      "semantic/color/warning": "enabled"
+    },
+    "group": "Color"
+  },
+  {
+    "id": "222b3e11200d82d61f1b89533e59175f71d23972",
+    "name": "danger",
+    "selectedTokenSets": {
+      "semantic/color/danger": "enabled"
+    },
+    "group": "Color"
   }
 ]
