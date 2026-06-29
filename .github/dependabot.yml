@@ -1,15 +1,8 @@
 version: 2
 
-registries:
-  npmjs:
-    type: npm-registry
-    url: https://registry.npmjs.org
-
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
-    registries:
-      - npmjs
     schedule:
       interval: 'weekly'
     open-pull-requests-limit: 10
@@ -36,3 +29,11 @@ updates:
       digdir:
         patterns:
           - '@digdir/*'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: 'build: '
