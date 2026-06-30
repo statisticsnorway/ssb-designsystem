@@ -1,3 +1,33 @@
 body {
   font-family: var(--ds-font-family);
 }
+
+/* Shared wrapper for custom docs pages inside Storybook docs iframe */
+.sbdocs .ds-doc-page {
+  min-height: calc(100vh - 200px);
+  display: grid;
+  place-content: center;
+  max-width: 50rem;
+  padding-bottom: 200px;
+}
+
+.sbdocs .ds-doc-page h1 {
+  font-size: 3.5rem;
+}
+
+.sbdocs .ds-doc-page h2 {
+  font-size: 1.625rem;
+}
+
+.sbdocs .ds-doc-page :is(p, li) {
+  font-size: 1.125rem;
+}
+
+.sbdocs .ds-doc-page p.ingress {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.sbdocs .ds-doc-page :is(h1, h2, h3, p, li) {
+  font-family: var(--ds-font-family);
+}
