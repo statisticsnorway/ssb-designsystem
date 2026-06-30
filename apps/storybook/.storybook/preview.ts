@@ -20,7 +20,7 @@ const preview: Preview = {
 
     options: {
       storySort: {
-        order: ['Showcase', 'SSB', 'Digdir'],
+        order: ['Introduksjon', 'Showcase', 'SSB', 'Digdir'],
         method: 'alphabetical',
       },
     },
