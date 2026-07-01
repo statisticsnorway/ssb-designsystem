@@ -4,11 +4,9 @@ body {
 
 /* Shared wrapper for custom docs pages inside Storybook docs iframe */
 .sbdocs .ds-doc-page {
-  min-height: calc(100vh - 200px);
   display: grid;
   place-content: center;
   max-width: 50rem;
-  padding-bottom: 200px;
 }
 
 .sbdocs .ds-doc-page h1 {
