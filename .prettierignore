@@ -1,3 +1,4 @@
 node_modules
 design-tokens
 packages/css/theme
+**/*.mdx
