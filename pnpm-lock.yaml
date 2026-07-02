@@ -73,6 +73,9 @@ importers:
         specifier: ^1.18.0
         version: 1.18.0
     devDependencies:
+      '@digdir/designsystemet-types':
+        specifier: ^1.18.0
+        version: 1.18.0
       postcss:
         specifier: ^8.5.16
         version: 8.5.16
