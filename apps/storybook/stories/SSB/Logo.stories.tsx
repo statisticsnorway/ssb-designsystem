@@ -50,3 +50,11 @@ export const WhiteLogo: Story = {
     </div>
   ),
 }
+
+export const LogoInLink: Story = {
+  render: () => (
+    <a href='/' aria-label='Gå til forsiden'>
+      <Logo />
+    </a>
+  ),
+}
