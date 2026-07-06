@@ -35,7 +35,9 @@ This file should be committed together with your changes.
 
 ### Versioning
 
-To apply changesets and update package versions and changelogs:
+Versioning is normally handled automatically by CI (Changesets action) after merge to `main`.
+
+Use manual versioning only when needed (for example a controlled fallback if CI is unavailable):
 
 ```bash
 pnpm changeset:version
@@ -59,7 +61,7 @@ pnpm changeset:release
 
 This builds and publishes all updated packages.
 
-> Publishing is automated via GitHub Actions + Changesets.
+> Publishing and GitHub release creation are automated via GitHub Actions + Changesets.
 
 ---
 
@@ -70,7 +72,7 @@ This repository now uses Changesets in CI for both release PR creation and npm p
 Flow on `main`:
 
 - If unreleased changesets exist, CI updates or creates a release PR.
-- When that PR is merged to `main`, CI publishes updated packages to npm.
+- When that PR is merged to `main`, CI publishes updated packages to npm and creates GitHub Releases.
 
 ### Release checklist
 
