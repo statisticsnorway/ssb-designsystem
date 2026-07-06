@@ -13,10 +13,14 @@
     "primitives/modes/color-scheme/dark/ssb",
     "primitives/modes/color-scheme/light/ssb",
     "themes/ssb",
-    "semantic/color",
-    "semantic/modes/main-color/primary",
-    "semantic/modes/support-color/secondary",
-    "semantic/modes/support-color/magic",
+    "semantic/color/primary",
+    "semantic/color/secondary",
+    "semantic/color/magic",
+    "semantic/color/neutral",
+    "semantic/color/info",
+    "semantic/color/success",
+    "semantic/color/warning",
+    "semantic/color/danger",
     "semantic/style"
   ]
 }

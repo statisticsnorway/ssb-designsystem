@@ -4,13 +4,9 @@
   "themes": {
     "ssb": {
       "colors": {
-        "main": {
-          "primary": "#016842"
-        },
-        "support": {
-          "secondary": "#274247",
-          "magic": "#7e5ee8"
-        },
+        "primary": "#016842",
+        "secondary": "#274247",
+        "magic": "#7e5ee8",
         "neutral": "#24272B"
       },
       "overrides": {
