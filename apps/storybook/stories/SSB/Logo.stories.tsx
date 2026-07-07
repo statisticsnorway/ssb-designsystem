@@ -41,6 +41,13 @@ export const Default: Story = {
       control: { type: 'number' },
     },
   },
+  parameters: {
+    docs: {
+      source: {
+        code: '<Logo />',
+      },
+    },
+  },
 }
 
 export const WhiteLogo: Story = {
@@ -49,6 +56,13 @@ export const WhiteLogo: Story = {
       <Logo variant='white' />
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: "<Logo variant='white' />",
+      },
+    },
+  },
 }
 
 export const LogoInLink: Story = {
