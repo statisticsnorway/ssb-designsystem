@@ -9,7 +9,7 @@ const preview: Preview = {
     layout: 'padded',
     options: {
       storySort: {
-        order: ['Introduksjon', 'Demosider', 'SSB', 'Digdir'],
+        order: ['Introduksjon', 'Kom i gang', 'Komponenter', 'Demosider', 'SSB'],
         method: 'alphabetical',
       },
     },
