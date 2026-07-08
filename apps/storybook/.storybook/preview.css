@@ -1,5 +1,17 @@
-body {
+.sbdocs :is(h1, h2, h3, p, li) {
   font-family: var(--ds-font-family);
+}
+
+.sbdocs-content.sbdocs-content {
+  max-width: 50rem; /* 800px */
+  padding-bottom: 200px; /* Space for scroll */
+}
+.sbdocs h1 {
+  font-size: 3.5rem;
+}
+
+.sbdocs p {
+  font-size: 1.25rem;
 }
 
 /* Shared wrapper for custom docs pages inside Storybook docs iframe */
@@ -27,16 +39,5 @@ body {
 }
 
 .sbdocs .ds-doc-page :is(h1, h2, h3, p, li) {
-  font-family: var(--ds-font-family);
-}
-
-/* Halla */
-
-.sbdocs-content.sbdocs-content {
-  max-width: 50rem; /* 800px */
-  padding-bottom: 200px; /* Space for scroll */
-}
-.sbdocs-content.sbdocs-content .sbdocs-title {
-  font-size: var(--ds-font-size-heading-xl);
   font-family: var(--ds-font-family);
 }
