@@ -7,4 +7,8 @@ addons.setConfig({
     showPanel: () => false,
   },
   theme: customTheme,
+  toolbar: {
+    'storybook/background': { hidden: true }, // Dark mode
+    'storybook/outline': { hidden: true }, // Outlines
+  },
 })
