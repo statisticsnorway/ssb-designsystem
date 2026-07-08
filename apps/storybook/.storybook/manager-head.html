@@ -1,4 +1,29 @@
 <style>
+  #root > div {
+    padding: 1em min(1rem, 1%);
+    gap: 0.25rem;
+  }
+
+  #root > div > * {
+    border-radius: 0.75rem;
+    border: 1px solid color-mix(in hsl, currentcolor, transparent 90%);
+    overflow: hidden;
+  }
+  #root > div > :has(.sidebar-container) {
+    border: 0;
+    overflow: visible;
+  }
+  #root div:has(+ .sidebar-container)::after {
+    opacity: 0 !important;
+  }
+
+  #root .sb-bar {
+    box-shadow: none !important;
+  }
+  #storybook-preview-iframe {
+    outline: 1px solid rgb(0 0 0 / 0.2);
+  }
+
   /**
    * Hide stuff
    */
@@ -6,6 +31,7 @@
   .sidebar-container.sidebar-container #storybook-explorer-searchfield ~ *, /* Search help */
   .sidebar-container.sidebar-container .search-field + button, /* Disable "Create new story" <button> */
   .sidebar-container.sidebar-container .sidebar-header button, /* Hide settings */
+  .sidebar-container.sidebar-container svg[type], /* Hide sidebar type icons */
   .sidebar-container.sidebar-container button[data-testid="tree-change-status-button"], /* Hide "new story" star */
   .sidebar-container.sidebar-container button[data-action="expand-all"], /* Hide expand <button> */
   .sidebar-container.sidebar-container button[title="Tag filters"], /* Hide filter tags <button> */
