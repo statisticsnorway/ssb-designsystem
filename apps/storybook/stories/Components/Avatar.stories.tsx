@@ -54,8 +54,8 @@ export const Variants: Story = {
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Avatar aria-label='color default' />
           <Avatar aria-label='color neutral' data-color='neutral' />
-          <Avatar aria-label='color brand1' data-color='brand1' />
-          <Avatar aria-label='color brand2' data-color='brand2' />
+          <Avatar aria-label='color secondary' data-color='secondary' />
+          <Avatar aria-label='color magic' data-color='magic' />
         </div>
       </div>
 

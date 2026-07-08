@@ -17,6 +17,12 @@
     opacity: 0 !important;
   }
 
+  /* Hide separator before colorScheme toolbar button */
+  div:has(button[aria-label*='colorScheme']) > span,
+  div:has(button[id*='colorScheme']) > span {
+    display: none;
+  }
+
   #root .sb-bar {
     box-shadow: none !important;
   }
