@@ -9,23 +9,11 @@ import { Link } from '@statisticsnorway/design-react'
 <h1>SSB Designsystem</h1>
 
 <p className='ingress'>
-  {
-    'SSB Designsystem gir et felles grunnlag for utvikling av brukergrensesnitt i SSB. Det er basert på Designsystemet.no og utvides med SSB-spesifikke komponenter og tilpasninger ved behov.'
-  }
+  <Unstyled>
+    {'SSBs designsystem bygger på '}
+    <Link href='https://www.designsystemet.no/'>designsystemet.no</Link>
+    {', men er tilpasset vår visuelle identitet. Det vil også bli utvidet med interne behov. Designsystemet fungerer som et felles språk mellom team og fagfelt, og lar oss skape effektive og gjenkjennbare brukeropplevelser for alle'}
+  </Unstyled>
 </p>
 
-<p>
-  <Unstyled>{'Kildekode: '}<Link href='https://github.com/statisticsnorway/ssb-designsystem'>github.com/statisticsnorway/ssb-designsystem</Link></Unstyled>
-</p>
-
-<h2>Pakker</h2>
-
-  <ul>
-    <li>
-      <Unstyled><Link href='https://www.npmjs.com/package/@statisticsnorway/design-css'>@statisticsnorway/design-css</Link>{' - CSS, fonter og SSB-tema'}</Unstyled>
-    </li>
-    <li>
-      <Unstyled><Link href='https://www.npmjs.com/package/@statisticsnorway/design-react'>@statisticsnorway/design-react</Link>{' - React-komponenter'}</Unstyled>
-    </li>
-  </ul>
 </div>
