@@ -60,3 +60,8 @@ body {
   font-size: 1.25rem;
   line-height: 2rem;
 }
+
+.sbdocs .ssb-doc-page .intro-action {
+  display: flex;
+  gap: 1rem;
+}

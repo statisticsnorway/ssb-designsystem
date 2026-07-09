@@ -1,5 +1,7 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
-import { Link } from '@statisticsnorway/design-react'
+import { Button, Link } from '@statisticsnorway/design-react'
+import { BranchingIcon, ChatIcon } from '@navikt/aksel-icons'
+import { version } from '../.storybook/utils'
 
 <Meta title='Introduksjon' />
 
@@ -12,8 +14,20 @@ import { Link } from '@statisticsnorway/design-react'
   <Unstyled>
     {'SSBs designsystem bygger på '}
     <Link href='https://www.designsystemet.no/'>designsystemet.no</Link>
-    {', men er tilpasset vår visuelle identitet. Det vil også bli utvidet med interne behov. Designsystemet fungerer som et felles språk mellom team og fagfelt, og lar oss skape effektive og gjenkjennbare brukeropplevelser for alle'}
+    {
+      ', men er tilpasset vår visuelle identitet. Det vil også bli utvidet med interne behov. Designsystemet fungerer som et felles språk mellom team og fagfelt, og lar oss skape effektive og gjenkjennbare brukeropplevelser for alle'
+    }
   </Unstyled>
 </p>
+
+<div className='intro-action'>
+  <Button href='' data-variant='secondary'>
+    <ChatIcon /> {'Snakk med oss på Teams'}
+  </Button>
+  <Button href='https://github.com/statisticsnorway/ssb-designsystem/releases' data-variant='secondary'>
+    <BranchingIcon />
+    {`Kode og versjonslogg (${version})`}
+  </Button>
+</div>
 
 </div>
