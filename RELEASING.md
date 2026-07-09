@@ -6,12 +6,12 @@ This repository uses Changesets to manage versioning and releases.
 
 ### Strategy
 
-Packages are versioned independently:
+Packages are versioned together (fixed) and always share the same version number:
 
 - `@statisticsnorway/design-css`
 - `@statisticsnorway/design-react`
 
-Changesets should include all affected packages.
+You only need to select the package(s) that actually changed when creating a changeset — the other package in the group will automatically be bumped to match, even without its own changeset entry. Its CHANGELOG.md will show a generic "Updated dependencies" line rather than a description of the change.
 
 ### Creating a changeset
 
