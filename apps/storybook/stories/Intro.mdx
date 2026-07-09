@@ -1,7 +1,8 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
 import { Button, Divider, Heading, Link } from '@statisticsnorway/design-react'
-import { BranchingIcon, ChatIcon } from '@navikt/aksel-icons'
+import { BranchingIcon, Chat2Icon } from '@navikt/aksel-icons'
 import { version, scrollToId } from '../.storybook/docs'
+import { AnchorLinks } from '../.storybook/docs-components'
 
 <Meta title='Introduksjon' />
 
@@ -21,15 +22,18 @@ import { version, scrollToId } from '../.storybook/docs'
 
 <div className='intro-action'>
   <Button data-variant='secondary' onClick={() => scrollToId('snakk-med-oss')}>
+    <Chat2Icon />
     {'Snakk med oss på Teams'}
   </Button>
   <Button asChild data-variant='secondary'>
     <a href='https://github.com/statisticsnorway/ssb-designsystem/releases'>
       <BranchingIcon />
-      {`Kode og versjonslogg (${version})`}
+      {`Kode og versjonslogg (v${version})`}
     </a>
   </Button>
 </div>
+
+<AnchorLinks />
 
 <Divider className='section-divider' />
 
