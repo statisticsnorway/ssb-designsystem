@@ -13,6 +13,16 @@ Packages are versioned together (fixed) and always share the same version number
 
 You only need to select the package(s) that actually changed when creating a changeset — the other package in the group will automatically be bumped to match, even without its own changeset entry. Its CHANGELOG.md will show a generic "Updated dependencies" line rather than a description of the change.
 
+> **Tip:** If a package in the fixed group gets version-bumped without its own
+> changeset, its CHANGELOG.md entry may end up empty or generic. You can
+> manually add a short line before committing, e.g.:
+>
+> ```
+> ### Patch Changes
+>
+> - Version bump only, to match `@statisticsnorway/design-react` (fixed versioning group).
+> ```
+
 ### Creating a changeset
 
 Each changeset describes the impact of a change and is used to determine the next version.
