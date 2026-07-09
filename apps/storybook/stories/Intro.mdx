@@ -1,14 +1,13 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
-import { Button, Link } from '@statisticsnorway/design-react'
+import { Button, Divider, Heading, Link } from '@statisticsnorway/design-react'
 import { BranchingIcon, ChatIcon } from '@navikt/aksel-icons'
-import { version } from '../.storybook/utils'
+import { version, scrollToId } from '../.storybook/docs'
 
 <Meta title='Introduksjon' />
 
-<div className='ssb-doc-page'>
-<img className='illustration' src="/svg/illustrasjon-samarbeid.svg" alt="" />
+<img className='illustration' src='/svg/illustrasjon-samarbeid.svg' alt='' />
 
-<h1>SSB Designsystem</h1>
+# SSB Designsystem
 
 <p className='ingress'>
   <Unstyled>
@@ -21,13 +20,40 @@ import { version } from '../.storybook/utils'
 </p>
 
 <div className='intro-action'>
-  <Button href='' data-variant='secondary'>
-    <ChatIcon /> {'Snakk med oss på Teams'}
+  <Button data-variant='secondary' onClick={() => scrollToId('snakk-med-oss')}>
+    {'Snakk med oss på Teams'}
   </Button>
-  <Button href='https://github.com/statisticsnorway/ssb-designsystem/releases' data-variant='secondary'>
-    <BranchingIcon />
-    {`Kode og versjonslogg (${version})`}
+  <Button asChild data-variant='secondary'>
+    <a href='https://github.com/statisticsnorway/ssb-designsystem/releases'>
+      <BranchingIcon />
+      {`Kode og versjonslogg (${version})`}
+    </a>
   </Button>
 </div>
 
-</div>
+<Divider className='section-divider' />
+
+## For utviklere
+
+Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som gjør det enklere å bygge konsistente
+og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
+
+<Divider className='section-divider' />
+
+## For Designere
+
+Vi bruker Figma som designverktøy. I Figma finner du komponenter, variabler og stiler fra SSB Designsystem som du kan bruke i produktet eller løsningen du jobber med. Komponentene er tilpasset SSBs identitet og behov og er i kontinuerlig utvikling.
+
+<Divider className='section-divider' />
+
+## Snakk med oss
+
+Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert på utviklingen av designsystemet? Vi er tilgjengelige i **Teams**.
+
+**Team:** Designsystemet
+
+**Kanaler:**
+
+- **Info fra teamet** – nyheter, oppdateringer og informasjon.
+- **Innmelding av behov** – forslag til nye komponenter, forbedringer og endringer.
+- **Spørsmål og svar** – spør om alt fra bruk av komponenter til implementasjon og design.
