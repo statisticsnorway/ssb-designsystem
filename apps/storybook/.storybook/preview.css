@@ -29,39 +29,33 @@ body {
   max-width: 50rem; /* 800px */
   padding-bottom: 200px; /* Space for scroll */
 }
-.sbdocs h1 {
-  font-size: 3.5rem;
-}
 
-.sbdocs p {
-  font-size: 1.25rem;
-}
-
-/* Shared wrapper for custom docs pages inside Storybook docs iframe */
-.sbdocs .ssb-doc-page {
-  display: grid;
-  place-content: center;
-  max-width: 50rem;
-}
-
-.sbdocs .ssb-doc-page h1 {
-  font-size: 3.5rem;
-}
-
-.sbdocs .ssb-doc-page h2 {
-  font-size: 1.625rem;
-}
-
-.sbdocs .ssb-doc-page :is(p, li) {
-  font-size: 1.125rem;
-}
-
-.sbdocs .ssb-doc-page p.ingress {
+.sbdocs p.ingress {
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
-.sbdocs .ssb-doc-page .intro-action {
+.sbdocs .intro-action {
   display: flex;
   gap: 1rem;
+}
+
+.section-divider {
+  margin-block: 3rem;
+}
+
+.sbdocs-content > :is(h2, h3, h4, h5, h6)::before {
+  transition: 0.2s;
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  background: currentcolor;
+  mask: center / contain no-repeat;
+  content: '';
+  cursor: pointer;
+  mask-image: url('data:image/svg+xml,...');
+}
+
+.sbdocs-content > :is(h2, h3, h4, h5, h6):hover::before {
+  opacity: 1;
 }
