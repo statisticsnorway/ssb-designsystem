@@ -40,22 +40,14 @@ body {
   gap: 1rem;
 }
 
+.sbdocs .anchor-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-block: 2em;
+  padding: 0;
+}
+
 .section-divider {
   margin-block: 3rem;
-}
-
-.sbdocs-content > :is(h2, h3, h4, h5, h6)::before {
-  transition: 0.2s;
-  opacity: 0;
-  width: 1em;
-  height: 1em;
-  background: currentcolor;
-  mask: center / contain no-repeat;
-  content: '';
-  cursor: pointer;
-  mask-image: url('data:image/svg+xml,...');
-}
-
-.sbdocs-content > :is(h2, h3, h4, h5, h6):hover::before {
-  opacity: 1;
 }
