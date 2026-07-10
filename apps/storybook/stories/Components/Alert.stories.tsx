@@ -29,14 +29,36 @@ export const Default: Story = {
   },
 }
 
-export const Variants: Story = {
+export const Colors: Story = {
   render: () => (
     <div style={{ display: 'grid', gap: '1rem', flexWrap: 'wrap' }}>
       <Alert data-color='info'>Dette er en informasjonsmelding.</Alert>
       <Alert data-color='success'>Endringen ble lagret.</Alert>
       <Alert data-color='warning'>Du har ikke fylt ut alle feltene.</Alert>
       <Alert data-color='danger'>Det oppstod en feil. Prøv igjen senere.</Alert>
+    </div>
+  ),
+}
 
+export const Sizes: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '1rem', flexWrap: 'wrap' }}>
+      <Alert data-color='info' data-size='sm'>
+        Dette er en informasjonsmelding.
+      </Alert>
+      <Alert data-color='info' data-size='md'>
+        Dette er en informasjonsmelding.
+      </Alert>
+      <Alert data-color='info' data-size='lg'>
+        Dette er en informasjonsmelding.
+      </Alert>
+    </div>
+  ),
+}
+
+export const WithTitle: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '1rem', flexWrap: 'wrap' }}>
       <Alert data-color='info'>
         <Heading
           level={2}
