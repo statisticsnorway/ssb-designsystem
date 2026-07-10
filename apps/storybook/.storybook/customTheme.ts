@@ -3,7 +3,7 @@ import '@statisticsnorway/design-css'
 
 const primary = '#016842'
 const primary_text = '#03332b'
-const neutral_tinted = '#f3f3f4'
+const secondary_tinted = '#f0f8f9'
 const white = '#ffffff'
 
 export default create({
@@ -20,7 +20,7 @@ export default create({
   colorSecondary: primary,
 
   // UI
-  appBg: neutral_tinted,
+  appBg: secondary_tinted,
   appPreviewBg: white,
   appContentBg: white,
   appBorderRadius: 6,

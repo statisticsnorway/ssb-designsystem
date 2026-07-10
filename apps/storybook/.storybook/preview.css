@@ -34,6 +34,10 @@ body {
   margin-inline: 0;
   margin-block: 1em;
 }
+.sbdocs-content blockquote.ingress p {
+  line-height: var(--ds-line-height-lg);
+  font-size: var(--ds-body-lg-font-size);
+}
 
 .sbdocs .intro-action {
   display: flex;
@@ -41,8 +45,7 @@ body {
 }
 
 .sbdocs .anchor-links {
-  display: flex;
-  gap: 2rem;
+  columns: 13em;
   list-style: none;
   margin-block: 2em;
   padding: 0;
@@ -54,6 +57,13 @@ body {
 
 .sbdocs .ds-paragraph {
   margin-top: 0.5rem;
+}
+
+.sbdocs .ds-paragraph code {
+  background-color: var(--ds-color-neutral-background-tinted);
+  color: var(--ds-color-neutral-text-default);
+  font-size: 1rem;
+  line-height: inherit;
 }
 
 .sbdocs .heading svg {

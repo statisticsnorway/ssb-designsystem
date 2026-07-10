@@ -52,8 +52,8 @@ const mdxComponents = {
   h2: (props: ComponentProps<'h2'>) => <Heading data-size='lg' level={2} {...props} />,
   h3: (props: ComponentProps<'h3'>) => <Heading data-size='md' level={3} {...props} />,
   h4: (props: ComponentProps<'h4'>) => <Heading data-size='sm' level={4} {...props} />,
-  blockquote: (props: ComponentProps<'blockquote'>) => <blockquote {...props} data-size='lg' />,
-  p: (props: ComponentProps<'p'>) => <Paragraph {...props} data-variant='long' />,
+  blockquote: (props: ComponentProps<'blockquote'>) => <blockquote {...props} className='ingress' />,
+  p: (props: ComponentProps<'p'>) => <Paragraph {...props} />,
   a: (props: ComponentProps<'a'>) => <a {...props} className='ds-link' />,
 }
 
