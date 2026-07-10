@@ -8,7 +8,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { useEffect } from 'react'
 import type { ComponentProps } from 'react'
 import type { Decorator, Preview } from '@storybook/react-vite'
-import { Heading } from '@statisticsnorway/design-react'
+import { Heading, Paragraph } from '@statisticsnorway/design-react'
 
 export const globalTypes = {
   colorScheme: {
@@ -52,6 +52,9 @@ const mdxComponents = {
   h2: (props: ComponentProps<'h2'>) => <Heading data-size='lg' level={2} {...props} />,
   h3: (props: ComponentProps<'h3'>) => <Heading data-size='md' level={3} {...props} />,
   h4: (props: ComponentProps<'h4'>) => <Heading data-size='sm' level={4} {...props} />,
+  blockquote: (props: ComponentProps<'blockquote'>) => <blockquote {...props} data-size='lg' />,
+  p: (props: ComponentProps<'p'>) => <Paragraph {...props} data-variant='long' />,
+  a: (props: ComponentProps<'a'>) => <a {...props} className='ds-link' />,
 }
 
 function ColorSchemeDocsContainer(props: Readonly<DocsContainerProps>) {

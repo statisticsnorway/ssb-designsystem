@@ -26,13 +26,13 @@ body {
 }
 
 .sbdocs-content.sbdocs-content {
-  max-width: 50rem; /* 800px */
-  padding-bottom: 200px; /* Space for scroll */
+  max-width: 50rem;
+  padding-bottom: 200px;
 }
 
-.sbdocs p.ingress {
-  font-size: 1.25rem;
-  line-height: 2rem;
+.sbdocs-content blockquote {
+  margin-inline: 0;
+  margin-block: 1em;
 }
 
 .sbdocs .intro-action {
@@ -48,6 +48,10 @@ body {
   padding: 0;
 }
 
-.section-divider {
-  margin-block: 3rem;
+.sbdocs .section-divider {
+  margin-block: 2rem;
+}
+
+.sbdocs .ds-paragraph {
+  margin-top: 0.5rem;
 }
