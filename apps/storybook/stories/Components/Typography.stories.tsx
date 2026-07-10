@@ -84,3 +84,41 @@ export const ParagraphStory: Story = {
     </div>
   ),
 }
+
+export const ParagraphLongStory: Story = {
+  name: 'Paragraph Long',
+  render: () => (
+    <div
+      style={{
+        display: 'grid',
+        gap: '2rem',
+        maxWidth: '48rem',
+      }}
+    >
+      <Paragraph data-size='xl' data-variant='long'>
+        This is an xl paragraph. It demonstrates how longer blocks of text appear, making it easier to evaluate
+        readability, line height, and spacing across different paragraph sizes.
+      </Paragraph>
+
+      <Paragraph data-size='lg' data-variant='long'>
+        This is a lg paragraph. It demonstrates how longer blocks of text appear, making it easier to evaluate
+        readability, line height, and spacing across different paragraph sizes.
+      </Paragraph>
+
+      <Paragraph data-size='md' data-variant='long'>
+        This is a md paragraph. It demonstrates how longer blocks of text appear, making it easier to evaluate
+        readability, line height, and spacing across different paragraph sizes.
+      </Paragraph>
+
+      <Paragraph data-size='sm' data-variant='long'>
+        This is a sm paragraph. It demonstrates how longer blocks of text appear, making it easier to evaluate
+        readability, line height, and spacing across different paragraph sizes.
+      </Paragraph>
+
+      <Paragraph data-size='xs' data-variant='long'>
+        This is an xs paragraph. It demonstrates how longer blocks of text appear, making it easier to evaluate
+        readability, line height, and spacing across different paragraph sizes.
+      </Paragraph>
+    </div>
+  ),
+}
