@@ -32,6 +32,6 @@
     "@digdir/designsystemet": "^1.18.0",
     "@types/node": "^26.1.0",
     "jsdom": "^29.1.1",
-    "prettier": "^3.9.4"
+    "prettier": "^3.9.5"
   }
 }
