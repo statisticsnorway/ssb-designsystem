@@ -28,10 +28,10 @@
     "changeset:release": "pnpm build && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.31.0",
+    "@changesets/cli": "^2.31.1",
     "@digdir/designsystemet": "^1.18.0",
-    "@types/node": "^26.1.0",
+    "@types/node": "^26.2.0",
     "jsdom": "^29.1.1",
-    "prettier": "^3.9.4"
+    "prettier": "^3.9.6"
   }
 }
