@@ -1,0 +1,43 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Badge.stories'
+
+<Meta of={stories} />
+
+# Badge
+
+> Badge er en ikke-interaktiv komponent som viser status med eller uten innhold. Bruk Tag dersom du skal ha tekst istedenfor tall.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/badge/overview)
+
+## Kode
+
+- Bruk `<Badge>` komponenten i React
+- Bruk `count` for antall og `maxCount` for øvre grense visning
+- Utelat `count` for badge uten tall
+
+  <Canvas of={stories.Default} />
+
+## Farger
+
+- Bruk `data-color` for å endre farge
+
+  <Canvas of={stories.Colors} />
+
+## Varianter
+
+- Bruk `variant='base | tinted'`
+
+  <Canvas of={stories.Variants} />
+
+## Flytende
+
+- Bruk `<Badge.Position>` for å ha flytende tall
+- placement="top-right | top-left | bottom-right | bottom-left"`
+
+  <Canvas of={stories.Floating} />
+
+## Uten tekst
+
+- Utelat `count` for badge uten tall
+
+  <Canvas of={stories.WithoutText} />

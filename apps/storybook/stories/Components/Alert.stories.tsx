@@ -16,7 +16,7 @@ export const Default: Story = {
 
 export const Colors: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '1rem', flexWrap: 'wrap' }}>
+    <div style={{ display: 'grid', gap: '1rem' }}>
       <Alert data-color='info'>Dette er en informasjonsmelding.</Alert>
       <Alert data-color='success'>Endringen ble lagret.</Alert>
       <Alert data-color='warning'>Du har ikke fylt ut alle feltene.</Alert>
@@ -27,7 +27,7 @@ export const Colors: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '1rem', flexWrap: 'wrap' }}>
+    <div style={{ display: 'grid', gap: '1rem' }}>
       <Alert data-color='info' data-size='sm'>
         Dette er en informasjonsmelding.
       </Alert>
@@ -43,21 +43,19 @@ export const Sizes: Story = {
 
 export const WithTitle: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '1rem', flexWrap: 'wrap' }}>
-      <Alert data-color='info'>
-        <Heading
-          level={2}
-          data-size='xs'
-          style={{
-            marginBottom: '0.5rem',
-          }}
-        >
-          Med overskrift
-        </Heading>
-        <Paragraph>
-          Hvis meldingen er lenger enn en setning kan det være nyttig å bruke en overskrift til å fremheve det viktigste
-        </Paragraph>
-      </Alert>
-    </div>
+    <Alert data-color='info'>
+      <Heading
+        level={2}
+        data-size='xs'
+        style={{
+          marginBottom: '0.5rem',
+        }}
+      >
+        Med overskrift
+      </Heading>
+      <Paragraph>
+        Hvis meldingen er lenger enn en setning kan det være nyttig å bruke en overskrift til å fremheve det viktigste
+      </Paragraph>
+    </Alert>
   ),
 }
