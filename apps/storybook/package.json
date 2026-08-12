@@ -10,20 +10,20 @@
   },
   "devDependencies": {
     "@mdx-js/react": "^3.1.1",
-    "@storybook/addon-docs": "^10.4.6",
-    "@storybook/react-vite": "^10.4.6",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "chromatic": "^18.0.0",
-    "concurrently": "^10.0.3",
-    "storybook": "^10.4.6"
+    "@storybook/addon-docs": "^10.5.7",
+    "@storybook/react-vite": "^10.5.7",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "chromatic": "^18.1.0",
+    "concurrently": "^10.0.4",
+    "storybook": "^10.5.7"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^8.14.0",
+    "@navikt/aksel-icons": "^8.16.1",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
     "clsx": "^2.1.1",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   }
 }
