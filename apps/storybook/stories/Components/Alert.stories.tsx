@@ -1,22 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Alert, Heading, Paragraph } from '@statisticsnorway/design-react'
 
-const description = `
-Alert gir brukeren informasjon som det er ekstra viktig at de ser og forstår.
-
-Se full dokumentasjon: https://designsystemet.no/no/components/docs/alert/overview
-`
-
 const meta: Meta<typeof Alert> = {
   title: 'Komponenter/Alert',
   component: Alert,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -24,9 +11,7 @@ export default meta
 type Story = StoryObj<typeof Alert>
 
 export const Default: Story = {
-  args: {
-    children: 'Dette er en informasjonsmelding.',
-  },
+  render: () => <Alert>Dette er en informasjonsmelding.</Alert>,
 }
 
 export const Colors: Story = {

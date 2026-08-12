@@ -1,23 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Avatar, Divider, Heading } from '@statisticsnorway/design-react'
+import { Avatar, Heading } from '@statisticsnorway/design-react'
 import { BriefcaseIcon } from '@navikt/aksel-icons'
-
-const description = `
-Avatar viser et bilde, initialer eller ikon for en person, enhet eller profil.
-
-Se full dokumentasjon: https://designsystemet.no/no/components/docs/avatar/overview
-`
 
 const meta: Meta<typeof Avatar> = {
   title: 'Komponenter/Avatar',
   component: Avatar,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -25,12 +12,10 @@ export default meta
 type Story = StoryObj<typeof Avatar>
 
 export const Default: Story = {
-  args: {
-    children: 'ON',
-  },
+  render: () => <Avatar aria-label='Ola Nordmann' variant='circle' />,
 }
 
-export const Variants: Story = {
+export const Sizes: Story = {
   render: () => (
     <div style={{ display: 'grid', gap: '2rem' }}>
       <div>
@@ -44,23 +29,30 @@ export const Variants: Story = {
           <Avatar data-size='lg' aria-label='large' initials='lg' />
         </div>
       </div>
+    </div>
+  ),
+}
 
-      <Divider />
-
+export const Colors: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '2rem' }}>
       <div>
         <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
           Farger
         </Heading>
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Avatar aria-label='color default' />
-          <Avatar aria-label='color neutral' data-color='neutral' />
           <Avatar aria-label='color secondary' data-color='secondary' />
           <Avatar aria-label='color magic' data-color='magic' />
         </div>
       </div>
+    </div>
+  ),
+}
 
-      <Divider />
-
+export const Variants: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '2rem' }}>
       <div>
         <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
           Varianter
@@ -68,15 +60,19 @@ export const Variants: Story = {
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Avatar variant='circle' aria-label='variant circle' />
           <Avatar variant='square' aria-label='variant square' />
-          <Avatar variant='circle' aria-label='Ola Nordmann'>
-            ON
-          </Avatar>
+          <Avatar variant='circle' aria-label='Ola Nordmann' initials='ON' />
           <Avatar variant='square' aria-label='Ola Nordmann'>
             ON
           </Avatar>
         </div>
       </div>
+    </div>
+  ),
+}
 
+export const WithPicture: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '2rem' }}>
       <div>
         <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
           Med bilde og ikon
