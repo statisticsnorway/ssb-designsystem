@@ -1,22 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Breadcrumbs } from '@statisticsnorway/design-react'
 
-const description = `
-Breadcrumbs hjelper brukerne med å forstå hvor de er i en struktur, og gjør det mulig å navigere tilbake til høgere nivå.
-
-Se full dokumentasjon: https://designsystemet.no/no/components/docs/breadcrumbs/overview
-`
-
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Komponenter/Breadcrumbs',
   component: Breadcrumbs,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta

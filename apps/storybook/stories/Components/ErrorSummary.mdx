@@ -1,0 +1,22 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './ErrorSummary.stories'
+
+<Meta of={stories} />
+
+# ErrorSummary
+
+> ErrorSummary er en oppsummering av feil.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/error-summary/overview)
+
+## Kode
+
+- Bruk `<ErrorSummary>` for å samle og vise valideringsfeil øverst i skjemaet
+
+  <Canvas of={stories.Default} />
+
+## Med lenker i skjema
+
+- Koble feiloppsummeringen til feltene slik at brukeren kan navigere til feilen
+
+  <Canvas of={stories.WithFormLinks} />

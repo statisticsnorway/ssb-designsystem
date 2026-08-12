@@ -1,0 +1,22 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Field.stories'
+
+<Meta of={stories} />
+
+# Field
+
+> Field er et hjelpemiddel for å automatisk koble et felt sammen med Label, Field.Description, ValidationMessage og Field.Counter.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/field/overview)
+
+## Kode
+
+- Bruk `<Field>` for å samle etikett, beskrivelse og validering rundt et felt
+
+  <Canvas of={stories.Default} />
+
+## Med feil
+
+- Vis valideringsfeil i samme struktur som feltet
+
+  <Canvas of={stories.WithError} />

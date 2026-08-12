@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Card.stories'
+
+<Meta of={stories} />
+
+# Card
+
+> Card fremhever informasjon eller oppgaver som hører sammen. Komponenten finnes i to varianter og kan inneholde tekst, bilde, tekstfelt, knapper og lenker.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/card/overview)
+
+## Kode
+
+- Bruk `<Card>` for å gruppere relatert innhold
+
+  <Canvas of={stories.Default} />
+
+## Varianter
+
+- Bruk `variant="default | tinted"`
+
+  <Canvas of={stories.Variants} />
+
+## Farger og varianter
+
+- Bruk `data-color` for farge og `variant="tinted"`
+
+  <Canvas of={stories.Colors} />
+
+## Lenkekort
+
+<Canvas of={stories.LinkCard} />
+
+## Med inndeling
+
+- Du kan dele kortet opp i seksjoner. Disse får skillelinjer mellom seg, og kan inneholde bilder eller video som går ut i kanten.
+
+<Canvas of={stories.CardWithSection} />
+
+### Horisontalt
+
+<Canvas of={stories.CardWithSectionHorizontal} />

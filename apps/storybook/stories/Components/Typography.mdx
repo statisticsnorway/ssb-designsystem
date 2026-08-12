@@ -1,0 +1,32 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Typography.stories'
+
+<Meta of={stories} />
+
+# Typography
+
+> Typography viser typografiske byggesteiner som overskrifter og avsnitt i designsystemet.
+
+## Oversikt
+
+- Se oversikt over overskrifter og avsnitt i designsystemet
+
+  <Canvas of={stories.Overview} />
+
+## Heading
+
+- Bruk `<Heading>` med passende nivå og størrelse
+
+  <Canvas of={stories.HeadingStory} />
+
+## Paragraph
+
+- Bruk `<Paragraph>` med ønsket `data-size`
+
+  <Canvas of={stories.ParagraphStory} />
+
+## Lang tekst
+
+- Bruk `data-variant='long'` for lengre brødtekst
+
+  <Canvas of={stories.ParagraphLongStory} />

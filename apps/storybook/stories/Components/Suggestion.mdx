@@ -1,0 +1,22 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Suggestion.stories'
+
+<Meta of={stories} />
+
+# Suggestion
+
+> Suggestion er under utvikling hos Digdir, og kan fortsatt få endringer og forbedringer.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/suggestion/overview)
+
+## Kode
+
+- Bruk `<EXPERIMENTAL_Suggestion>` for søkbare valg med forslag
+
+  <Canvas of={stories.Default} />
+
+## Flere valg
+
+- Bruk `multiple` når brukeren skal kunne velge flere alternativer
+
+  <Canvas of={stories.Multiple} />

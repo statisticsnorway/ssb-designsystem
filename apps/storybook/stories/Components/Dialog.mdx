@@ -1,0 +1,22 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Dialog.stories'
+
+<Meta of={stories} />
+
+# Dialog
+
+> Det er to typer dialoger, en modal og en ikke-modal.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/dialog/overview)
+
+## Kode
+
+- Bruk `<Dialog>` når brukeren må forholde seg til innhold som legges over resten av grensesnittet
+
+  <Canvas of={stories.Default} />
+
+## Varianter
+
+- Se ulike typer dialoger og oppsett
+
+  <Canvas of={stories.Variants} />

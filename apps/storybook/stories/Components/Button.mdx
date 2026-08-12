@@ -1,0 +1,51 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Button.stories'
+
+<Meta of={stories} />
+
+# Button
+
+> Button lar brukere utføre handlinger.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/button/overview)
+
+## Kode
+
+- Bruk `<Button>` komponenten i React
+
+  <Canvas of={stories.Default} />
+
+## Varianter
+
+- Bruk `variant='Primary' | secondary | tertiary"`
+
+  <Canvas of={stories.Variants} />
+
+## Størrelse
+
+- Bruk `data-size="sm | md | lg"`
+  <Canvas of={stories.Sizes} />
+
+## Farger
+
+- Bruk `data-color`
+  <Canvas of={stories.Colors} />
+
+## Ikoner
+
+- Ikoner kan legges før eller etter tekst
+- Kan også vise kun ikon, må da legge til tilgjengelig tekst i `aria-label`, `title` eller i en `Tooltip`
+
+  <Canvas of={stories.Icons} />
+
+## Knapp med spinner
+
+- Kan kombinere knapp med spinner for å vise at knappen laster ned noe
+
+  <Canvas of={stories.WithSpinner} />
+
+## Knapp som lenke
+
+- Lenker kan se ut som knapp, men vurder først om det er mulig å heller bruke Link komponenten
+
+<Canvas of={stories.AsLink} />
