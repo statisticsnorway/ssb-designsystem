@@ -12,8 +12,8 @@ importers:
         specifier: ^2.31.1
         version: 2.31.1(@types/node@26.2.0)
       '@digdir/designsystemet':
-        specifier: ^1.18.0
-        version: 1.18.0(@types/node@26.2.0)
+        specifier: ^1.19.1
+        version: 1.19.1(@types/node@26.2.0)
       '@types/node':
         specifier: ^26.2.0
         version: 26.2.0
@@ -70,12 +70,12 @@ importers:
   packages/css:
     dependencies:
       '@digdir/designsystemet-css':
-        specifier: ^1.18.0
-        version: 1.18.0
+        specifier: ^1.19.1
+        version: 1.19.1
     devDependencies:
       '@digdir/designsystemet-types':
-        specifier: ^1.18.0
-        version: 1.18.0
+        specifier: ^1.19.1
+        version: 1.19.1
       postcss:
         specifier: ^8.5.26
         version: 8.5.26
@@ -86,11 +86,11 @@ importers:
   packages/react:
     dependencies:
       '@digdir/designsystemet-react':
-        specifier: ^1.18.0
-        version: 1.18.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: ^1.19.1
+        version: 1.19.1(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@digdir/designsystemet-types':
-        specifier: ^1.18.0
-        version: 1.18.0
+        specifier: ^1.19.1
+        version: 1.19.1
       '@navikt/aksel-icons':
         specifier: ^8.16.1
         version: 8.16.1
@@ -329,24 +329,24 @@ packages:
     resolution: {integrity: sha512-QxULHAm7cNu72w97JUNCBFODFaXpbDg+dP8b/oWFAZ2MTRppA3U00Y2L1HqaS4J6yBqxwa/Y3nMBaxVKbB/NsA==}
     engines: {node: '>=20.19.0'}
 
-  '@digdir/designsystemet-css@1.18.0':
-    resolution: {integrity: sha512-AiJAOGOJa8XKnaGhlho+/I16jYYB8gJuXgdoCreotFGhZWf9FPjRp/3IXh4CoLmSwooNXJL/5/qmiFRBhbrJ2Q==}
+  '@digdir/designsystemet-css@1.19.1':
+    resolution: {integrity: sha512-hk+mWIzgfrk/eZh4IbwPtZOAGe82ufyuMS/pScEImbWLYSrk/RwwST8P5+U1jNtfRUSaR+IJKKGs8GePo0ij9w==}
 
-  '@digdir/designsystemet-react@1.18.0':
-    resolution: {integrity: sha512-rBOG0wWrHYeQFsmfjcECiEyXdt5RQ06Ec5oTT3SyvaU/+5cEpaCSCcF97S4EfA/2vsRVjIjYa6V854ibEM2FbA==}
+  '@digdir/designsystemet-react@1.19.1':
+    resolution: {integrity: sha512-mMoiWr9QsmyYgvRLdB8TcZOIIGleeqn/rHiOfetjAXd+0bvSALOEvwPfvmAVKIp64m8JfymWKJyPS8Xl7CjSCQ==}
     peerDependencies:
       react: '>=18.3.1 || ^19.0.0'
       react-dom: '>=18.3.1 || ^19.0.0'
 
-  '@digdir/designsystemet-types@1.18.0':
-    resolution: {integrity: sha512-2Qfn9Pf59AZyjc95NcWpsNyma3vcsWbiNMLmoMjHG8o0oBNYQdaln4V7wJig5avjbz7Z1BcBhs60d/DOcP+j5w==}
+  '@digdir/designsystemet-types@1.19.1':
+    resolution: {integrity: sha512-TZXnZTuz0Du0qu0Du3zITeIINOi99ePD0ATgBNDapkcxWP4+a9c0ACTpEmkX5X1M/b0ZlhSQDp8ZEZHB57U1hg==}
 
-  '@digdir/designsystemet-web@1.18.0':
-    resolution: {integrity: sha512-CLQZWSywbk2StmD6kzTi9ZsHiZrNKbWVOTRG0/JGP0xX+QZwadDqz1Dsh11HeRDRCoz6PjMz6Yi1HV/icmwcjQ==}
+  '@digdir/designsystemet-web@1.19.1':
+    resolution: {integrity: sha512-WtwaiG0u8GRQ0E9VOn19YV1FsWnM3Q5BJU5angQOnV0i0kPJ8Bh7kn0Q3Q9wMbHOcEAAC1F+FANHJdcTsCgmDA==}
 
-  '@digdir/designsystemet@1.18.0':
-    resolution: {integrity: sha512-DjQICv8NmSvbm1UPBwGRyPxG+niU1mn7PpPr2F2eRMyVRoGLbPak2BCjph7rvHjt3dDE6b2REz5yfSVG7fvnbA==}
-    engines: {node: '>=24.16.0'}
+  '@digdir/designsystemet@1.19.1':
+    resolution: {integrity: sha512-zCck8OSz6hz8VU2xH53G6GfvageQWQatFu6AatJRx3yp8dFeAJuEpUivJ0tIAEg/+BfJr30J7T1qq7ca39Q2Qw==}
+    engines: {node: '>=24.19.0'}
     hasBin: true
 
   '@emnapi/core@1.11.2':
@@ -1635,8 +1635,8 @@ packages:
   colorjs.io@0.5.2:
     resolution: {integrity: sha512-twmVoizEW7ylZSN32OgKdXRmo1qg+wT5/6C3xu5b9QsWzSFAhHLn2xd8ro0diCsKfCj1RdaTP/nrcW+vAoQPIw==}
 
-  colorjs.io@0.6.1:
-    resolution: {integrity: sha512-8lyR2wHzuIykCpqHKgluGsqQi5iDm3/a2IgP2GBZrasn2sBRkE4NOGsglZxWLs/jZQoNkmA/KM/8NV16rLUdBg==}
+  colorjs.io@0.7.1:
+    resolution: {integrity: sha512-LY7OHnJZxHwT5UlzNa9bbhHHDbzB6yE5+3MIPwJEQKRvSCt/T4G7epsj+9j2BExUIIfXFIJGsIXUKdfrK9Q5tA==}
 
   commander@12.1.0:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
@@ -3463,14 +3463,14 @@ snapshots:
 
   '@csstools/css-tokenizer@4.0.0': {}
 
-  '@digdir/designsystemet-css@1.18.0':
+  '@digdir/designsystemet-css@1.19.1':
     dependencies:
-      '@digdir/designsystemet-types': 1.18.0
+      '@digdir/designsystemet-types': 1.19.1
 
-  '@digdir/designsystemet-react@1.18.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@digdir/designsystemet-react@1.19.1(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
-      '@digdir/designsystemet-types': 1.18.0
-      '@digdir/designsystemet-web': 1.18.0
+      '@digdir/designsystemet-types': 1.19.1
+      '@digdir/designsystemet-web': 1.19.1
       '@floating-ui/dom': 1.8.0
       '@floating-ui/react': 0.26.23(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@navikt/aksel-icons': 8.16.1
@@ -3482,9 +3482,9 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@digdir/designsystemet-types@1.18.0': {}
+  '@digdir/designsystemet-types@1.19.1': {}
 
-  '@digdir/designsystemet-web@1.18.0':
+  '@digdir/designsystemet-web@1.19.1':
     dependencies:
       '@floating-ui/dom': 1.8.0
       '@u-elements/u-combobox': 2.1.1
@@ -3492,17 +3492,19 @@ snapshots:
       '@u-elements/u-details': 1.0.0
       '@u-elements/u-tabs': 1.0.4
 
-  '@digdir/designsystemet@1.18.0(@types/node@26.2.0)':
+  '@digdir/designsystemet@1.19.1(@types/node@26.2.0)':
     dependencies:
       '@commander-js/extra-typings': 14.0.0(commander@14.0.3)
-      '@digdir/designsystemet-types': 1.18.0
+      '@digdir/designsystemet-types': 1.19.1
       '@inquirer/confirm': 6.1.1(@types/node@26.2.0)
       '@tokens-studio/sd-transforms': 2.0.3(style-dictionary@5.5.1)
+      '@tokens-studio/types': 0.5.2
       chroma-js: 3.2.0
-      colorjs.io: 0.6.1
+      colorjs.io: 0.7.1
       commander: 14.0.3
       fast-glob: 3.3.3
       hsluv: 1.0.2
+      jsonc-parser: 3.3.1
       object-hash: 3.0.0
       picocolors: 1.1.1
       postcss: 8.5.26
@@ -4657,7 +4659,7 @@ snapshots:
 
   colorjs.io@0.5.2: {}
 
-  colorjs.io@0.6.1: {}
+  colorjs.io@0.7.1: {}
 
   commander@12.1.0: {}
 
