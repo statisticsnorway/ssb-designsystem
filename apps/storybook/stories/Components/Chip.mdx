@@ -5,18 +5,37 @@ import * as stories from './Chip.stories'
 
 # Chip
 
-> Chip er små, interaktive komponenter som lar brukerne styre hvordan de vil se innhold.
+> Chip er små, interaktive komponenter som lar brukerne styre hvordan de vil se innhold. For eksempel kan de brukes til å filtrere kategorier i et søkeresultat og vise hvilke filter som er aktive.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/chip/overview)
 
 ## Kode
 
 - Bruk `<Chip>` for små, valgbare handlinger eller filtre
+- Bruk `Chip.Radio` når brukeren skal velge ett alternativ
 
   <Canvas of={stories.Default} />
 
-## Varianter
+## Størrelser
 
-- Se ulike varianter og tilstander
+- Bruk `data-size="sm | md | lg"`
 
-  <Canvas of={stories.Variants} />
+  <Canvas of={stories.Sizes} />
+
+## Chip som checkbox
+
+- Bruk`Chip.Checkbox` når brukeren skal velge ett eller flere alternativ
+
+  <Canvas of={stories.ChipCheckbox} />
+
+## Chip som filtervalg
+
+- Viser et aktivt filter som brukeren kan fjerne
+
+  <Canvas of={stories.ChipRemovable} />
+
+## Chip som Button
+
+- Bruk`Chip.Button` når chip skal utløse en handling
+
+  <Canvas of={stories.ChipButton} />
