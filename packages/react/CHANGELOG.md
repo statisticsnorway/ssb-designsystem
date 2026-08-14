@@ -1,5 +1,13 @@
 # @statisticsnorway/design-react
 
+## 0.2.1
+
+### Patch Changes
+
+- 4ffcf3a: Update Digdir Designsystemet from 1.18.0 to 1.19.1.
+
+  See the [Digdir v1.19.0 release notes](https://github.com/digdir/designsystemet/releases/tag/v1.19.0) and [v1.19.1 release notes](https://github.com/digdir/designsystemet/releases/tag/v1.19.1).
+
 ## 0.2.0
 
 ### Minor Changes
