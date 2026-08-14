@@ -15,8 +15,32 @@ import * as stories from './Details.stories'
 
   <Canvas of={stories.Default} />
 
+## Størrelser
+
+- Bruk `data-size="sm | md | lg"`
+
+  <Canvas of={stories.Sizes} />
+
+## Farger
+
+- Bruk `data-color="primary | secondary | neutral"`
+
+  <Canvas of={stories.Colors} />
+
 ## Varianter
 
-- Se ulike måter å presentere skjulbart innhold på
+- Bruk `variant="tinted"`
 
   <Canvas of={stories.Variants} />
+
+## Med ramme
+
+- Legg Details inn i Card for å få avrunnede kanter og bakgrunn
+
+  <Canvas of={stories.CardVariant} />
+
+## Åpen
+
+- Bruk `defaultOpen` for å ha vise den som åpen
+
+  <Canvas of={stories.OpenDetail} />
