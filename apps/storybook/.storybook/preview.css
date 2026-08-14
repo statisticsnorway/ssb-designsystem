@@ -75,3 +75,8 @@ body {
   font-size: 1em;
   display: inline-block;
 }
+
+/* Story */
+.docs-story [scale='1'] {
+  transform: none; /* Avoid conflicts with position: fixed <dialog> */
+}

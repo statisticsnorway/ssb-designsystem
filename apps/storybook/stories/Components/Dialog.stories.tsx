@@ -1,26 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { useRef, useState } from 'react'
-import { Button, Dialog, Heading, Paragraph } from '@statisticsnorway/design-react'
-
-const description = `
-Det er to typer dialoger, en modal og en ikke-modal.
-En modal dialog tvinger brukerne til å ta stilling til noe før de kan fortsette å bruke siden. 
-En ikke-modal dialog lar brukerne fortsette å bruke siden, selv om dialogen er åpen.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/dialog/overview
-`
+import { useState, type ChangeEvent } from 'react'
+import {
+  Button,
+  Checkbox,
+  Dialog,
+  DialogProps,
+  Heading,
+  Fieldset,
+  Label,
+  Paragraph,
+  Textarea,
+  Radio,
+} from '@statisticsnorway/design-react'
 
 const meta: Meta<typeof Dialog> = {
   title: 'Komponenter/Dialog',
   component: Dialog,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -41,55 +36,95 @@ export const Default: Story = {
   ),
 }
 
-const NonModalExample = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+const NonModalDialog = () => (
+  <>
+    <Button command='--show-non-modal' commandfor='my-dialog-non-modal'>
+      Åpne ikke-modal Dialog
+    </Button>
+    <Dialog
+      id='my-dialog-non-modal'
+      modal={false}
+      style={{
+        zIndex: '10',
+        top: 'calc(100vh - 290px)',
+        left: 'calc(100vw - 385px)',
+        margin: 0,
+        maxWidth: '350px',
+      }}
+    >
+      <Heading style={{ marginBottom: 'var(--ds-size-4)' }}>Vi ønsker din mening</Heading>
+      <Label htmlFor='my-textarea'>Hvordan var din opplevelse?</Label>
+      <Textarea
+        id='my-textarea'
+        style={{
+          marginBottom: 'var(--ds-size-6)',
+        }}
+      />
+      <Button>Send inn</Button>
+    </Dialog>
+  </>
+)
+
+const Drawer = () => {
+  const [placement, setPlacement] = useState<DialogProps['placement']>('bottom')
+  const [modal, setModal] = useState(true)
 
   return (
-    <div style={{ display: 'grid', gap: '0.75rem', justifyItems: 'start' }}>
-      <Heading level={3} data-size='xs'>
-        Ikke-modal
-      </Heading>
-      <Button onClick={() => dialogRef.current?.show()}>Åpne ikke-modal dialog</Button>
-
-      <Dialog ref={dialogRef} modal={false}>
-        <Heading level={2} data-size='sm'>
-          Ikke-modal dialog
-        </Heading>
-        <Paragraph style={{ marginBottom: '1rem' }}>Denne dialogen lar deg fortsatt samhandle med siden bak.</Paragraph>
-        <Button onClick={() => dialogRef.current?.close()}>Lukk</Button>
+    <>
+      <Checkbox
+        label='Modal'
+        checked={modal}
+        style={{ marginBottom: 'var(--ds-size-4)' }}
+        onChange={(e) => setModal(e.target.checked)}
+      />
+      <Fieldset
+        onChange={(e: ChangeEvent<HTMLFieldSetElement>) => {
+          const target = e.target as unknown as HTMLInputElement
+          setPlacement(target.value as DialogProps['placement'])
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 'var(--ds-size-5)',
+            marginBottom: 'var(--ds-size-8)',
+          }}
+        >
+          <Radio name='drawer' label='Center' value='center' />
+          <Radio name='drawer' label='Top' value='top' />
+          <Radio name='drawer' label='Bottom' value='bottom' />
+          <Radio name='drawer' label='Left' value='left' />
+          <Radio name='drawer' label='Right' value='right' />
+        </div>
+      </Fieldset>
+      <Button command={modal ? 'show-modal' : '--show-non-modal'} commandfor='my-dialog-drawer'>
+        Open Dialog with command
+      </Button>
+      <Dialog id='my-dialog-drawer' closedby='any' placement={placement} style={{ zIndex: '10' }}>
+        <Dialog.Block>
+          <Paragraph>
+            This is a {modal ? 'modal' : 'non-modal'} Dialog with <code>placement="{placement}"</code>
+          </Paragraph>
+        </Dialog.Block>
       </Dialog>
-    </div>
+    </>
   )
 }
 
-const DrawerExample = () => {
-  const [modal] = useState(true)
+export const NonModal: Story = {
+  render: () => <NonModalDialog />,
+}
 
-  return (
-    <div style={{ display: 'grid', gap: '1rem', justifyItems: 'start' }}>
-      <Heading level={3} data-size='xs'>
-        Dialog som drawer
-      </Heading>
-
-      <Dialog.TriggerContext>
-        <Dialog.Trigger>Åpne dialog med plassering</Dialog.Trigger>
-        <Dialog modal={modal} closedby='any' placement='right' style={{ zIndex: '10' }}>
-          <Dialog.Block>
-            <Paragraph>
-              Dette er en {modal ? 'modal' : 'ikke-modal'} dialog med <code>placement="right"</code>.
-            </Paragraph>
-          </Dialog.Block>
-        </Dialog>
-      </Dialog.TriggerContext>
-    </div>
-  )
+export const DrawerExample: Story = {
+  render: () => <Drawer />,
 }
 
 export const Variants: Story = {
   render: () => (
     <div style={{ display: 'grid', gap: '2rem', justifyItems: 'start' }}>
-      <NonModalExample />
-      <DrawerExample />
+      <NonModalDialog />
+      <Drawer />
     </div>
   ),
 }
