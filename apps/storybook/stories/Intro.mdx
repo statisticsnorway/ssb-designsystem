@@ -1,5 +1,5 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
-import { Button, Divider, Heading, Link, Paragraph } from '@statisticsnorway/design-react'
+import { Badge, Button, Details, Divider, Heading, Link, Tabs, Paragraph } from '@statisticsnorway/design-react'
 import { BranchingIcon } from '@navikt/aksel-icons'
 import { version, scrollToId } from '../.storybook/docs'
 import { AnchorLinks } from '../.storybook/docs-components'
@@ -30,7 +30,53 @@ import { AnchorLinks } from '../.storybook/docs-components'
 Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som gjør det enklere å bygge konsistente
 og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 
-<Divider className='section-divider' />
+<br />
+
+<Details>
+  <Details.Summary><Badge count={1} />Installer pakkene</Details.Summary>
+  <Details.Content>
+    Installer React- og CSS-pakkene:
+
+    ```bash
+    npm install @statisticsnorway/design-css @statisticsnorway/design-react
+    ```
+
+  </Details.Content>
+</Details>
+<Details>
+<Details.Summary><Badge count={2} />Last inn CSS</Details.Summary>
+<Details.Content>
+Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel main.tsx:
+
+```tsx
+import '@statisticsnorway/design-css'
+import '@statisticsnorway/design-css/theme'
+```
+
+Alternativt kan du importere dem fra hoved-CSS-filen din:
+
+```css
+@import '@statisticsnorway/design-css';
+@import '@statisticsnorway/design-css/theme.css';
+```
+
+</Details.Content>
+</Details>
+
+<Details>
+<Details.Summary><Badge count={3} />Bruk komponentene</Details.Summary>
+<Details.Content>
+```tsx
+import { Button } from '@statisticsnorway/design-react'
+
+export function Example() {
+  return <Button>Trykk her</Button>
+}
+```
+</Details.Content>
+</Details>
+
+<br />
 
 ## For Designere
 
@@ -49,3 +95,7 @@ Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert p
 - **Info fra teamet** – nyheter, oppdateringer og informasjon.
 - **Innmelding av behov** – forslag til nye komponenter, forbedringer og endringer.
 - **Spørsmål og svar** – spør om alt fra bruk av komponenter til implementasjon og design.
+
+```
+
+```
