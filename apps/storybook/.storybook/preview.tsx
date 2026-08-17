@@ -82,7 +82,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduksjon', 'Kom i gang', 'Komponenter', 'Demosider', 'SSB'],
+        order: ['Introduksjon', 'Designsystem', 'Komponenter', 'Demosider'],
         method: 'alphabetical',
       },
     },

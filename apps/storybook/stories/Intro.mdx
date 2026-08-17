@@ -44,9 +44,9 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
   </Details.Content>
 </Details>
 <Details>
-<Details.Summary><Badge count={2} />Last inn CSS</Details.Summary>
-<Details.Content>
-Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel main.tsx:
+  <Details.Summary><Badge count={2} />Last inn CSS</Details.Summary>
+  <Details.Content>
+  Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel main.tsx:
 
 ```tsx
 import '@statisticsnorway/design-css'
@@ -60,27 +60,48 @@ Alternativt kan du importere dem fra hoved-CSS-filen din:
 @import '@statisticsnorway/design-css/theme.css';
 ```
 
-</Details.Content>
-</Details>
+  </Details.Content>
+  </Details>
 
 <Details>
-<Details.Summary><Badge count={3} />Bruk komponentene</Details.Summary>
-<Details.Content>
-```tsx
-import { Button } from '@statisticsnorway/design-react'
+  <Details.Summary><Badge count={3} />Bruk komponentene</Details.Summary>
+  <Details.Content>
+  ```tsx
+  import { Button } from '@statisticsnorway/design-react'
 
 export function Example() {
   return <Button>Trykk her</Button>
 }
+
 ```
 </Details.Content>
 </Details>
 
 <br />
+<br />
+
+<Divider className='section-divider' />
 
 ## For Designere
 
 Vi bruker Figma som designverktøy. I Figma finner du komponenter, variabler og stiler fra SSB Designsystem som du kan bruke i produktet eller løsningen du jobber med. Komponentene er tilpasset SSBs identitet og behov og er i kontinuerlig utvikling.
+<br />
+
+<Details>
+  <Details.Summary><Badge count={1} />Ta i bruk komponentene i Figma</Details.Summary>
+  <Details.Content>Kommer mer</Details.Content>
+</Details>
+<Details>
+  <Details.Summary><Badge count={2} />Bruk mode for å justere størrelser og fargepalett</Details.Summary>
+  <Details.Content>Kommer mer</Details.Content>
+</Details>
+<Details>
+  <Details.Summary><Badge count={3} />Bruk variabler og typografistiler i egne design</Details.Summary>
+  <Details.Content>Kommer mer</Details.Content>
+</Details>
+
+<br />
+<br />
 
 <Divider className='section-divider' />
 
@@ -95,6 +116,8 @@ Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert p
 - **Info fra teamet** – nyheter, oppdateringer og informasjon.
 - **Innmelding av behov** – forslag til nye komponenter, forbedringer og endringer.
 - **Spørsmål og svar** – spør om alt fra bruk av komponenter til implementasjon og design.
+
+```
 
 ```
 
