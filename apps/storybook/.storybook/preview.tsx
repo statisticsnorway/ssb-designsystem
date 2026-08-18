@@ -47,9 +47,11 @@ function getColorSchemeFromUrl(): string {
 }
 
 function DocsContainerWithTheme(props: Readonly<DocsContainerProps>) {
+  const colorScheme = getColorSchemeFromUrl()
+
   useEffect(() => {
-    document.documentElement.dataset.colorScheme = getColorSchemeFromUrl()
-  })
+    document.documentElement.dataset.colorScheme = colorScheme
+  }, [colorScheme])
 
   return (
     <Unstyled>
