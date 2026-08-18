@@ -44,17 +44,9 @@ body {
 }
 
 .sbdocs .section-divider {
-  margin-block: 2rem;
+  margin-block: var(--ds-size-10);
 }
 
-/* .sbdocs .sbdocs-content :is(details, .ds-details) + :is(details, .ds-details) {
-  margin-top: 0.75rem;
-}
-
-.sbdocs .sbdocs-content :is(details, .ds-details) + .section-divider {
-  margin-top: 2.5rem;
-}
- */
 .sbdocs .heading svg {
   fill: currentColor;
   vertical-align: -0.15em;

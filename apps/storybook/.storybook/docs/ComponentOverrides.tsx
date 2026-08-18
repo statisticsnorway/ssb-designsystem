@@ -42,10 +42,6 @@ export const mdxComponents = {
   a: ({ className, ...props }: ComponentProps<'a'>) => (
     <a {...props} className={withClassName(`ds-link ${styles.link}`, className)} />
   ),
-  code: ({ className, ...props }: ComponentProps<'code'>) => (
-    <code {...props} className={withClassName(styles.code, className)} />
-  ),
-  pre: ({ className, ...props }: ComponentProps<'pre'>) => <pre {...props} className={withClassName(styles.pre, className)} />,
 }
 
 export function AnchorLinks() {
