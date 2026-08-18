@@ -6,9 +6,8 @@ import { DocsContainer, Unstyled } from '@storybook/addon-docs/blocks'
 import type { DocsContainerProps } from '@storybook/addon-docs/blocks'
 import { MDXProvider } from '@mdx-js/react'
 import { useEffect } from 'react'
-import type { ComponentProps } from 'react'
 import type { Decorator, Preview } from '@storybook/react-vite'
-import { Heading, Paragraph } from '@statisticsnorway/design-react'
+import { mdxComponents } from './docs/ComponentOverrides'
 
 export const globalTypes = {
   colorScheme: {
@@ -47,17 +46,7 @@ function getColorSchemeFromUrl(): string {
   }
 }
 
-const mdxComponents = {
-  h1: (props: ComponentProps<'h1'>) => <Heading data-size='2xl' level={1} {...props} />,
-  h2: (props: ComponentProps<'h2'>) => <Heading data-size='lg' level={2} {...props} />,
-  h3: (props: ComponentProps<'h3'>) => <Heading data-size='md' level={3} {...props} />,
-  h4: (props: ComponentProps<'h4'>) => <Heading data-size='sm' level={4} {...props} />,
-  blockquote: (props: ComponentProps<'blockquote'>) => <blockquote {...props} className='ingress' />,
-  p: (props: ComponentProps<'p'>) => <Paragraph {...props} />,
-  a: (props: ComponentProps<'a'>) => <a {...props} className='ds-link' />,
-}
-
-function ColorSchemeDocsContainer(props: Readonly<DocsContainerProps>) {
+function DocsContainerWithTheme(props: Readonly<DocsContainerProps>) {
   useEffect(() => {
     document.documentElement.dataset.colorScheme = getColorSchemeFromUrl()
   })
@@ -78,7 +67,7 @@ const preview: Preview = {
       canvas: {
         layout: 'centered',
       },
-      container: ColorSchemeDocsContainer,
+      container: DocsContainerWithTheme,
     },
     options: {
       storySort: {

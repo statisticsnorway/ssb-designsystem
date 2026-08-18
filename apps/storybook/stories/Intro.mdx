@@ -2,7 +2,7 @@ import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
 import { Badge, Button, Details, Divider, Heading, Link, Tabs, Paragraph } from '@statisticsnorway/design-react'
 import { BranchingIcon } from '@navikt/aksel-icons'
 import { version, scrollToId } from '../.storybook/docs'
-import { AnchorLinks } from '../.storybook/docs-components'
+import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
 
 <Meta title='Introduksjon' />
 
@@ -29,8 +29,6 @@ import { AnchorLinks } from '../.storybook/docs-components'
 
 Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som gjør det enklere å bygge konsistente
 og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
-
-<br />
 
 <Details>
   <Details.Summary><Badge count={1} />Installer pakkene</Details.Summary>
@@ -77,15 +75,10 @@ export function Example() {
 </Details.Content>
 </Details>
 
-<br />
-<br />
-
-<Divider className='section-divider' />
 
 ## For Designere
 
 Vi bruker Figma som designverktøy. I Figma finner du komponenter, variabler og stiler fra SSB Designsystem som du kan bruke i produktet eller løsningen du jobber med. Komponentene er tilpasset SSBs identitet og behov og er i kontinuerlig utvikling.
-<br />
 
 <Details>
   <Details.Summary><Badge count={1} />Ta i bruk komponentene i Figma</Details.Summary>
@@ -100,9 +93,6 @@ Vi bruker Figma som designverktøy. I Figma finner du komponenter, variabler og 
   <Details.Content>Kommer mer</Details.Content>
 </Details>
 
-<br />
-<br />
-
 <Divider className='section-divider' />
 
 ## Snakk med oss
@@ -116,9 +106,3 @@ Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert p
 - **Info fra teamet** – nyheter, oppdateringer og informasjon.
 - **Innmelding av behov** – forslag til nye komponenter, forbedringer og endringer.
 - **Spørsmål og svar** – spør om alt fra bruk av komponenter til implementasjon og design.
-
-```
-
-```
-
-```

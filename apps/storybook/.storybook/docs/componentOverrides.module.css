@@ -1,0 +1,59 @@
+.heading {
+	margin-bottom: var(--ds-size-2);
+}
+
+.heading:where(h1, h2) {
+	margin-top: var(--ds-size-5);
+}
+
+.heading:where(h3, h4, h5, h6) {
+	margin-top: var(--ds-size-4);
+}
+
+.heading:first-child {
+	margin-top: 0;
+}
+
+.paragraph {
+	margin-block: var(--ds-size-2) var(--ds-size-4);
+}
+
+.ingress {
+	margin-inline: 0;
+	margin-block: var(--ds-size-3);
+}
+
+.ingress p {
+	line-height: var(--ds-line-height-lg);
+	font-size: var(--ds-body-lg-font-size);
+}
+
+.list {
+	margin-block: 0 var(--ds-size-4);
+	padding-inline-start: 1.25rem;
+}
+
+.listItem {
+	margin-top: var(--ds-size-1);
+}
+
+.link {
+	color: var(--ds-color-neutral-text-default);
+}
+
+.code {
+	background-color: var(--ds-color-neutral-background-tinted);
+	color: var(--ds-color-neutral-text-default);
+	font-size: 1rem;
+	line-height: inherit;
+}
+
+.pre {
+	background-color: var(--ds-color-neutral-background-tinted);
+	padding: var(--ds-size-2);
+	overflow-x: auto;
+}
+
+.pre code {
+	background-color: transparent;
+}

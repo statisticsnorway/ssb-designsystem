@@ -20,23 +20,9 @@ body {
   color: var(--ds-color-neutral-text-default);
 }
 
-.sbdocs :is(h1, h2, h3, p, li) {
-  font-family: var(--ds-font-family);
-  color: var(--ds-color-neutral-text-default);
-}
-
 .sbdocs-content.sbdocs-content {
   max-width: 50rem;
   padding-bottom: 200px;
-}
-
-.sbdocs-content blockquote {
-  margin-inline: 0;
-  margin-block: 1em;
-}
-.sbdocs-content blockquote.ingress p {
-  line-height: var(--ds-line-height-lg);
-  font-size: var(--ds-body-lg-font-size);
 }
 
 .sbdocs .intro-action {
@@ -61,17 +47,14 @@ body {
   margin-block: 2rem;
 }
 
-.sbdocs .ds-paragraph {
-  margin-top: 0.5rem;
+/* .sbdocs .sbdocs-content :is(details, .ds-details) + :is(details, .ds-details) {
+  margin-top: 0.75rem;
 }
 
-.sbdocs .ds-paragraph code {
-  background-color: var(--ds-color-neutral-background-tinted);
-  color: var(--ds-color-neutral-text-default);
-  font-size: 1rem;
-  line-height: inherit;
+.sbdocs .sbdocs-content :is(details, .ds-details) + .section-divider {
+  margin-top: 2.5rem;
 }
-
+ */
 .sbdocs .heading svg {
   fill: currentColor;
   vertical-align: -0.15em;
