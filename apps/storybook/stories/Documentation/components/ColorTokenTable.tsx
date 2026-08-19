@@ -1,25 +1,46 @@
 import { useState } from 'react'
+import css from '../../../../../packages/css/theme/ssb.css?raw'
 import styles from './ColorTokenTable.module.css'
+import { Card, Table } from '@statisticsnorway/design-react'
 
-const GROUPS = ['primary', 'secondary', 'magic', 'neutral', 'info', 'success', 'warning', 'danger'] as const
+const toUpper = (str: string) => str.replace(/\b./g, (m) => m.toUpperCase())
+const toUnique = <T,>(arr: T[]): T[] => [...new Set(arr)]
 
-const ROLES = [
-  'background-default',
-  'background-tinted',
-  'surface-default',
-  'surface-tinted',
-  'surface-hover',
-  'surface-active',
-  'border-subtle',
-  'border-default',
-  'border-strong',
-  'text-subtle',
-  'text-default',
-  'base-default',
-  'base-hover',
-  'base-active',
-  'base-contrast-subtle',
-  'base-contrast-default',
+const COLORS = toUnique(
+  Array.from(
+    css.matchAll(/--ds-color-([^-]+)(-[^-:)]+){3}/g), // Match minium 3 variants to avoid dynamic tokens without color name
+    ([, name]) => name
+  )
+)
+
+const GROUPS = [
+  ['background', [['default'], ['tinted', 'Grupper']]],
+  ['surface', [['default', 'Flater'], ['tinted'], ['hover'], ['active']]],
+  [
+    'border',
+    [
+      ['subtle', 'Flater og skillelinjer'],
+      ['default', 'F.eks. knapper'],
+      ['strong', 'F.eks. i skjema'],
+    ],
+  ],
+  [
+    'text',
+    [
+      ['subtle', 'F.eks store ikon'],
+      ['default', 'Tekst og ikoner'],
+    ],
+  ],
+  [
+    'base',
+    [
+      ['default', 'Til f.eks. knapper'],
+      ['hover'],
+      ['active'],
+      ['contrast-subtle', 'På base'],
+      ['contrast-default', 'På base'],
+    ],
+  ],
 ] as const
 
 const COPIED_LABEL = 'Kopiert!'
@@ -36,30 +57,56 @@ export const ColorTokenTable = () => {
   }
 
   return (
-    <div className={styles.wrapper}>
-      {GROUPS.map((group) => (
-        <section key={group}>
-          <h3 className={styles.groupTitle}>{group}</h3>
-          <div className={styles.swatches}>
-            {ROLES.map((role) => {
-              const token = `--ds-color-${group}-${role}`
-              return (
-                <button
-                  key={token}
-                  type='button'
-                  className={styles.swatch}
-                  style={{ backgroundColor: `var(${token})` }}
-                  aria-label={`Kopier ${token}`}
-                  title={token}
-                  onClick={() => handleCopy(token)}
-                >
-                  <span className={styles.label}>{copiedToken === token ? COPIED_LABEL : role}</span>
-                </button>
-              )
-            })}
-          </div>
-        </section>
-      ))}
-    </div>
+    <figure className={styles.colorToken}>
+      <Table data-fixed>
+        <thead>
+          <tr>
+            <th aria-label='Farger' />
+            {GROUPS.map(([name, variants]) => (
+              <th colSpan={variants.length} key={name}>
+                {toUpper(name)}
+              </th>
+            ))}
+          </tr>
+          <tr>
+            <th />
+            {GROUPS.flatMap(([name, variants]) =>
+              variants.map(([variant, desc], i) => (
+                <th key={`${name}-${variant}`} data-i={i}>
+                  {toUpper(variant)}
+                  {!!desc && <small>{desc}</small>}
+                </th>
+              ))
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          {COLORS.map((color) => (
+            <tr key={color}>
+              <th>{toUpper(color)}</th>
+              {GROUPS.map(([name, variants]) =>
+                variants.map(([variant], i) => {
+                  const colorPrefix = color === 'primary' ? '' : `${color}-`
+                  const token = `var(--ds-color-${colorPrefix}${name}-${variant})`
+
+                  return (
+                    <td key={`${name}-${variant}`} data-i={i}>
+                      <Card asChild>
+                        <button
+                          type='button'
+                          data-tooltip={copiedToken === token ? COPIED_LABEL : token}
+                          onClick={() => handleCopy(token)}
+                          style={{ background: token }}
+                        />
+                      </Card>
+                    </td>
+                  )
+                })
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </figure>
   )
 }

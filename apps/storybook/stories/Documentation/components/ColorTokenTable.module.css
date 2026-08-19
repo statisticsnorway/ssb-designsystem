@@ -1,44 +1,74 @@
-.wrapper {
-  display: grid;
-  gap: 2rem;
+.colorToken {
+  --content-max-width: 900px;
+  --content-padding: 4em;
+
+  font-size: 0.875rem;
+  /* Break out of the centered content column so the table can use the full viewport width */
+  margin: 3rem calc(50% + var(--content-padding) - min(var(--content-max-width), 50vw));
 }
 
-.groupTitle {
-  margin-bottom: 0.75rem;
-  text-transform: capitalize;
+.colorToken table {
+  min-width: 1140px; /* Prevent squeeze */
 }
 
-.swatches {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-  gap: 0.5rem;
+.colorToken :is(th, td):has(+ [data-i='0']) {
+  padding-right: var(--ds-size-2);
 }
 
-.swatch {
+.colorToken :is(th, td)[data-i='0'] {
+  padding-left: var(--ds-size-2);
+  border-left: 1px solid var(--ds-color-border-subtle);
+}
+
+.colorToken thead small {
+  display: block;
+  font-weight: normal;
+}
+
+.colorToken thead tr:first-child {
+  text-align: center;
+}
+
+.colorToken thead th {
+  vertical-align: top;
+  font-weight: var(--ds-font-weight-medium);
+}
+
+.colorToken tbody th {
+  vertical-align: middle;
+}
+
+.colorToken tbody td {
+  padding-inline: 1px;
+}
+
+.colorToken button {
   position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  padding: 0;
-  border: 1px solid var(--ds-color-neutral-border-subtle, #ccc);
-  border-radius: 4px;
-  cursor: pointer;
+  width: 100%;
+  border-radius: var(--ds-border-radius-sm);
 }
 
-.label {
+.colorToken button::before {
+  display: none;
+}
+
+.colorToken button[data-tooltip]::after {
+  content: attr(data-tooltip);
   position: absolute;
   inset: auto 0 0 0;
   padding: 0.25rem;
   overflow-wrap: break-word;
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   line-height: 1.2;
   text-align: center;
   background: rgba(0, 0, 0, 0.65);
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.15s ease;
 }
 
-.swatch:hover .label,
-.swatch:focus-visible .label {
+.colorToken button[data-tooltip]:hover::after,
+.colorToken button[data-tooltip]:focus-visible::after {
   opacity: 1;
 }
