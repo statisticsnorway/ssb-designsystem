@@ -94,6 +94,7 @@ export const ColorTokenTable = () => {
                       <Card asChild>
                         <button
                           type='button'
+                          aria-label={`Kopier ${token}`}
                           data-tooltip={copiedToken === token ? COPIED_LABEL : token}
                           onClick={() => handleCopy(token)}
                           style={{ background: token }}
