@@ -51,3 +51,9 @@
 .colorToken button::before {
   display: none;
 }
+
+.colorToken button:hover,
+.colorToken button:focus-visible {
+  outline: 1px solid var(--ds-color-neutral-border-strong);
+  outline-offset: -1px;
+}

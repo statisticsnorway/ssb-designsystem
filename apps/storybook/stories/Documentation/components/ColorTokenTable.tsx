@@ -14,33 +14,11 @@ const COLORS = toUnique(
 )
 
 const GROUPS = [
-  ['background', [['default'], ['tinted', 'Grupper']]],
-  ['surface', [['default', 'Flater'], ['tinted'], ['hover'], ['active']]],
-  [
-    'border',
-    [
-      ['subtle', 'Flater og skillelinjer'],
-      ['default', 'F.eks. knapper'],
-      ['strong', 'F.eks. i skjema'],
-    ],
-  ],
-  [
-    'text',
-    [
-      ['subtle', 'F.eks store ikon'],
-      ['default', 'Tekst og ikoner'],
-    ],
-  ],
-  [
-    'base',
-    [
-      ['default', 'Til f.eks. knapper'],
-      ['hover'],
-      ['active'],
-      ['contrast-subtle', 'På base'],
-      ['contrast-default', 'På base'],
-    ],
-  ],
+  ['background', [['default'], ['tinted']]],
+  ['surface', [['default'], ['tinted'], ['hover'], ['active']]],
+  ['border', [['subtle'], ['default'], ['strong']]],
+  ['text', [['subtle'], ['default']]],
+  ['base', [['default'], ['hover'], ['active'], ['contrast-subtle'], ['contrast-default']]],
 ] as const
 
 const COPIED_LABEL = 'Kopiert!'
@@ -71,10 +49,9 @@ export const ColorTokenTable = () => {
           <tr>
             <th />
             {GROUPS.flatMap(([name, variants]) =>
-              variants.map(([variant, desc], i) => (
+              variants.map(([variant], i) => (
                 <th key={`${name}-${variant}`} data-i={i}>
                   {toUpper(variant)}
-                  {!!desc && <small>{desc}</small>}
                 </th>
               ))
             )}
