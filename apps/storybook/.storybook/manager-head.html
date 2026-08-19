@@ -1,0 +1,75 @@
+<style>
+  #root > div {
+    padding: 1em min(1rem, 1%);
+    gap: 0.25rem;
+  }
+
+  #root > div > * {
+    border-radius: 0.75rem;
+    border: 1px solid color-mix(in hsl, currentcolor, transparent 90%);
+    overflow: hidden;
+  }
+  #root > div > :has(.sidebar-container) {
+    border: 0;
+    overflow: visible;
+  }
+  #root div:has(+ .sidebar-container)::after {
+    opacity: 0 !important;
+  }
+
+  /* Hide separator before colorScheme toolbar button */
+  div:has(button[aria-label*='colorScheme']) > span,
+  div:has(button[id*='colorScheme']) > span {
+    display: none;
+  }
+
+  #root .sb-bar {
+    box-shadow: none !important;
+  }
+  #storybook-preview-iframe {
+    outline: 1px solid rgb(0 0 0 / 0.2);
+  }
+
+  /**
+   * Hide stuff
+   */
+  .sidebar-container.sidebar-container .sidebar-header ~ *, /* Hide install guide for authors */
+  .sidebar-container.sidebar-container #storybook-explorer-searchfield ~ *, /* Search help */
+  .sidebar-container.sidebar-container .search-field + button, /* Disable "Create new story" <button> */
+  .sidebar-container.sidebar-container .sidebar-header button, /* Hide settings */
+  .sidebar-container.sidebar-container svg[type], /* Hide sidebar type icons */
+  .sidebar-container.sidebar-container button[data-testid="tree-change-status-button"], /* Hide "new story" star */
+  .sidebar-container.sidebar-container button[data-action="expand-all"], /* Hide expand <button> */
+  .sidebar-container.sidebar-container button[title="Tag filters"], /* Hide filter tags <button> */
+  .sidebar-container.sidebar-container button[role="switch"][aria-label*="review" i], /* Hide review stories button */
+  .sidebar-container.sidebar-container [data-displayed], /* Hide "Open in edtior" context menu in sidebar */
+  .sb-bar.sb-bar button[aria-label="Open in editor"], /* Hide "Open in edtior" (new markup) */
+  .sb-bar.sb-bar button[title="Open in editor"] /* Hide "Open in edtior" (old markup) */ {
+    display: none !important;
+  }
+
+  /**
+   * Sidebar
+   */
+
+  /* Larger title in sidebar */
+  .sidebar-container .sidebar-header a {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-container .sidebar-item :is(a, button) {
+    align-items: center;
+    font: inherit;
+    font-weight: 400;
+    white-space: pre;
+    line-height: 1.5;
+  }
+
+  .sidebar-container .sidebar-item a {
+    gap: 0;
+  }
+
+  .sidebar-container .sidebar-item:hover {
+    background: #b6e8b8;
+  }
+</style>

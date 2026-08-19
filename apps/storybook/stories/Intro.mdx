@@ -1,0 +1,106 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
+import { Badge, Button, Details, Divider, Heading, Link, Tabs, Paragraph } from '@statisticsnorway/design-react'
+import { BranchingIcon } from '@navikt/aksel-icons'
+import { version, scrollToId } from '../.storybook/docs'
+import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
+
+<Meta title='Introduksjon' />
+
+<img className='illustration' src='/svg/illustrasjon-samarbeid.svg' alt='' />
+
+# SSB Designsystem
+
+> SSBs designsystem bygger på [designsystemet.no](https://www.designsystemet.no/), men er tilpasset vår visuelle identitet. Det vil også bli utvidet med interne behov. Designsystemet fungerer som et felles språk mellom team og fagfelt, og lar oss skape effektive og gjenkjennbare brukeropplevelser for alle.
+
+<div className='intro-action'>
+  <Button asChild data-variant='secondary'>
+    <a href='https://github.com/statisticsnorway/ssb-designsystem/releases'>
+      <BranchingIcon />
+      {`Kode og versjonslogg (v${version})`}
+    </a>
+  </Button>
+</div>
+
+<AnchorLinks />
+
+<Divider className='section-divider' />
+
+## For utviklere
+
+Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som gjør det enklere å bygge konsistente
+og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
+
+<Details>
+  <Details.Summary><Badge count={1} />Installer pakkene</Details.Summary>
+  <Details.Content>
+    Installer React- og CSS-pakkene:
+
+    ```bash
+    npm install @statisticsnorway/design-css @statisticsnorway/design-react
+    ```
+
+  </Details.Content>
+</Details>
+<Details>
+  <Details.Summary><Badge count={2} />Last inn CSS</Details.Summary>
+  <Details.Content>
+  Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel main.tsx:
+
+```tsx
+import '@statisticsnorway/design-css'
+import '@statisticsnorway/design-css/theme'
+```
+
+Alternativt kan du importere dem fra hoved-CSS-filen din:
+
+```css
+@import '@statisticsnorway/design-css';
+@import '@statisticsnorway/design-css/theme.css';
+```
+
+  </Details.Content>
+  </Details>
+
+<Details>
+  <Details.Summary><Badge count={3} />Bruk komponentene</Details.Summary>
+  <Details.Content>
+  ```tsx
+  import { Button } from '@statisticsnorway/design-react'
+
+export function Example() {
+  return <Button>Trykk her</Button>
+}
+
+```
+</Details.Content>
+</Details>
+
+
+## For Designere
+
+Vi bruker Figma som designverktøy. I Figma finner du komponenter, variabler og stiler fra SSB Designsystem som du kan bruke i produktet eller løsningen du jobber med. Komponentene er tilpasset SSBs identitet og behov og er i kontinuerlig utvikling.
+
+<Details>
+  <Details.Summary><Badge count={1} />Ta i bruk komponentene i Figma</Details.Summary>
+  <Details.Content>Kommer mer</Details.Content>
+</Details>
+<Details>
+  <Details.Summary><Badge count={2} />Bruk mode for å justere størrelser og fargepalett</Details.Summary>
+  <Details.Content>Kommer mer</Details.Content>
+</Details>
+<Details>
+  <Details.Summary><Badge count={3} />Bruk variabler og typografistiler i egne design</Details.Summary>
+  <Details.Content>Kommer mer</Details.Content>
+</Details>
+
+## Snakk med oss
+
+Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert på utviklingen av designsystemet? Vi er tilgjengelige i **Teams**.
+
+**Team:** Designsystemet
+
+**Kanaler:**
+
+- **Info fra teamet** – nyheter, oppdateringer og informasjon.
+- **Innmelding av behov** – forslag til nye komponenter, forbedringer og endringer.
+- **Spørsmål og svar** – spør om alt fra bruk av komponenter til implementasjon og design.

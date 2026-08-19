@@ -1,0 +1,22 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Tooltip.stories'
+
+<Meta of={stories} />
+
+# Tooltip
+
+> Tooltip viser kort informasjon når brukeren holder musepekeren over eller fokuserer på et element.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/tooltip/overview)
+
+## Kode
+
+- Bruk `<Tooltip>` for kort hjelpetekst knyttet til et element
+
+  <Canvas of={stories.Default} />
+
+## Varianter
+
+- Se ulike plasseringer og presentasjoner
+
+  <Canvas of={stories.Variants} />

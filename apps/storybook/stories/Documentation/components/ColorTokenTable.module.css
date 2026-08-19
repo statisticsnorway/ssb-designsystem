@@ -1,0 +1,59 @@
+.colorToken {
+  --content-max-width: 900px;
+  --content-padding: 4em;
+
+  font-size: 0.875rem;
+  /* Break out of the centered content column so the table can use the full viewport width */
+  margin: 3rem calc(50% + var(--content-padding) - min(var(--content-max-width), 50vw));
+}
+
+.colorToken table {
+  min-width: 1140px; /* Prevent squeeze */
+}
+
+.colorToken :is(th, td):has(+ [data-i='0']) {
+  padding-right: var(--ds-size-2);
+}
+
+.colorToken :is(th, td)[data-i='0'] {
+  padding-left: var(--ds-size-2);
+  border-left: 1px solid var(--ds-color-border-subtle);
+}
+
+.colorToken thead small {
+  display: block;
+  font-weight: normal;
+}
+
+.colorToken thead tr:first-child {
+  text-align: center;
+}
+
+.colorToken thead th {
+  vertical-align: top;
+  font-weight: var(--ds-font-weight-medium);
+}
+
+.colorToken tbody th {
+  vertical-align: middle;
+}
+
+.colorToken tbody td {
+  padding-inline: 1px;
+}
+
+.colorToken button {
+  position: relative;
+  width: 100%;
+  border-radius: var(--ds-border-radius-sm);
+}
+
+.colorToken button::before {
+  display: none;
+}
+
+.colorToken button:hover,
+.colorToken button:focus-visible {
+  outline: 1px solid var(--ds-color-neutral-border-strong);
+  outline-offset: -1px;
+}

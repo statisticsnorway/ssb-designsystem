@@ -1,0 +1,46 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './Details.stories'
+
+<Meta of={stories} />
+
+# Details
+
+> Details er en sammenleggbar komponent som lar brukeren vise eller skjule innhold.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/details/overview)
+
+## Kode
+
+- Bruk `<Details>` når innhold kan skjules til det er relevant
+
+  <Canvas of={stories.Default} />
+
+## Størrelser
+
+- Bruk `data-size="sm | md | lg"`
+
+  <Canvas of={stories.Sizes} />
+
+## Farger
+
+- Bruk `data-color="primary | secondary | neutral"`
+
+  <Canvas of={stories.Colors} />
+
+## Varianter
+
+- Bruk `variant="tinted"`
+
+  <Canvas of={stories.Variants} />
+
+## Med ramme
+
+- Legg Details inn i Card for å få avrunnede kanter og bakgrunn
+
+  <Canvas of={stories.CardVariant} />
+
+## Åpen
+
+- Bruk `defaultOpen` for å ha vise den som åpen
+
+  <Canvas of={stories.OpenDetail} />

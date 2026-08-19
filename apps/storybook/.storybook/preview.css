@@ -1,3 +1,70 @@
 body {
   font-family: var(--ds-font-family);
+  background-color: var(--ds-color-neutral-background-default);
+  color: var(--ds-color-neutral-text-default);
+}
+
+/* Remove hardcoded Storybook backgrounds so dark mode can show through */
+.sbdocs-preview.sbdocs-preview,
+.sbdocs-wrapper.sbdocs-wrapper {
+  background: none;
+}
+
+/* Hide zoom/reload toolbar above story examples in docs */
+.sbdocs-preview [role='toolbar'] {
+  display: none;
+}
+
+/* Fix button colors in docs preview actions (Show code / Copy code) */
+.sbdocs-preview-actions button {
+  color: var(--ds-color-neutral-text-default);
+}
+
+.sbdocs-content.sbdocs-content {
+  max-width: 50rem;
+  padding-bottom: 200px;
+}
+
+.sbdocs .intro-action {
+  display: flex;
+  gap: 1rem;
+}
+
+.sbdocs .universell-utforming-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.sbdocs .anchor-links {
+  columns: 13em;
+  list-style: none;
+  margin-block: 2em;
+  padding: 0;
+}
+
+.sbdocs .section-divider {
+  margin-block: var(--ds-size-10);
+}
+
+.sbdocs .ds-paragraph code {
+  background-color: var(--ds-color-neutral-background-tinted);
+  color: var(--ds-color-neutral-text-default);
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.sbdocs .heading svg {
+  fill: currentColor;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  display: inline-block;
+}
+
+/* Story */
+.docs-story [scale='1'] {
+  transform: none; /* Avoid conflicts with position: fixed <dialog> */
 }

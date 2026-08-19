@@ -1,0 +1,61 @@
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Alert, Heading, Paragraph } from '@statisticsnorway/design-react'
+
+const meta: Meta<typeof Alert> = {
+  title: 'Komponenter/Alert',
+  component: Alert,
+}
+
+export default meta
+
+type Story = StoryObj<typeof Alert>
+
+export const Default: Story = {
+  render: () => <Alert>Dette er en informasjonsmelding.</Alert>,
+}
+
+export const Colors: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '1rem' }}>
+      <Alert data-color='info'>Dette er en informasjonsmelding.</Alert>
+      <Alert data-color='success'>Endringen ble lagret.</Alert>
+      <Alert data-color='warning'>Du har ikke fylt ut alle feltene.</Alert>
+      <Alert data-color='danger'>Det oppstod en feil. Prøv igjen senere.</Alert>
+    </div>
+  ),
+}
+
+export const Sizes: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '1rem' }}>
+      <Alert data-color='info' data-size='sm'>
+        Dette er en informasjonsmelding.
+      </Alert>
+      <Alert data-color='info' data-size='md'>
+        Dette er en informasjonsmelding.
+      </Alert>
+      <Alert data-color='info' data-size='lg'>
+        Dette er en informasjonsmelding.
+      </Alert>
+    </div>
+  ),
+}
+
+export const WithTitle: Story = {
+  render: () => (
+    <Alert data-color='info'>
+      <Heading
+        level={2}
+        data-size='xs'
+        style={{
+          marginBottom: '0.5rem',
+        }}
+      >
+        Med overskrift
+      </Heading>
+      <Paragraph>
+        Hvis meldingen er lenger enn en setning kan det være nyttig å bruke en overskrift til å fremheve det viktigste
+      </Paragraph>
+    </Alert>
+  ),
+}
