@@ -1,0 +1,44 @@
+.wrapper {
+  display: grid;
+  gap: 2rem;
+}
+
+.groupTitle {
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 0.5rem;
+}
+
+.swatch {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--ds-color-neutral-border-subtle, #ccc);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.label {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.25rem;
+  overflow-wrap: break-word;
+  color: #fff;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.swatch:hover .label,
+.swatch:focus-visible .label {
+  opacity: 1;
+}
