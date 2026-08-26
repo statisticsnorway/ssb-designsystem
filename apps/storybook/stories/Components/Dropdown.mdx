@@ -5,18 +5,24 @@ import * as stories from './Dropdown.stories'
 
 # Dropdown
 
-> Dropdown er en generisk nedtrekksliste.
+> Dropdown er en generisk nedtrekksliste. Den legger grunnmuren for å bygge menyer og lister.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/dropdown/overview)
 
 ## Kode
 
-- Bruk `<Dropdown>` når brukeren skal velge handlinger eller innhold fra en meny
+- Bruk `<Dropdown>` du vil tilby flere alternativer uten at de tar mye plass i grensesnittet.
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Med ikoner
 
-- Se ulike oppsett og bruksmønstre
+- Du kan bruke ikoner sammen med tekst i dropdown-elementene
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.WithIcons} />
+
+## Med grupper
+
+- Du kan bruke overskrifter for å gruppere relaterte elementer i dropdownen
+
+<Canvas of={stories.WithGroups} />
