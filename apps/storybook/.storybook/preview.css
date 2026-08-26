@@ -47,7 +47,7 @@ body {
   margin-block: var(--ds-size-10);
 }
 
-.sbdocs .ds-paragraph code {
+.sbdocs code {
   background-color: var(--ds-color-neutral-background-tinted);
   color: var(--ds-color-neutral-text-default);
   font-size: 1rem;
