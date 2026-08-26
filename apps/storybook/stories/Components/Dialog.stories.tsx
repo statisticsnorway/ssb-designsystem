@@ -1,17 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { useState, type ChangeEvent } from 'react'
-import {
-  Button,
-  Checkbox,
-  Dialog,
-  DialogProps,
-  Heading,
-  Fieldset,
-  Label,
-  Paragraph,
-  Textarea,
-  Radio,
-} from '@statisticsnorway/design-react'
+import { Button, Dialog, Heading, Label, Paragraph, Textarea } from '@statisticsnorway/design-react'
 
 const meta: Meta<typeof Dialog> = {
   title: 'Komponenter/Dialog',
