@@ -5,18 +5,22 @@ import * as stories from './ErrorSummary.stories'
 
 # ErrorSummary
 
-> ErrorSummary er en oppsummering av feil.
+> Error summary er en oppsummering av feil. Den gir brukeren oversikt over feil eller mangler som må rettes på en side eller trinn, for å komme videre.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/error-summary/overview)
 
 ## Kode
 
-- Bruk `<ErrorSummary>` for å samle og vise valideringsfeil øverst i skjemaet
+- Bruk `<ErrorSummary>` komponenten i React
+- `ErrorSummary.Heading` definerer overskriften.
+- `ErrorSummary.List` definerer listen med feil.
+- Hver feil representeres som en `ErrorSummary.Item` som inneholder en `ErrorSummary.Link`.
+- Hver `ErrorSummary.Link` må ha en href til den unike identifikatoren for et skjemafelt, slik at brukeren kan navigere til riktig sted i skjemaet.
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
 ## Med lenker i skjema
 
-- Koble feiloppsummeringen til feltene slik at brukeren kan navigere til feilen
+Koble feiloppsummeringen til feltene slik at brukeren kan navigere til feilen
 
-  <Canvas of={stories.WithFormLinks} />
+<Canvas of={stories.WithFormLinks} />

@@ -1,22 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { ErrorSummary, Textfield } from '@statisticsnorway/design-react'
 
-const description = `
-ErrorSummary er en oppsummering av feil.
-
-Se full dokumentasjon: https://designsystemet.no/no/components/docs/error-summary/overview
-`
-
 const meta: Meta<typeof ErrorSummary> = {
   title: 'Komponenter/ErrorSummary',
   component: ErrorSummary,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
