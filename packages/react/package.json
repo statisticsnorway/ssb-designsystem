@@ -36,16 +36,16 @@
     "react-dom": ">=18.3.1 || ^19.0.0"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.20.1",
-    "@digdir/designsystemet-types": "^1.20.1",
+    "@digdir/designsystemet-react": "^1.21.0",
+    "@digdir/designsystemet-types": "^1.21.0",
     "@navikt/aksel-icons": "^8.16.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^7.0.1",
-    "@testing-library/react": "^16.3.2",
+    "@testing-library/react": "^16.3.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
-    "@vitejs/plugin-react": "^6.1.0",
+    "@vitejs/plugin-react": "^6.1.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "vite": "^8.2.2",
