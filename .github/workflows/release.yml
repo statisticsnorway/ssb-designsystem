@@ -42,10 +42,9 @@ jobs:
         run: pnpm build
 
       - name: Create or update release pull request
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
-          version: pnpm changeset:version
-          publish: pnpm changeset:release
-          createGithubReleases: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          version-script: pnpm changeset:version
+          publish-script: pnpm changeset:release
+          create-github-releases: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
