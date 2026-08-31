@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.1",
-    "@digdir/designsystemet": "^1.20.1",
-    "@types/node": "^26.3.0",
+    "@digdir/designsystemet": "^1.21.0",
+    "@types/node": "^26.4.0",
     "jsdom": "^30.0.1",
     "prettier": "^3.9.6",
     "typescript": "^6.0.3"
