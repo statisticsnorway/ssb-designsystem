@@ -5,7 +5,7 @@ import * as stories from './Field.stories'
 
 # Field
 
-> Field er et hjelpemiddel for å automatisk koble et felt sammen med Label, Field.Description, ValidationMessage og Field.Counter.
+> Field er et hjelpemiddel for å automatisk koble et felt sammen med label, beskrivelse, validation message og antall tegn.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/field/overview)
 
@@ -13,10 +13,23 @@ import * as stories from './Field.stories'
 
 - Bruk `<Field>` for å samle etikett, beskrivelse og validering rundt et felt
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
 ## Med feil
 
 - Vis valideringsfeil i samme struktur som feltet
 
-  <Canvas of={stories.WithError} />
+<Canvas of={stories.WithError} />
+
+## Med Prefix/Suffix
+
+- Bruk `<Field.Affixes>`, nyttige for å vise enheter, valuta eller andre typer informasjon som er relevant for feltet
+
+<Canvas of={stories.WithPrefix} />
+
+## Med teller
+
+- Bruk `Field.Counter` for å få en teller på input og textarea
+- Bruk atributt `over` og `under` for egnedefinerte tekster for antall tegn over, og antall tegn igjen. Feks engelske tekster `over='%d characters over the limit'` `under='%d characters remaining'`
+
+<Canvas of={stories.WithCount} />
