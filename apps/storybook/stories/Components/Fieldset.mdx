@@ -5,12 +5,25 @@ import * as stories from './Fieldset.stories'
 
 # Fieldset
 
-> Fieldset brukes til å gruppere og navngi felt som naturlig hører sammen, Fieldset er et sett med Field.
+> Fieldset brukes til å gruppere og navngi felt som naturlig hører sammen, for eksempel datofelt eller adressefelt. Komponenten hjelper med å organisere informasjon, gjøre skjemaer mer oversiktlige og forbedre tilgjengeligheten for skjermlesere.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/fieldset/overview)
 
 ## Kode
 
-- Bruk `<Fieldset>` for å gruppere relaterte felter under en felles overskrift
+- Bruk `<Fieldset>` komponenten i React
+- Denne grupperer typisk `checkbox`, `radio`, `input` , `select` osv
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
+
+## Med checkbox
+
+<Canvas of={stories.CheckboxRadio} />
+
+## Med validation message
+
+<Canvas of={stories.WithValidation} />
+
+## Med ulike typer
+
+<Canvas of={stories.WithFields} />
