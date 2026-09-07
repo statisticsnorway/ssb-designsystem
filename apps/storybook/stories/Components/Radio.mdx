@@ -5,18 +5,34 @@ import * as stories from './Radio.stories'
 
 # Radio
 
-> Radio er et alternativ brukeren kan velge. Bruk flere Radio for å vise en liste med alternativer.
+> Radio er et alternativ brukeren kan velge. Bruk flere radio for å vise en liste med alternativer. Brukerne kan bytte mellom alternativene, men kan kun velge ett.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/radio/overview)
 
 ## Kode
 
-- Bruk `<Radio>` når brukeren kun skal velge ett alternativ
+- Bruk `<Radio>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Gruppering
 
-- Se ulike måter å presentere valgene på
+- Bruk `Fieldset` og [useRadioGroup](?path=/docs/hooks-useradiogroup--docs) for å lettere håndtere en gruppe av Radio-komponenter.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Group} />
+
+## Outline
+
+- Bruk `variant="outline"` for legger på ekstra padding og en ramme rundt valget slik at det blir en større klikkflate.
+
+<Canvas of={stories.Outline} />
+
+## Med feil
+
+<Canvas of={stories.WithError} />
+
+## Plassering
+
+- Radio kan plasseres horisontalt med flex, men skal som hovedregel plasseres vertikalt.
+
+<Canvas of={stories.Placement} />
