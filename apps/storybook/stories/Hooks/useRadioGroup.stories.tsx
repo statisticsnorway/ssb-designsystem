@@ -43,14 +43,14 @@ const meta: Meta<UseRadioGroupProps> = {
     },
   },
   decorators: [
-    (Story, context) => {
+    (Story: React.ComponentType<{ args: UseRadioGroupProps }>, context: { args: UseRadioGroupProps }) => {
       const [, updateArgs] = useArgs()
 
       return (
         <Story
           args={{
             ...context.args,
-            onChange: (nextValue) => {
+            onChange: (nextValue: string) => {
               updateArgs({ value: nextValue })
             },
           }}
@@ -62,7 +62,7 @@ const meta: Meta<UseRadioGroupProps> = {
 
 export default meta
 
-type Story = StoryObj<UseRadioGroupProps>
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
@@ -70,7 +70,7 @@ export const Default: Story = {
     value: '',
   },
 
-  render: (args) => {
+  render: (args: UseRadioGroupProps) => {
     const { getRadioProps } = useRadioGroup(args)
 
     return (

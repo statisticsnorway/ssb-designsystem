@@ -56,7 +56,7 @@ const meta: Meta<UsePaginationProps> = {
 
 export default meta
 
-type Story = StoryObj<UsePaginationProps>
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
@@ -65,7 +65,7 @@ export const Default: Story = {
     showPages: 7,
   },
 
-  render: (args) => {
+  render: (args: UsePaginationProps) => {
     const [, updateArgs] = useArgs()
 
     const { pages, nextButtonProps, prevButtonProps } = usePagination({
