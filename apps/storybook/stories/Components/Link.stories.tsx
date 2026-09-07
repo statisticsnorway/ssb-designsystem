@@ -2,23 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Link, Paragraph } from '@statisticsnorway/design-react'
 import { Chat2Icon } from '@navikt/aksel-icons'
 
-const description = `
-Link er klikkbar tekst eller grafikk som tar brukeren videre til andre sider eller dokumenter.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/link/overview
-`
-
 const meta: Meta<typeof Link> = {
   title: 'Komponenter/Link',
   component: Link,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -28,23 +14,27 @@ export const Default: Story = {
   render: () => <Link href=''>Standard lenke</Link>,
 }
 
-export const Variants: Story = {
+export const WithIcon: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '1rem' }}>
-      <div>
-        <Link href=''>Standard lenke</Link>
-      </div>
+    <Link href=''>
+      <Chat2Icon aria-hidden height='1.5rem' width='1.5rem' />
+      <span>Lenke med ikon</span>
+    </Link>
+  ),
+}
 
-      <div>
-        <Link href=''>
-          <Chat2Icon aria-hidden height='1.5rem' width='1.5rem' />
-          <span>Lenke med ikon</span>
-        </Link>
-      </div>
+export const InText: Story = {
+  render: () => (
+    <Paragraph>
+      Lenke til <Link href=''>designsystemet.no</Link> i tekst
+    </Paragraph>
+  ),
+}
 
-      <Paragraph>
-        Lenke til <Link href=''>designsystemet.no</Link> i tekst
-      </Paragraph>
-    </div>
+export const Neutral: Story = {
+  render: () => (
+    <Link href='' data-color='neutral'>
+      Lenke med nøytral farge
+    </Link>
   ),
 }

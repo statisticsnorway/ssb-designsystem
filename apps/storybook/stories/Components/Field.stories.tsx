@@ -1,23 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Field, Label, Input, ValidationMessage } from '@statisticsnorway/design-react'
-
-const description = `
-Field er et hjelpemiddel for å automatisk koble et felt sammen med Label, Field.Description, ValidationMessage og Field.Counter.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/field/overview
-`
+import { Field, Label, Input, Textarea, ValidationMessage } from '@statisticsnorway/design-react'
 
 const meta: Meta<typeof Field> = {
   title: 'Komponenter/Field',
   component: Field,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -40,6 +26,29 @@ export const WithError: Story = {
       <Field.Description>Etternavn kan ikke inneholde mellomrom</Field.Description>
       <Input defaultValue='Nordmann Svenske' />
       <ValidationMessage>Du kan ikke ha mellomrom i etternavnet ditt</ValidationMessage>
+    </Field>
+  ),
+}
+
+export const WithPrefix: Story = {
+  render: () => (
+    <Field>
+      <Label>Hvor mange kroner koster det per måned?</Label>
+      <Field.Affixes>
+        <Field.Affix>NOK</Field.Affix>
+        <Input />
+        <Field.Affix>pr. mnd.</Field.Affix>
+      </Field.Affixes>
+    </Field>
+  ),
+}
+
+export const WithCount: Story = {
+  render: () => (
+    <Field>
+      <Label>Legg til en beskrivelse</Label>
+      <Textarea rows={2} />
+      <Field.Counter limit={10} />
     </Field>
   ),
 }

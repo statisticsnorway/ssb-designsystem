@@ -1,0 +1,65 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks'
+import * as stories from './usePagination.stories'
+
+<Meta of={stories} />
+
+# usePagination
+
+> En React-hook for å håndtere paginering.
+
+> Se full dokumentasjon for hooken på [designsystemet.no](https://designsystemet.no/no/components/utilities/use-pagination)
+
+<Canvas of={stories.Default} />
+
+## Props
+
+<Controls of={stories.Default} />
+
+I respons får du objektet:
+
+```ts
+{
+  pages: Array<{
+    page: number | string; // Sidenummer eller "ellipsis"
+    itemKey: string; // Unik key for Pagination.Item
+    buttonProps: PaginationButtonProps | null; // Props som kan spres på Pagination.Button
+  }>,
+  prevButtonProps: PaginationButtonProps, // Props for forrige-knappen
+  nextButtonProps: PaginationButtonProps, // Props for neste-knappen
+  hasPrev: boolean, // Om forrige side finnes
+  hasNext: boolean, // Om neste side finnes
+}
+```
+
+## Bruk
+
+```tsx
+const onChange = (event, page: number) => console.log(`Going to page ${page}`)
+const [currentPage, setCurrentPage] = useState(4)
+const { pages, prevButtonProps, nextButtonProps, hasNext, hasPrev } = usePagination({
+  currentPage,
+  setCurrentPage,
+  onChange,
+  totalPages: 10,
+  showPages: 7,
+})
+```
+
+### På `Pagination.Button`
+
+Du looper gjennom `pages` fra respons-objektet, og sprer `buttonProps` på `Pagination.Button`.
+Legg merke til at vi sjekker `typeof` på `page`. Dette er fordi ellipser skal være en tom `li`.
+
+```tsx
+{
+  pages.map(({ page, itemKey, buttonProps }) => (
+    <Pagination.Item key={itemKey}>
+      {typeof page === 'number' && (
+        <Pagination.Button asChild aria-label={`Side ${page}`} {...buttonProps}>
+          <a href={`#side-${page}`}>{page}</a>
+        </Pagination.Button>
+      )}
+    </Pagination.Item>
+  ))
+}
+```

@@ -5,18 +5,37 @@ import * as stories from './Popover.stories'
 
 # Popover
 
-> Popover vises over andre elementer i grensesnittet og er koblet til et spesifikt element.
+> Popover vises over andre elementer i grensesnittet og er koblet til et spesifikt element. Den brukes til å vise tilleggsinformasjon, interaktive elementer eller korte forklaringer uten å navigere bort fra siden.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/popover/overview)
 
 ## Kode
 
-- Bruk `<Popover>` for hjelpetekst eller tilleggsinnhold knyttet til et element
+- Bruk `<Popover>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Interaktiv
 
-- Se ulike plasseringer og oppsett
+- Popover kan inneholde knapper og andre interaktive elementer.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Interactive} />
+
+## Ordforklaring
+
+- Du kan bruke popover inline i tekst med stiplet understrek, for eksempel når du skal forklare et begrep.
+
+<Canvas of={stories.DottedUnderline} />
+
+## Plassering
+
+- Bruk `placement='top | bottom | left | right'` for å endre hvor popover åpnes
+
+<Canvas of={stories.Placement} />
+
+## Variant
+
+- Endre utseende på `Popover.Trigger` med `variant='primary | secondary | tertiary'`
+- Endre bakgrunnsfarge på `Popover` med `variant='tinted | default'`
+
+<Canvas of={stories.Variant} />

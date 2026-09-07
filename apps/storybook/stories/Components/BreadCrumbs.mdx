@@ -11,6 +11,18 @@ import * as stories from './BreadCrumbs.stories'
 
 ## Kode
 
-- Bruk `<Breadcrumbs>` for å vise hvor brukeren befinner seg i strukturen
+- Bruk `<Breadcrumbs>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
+
+## Tilbake knapp
+
+- Hvis kun ett item vil det vises med tilbakeknapp
+
+<Canvas of={stories.Back} />
+
+## Responsiv visning
+
+- Når `<Breadcrumbs.Link>` og `<Breadcrumbs.List>` brukes direkte i `<Breadcrumbs>`, vises kun lenken til nærmeste overordnede nivå på skjermer under 650 px.
+
+<Canvas of={stories.Responsive} />

@@ -5,18 +5,32 @@ import * as stories from './Input.stories'
 
 # Input
 
-> Input lar brukeren skrive inn én linje med tekst.
+> Input er et skjemaelement for å samle inn brukerdata. Det tilbyr grunnleggende funksjonalitet og er ideell når du trenger full kontroll over komponentens oppsett og validering, noe som gjør den ideell for bygging av spesialtilpassede elementer.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/en/components/docs/input/overview)
 
 ## Kode
 
-- Bruk `<Input>` for enkle tekstfelt i skjemaer
+- Bruk `<Input>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Med label
 
-- Se ulike tilstander og oppsett
+<Canvas of={stories.WithLabel} />
 
-  <Canvas of={stories.Variants} />
+## Med feil
+
+<Canvas of={stories.WithError} />
+
+## Med hjelpetekst
+
+<Canvas of={stories.WithHelptext} />
+
+## ReadOnly
+
+<Canvas of={stories.ReadOnly} />
+
+## Disabled
+
+<Canvas of={stories.Disabled} />

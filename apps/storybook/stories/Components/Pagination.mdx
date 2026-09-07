@@ -5,18 +5,19 @@ import * as stories from './Pagination.stories'
 
 # Pagination
 
-> Pagination brukes til å dele opp innhold i flere sider og gjøre det lettere å navigere i store datamengder.
+> Pagination er en liste med knapper som brukes for å navigere mellom ulike sider med innhold, for eksempel søkeresultater eller tabeller.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/pagination/overview)
 
 ## Kode
 
-- Bruk `<Pagination>` for paginert innhold eller tabeller
+- Bruk `<Pagination>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
 ## Varianter
 
-- Se ulike måter å navigere mellom sider på
+- Pagination er en komponent uten state, og du må selv styre hvilke sider som er vist.
+- Bruk [usePagination](?path=/docs/hooks-usepagination--docs) for paginering-logikk sammen med de enkle delkomponentene.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.WithAnchor} />

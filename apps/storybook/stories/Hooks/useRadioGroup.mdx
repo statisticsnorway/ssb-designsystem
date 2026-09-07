@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks'
+import * as stories from './useRadioGroup.stories'
+
+<Meta of={stories} />
+
+# useRadioGroup
+
+> En React-hook for å koble sammen en gruppe av radioknapper.
+
+> Se full dokumentasjon for hooken på [designsystemet.no](https://designsystemet.no/no/components/utilities/use-radio-group)
+
+<Canvas of={stories.Default} />
+
+## Props
+
+<Controls of={stories.Default} />
+
+## Bruk
+
+I respons får du objektet:
+
+```ts
+{
+  getRadioProps: (value: string | RadioProps) => RadioProps, // Returnerer props du kan spre på <Radio /> eller <input type="radio" />
+  validationMessageProps: ValidationMessageProps, // Props du valgfritt sprer på ValidationMessage for å koble feilmelding til radiogruppen
+  setValue: string, // Funksjon for å sette radiogruppens verdi
+  value: string, // Nåværende verdi for radiogruppen
+}
+
+```
