@@ -5,18 +5,19 @@ import * as stories from './List.stories'
 
 # List
 
-> List brukes for å presentere innhold på en oversiktlig og strukturert måtes.
+> List brukes for å presentere innhold på en oversiktlig og strukturert måte, for eksempel for å oppsummere hovedpunkter eller vise brukeren hvilke trinn som må følges i en bestemt rekkefølge.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/list/overview)
 
 ## Kode
 
-- Bruk `<List>` for å presentere punkter eller trinn i en tydelig rekkefølge
+- Bruk `<List>` komponenten i React
+- Bruk `List.Unordered` for usortert liste
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
 ## Varianter
 
-- Se ulike listetyper og uttrykk
+- Bruk `List.Ordered` for sortert liste
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Ordered} />
