@@ -1,24 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Heading, Paragraph, Popover } from '@statisticsnorway/design-react'
+import { Button, Heading, Paragraph, Popover } from '@statisticsnorway/design-react'
 import { TrashIcon } from '@navikt/aksel-icons'
-
-const description = `
-Popover vises over andre elementer i grensesnittet og er koblet til et spesifikt element.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/popover/overview
-`
 
 const meta: Meta<typeof Popover> = {
   title: 'Komponenter/Popover',
   component: Popover,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -27,80 +13,125 @@ type Story = StoryObj<typeof Popover>
 export const Default: Story = {
   render: () => (
     <Popover.TriggerContext>
-      <Popover.Trigger>Vis informasjon</Popover.Trigger>
-
-      <Popover>
-        <Heading level={2} data-size='xs'>
-          Informasjon
-        </Heading>
-        <Paragraph>Dette er en enkel popover med litt tekst.</Paragraph>
+      <Popover.Trigger>Åpne popover</Popover.Trigger>
+      <Popover placement='top'>
+        Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
       </Popover>
     </Popover.TriggerContext>
   ),
 }
 
-export const Variants: Story = {
+export const Interactive: Story = {
   render: () => (
-    <>
-      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-        <Popover.TriggerContext>
-          <Popover.Trigger>Top</Popover.Trigger>
-          <Popover placement='top'>
-            <Paragraph>Vises over knappen</Paragraph>
-          </Popover>
-        </Popover.TriggerContext>
+    <Popover.TriggerContext>
+      <Popover.Trigger data-color='danger' aria-label='Slett rad'>
+        <TrashIcon title='Slett rad' />
+      </Popover.Trigger>
+      <Popover data-color='danger'>
+        <Paragraph>Er du sikker på at du vil slette raden? Handlingen kan ikke angres.</Paragraph>
+        <div
+          style={{
+            display: 'flex',
+            gap: 'var(--ds-size-2)',
+            marginTop: 'var(--ds-size-2)',
+          }}
+        >
+          <Button data-size='sm'>Ja, slett den</Button>
+          <Button data-size='sm' variant='tertiary'>
+            Avbryt
+          </Button>
+        </div>
+      </Popover>
+    </Popover.TriggerContext>
+  ),
+}
 
-        <Popover.TriggerContext>
-          <Popover.Trigger>Bottom</Popover.Trigger>
-          <Popover placement='bottom'>
-            <Paragraph>Vises under knappen</Paragraph>
-          </Popover>
-        </Popover.TriggerContext>
+export const DottedUnderline: Story = {
+  render: () => (
+    <Popover.TriggerContext>
+      <Paragraph>
+        Vi bruker <Popover.Trigger inline>design tokens</Popover.Trigger> for å sikre at vi har en konsistent design.
+      </Paragraph>
+      <Popover data-color='neutral'>
+        <Paragraph>
+          <strong
+            style={{
+              display: 'block',
+            }}
+          >
+            Design tokens
+          </strong>
+          <span>Design tokens er en samling av variabler som definerer designet i et designsystem.</span>
+        </Paragraph>
+      </Popover>
+    </Popover.TriggerContext>
+  ),
+}
 
-        <Popover.TriggerContext>
-          <Popover.Trigger>Left</Popover.Trigger>
-          <Popover placement='left'>
-            <Paragraph>Vises til venstre</Paragraph>
-          </Popover>
-        </Popover.TriggerContext>
+export const Placement: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+      <Popover.TriggerContext>
+        <Popover.Trigger>Top</Popover.Trigger>
+        <Popover placement='top'>
+          <Paragraph>Vises over knappen</Paragraph>
+        </Popover>
+      </Popover.TriggerContext>
 
-        <Popover.TriggerContext>
-          <Popover.Trigger>Right</Popover.Trigger>
-          <Popover placement='right'>
-            <Paragraph>Vises til høyre</Paragraph>
-          </Popover>
-        </Popover.TriggerContext>
+      <Popover.TriggerContext>
+        <Popover.Trigger>Bottom</Popover.Trigger>
+        <Popover placement='bottom'>
+          <Paragraph>Vises under knappen</Paragraph>
+        </Popover>
+      </Popover.TriggerContext>
 
-        <Popover.TriggerContext>
-          <Popover.Trigger data-color='danger' aria-label='Slett rad'>
-            <TrashIcon title='Slett rad' />
-          </Popover.Trigger>
-          <Popover data-color='danger'>
-            <Paragraph>Er du sikker på at du vil slette raden? Handlingen kan ikke angres.</Paragraph>
-          </Popover>
-        </Popover.TriggerContext>
-      </div>
+      <Popover.TriggerContext>
+        <Popover.Trigger>Left</Popover.Trigger>
+        <Popover placement='left'>
+          <Paragraph>Vises til venstre</Paragraph>
+        </Popover>
+      </Popover.TriggerContext>
 
-      <div style={{ marginTop: '2rem' }}>
-        <Heading level={2} data-size='xs' style={{ marginBottom: '0.5rem' }}>
-          Ordforklaring
-        </Heading>
+      <Popover.TriggerContext>
+        <Popover.Trigger>Right</Popover.Trigger>
+        <Popover placement='right'>
+          <Paragraph>Vises til høyre</Paragraph>
+        </Popover>
+      </Popover.TriggerContext>
+    </div>
+  ),
+}
 
-        <Popover.TriggerContext>
-          <Paragraph>
-            Vi bruker <Popover.Trigger inline>ordforklaring</Popover.Trigger> for å forklare noen ord i teksten.
-          </Paragraph>
+export const Variant: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+      <Popover.TriggerContext>
+        <Popover.Trigger variant='primary'>Primary</Popover.Trigger>
+        <Popover placement='top'>
+          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
+        </Popover>
+      </Popover.TriggerContext>
 
-          <Popover data-color='neutral'>
-            <Paragraph>
-              <strong style={{ display: 'block' }}>Ordforklaring</strong>
-              <span>
-                Orforklaring er en type popover som brukes til å forklare betydningen av et ord eller uttrykk i teksten.
-              </span>
-            </Paragraph>
-          </Popover>
-        </Popover.TriggerContext>
-      </div>
-    </>
+      <Popover.TriggerContext>
+        <Popover.Trigger variant='secondary'>Secondary</Popover.Trigger>
+        <Popover placement='top'>
+          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
+        </Popover>
+      </Popover.TriggerContext>
+
+      <Popover.TriggerContext>
+        <Popover.Trigger variant='tertiary'>Tertiary</Popover.Trigger>
+        <Popover placement='top'>
+          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
+        </Popover>
+      </Popover.TriggerContext>
+
+      <Popover.TriggerContext>
+        <Popover.Trigger>Tinted Popover</Popover.Trigger>
+        <Popover variant='tinted'>
+          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
+        </Popover>
+      </Popover.TriggerContext>
+    </div>
   ),
 }
