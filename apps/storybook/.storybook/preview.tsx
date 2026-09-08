@@ -31,7 +31,10 @@ export const decorators: Decorator[] = [
   (Story, context) => {
     const colorScheme = (context.globals.colorScheme as string) ?? 'light'
     document.documentElement.dataset.colorScheme = colorScheme
-    return Story()
+
+    const customStyles = context.parameters.customStyles
+
+    return <div style={customStyles}>{Story()}</div>
   },
 ]
 
