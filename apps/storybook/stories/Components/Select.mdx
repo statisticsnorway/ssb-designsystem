@@ -11,12 +11,18 @@ import * as stories from './Select.stories'
 
 ## Kode
 
-- Bruk `<Select>` når valgene er forhåndsdefinerte og det bare skal velges ett alternativ
+- Bruk `<Select>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Gruppering
 
-- Se ulike tilstander og oppsett
+- Gruppering brukes for å organisere alternativer i kategorier
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Group} />
+
+## ReadOnly
+
+- Bruk `aria-readonly` på Select når du vil vise en forhåndsvalgt verdi i select, men ikke tillate at brukeren endrer valget.
+
+<Canvas of={stories.ReadOnly} />
