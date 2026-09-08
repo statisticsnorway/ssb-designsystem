@@ -1,23 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Divider, Field, Label, Search } from '@statisticsnorway/design-react'
 
-const description = `
-Search lar brukere raskt finne relevant innhold på et nettsted eller i en applikasjon.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/search/overview
-`
-
 const meta: Meta<typeof Search> = {
   title: 'Komponenter/Search',
   component: Search,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
@@ -44,7 +30,7 @@ export const Variants: Story = {
       <Divider />
 
       <Search>
-        <Search.Input aria-label='Søk' />
+        <Search.Input type='text' aria-label='Søk' />
         <Search.Clear />
         <Search.Button />
       </Search>
@@ -52,21 +38,23 @@ export const Variants: Story = {
       <Divider />
 
       <Search>
-        <Search.Input aria-label='Søk' />
+        <Search.Input type='text' aria-label='Søk' />
         <Search.Clear />
         <Search.Button variant='secondary' />
       </Search>
-
-      <Divider />
-
-      <Field>
-        <Label>Søk med label</Label>
-        <Search>
-          <Search.Input aria-label='Søk' />
-          <Search.Clear />
-          <Search.Button />
-        </Search>
-      </Field>
     </div>
+  ),
+}
+
+export const WithLabel: Story = {
+  render: () => (
+    <Field>
+      <Label>Søk etter katter</Label>
+      <Search>
+        <Search.Input type='text' name='cat-search' />
+        <Search.Clear />
+        <Search.Button />
+      </Search>
+    </Field>
   ),
 }
