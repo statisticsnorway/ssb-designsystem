@@ -4,6 +4,15 @@ import { Field, Label, Input, Textarea, ValidationMessage } from '@statisticsnor
 const meta: Meta<typeof Field> = {
   title: 'Komponenter/Field',
   component: Field,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta

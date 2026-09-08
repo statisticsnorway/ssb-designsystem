@@ -4,6 +4,15 @@ import { Breadcrumbs } from '@statisticsnorway/design-react'
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Komponenter/Breadcrumbs',
   component: Breadcrumbs,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta

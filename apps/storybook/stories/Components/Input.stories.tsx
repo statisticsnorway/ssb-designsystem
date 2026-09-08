@@ -4,6 +4,15 @@ import { Input, Field, Label, ValidationMessage } from '@statisticsnorway/design
 const meta: Meta<typeof Input> = {
   title: 'Komponenter/Input',
   component: Input,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta

@@ -4,6 +4,15 @@ import { Divider, Heading, Paragraph, Skeleton } from '@statisticsnorway/design-
 const meta: Meta<typeof Skeleton> = {
   title: 'Komponenter/Skeleton',
   component: Skeleton,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta
@@ -15,19 +24,13 @@ export const Default: Story = {
 
 export const Variants: Story = {
   render: () => (
-    <div
-      style={{
-        display: 'flex',
-        gap: '1rem',
-        alignItems: 'center',
-      }}
-    >
+    <>
       <Skeleton variant='circle' width='50px' height='50px' />
       <Skeleton variant='rectangle' width='100px' height='50px' />
       <Paragraph>
         <Skeleton variant='text' width='10' />
       </Paragraph>
-    </div>
+    </>
   ),
 }
 
@@ -55,7 +58,7 @@ export const Example: Story = {
 
 export const ExampleText: Story = {
   render: () => (
-    <div style={{ display: 'flex' }}>
+    <>
       <div style={{ flex: '1 1 200px' }}>
         <Heading>En tittel</Heading>
         <Paragraph data-size='sm'>Her er en paragraf som går over flere linjer</Paragraph>
@@ -68,6 +71,6 @@ export const ExampleText: Story = {
           <Skeleton variant='text' width={40} />
         </Paragraph>
       </div>
-    </div>
+    </>
   ),
 }

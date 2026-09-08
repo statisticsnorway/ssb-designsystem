@@ -5,6 +5,15 @@ import { ArrowForwardIcon, DownloadIcon } from '@navikt/aksel-icons'
 const meta: Meta<typeof Dropdown> = {
   title: 'Komponenter/Dropdown',
   component: Dropdown,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta
@@ -78,46 +87,5 @@ export const WithGroups: Story = {
         </Dropdown.List>
       </Dropdown>
     </>
-  ),
-}
-
-export const Variants: Story = {
-  render: () => (
-    <div style={{ display: 'grid', gap: '1rem', justifyItems: 'start' }}>
-      <Dropdown.TriggerContext>
-        <Dropdown.Trigger>Enkel meny</Dropdown.Trigger>
-        <Dropdown placement='bottom-end'>
-          <Dropdown.List>
-            <Dropdown.Item>
-              <Dropdown.Button>Last ned</Dropdown.Button>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Dropdown.Button>Del</Dropdown.Button>
-            </Dropdown.Item>
-          </Dropdown.List>
-        </Dropdown>
-      </Dropdown.TriggerContext>
-
-      <Dropdown.TriggerContext>
-        <Dropdown.Trigger>Med grupper</Dropdown.Trigger>
-        <Dropdown placement='bottom-end'>
-          <Dropdown.Heading>Handlinger</Dropdown.Heading>
-          <Dropdown.List>
-            <Dropdown.Item>
-              <Dropdown.Button>Rediger</Dropdown.Button>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Dropdown.Button>Dupliser</Dropdown.Button>
-            </Dropdown.Item>
-          </Dropdown.List>
-          <Dropdown.Heading>Farlige valg</Dropdown.Heading>
-          <Dropdown.List>
-            <Dropdown.Item>
-              <Dropdown.Button>Slett</Dropdown.Button>
-            </Dropdown.Item>
-          </Dropdown.List>
-        </Dropdown>
-      </Dropdown.TriggerContext>
-    </div>
   ),
 }

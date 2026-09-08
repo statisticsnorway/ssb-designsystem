@@ -11,8 +11,14 @@ export default meta
 type Story = StoryObj<typeof Card>
 
 export const Default: Story = {
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
+  },
   render: () => (
-    <Card style={{ maxWidth: '300px' }}>
+    <Card>
       <Heading level={3} data-size='sm'>
         Tittel
       </Heading>
@@ -22,8 +28,15 @@ export const Default: Story = {
 }
 
 export const Variants: Story = {
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      justifyContent: 'center',
+    },
+  },
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <>
       <Card>
         <Paragraph data-size='sm'>Default</Paragraph>
       </Card>
@@ -31,13 +44,13 @@ export const Variants: Story = {
       <Card data-variant='tinted'>
         <Paragraph data-size='sm'>Tinted</Paragraph>
       </Card>
-    </div>
+    </>
   ),
 }
 
 export const Colors: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(280px , 320px))' }}>
+    <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(2, 320px)' }}>
       <Card>
         <Card.Block>
           <Paragraph>Standard</Paragraph>
@@ -83,15 +96,19 @@ export const Colors: Story = {
 }
 
 export const LinkCard: Story = {
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
+  },
   render: () => (
-    <div style={{ display: 'grid', gap: '1rem', maxWidth: '300px' }}>
-      <Card style={{ maxWidth: '300px' }}>
-        <Heading level={3} data-size='sm'>
-          <Link href='#'>Klikkbart kort</Link>
-        </Heading>
-        <Paragraph data-size='sm'>Dette kortet fungerer som en lenke via overskriften.</Paragraph>
-      </Card>
-    </div>
+    <Card style={{ maxWidth: '300px' }}>
+      <Heading level={3} data-size='sm'>
+        <Link href='#'>Klikkbart kort</Link>
+      </Heading>
+      <Paragraph data-size='sm'>Dette kortet fungerer som en lenke via overskriften.</Paragraph>
+    </Card>
   ),
 }
 

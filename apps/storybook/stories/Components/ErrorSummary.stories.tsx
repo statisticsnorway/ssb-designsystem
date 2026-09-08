@@ -4,6 +4,15 @@ import { ErrorSummary, Textfield } from '@statisticsnorway/design-react'
 const meta: Meta<typeof ErrorSummary> = {
   title: 'Komponenter/ErrorSummary',
   component: ErrorSummary,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta
