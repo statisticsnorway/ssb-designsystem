@@ -5,18 +5,26 @@ import * as stories from './Skeleton.stories'
 
 # Skeleton
 
-> Skeleton brukes for å vise at innhold på en side er i ferd med å lastes inn.
+> Skeleton brukes for å vise at innhold på en side er i ferd med å lastes inn. Den gir brukeren et visuelt hint om hvordan innholdet til slutt vil se ut.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/skeleton/overview)
 
 ## Kode
 
-- Bruk `<Skeleton>` som en midlertidig plassholder mens innhold lastes
+- Bruk `<Skeleton>` komponenten i React
 
   <Canvas of={stories.Default} />
 
 ## Varianter
 
-- Se ulike former og størrelser på plassholderne
+- Skeleton kommer i tre ulike varianter: `variant="rectangle | circle | text"`.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Variants} />
+
+## Eksempler i bruk
+
+<Canvas of={stories.Example} />
+
+### Tekst
+
+<Canvas of={stories.ExampleText} />
