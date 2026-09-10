@@ -5,18 +5,42 @@ import * as stories from './Table.stories'
 
 # Table
 
-> Table brukes for å vise strukturert informasjon på en ryddig og oversiktlig måte.
+> Table brukes for å vise strukturert informasjon på en ryddig og oversiktlig måte. Tabeller kan gjøre det enklere for brukerne å skanne og sammenligne informasjon.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/table/overview)
 
 ## Kode
 
-- Bruk `<Table>` for strukturert informasjon med rader og kolonner
+- Bruk `<Table>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Zebra-striper
 
-- Se tabeller med zebra-striper, rammer og sortering
+- Bruk `zebra` for å gjøre tabellen lettere å lese ved å skille radene visuelt.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Zebra} />
+
+## Med ramme
+
+- Bruk `border` for å hjelpe brukerne med å skille tabellen fra annet innhold på siden.
+
+<Canvas of={stories.Border} />
+
+## Hover
+
+- Bruk `hover` for å vise en hover-effekt på tabellradene.
+
+<Canvas of={stories.Hover} />
+
+## Sticky header
+
+- Bruk `stickyHeader` for å gjøre tabellhodet fast ved scrolling.
+
+<Canvas of={stories.StickyHeader} />
+
+## Sortering
+
+- Du kan vise at tabellen kan sorteres etter innholdet i en kolonne.
+
+<Canvas of={stories.Sorted} />
