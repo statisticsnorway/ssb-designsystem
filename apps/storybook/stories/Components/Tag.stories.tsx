@@ -1,22 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Heading, Tag } from '@statisticsnorway/design-react'
+import { Tag } from '@statisticsnorway/design-react'
 import { RobotIcon } from '@navikt/aksel-icons'
-
-const description = `
-Tag er en merkelapp som kan brukes til å kategorisere elementer eller kommunisere fremdrift, status eller prosess. 
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/tag/overview
-`
 
 const meta: Meta<typeof Tag> = {
   title: 'Komponenter/Tag',
   component: Tag,
   parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   },
 }
@@ -28,49 +23,67 @@ export const Default: Story = {
   render: () => <Tag>Ny</Tag>,
 }
 
-export const Variants: Story = {
+export const Colors: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '2rem' }}>
-      <div>
-        <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
-          Farger
-        </Heading>
+    <>
+      <Tag data-color='primary'>Primary</Tag>
+      <Tag data-color='secondary'>Secondary</Tag>
+      <Tag data-color='magic'>Magic</Tag>
+      <Tag data-color='neutral'>Neutral</Tag>
+      <Tag data-color='info'>Info</Tag>
+      <Tag data-color='success'>Success</Tag>
+      <Tag data-color='warning'>Warning</Tag>
+      <Tag data-color='danger'>Danger</Tag>
+    </>
+  ),
+}
 
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Tag data-color='accent'>Standard</Tag>
-          <Tag data-color='accent' variant='outline'>
-            Outline
-          </Tag>
-          <Tag data-color='neutral'>Neutral</Tag>
-          <Tag data-color='info'>Info</Tag>
-          <Tag data-color='success'>Success</Tag>
-          <Tag data-color='warning'>Warning</Tag>
-          <Tag data-color='danger'>Danger</Tag>
-        </div>
-      </div>
+export const Outline: Story = {
+  render: () => (
+    <>
+      <Tag data-color='primary' variant='outline'>
+        Primary
+      </Tag>
+      <Tag data-color='secondary' variant='outline'>
+        Secondary
+      </Tag>
+      <Tag data-color='magic' variant='outline'>
+        Magic
+      </Tag>
+      <Tag data-color='neutral' variant='outline'>
+        Neutral
+      </Tag>
+      <Tag data-color='info' variant='outline'>
+        Info
+      </Tag>
+      <Tag data-color='success' variant='outline'>
+        Success
+      </Tag>
+      <Tag data-color='warning' variant='outline'>
+        Warning
+      </Tag>
+      <Tag data-color='danger' variant='outline'>
+        Danger
+      </Tag>
+    </>
+  ),
+}
 
-      <div>
-        <Heading level={2} data-size='xs' style={{ marginBottom: '1rem' }}>
-          Størrelser
-        </Heading>
+export const Size: Story = {
+  render: () => (
+    <>
+      <Tag data-size='sm'>Small</Tag>
+      <Tag data-size='md'>Medium</Tag>
+      <Tag data-size='lg'>Large</Tag>
+    </>
+  ),
+}
 
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Tag data-size='sm'>Small</Tag>
-          <Tag data-size='md'>Medium</Tag>
-          <Tag data-size='lg'>Large</Tag>
-        </div>
-      </div>
-
-      <div>
-        <Heading level={2} data-size='xs' style={{ marginBottom: '0.5rem' }}>
-          Med ikon
-        </Heading>
-
-        <Tag data-color='neutral' data-size='md' style={{ paddingInlineStart: 'var(--ds-size-1)' }}>
-          <RobotIcon aria-hidden style={{ marginInlineEnd: 'var(--ds-size-1)' }} />
-          KI-generert
-        </Tag>
-      </div>
-    </div>
+export const WithIcon: Story = {
+  render: () => (
+    <Tag data-color='neutral' data-size='md' style={{ paddingInlineStart: 'var(--ds-size-1)' }}>
+      <RobotIcon aria-hidden style={{ marginInlineEnd: 'var(--ds-size-1)' }} />
+      KI-generert
+    </Tag>
   ),
 }
