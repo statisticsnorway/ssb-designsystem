@@ -11,12 +11,30 @@ import * as stories from './Textfield.stories'
 
 ## Kode
 
-- Bruk `<Textfield>` for vanlige skjemaelementer med tekst eller tall
+- Bruk `<Textfield>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Multiline
 
-- Se ulike tilstander og tilpasninger
+- Du endrer til textarea ved å sette `multiline`. Da kan brukerne skrive lengre tekster.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Multiline} />
+
+## Påkrevde og valgfrie felt
+
+- Bruk `required` for å markere påkrevd felt.
+
+<Canvas of={stories.Required} />
+
+## Med teller
+
+- Bruk `counter` til å vise brukeren hvor mange tegn de kan skrive inn i feltet.
+
+<Canvas of={stories.Counter} />
+
+## Prefix/Sufix
+
+- Bruk `prefix` og `suffix` for å vise enheter, valuta eller annen informasjon som er relevant for feltet
+
+<Canvas of={stories.Prefix} />
