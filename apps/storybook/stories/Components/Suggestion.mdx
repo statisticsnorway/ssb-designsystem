@@ -1,22 +1,49 @@
 import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import { Alert } from '@statisticsnorway/design-react'
 import * as stories from './Suggestion.stories'
 
 <Meta of={stories} />
 
 # Suggestion
 
-> Suggestion er under utvikling hos Digdir, og kan fortsatt få endringer og forbedringer.
+> Suggestion er en søkbar "select" med mulighet for å velge flere alternativer.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/suggestion/overview)
 
+<Alert data-color='warning'>Suggestion er under utvikling. Gi oss beskjed hvis du finner feil eller mangler.</Alert>
+
 ## Kode
 
-- Bruk `<EXPERIMENTAL_Suggestion>` for søkbare valg med forslag
+- Bruk `<EXPERIMENTAL_Suggestion>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
 ## Flere valg
 
-- Bruk `multiple` når brukeren skal kunne velge flere alternativer
+- Bruk `multiple` når brukeren skal kunne velge flere alternativer.
 
-  <Canvas of={stories.Multiple} />
+<Canvas of={stories.Multiple} />
+
+## Tøm valget
+
+- Bruk `<EXPERIMENTAL_Suggestion.Clear />` for å la brukeren tømme valget.
+
+<Canvas of={stories.Clear} />
+
+## Åpne og lukk liste
+
+- Bruk `<EXPERIMENTAL_Suggestion.Toggle />` for å la brukeren åpne og lukke listen.
+
+<Canvas of={stories.ToggleList} />
+
+## Filtrering
+
+- Bruk `filter` for å tilpasse hvordan alternativene filtreres når brukeren skriver i input-feltet. Sett `filter={false}` dersom du vil vise alle alternativer, uavhengig av input.
+
+<Canvas of={stories.Filter} />
+
+## Legge til nye alternativer
+
+- Bruk `creatable` når brukeren skal kunne opprette nye alternativer ved å skrive inn tekst i input-feltet og trykke Enter.
+
+<Canvas of={stories.Creatable} />
