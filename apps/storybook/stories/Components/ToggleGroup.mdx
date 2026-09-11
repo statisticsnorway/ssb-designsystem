@@ -5,18 +5,22 @@ import * as stories from './ToggleGroup.stories'
 
 # ToggleGroup
 
-> ToggleGroup samler relaterte alternativer. Komponenten består av en gruppe knapper som henger sammen, der bare én knapp kan velges om gangen.
+> Toggle group samler relaterte alternativ. Komponenten består av ei gruppe knappar som heng saman, der berre éin knapp er mogleg å velje om gongen.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/toggle-group/overview)
 
 ## Kode
 
-- Bruk `<ToggleGroup>` når brukeren skal velge ett av flere relaterte alternativer
+- Bruk `<ToggleGroup>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Bare ikoner
 
-- Se ulike størrelser og oppsett
+<Canvas of={stories.OnlyIcons} />
 
-  <Canvas of={stories.Variants} />
+## Secondary variananter
+
+- Bruk `variant='secondary'`
+
+<Canvas of={stories.Secondary} />
