@@ -4,6 +4,13 @@ import { Card, Divider, Heading, Paragraph, Link } from '@statisticsnorway/desig
 const meta: Meta<typeof Card> = {
   title: 'Komponenter/Card',
   component: Card,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      justifyContent: 'center',
+    },
+  },
 }
 
 export default meta
@@ -11,12 +18,6 @@ export default meta
 type Story = StoryObj<typeof Card>
 
 export const Default: Story = {
-  parameters: {
-    customStyles: {
-      display: 'flex',
-      justifyContent: 'center',
-    },
-  },
   render: () => (
     <Card>
       <Heading level={3} data-size='sm'>
@@ -28,13 +29,6 @@ export const Default: Story = {
 }
 
 export const Variants: Story = {
-  parameters: {
-    customStyles: {
-      display: 'flex',
-      gap: '1rem',
-      justifyContent: 'center',
-    },
-  },
   render: () => (
     <>
       <Card>
@@ -96,12 +90,6 @@ export const Colors: Story = {
 }
 
 export const LinkCard: Story = {
-  parameters: {
-    customStyles: {
-      display: 'flex',
-      justifyContent: 'center',
-    },
-  },
   render: () => (
     <Card style={{ maxWidth: '300px' }}>
       <Heading level={3} data-size='sm'>
@@ -116,8 +104,7 @@ export const CardWithSection: Story = {
   render: () => (
     <div
       style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, 320px)',
+        display: 'flex',
         gap: '1rem',
         justifyContent: 'start',
       }}
