@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks'
+import * as stories from './useCheckboxGroup.stories'
+
+<Meta of={stories} />
+
+# useCheckboxGroup
+
+> En React-hook for å lettere håndtere en gruppe av Checkbox-komponenter.
+
+> Se full dokumentasjon for hooken på [designsystemet.no](https://designsystemet.no/no/components/utilities/use-checkbox-group)
+
+## Bruk
+
+<Canvas of={stories.Default} />
+
+I respons får du objektet:
+
+```ts
+{
+  getCheckboxProps: (value: string | CheckboxProps) => CheckboxProps, // Returnerer props du kan spre på <Checkbox /> eller <input type="checkbox" />
+  validationMessageProps: ValidationMessageProps, // Props du valgfritt sprer på ValidationMessage for å koble feilmelding til checkboxgruppen
+  setValue: string, // Funksjon for å sette checkboxgruppens verdi
+  value: string, // Nåværende verdi for checkboxgruppen
+}
+```
