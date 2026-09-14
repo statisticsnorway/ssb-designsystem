@@ -1,0 +1,22 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks'
+import * as stories from './useSynchronizedAnimation.stories'
+
+<Meta of={stories} />
+
+# useSynchronizedAnimation
+
+> En react hook for å synkronisere CSS animasjoner på tvers av flere elementer.
+
+> Se full dokumentasjon for hooken på [designsystemet.no](https://designsystemet.no/no/components/utilities/use-synchronized-animation)
+
+## Bruk
+
+<Canvas of={stories.Default} />
+
+```tsx
+const SyncedBox = () => {
+  const ref = useSynchronizedAnimation<HTMLDivElement>('spin')
+
+  return <div ref={ref} />
+}
+```
