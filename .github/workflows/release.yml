@@ -42,9 +42,25 @@ jobs:
         run: pnpm build
 
       - name: Create or update release pull request
+        id: changesets
         uses: changesets/action@v2
         with:
           version-script: pnpm changeset:version
           publish-script: pnpm changeset:release
-          create-github-releases: true
+          create-github-releases: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get release version
+        id: release_version
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.publishedPackages }}
+        run: echo "value=$(jq -r '.[0].version' <<< "$PUBLISHED_PACKAGES")" >> "$GITHUB_OUTPUT"
+
+      - name: Create combined GitHub release
+        if: ${{ steps.changesets.outputs.published == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: v${{ steps.release_version.outputs.value }}
+          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.publishedPackages }}
+        run: bash ./.github/workflows/scripts/create-aggregated-release.sh

@@ -77,12 +77,13 @@ This builds and publishes all updated packages.
 
 ## Automated release with Trusted Publisher
 
-This repository now uses Changesets in CI for both release PR creation and npm publish.
+This repository now uses Changesets in CI for release PR creation and npm publish.
 
 Flow on `main`:
 
 - If unreleased changesets exist, CI updates or creates a release PR.
-- When that PR is merged to `main`, CI publishes updated packages to npm and creates GitHub Releases.
+- When that PR is merged to `main`, CI publishes updated packages to npm and creates one combined GitHub Release.
+- The release is tagged and titled `v<version>` and contains the changelog entries for both packages.
 
 ### Release checklist
 
