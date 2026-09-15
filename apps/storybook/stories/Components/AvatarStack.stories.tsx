@@ -77,3 +77,60 @@ export const Variants: Story = {
     </EXPERIMENTAL_AvatarStack>
   ),
 }
+
+export const Size: Story = {
+  render: () => (
+    <EXPERIMENTAL_AvatarStack
+      style={
+        {
+          '--dsc-avatar-stack-size': 'clamp(5rem, 1.5rem + 2vw, 10rem)',
+        } as React.CSSProperties
+      }
+    >
+      <li>
+        <Avatar aria-label='Cat'>
+          <img src='/img/animals/cat-portrait.jpg' alt='' />
+        </Avatar>
+      </li>
+      <li>
+        <Avatar aria-label='briefcase'>
+          <BriefcaseIcon />
+        </Avatar>
+      </li>
+      <li>
+        <Avatar aria-label='Søren Magnussen'>sm</Avatar>
+      </li>
+      <li>
+        <Avatar aria-label='Mark Downright'>md</Avatar>
+      </li>
+      <li>
+        <Avatar aria-label='Ola Nordman'>on</Avatar>
+      </li>
+    </EXPERIMENTAL_AvatarStack>
+  ),
+}
+
+export const Gap: Story = {
+  render: () => (
+    <EXPERIMENTAL_AvatarStack
+      style={
+        {
+          '--dsc-avatar-stack-gap': '6px',
+        } as React.CSSProperties
+      }
+    >
+      <li>
+        <Avatar aria-label='' initials='AA' />
+      </li>
+      <li>
+        <Avatar aria-label='' initials='BB' />
+      </li>
+      <li>
+        <Avatar aria-label='' initials='CC' />
+      </li>
+      <li>
+        <Avatar aria-label='' initials='DD' />
+      </li>
+    </EXPERIMENTAL_AvatarStack>
+  ),
+}
