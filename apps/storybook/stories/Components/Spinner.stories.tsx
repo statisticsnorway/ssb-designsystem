@@ -1,21 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Heading, Paragraph, Spinner } from '@statisticsnorway/design-react'
 
-const description = `
-Spinner brukes for å indikere at noe er i ferd med å lastes inn.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/spinner/overview
-`
-
 const meta: Meta<typeof Spinner> = {
   title: 'Komponenter/Spinner',
   component: Spinner,
   parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   },
 }
@@ -25,6 +20,28 @@ type Story = StoryObj<typeof Spinner>
 
 export const Default: Story = {
   render: () => <Spinner aria-label='Laster...' />,
+}
+
+export const Size: Story = {
+  render: () => (
+    <>
+      <Spinner aria-label='Henter kaffi' data-size='2xs' />
+      <Spinner aria-label='Henter kaffi' data-size='xs' />
+      <Spinner aria-label='Henter kaffi' data-size='sm' />
+      <Spinner aria-label='Henter kaffi' data-size='md' />
+      <Spinner aria-label='Henter kaffi' data-size='lg' />
+      <Spinner aria-label='Henter kaffi' data-size='xl' />
+    </>
+  ),
+}
+
+export const Text: Story = {
+  render: () => (
+    <>
+      <Spinner aria-label='Laster...' data-size='sm' />
+      <Paragraph>Laster inn data...</Paragraph>
+    </>
+  ),
 }
 
 export const Variants: Story = {

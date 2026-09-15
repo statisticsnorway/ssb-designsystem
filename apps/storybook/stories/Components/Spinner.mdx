@@ -5,18 +5,22 @@ import * as stories from './Spinner.stories'
 
 # Spinner
 
-> Spinner brukes for å indikere at noe er i ferd med å lastes inn.
+> Spinner brukes for å indikere at innhold eller en handling er i ferd med å laste, og at brukeren må vente før de kan fortsette.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/spinner/overview)
 
 ## Kode
 
-- Bruk `<Spinner>` for å vise pågående lasting
+- Bruk `<Spinner>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Størrelse
 
-- Se ulike størrelser og tilpasninger
+- Bruk `data-size` for å endre størrelse
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Size} />
+
+## Med tekst
+
+<Canvas of={stories.Text} />

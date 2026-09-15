@@ -1,0 +1,63 @@
+.colorTokenList section + section {
+  margin-top: var(--ds-size-8);
+}
+
+.colorTokenList h3 {
+  font-size: var(--ds-heading-xs-font-size);
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-size-4);
+}
+
+.group + .group {
+  margin-top: var(--ds-size-6);
+}
+
+.groupLabel {
+  flex: 0 0 8ch;
+  font-size: var(--ds-body-sm-font-size);
+  font-weight: var(--ds-font-weight-medium);
+}
+
+.groupContent {
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.bar {
+  display: flex;
+  gap: 2px;
+  block-size: var(--ds-size-14);
+}
+
+.segment {
+  flex: 1;
+  border: 1px solid var(--ds-color-border-subtle);
+  border-radius: var(--ds-border-radius-md);
+}
+
+.labels {
+  display: flex;
+  margin-top: var(--ds-size-2);
+}
+
+.label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.variant,
+.hex {
+  font-size: var(--ds-body-xs-font-size);
+}
+
+.hex {
+  color: var(--ds-color-text-subtle);
+  text-transform: uppercase;
+}

@@ -11,12 +11,28 @@ import * as stories from './Tag.stories'
 
 ## Kode
 
-- Bruk `<Tag>` for tekstbaserte status- eller kategorimerker
+- Bruk `<Tag>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
-## Varianter
+## Farger
 
-- Se ulike visuelle varianter og farger
+- Bruk `data-color`
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Colors} />
+
+## Outline
+
+- Bruk `variant="outline"` for å gi tag en kantlinje som gjør den mer synlig
+
+<Canvas of={stories.Outline} />
+
+## Størrelse
+
+- Bruk `data-size="sm | md | lg"`
+
+<Canvas of={stories.Size} />
+
+## Med ikon
+
+<Canvas of={stories.WithIcon} />

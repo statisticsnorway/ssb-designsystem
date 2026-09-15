@@ -5,6 +5,15 @@ import { Heading, Pagination, usePagination } from '@statisticsnorway/design-rea
 const meta: Meta<typeof Pagination> = {
   title: 'Komponenter/Pagination',
   component: Pagination,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta

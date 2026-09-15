@@ -5,6 +5,15 @@ import { Chat2Icon } from '@navikt/aksel-icons'
 const meta: Meta<typeof Link> = {
   title: 'Komponenter/Link',
   component: Link,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta

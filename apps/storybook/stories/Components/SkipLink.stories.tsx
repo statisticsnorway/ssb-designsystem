@@ -1,23 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Paragraph, SkipLink } from '@statisticsnorway/design-react'
 
-const description = `
-SkipLink lar brukere hoppe over navigasjon og gå direkte til hovedinnholdet på siden.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/skip-link/overview
-`
-
 const meta: Meta<typeof SkipLink> = {
   title: 'Komponenter/SkipLink',
   component: SkipLink,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta

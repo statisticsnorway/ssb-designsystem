@@ -1,58 +1,44 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Tag, Textfield } from '@statisticsnorway/design-react'
 
-const description = `
-Textfield gir brukere muligheten til å skrive fritekst eller tall.
-
-Se full dokumentasjon:
-https://designsystemet.no/no/components/docs/textfield/overview
-`
-
 const meta: Meta<typeof Textfield> = {
   title: 'Komponenter/Textfield',
   component: Textfield,
-  parameters: {
-    docs: {
-      description: {
-        component: description,
-      },
-    },
-  },
 }
 
 export default meta
 type Story = StoryObj<typeof Textfield>
 
 export const Default: Story = {
-  render: () => <Textfield label='Navn' />,
+  render: () => <Textfield label='Label' />,
 }
 
-export const Variants: Story = {
+export const Required: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '1.5rem', maxWidth: '32rem' }}>
-      <Textfield label='Standard' description='Skriv inn navnet ditt' />
-
-      <Textfield label='E-post' type='email' description='Vi bruker e-posten til å kontakte deg' />
-
-      <Textfield label='Telefonnummer' type='tel' />
-
-      <Textfield
-        label={
-          <>
-            Hvor bor du?
-            <Tag data-color='warning' style={{ marginInlineStart: 'var(--ds-size-2)' }}>
-              Må fylles ut
-            </Tag>
-          </>
-        }
-        required
-      />
-
-      <Textfield label='Multiline' multiline rows={4} />
-
-      <Textfield label='Med prefiks og suffiks' prefix='NOK' suffix='pr. mnd' />
-
-      <Textfield label='Med teller' counter={50} />
-    </div>
+    <Textfield
+      label={
+        <>
+          Hvor bor du?
+          <Tag data-color='warning' style={{ marginInlineStart: 'var(--ds-size-2)' }}>
+            Må fylles ut
+          </Tag>
+        </>
+      }
+      required
+    />
   ),
+}
+
+export const Multiline: Story = {
+  render: () => <Textfield label='Label' multiline rows={4} />,
+}
+
+export const Prefix: Story = {
+  render: () => <Textfield label='Med prefiks og suffiks' prefix='NOK' suffix='pr. mnd' />,
+}
+
+export const Counter: Story = {
+  render: () => {
+    return <Textfield counter={75} id='textfield-counter' label='Legg til en beskrivelse' multiline rows={4} />
+  },
 }

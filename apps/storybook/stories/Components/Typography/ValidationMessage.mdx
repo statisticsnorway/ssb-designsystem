@@ -1,0 +1,28 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './ValidationMessage.stories'
+
+<Meta of={stories} />
+
+# Validation message
+
+> Validation message brukes til å vise tilbakemeldinger knyttet til validering av brukerinput, for eksempel feilmeldinger eller advarsler i skjema.
+
+> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/heading/overview)
+
+## Kode
+
+- Bruk `<ValidationMessage>` komponenten i React
+
+<Canvas of={stories.Default} />
+
+## Farger
+
+- Bruk `data-color='danger | success | info | warning'` for å endre farge og ikon
+
+<Canvas of={stories.Colors} />
+
+## Størrelse
+
+- Bruk `data-size='sm | md | lg'` for å endre størrelse
+
+<Canvas of={stories.Size} />

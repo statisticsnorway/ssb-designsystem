@@ -5,18 +5,25 @@ import * as stories from './Search.stories'
 
 # Search
 
-> Search lar brukere raskt finne relevant innhold på et nettsted eller i en applikasjon.
+> Search lar brukere raskt finne relevant innhold på et nettsted eller i en applikasjon. Komponenten består av et søkefelt, med eller uten en søkeknapp.
 
 > Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/search/overview)
 
 ## Kode
 
-- Bruk `<Search>` for søkefelt med tydelig fokus på søkehandlinger
+- Bruk `<Search>` komponenten i React
 
-  <Canvas of={stories.Default} />
+<Canvas of={stories.Default} />
 
 ## Varianter
 
-- Se ulike oppsett og tilstander
+- Bruk `Search.Clear` for å gi brukeren mulighet til å tømme søkefeltet. `Search.Button` er valgfri – uten knappen vises et søkeikon i feltet.
+- Eksemplene nedenfor viser varianter som inkluderer ikon, primær- og sekundærknapp.
 
-  <Canvas of={stories.Variants} />
+<Canvas of={stories.Variants} />
+
+## Med label
+
+- Legg til `Label` som du kobler sammen med `Search.Input`
+
+<Canvas of={stories.WithLabel} />

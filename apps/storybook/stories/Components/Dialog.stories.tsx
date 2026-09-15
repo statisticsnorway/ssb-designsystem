@@ -4,6 +4,15 @@ import { Button, Dialog, Heading, Label, Paragraph, Textarea } from '@statistics
 const meta: Meta<typeof Dialog> = {
   title: 'Komponenter/Dialog',
   component: Dialog,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta

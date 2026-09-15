@@ -5,6 +5,15 @@ import { TrashIcon } from '@navikt/aksel-icons'
 const meta: Meta<typeof Popover> = {
   title: 'Komponenter/Popover',
   component: Popover,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta
@@ -70,7 +79,7 @@ export const DottedUnderline: Story = {
 
 export const Placement: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+    <>
       <Popover.TriggerContext>
         <Popover.Trigger>Top</Popover.Trigger>
         <Popover placement='top'>
@@ -98,13 +107,13 @@ export const Placement: Story = {
           <Paragraph>Vises til høyre</Paragraph>
         </Popover>
       </Popover.TriggerContext>
-    </div>
+    </>
   ),
 }
 
 export const Variant: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+    <>
       <Popover.TriggerContext>
         <Popover.Trigger variant='primary'>Primary</Popover.Trigger>
         <Popover placement='top'>
@@ -132,6 +141,6 @@ export const Variant: Story = {
           Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
         </Popover>
       </Popover.TriggerContext>
-    </div>
+    </>
   ),
 }

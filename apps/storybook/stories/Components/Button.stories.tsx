@@ -5,6 +5,15 @@ import { PencilWritingIcon } from '@navikt/aksel-icons'
 const meta: Meta<typeof Button> = {
   title: 'Komponenter/Button',
   component: Button,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta
@@ -17,21 +26,21 @@ export const Default: Story = {
 
 export const Variants: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <>
       <Button>Primary</Button>
       <Button variant='secondary'>Secondary</Button>
       <Button variant='tertiary'>Tertiary</Button>
-    </div>
+    </>
   ),
 }
 
 export const Sizes: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <>
       <Button data-size='sm'>Small</Button>
       <Button data-size='md'>Medium</Button>
       <Button data-size='lg'>Large</Button>
-    </div>
+    </>
   ),
 }
 
@@ -67,23 +76,21 @@ export const Colors: Story = {
 
 export const Icons: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
-      <div style={{ display: 'flex', gap: '1rem' }}>
-        <Button icon aria-label='Kun ikon'>
-          <PencilWritingIcon aria-hidden />
-        </Button>
-        <Button>
-          <PencilWritingIcon aria-hidden />
-          Rediger
-        </Button>
-      </div>
-    </div>
+    <>
+      <Button icon aria-label='Kun ikon'>
+        <PencilWritingIcon aria-hidden />
+      </Button>
+      <Button>
+        <PencilWritingIcon aria-hidden />
+        Rediger
+      </Button>
+    </>
   ),
 }
 
 export const WithSpinner: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <>
       <Button variant='primary' loading>
         Laster…
       </Button>
@@ -93,18 +100,16 @@ export const WithSpinner: Story = {
       <Button variant='tertiary' loading>
         Laster…
       </Button>
-    </div>
+    </>
   ),
 }
 
 export const AsLink: Story = {
   render: () => (
-    <div style={{ display: 'flex' }}>
-      <Button asChild>
-        <a target='_blank' rel='noreferrer' href='www.designsystemet.no'>
-          Gå til designsystemet.no
-        </a>
-      </Button>
-    </div>
+    <Button asChild>
+      <a target='_blank' rel='noreferrer' href='www.designsystemet.no'>
+        Gå til designsystemet.no
+      </a>
+    </Button>
   ),
 }

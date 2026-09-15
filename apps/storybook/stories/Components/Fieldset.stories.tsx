@@ -14,6 +14,15 @@ import {
 const meta: Meta<typeof Fieldset> = {
   title: 'Komponenter/Fieldset',
   component: Fieldset,
+  parameters: {
+    customStyles: {
+      display: 'flex',
+      gap: '1rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 }
 
 export default meta
