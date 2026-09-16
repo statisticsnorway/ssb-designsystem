@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- 69e85b483b44d4d267cf0456c9cbe014fef65d50: Update Digdir packages to 1.21.1 and export EXPERIMENTAL_FileUpload.
+- 69e85b483b44d4d267cf0456c9cbe014fef65d50: Update Digdir packages to [v1.21.1 ](https://github.com/digdir/designsystemet/releases/tag/v1.21.1)
 
 ## 0.2.2
 
