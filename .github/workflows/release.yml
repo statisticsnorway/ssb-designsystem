@@ -54,7 +54,7 @@ jobs:
         id: release_version
         if: steps.changesets.outputs.published == 'true'
         env:
-          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.publishedPackages }}
+          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.published-packages }}
         run: echo "value=$(jq -r '.[0].version' <<< "$PUBLISHED_PACKAGES")" >> "$GITHUB_OUTPUT"
 
       - name: Create combined GitHub release
@@ -62,5 +62,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: v${{ steps.release_version.outputs.value }}
-          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.publishedPackages }}
+          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.published-packages }}
         run: bash ./.github/workflows/scripts/create-aggregated-release.sh
