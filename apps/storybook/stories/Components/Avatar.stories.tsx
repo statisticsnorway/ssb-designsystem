@@ -27,10 +27,18 @@ export const Default: Story = {
 export const Sizes: Story = {
   render: () => (
     <>
-      <Avatar data-size='xs' aria-label='extra small' initials='xs' />
-      <Avatar data-size='sm' aria-label='small' initials='sm' />
-      <Avatar data-size='md' aria-label='medium' initials='md' />
-      <Avatar data-size='lg' aria-label='large' initials='lg' />
+      <Avatar data-size='xs' aria-label='extra small'>
+        xs
+      </Avatar>
+      <Avatar data-size='sm' aria-label='small'>
+        sm
+      </Avatar>
+      <Avatar data-size='md' aria-label='medium'>
+        md
+      </Avatar>
+      <Avatar data-size='lg' aria-label='large'>
+        lg
+      </Avatar>
     </>
   ),
 }
@@ -48,11 +56,9 @@ export const Colors: Story = {
 export const Variants: Story = {
   render: () => (
     <>
-      <Avatar variant='circle' aria-label='variant circle' />
+      <Avatar aria-label='variant circle' />
       <Avatar variant='square' aria-label='variant square' />
-      <Avatar variant='circle' aria-label='Ola Nordmann'>
-        ON
-      </Avatar>
+      <Avatar aria-label='Ola Nordmann'>ON</Avatar>
       <Avatar variant='square' aria-label='Ola Nordmann'>
         ON
       </Avatar>

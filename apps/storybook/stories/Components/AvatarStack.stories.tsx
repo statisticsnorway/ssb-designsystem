@@ -120,16 +120,16 @@ export const Gap: Story = {
       }
     >
       <li>
-        <Avatar aria-label='' initials='AA' />
+        <Avatar aria-label=''>AA</Avatar>
       </li>
       <li>
-        <Avatar aria-label='' initials='BB' />
+        <Avatar aria-label=''>BB</Avatar>
       </li>
       <li>
-        <Avatar aria-label='' initials='CC' />
+        <Avatar aria-label=''>CC</Avatar>
       </li>
       <li>
-        <Avatar aria-label='' initials='DD' />
+        <Avatar aria-label=''>DD</Avatar>
       </li>
     </EXPERIMENTAL_AvatarStack>
   ),
