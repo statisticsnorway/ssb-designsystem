@@ -15,8 +15,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       '@digdir/designsystemet':
-        specifier: ^1.21.1
-        version: 1.21.1(@types/node@26.5.1)
+        specifier: ^1.22.0
+        version: 1.22.0(@types/node@26.5.1)
       '@types/node':
         specifier: ^26.5.1
         version: 26.5.1
@@ -79,12 +79,12 @@ importers:
   packages/css:
     dependencies:
       '@digdir/designsystemet-css':
-        specifier: ^1.21.1
-        version: 1.21.1
+        specifier: ^1.22.0
+        version: 1.22.0
     devDependencies:
       '@digdir/designsystemet-types':
-        specifier: ^1.21.1
-        version: 1.21.1
+        specifier: ^1.22.0
+        version: 1.22.0
       postcss:
         specifier: ^8.5.28
         version: 8.5.28
@@ -95,11 +95,11 @@ importers:
   packages/react:
     dependencies:
       '@digdir/designsystemet-react':
-        specifier: ^1.21.1
-        version: 1.21.1(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: ^1.22.0
+        version: 1.22.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@digdir/designsystemet-types':
-        specifier: ^1.21.1
-        version: 1.21.1
+        specifier: ^1.22.0
+        version: 1.22.0
       '@navikt/aksel-icons':
         specifier: ^8.16.2
         version: 8.16.2
@@ -345,23 +345,23 @@ packages:
     resolution: {integrity: sha512-QxULHAm7cNu72w97JUNCBFODFaXpbDg+dP8b/oWFAZ2MTRppA3U00Y2L1HqaS4J6yBqxwa/Y3nMBaxVKbB/NsA==}
     engines: {node: '>=20.19.0'}
 
-  '@digdir/designsystemet-css@1.21.1':
-    resolution: {integrity: sha512-k01KHaYmkze7tYBt1S/XVPC5UzPIYrpH8pQJzMtRo9WX3EHSPy7llwuFeRvnP4RT3ctDowaIi3s3S3pHIAKevw==}
+  '@digdir/designsystemet-css@1.22.0':
+    resolution: {integrity: sha512-f/+YOK1Gvl7ypdeRh0TDGs28eu8DkOPDAR+T8yLpnys9FxNWX05UNuhXJwYwRuzF9WUgjAhpJ5JKdodTDxWMEA==}
 
-  '@digdir/designsystemet-react@1.21.1':
-    resolution: {integrity: sha512-qj16MTvK3xxzwnOduM4jDJpDzNAPE5gXA2n2bZQEfBCveDsi4gPWf/ZgbnIkBZUZoKl6QAx8wFUoXDR5qF+vHw==}
+  '@digdir/designsystemet-react@1.22.0':
+    resolution: {integrity: sha512-0BrL6nZWjHu+FLtyBhcZwX3N0QHcI880l+JTIHCZhgdEvQ81eAWe8gIwmKfDHnPVnBZSZMzVIYDRZu0ISD+X6g==}
     peerDependencies:
       react: '>=18.3.1 || ^19.0.0'
       react-dom: '>=18.3.1 || ^19.0.0'
 
-  '@digdir/designsystemet-types@1.21.1':
-    resolution: {integrity: sha512-kRkZb+XGIVzPseVnWGi1aryfBenpSh/U0QvaOWmH2MNTIrY+/OHqKaVU1x71lo/XFAlhlwpPrhqqJoaNMxvxsA==}
+  '@digdir/designsystemet-types@1.22.0':
+    resolution: {integrity: sha512-VsWH7iFAUBvRCVWuL/ukv1W3xgRH+7Ubbmmf9l7iRAqOFqn8J4GmdzD25YewDjGWUgiDs5rNsTgorK7KS+50WA==}
 
-  '@digdir/designsystemet-web@1.21.1':
-    resolution: {integrity: sha512-+xwlgZkMokN8svF71sdf+DfOFYjgNFiOINYJx1Vo844RAsmM1Xxij79ln2PbwjZJrklXIwWVWGAK4xE3gKg8bw==}
+  '@digdir/designsystemet-web@1.22.0':
+    resolution: {integrity: sha512-AhgkapDs7efBAR6VyvmEfMEmO+xp7q/BM6XvxTWt/Iff3dmlEs9M/wLKX8hOrBY71I3Q/SB6wTKF5u0gaSNeaQ==}
 
-  '@digdir/designsystemet@1.21.1':
-    resolution: {integrity: sha512-F66Cc0RsEHJ/j/DsCM36VxpjtWEKpvWoH6qyhwQmWes2p+tv/wEsIuWlVZMVkKHgZn1efsVE8Mn3cU9wJRuPPg==}
+  '@digdir/designsystemet@1.22.0':
+    resolution: {integrity: sha512-MurWr2K5DTGsp4LW8qwACEjkT0dEBqqorYtNi8ur7Qc9IVTINYsQZTwxZqeyBlYT/B1dffj+qgJ3Mr01twPtJg==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
@@ -3297,14 +3297,14 @@ snapshots:
 
   '@csstools/css-tokenizer@4.0.0': {}
 
-  '@digdir/designsystemet-css@1.21.1':
+  '@digdir/designsystemet-css@1.22.0':
     dependencies:
-      '@digdir/designsystemet-types': 1.21.1
+      '@digdir/designsystemet-types': 1.22.0
 
-  '@digdir/designsystemet-react@1.21.1(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@digdir/designsystemet-react@1.22.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@digdir/designsystemet-types': 1.21.1
-      '@digdir/designsystemet-web': 1.21.1
+      '@digdir/designsystemet-types': 1.22.0
+      '@digdir/designsystemet-web': 1.22.0
       '@floating-ui/dom': 1.8.0
       '@floating-ui/react': 0.26.23(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@navikt/aksel-icons': 8.16.2
@@ -3316,9 +3316,9 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@digdir/designsystemet-types@1.21.1': {}
+  '@digdir/designsystemet-types@1.22.0': {}
 
-  '@digdir/designsystemet-web@1.21.1':
+  '@digdir/designsystemet-web@1.22.0':
     dependencies:
       '@floating-ui/dom': 1.8.0
       '@u-elements/u-combobox': 2.1.4
@@ -3326,10 +3326,10 @@ snapshots:
       '@u-elements/u-details': 1.0.0
       '@u-elements/u-tabs': 1.0.4
 
-  '@digdir/designsystemet@1.21.1(@types/node@26.5.1)':
+  '@digdir/designsystemet@1.22.0(@types/node@26.5.1)':
     dependencies:
       '@commander-js/extra-typings': 15.0.0(commander@15.0.0)
-      '@digdir/designsystemet-types': 1.21.1
+      '@digdir/designsystemet-types': 1.22.0
       '@inquirer/confirm': 6.3.2(@types/node@26.5.1)
       '@tokens-studio/sd-transforms': 2.0.3(style-dictionary@5.5.3)
       '@tokens-studio/types': 0.5.2
