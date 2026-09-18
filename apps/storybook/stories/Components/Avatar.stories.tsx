@@ -56,10 +56,24 @@ export const Colors: Story = {
 export const Variants: Story = {
   render: () => (
     <>
-      <Avatar aria-label='variant circle' />
-      <Avatar variant='square' aria-label='variant square' />
+      <Avatar aria-label='circle' />
+      <Avatar
+        aria-label='square'
+        style={
+          {
+            '--dsc-avatar-radius': 'var(--ds-border-radius-md)',
+          } as React.CSSProperties
+        }
+      />
       <Avatar aria-label='Ola Nordmann'>ON</Avatar>
-      <Avatar variant='square' aria-label='Ola Nordmann'>
+      <Avatar
+        aria-label='Ola Nordmann'
+        style={
+          {
+            '--dsc-avatar-radius': 'var(--ds-border-radius-md)',
+          } as React.CSSProperties
+        }
+      >
         ON
       </Avatar>
     </>

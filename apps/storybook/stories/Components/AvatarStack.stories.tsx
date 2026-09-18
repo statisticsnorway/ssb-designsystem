@@ -48,31 +48,32 @@ export const Default: Story = {
 
 export const Variants: Story = {
   render: () => (
-    <EXPERIMENTAL_AvatarStack>
+    <EXPERIMENTAL_AvatarStack
+      aria-label='example of square avatars'
+      style={
+        {
+          '--dsc-avatar-stack-radius': 'var(--ds-border-radius-md)',
+        } as React.CSSProperties
+      }
+    >
       <li>
-        <Avatar aria-label='Cat' variant='square'>
+        <Avatar aria-label='Cat'>
           <img src='/img/animals/cat-portrait.jpg' alt='' />
         </Avatar>
       </li>
       <li>
-        <Avatar aria-label='briefcase' variant='square'>
+        <Avatar aria-label='briefcase'>
           <BriefcaseIcon />
         </Avatar>
       </li>
       <li>
-        <Avatar aria-label='Søren Magnussen' variant='square'>
-          sm
-        </Avatar>
+        <Avatar aria-label='Søren Magnussen'>sm</Avatar>
       </li>
       <li>
-        <Avatar aria-label='Mark Downright' variant='square'>
-          md
-        </Avatar>
+        <Avatar aria-label='Mark Downright'>md</Avatar>
       </li>
       <li>
-        <Avatar aria-label='Ola Nordman' variant='square'>
-          on
-        </Avatar>
+        <Avatar aria-label='Ola Nordman'>on</Avatar>
       </li>
     </EXPERIMENTAL_AvatarStack>
   ),
@@ -132,5 +133,67 @@ export const Gap: Story = {
         <Avatar aria-label=''>DD</Avatar>
       </li>
     </EXPERIMENTAL_AvatarStack>
+  ),
+}
+
+export const Expandable: Story = {
+  render: () => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        gap: 'var(--ds-size-4)',
+        flexWrap: 'wrap',
+      }}
+    >
+      <fieldset>
+        <legend>expandable</legend>
+        <EXPERIMENTAL_AvatarStack expandable aria-label='example of expandable avatars'>
+          <li>
+            <Avatar aria-label='Cat'>
+              <img src='/img/animals/cat-portrait.jpg' alt='' />
+            </Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='briefcase'>
+              <BriefcaseIcon />
+            </Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='Søren Magnussen'>sm</Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='Mark Downright'>md</Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='Ola Nordman'>on</Avatar>
+          </li>
+        </EXPERIMENTAL_AvatarStack>
+      </fieldset>
+      <fieldset>
+        <legend>expandable="fixed"</legend>
+        <EXPERIMENTAL_AvatarStack expandable='fixed' aria-label='example of expandable avatars'>
+          <li>
+            <Avatar aria-label='Cat'>
+              <img src='/img/animals/cat-portrait.jpg' alt='' />
+            </Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='briefcase'>
+              <BriefcaseIcon />
+            </Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='Søren Magnussen'>sm</Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='Mark Downright'>md</Avatar>
+          </li>
+          <li>
+            <Avatar aria-label='Ola Nordman'>on</Avatar>
+          </li>
+        </EXPERIMENTAL_AvatarStack>
+      </fieldset>
+    </div>
   ),
 }
