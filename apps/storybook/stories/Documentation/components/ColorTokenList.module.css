@@ -1,25 +1,23 @@
 .colorTokenList section + section {
-  margin-top: var(--ds-size-8);
+  margin-top: var(--ds-size-12);
 }
 
 .colorTokenList h3 {
-  font-size: var(--ds-heading-xs-font-size);
+  margin-block-end: var(--ds-size-5);
 }
 
 .group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--ds-size-4);
+}
+
+.groupLabel {
+  flex: 0 0 10ch;
 }
 
 .group + .group {
   margin-top: var(--ds-size-6);
-}
-
-.groupLabel {
-  flex: 0 0 8ch;
-  font-size: var(--ds-body-sm-font-size);
-  font-weight: var(--ds-font-weight-medium);
 }
 
 .groupContent {

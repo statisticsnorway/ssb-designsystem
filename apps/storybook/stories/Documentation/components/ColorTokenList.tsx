@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import css from '../../../../../packages/css/theme/ssb.css?raw'
 import styles from './ColorTokenList.module.css'
+import { Heading } from '@statisticsnorway/design-react'
 
 const toUpper = (str: string) => str.replace(/\b./g, (m) => m.toUpperCase())
 
-const COLORS = ['primary', 'neutral', 'secondary', 'magic'] as const
+const COLORS = ['primary', 'secondary', 'magic', 'neutral'] as const
 
 const GROUPS = [
   ['background', ['default', 'tinted']],
@@ -21,40 +23,62 @@ const HEX_BY_TOKEN = Object.fromEntries(
   )
 )
 
-export const ColorTokenList = () => (
-  <div className={styles.colorTokenList}>
-    {COLORS.map((color) => (
-      <section key={color}>
-        <h3>{toUpper(color)}</h3>
-        {GROUPS.map(([group, variants]) => (
-          <div key={group} className={styles.group}>
-            <span className={styles.groupLabel}>{toUpper(group)}</span>
-            <div className={styles.groupContent}>
-              <div className={styles.bar}>
-                {variants.map((variant) => (
-                  <span
-                    key={variant}
-                    className={styles.segment}
-                    style={{ background: `var(--ds-color-${color}-${group}-${variant})` }}
-                  />
-                ))}
-              </div>
-              <div className={styles.labels}>
-                {variants.map((variant) => {
-                  const tokenName = `${color}-${group}-${variant}`
+const COPIED_LABEL = 'Kopiert!'
 
-                  return (
-                    <div key={variant} className={styles.label}>
-                      <span className={styles.variant}>{variant}</span>
-                      <code className={styles.hex}>{HEX_BY_TOKEN[tokenName]}</code>
-                    </div>
-                  )
-                })}
+export const ColorTokenList = () => {
+  const [copiedToken, setCopiedToken] = useState<string | null>(null)
+
+  const handleCopy = async (token: string) => {
+    await navigator.clipboard.writeText(token)
+    setCopiedToken(token)
+    setTimeout(() => {
+      setCopiedToken((current) => (current === token ? null : current))
+    }, 1500)
+  }
+  return (
+    <div className={styles.colorTokenList}>
+      {COLORS.map((color) => (
+        <section key={color}>
+          <Heading level={3}>{toUpper(color)}</Heading>
+          {GROUPS.map(([group, variants]) => (
+            <div key={group} className={styles.group}>
+              <span className={styles.groupLabel}>{toUpper(group)}</span>
+              <div className={styles.groupContent}>
+                <div className={styles.bar}>
+                  {variants.map((variant) => {
+                    const colorPrefix = color === 'primary' ? '' : `${color}-`
+                    const token = `var(--ds-color-${colorPrefix}${group}-${variant})`
+
+                    return (
+                      <button
+                        className={styles.segment}
+                        key={`${group}-${variant}`}
+                        type='button'
+                        aria-label={`Kopier ${token}`}
+                        data-tooltip={copiedToken === token ? COPIED_LABEL : token}
+                        onClick={() => handleCopy(token)}
+                        style={{ background: token }}
+                      />
+                    )
+                  })}
+                </div>
+                <div className={styles.labels}>
+                  {variants.map((variant) => {
+                    const tokenName = `${color}-${group}-${variant}`
+
+                    return (
+                      <div key={variant} className={styles.label}>
+                        <span className={styles.variant}>{variant}</span>
+                        <code className={styles.hex}>{HEX_BY_TOKEN[tokenName]}</code>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </section>
-    ))}
-  </div>
-)
+          ))}
+        </section>
+      ))}
+    </div>
+  )
+}
