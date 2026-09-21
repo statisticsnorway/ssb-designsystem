@@ -20,7 +20,7 @@ import * as stories from './AvatarStack.stories'
 
 ## Varianter
 
-- Bruk `variant='circle | square'`
+- Bruk `style={{ '--dsc-avatar-radius': VALUE }}` for å endre formen på AvatarStack.
 
 <Canvas of={stories.Variants} />
 
@@ -35,3 +35,9 @@ import * as stories from './AvatarStack.stories'
 - Mellomrommet mellom avatarene kan justeres ved sette størrelsen på variabelen `--dsc-avatar-stack-gap`.
 
 <Canvas of={stories.Gap} />
+
+## Ekspanderbar
+
+- Bruk `expandable` for å vise hele avatarene ved hover. Med `expandable="fixed"` beholdes AvatarStack sin bredde når avatarene utvides.
+
+<Canvas of={stories.Expandable} />
