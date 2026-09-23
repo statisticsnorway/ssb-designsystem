@@ -38,7 +38,7 @@ export const ColorTokenList = () => {
   return (
     <div className={styles.colorTokenList}>
       {COLORS.map((color) => (
-        <section key={color}>
+        <section key={color} className={styles.colorSection}>
           <Heading level={3}>{toUpper(color)}</Heading>
           {GROUPS.map(([group, variants]) => (
             <div key={group} className={styles.group}>
