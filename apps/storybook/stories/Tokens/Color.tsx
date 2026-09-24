@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import css from '../../../../packages/css/theme/ssb.css?raw'
-import styles from './ColorTokenList.module.css'
-import { Heading } from '@statisticsnorway/design-react'
+import styles from './Color.module.css'
+import { Checkbox, Heading } from '@statisticsnorway/design-react'
 
 const toUpper = (str: string) => str.replace(/\b./g, (m) => m.toUpperCase())
 
@@ -27,6 +27,7 @@ const COPIED_LABEL = 'Kopiert!'
 
 export const ColorTokenList = () => {
   const [copiedToken, setCopiedToken] = useState<string | null>(null)
+  const [showColorCodes, setShowColorCodes] = useState(false)
 
   const handleCopy = async (token: string) => {
     await navigator.clipboard.writeText(token)
@@ -37,6 +38,17 @@ export const ColorTokenList = () => {
   }
   return (
     <div className={styles.colorTokenList}>
+      <div className={styles.colorHeader}>
+        <Heading level={2} data-size='lg'>
+          Fargepalett
+        </Heading>
+        <Checkbox
+          label='Vis fargekoder'
+          checked={showColorCodes}
+          value='value'
+          onChange={(event) => setShowColorCodes(event.target.checked)}
+        />
+      </div>
       {COLORS.map((color) => (
         <section key={color} className={styles.colorSection}>
           <Heading level={3}>{toUpper(color)}</Heading>
@@ -69,7 +81,7 @@ export const ColorTokenList = () => {
                     return (
                       <div key={variant} className={styles.label}>
                         <span className={styles.variant}>{variant}</span>
-                        <code className={styles.hex}>{HEX_BY_TOKEN[tokenName]}</code>
+                        {showColorCodes && <span className={styles.hex}>{HEX_BY_TOKEN[tokenName]}</span>}
                       </div>
                     )
                   })}

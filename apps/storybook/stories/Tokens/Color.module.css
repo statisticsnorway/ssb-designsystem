@@ -1,5 +1,5 @@
 .colorTokenList {
-  margin-top: var(--ds-size-12);
+  margin-top: var(--ds-size-8);
 }
 
 .colorSection {
@@ -8,6 +8,13 @@
 
 .colorSection h3 {
   margin-block-end: var(--ds-size-10);
+}
+
+.colorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .group {
@@ -63,7 +70,5 @@
 }
 
 .hex {
-  color: var(--ds-color-text-subtle);
-  font-size: var(--ds-body-xs-font-size);
   text-transform: uppercase;
 }
