@@ -5,7 +5,7 @@ import { Checkbox, Heading } from '@statisticsnorway/design-react'
 
 const toUpper = (str: string) => str.replace(/\b./g, (m) => m.toUpperCase())
 
-const COLORS = ['primary', 'secondary', 'magic', 'neutral'] as const
+const COLORS = ['primary', 'secondary', 'magic', 'neutral', 'info', 'success', 'warning', 'danger'] as const
 
 const GROUPS = [
   ['background', ['default', 'tinted']],
@@ -51,7 +51,9 @@ export const ColorTokenList = () => {
       </div>
       {COLORS.map((color) => (
         <section key={color} className={styles.colorSection}>
-          <Heading level={3}>{toUpper(color)}</Heading>
+          <Heading level={3} data-size='md'>
+            {toUpper(color)}
+          </Heading>
           {GROUPS.map(([group, variants]) => (
             <div key={group} className={styles.group}>
               <span className={styles.groupLabel}>{toUpper(group)}</span>
