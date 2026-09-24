@@ -64,5 +64,6 @@
 
 .hex {
   color: var(--ds-color-text-subtle);
+  font-size: var(--ds-body-xs-font-size);
   text-transform: uppercase;
 }

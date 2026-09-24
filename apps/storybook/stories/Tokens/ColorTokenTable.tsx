@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import css from '../../../../../packages/css/theme/ssb.css?raw'
+import css from '../../../../packages/css/theme/ssb.css?raw'
 import styles from './ColorTokenTable.module.css'
 import { Card, Table } from '@statisticsnorway/design-react'
 
