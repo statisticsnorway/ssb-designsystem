@@ -47,12 +47,12 @@ export const Colors: Story = {
     <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(2, 320px)' }}>
       <Card>
         <Card.Block>
-          <Paragraph>Standard</Paragraph>
+          <Paragraph>Primary</Paragraph>
         </Card.Block>
       </Card>
       <Card data-variant='tinted'>
         <Card.Block>
-          <Paragraph>Standard:Tinted</Paragraph>
+          <Paragraph>Primary:Tinted</Paragraph>
         </Card.Block>
       </Card>
       <Card data-color='secondary'>
@@ -63,16 +63,6 @@ export const Colors: Story = {
       <Card data-color='secondary' data-variant='tinted'>
         <Card.Block>
           <Paragraph>Secondary:Tinted</Paragraph>
-        </Card.Block>
-      </Card>
-      <Card data-color='neutral'>
-        <Card.Block>
-          <Paragraph>Neutral</Paragraph>
-        </Card.Block>
-      </Card>
-      <Card data-color='neutral' data-variant='tinted'>
-        <Card.Block>
-          <Paragraph>Neutral:Tinted</Paragraph>
         </Card.Block>
       </Card>
       <Card data-color='magic'>
