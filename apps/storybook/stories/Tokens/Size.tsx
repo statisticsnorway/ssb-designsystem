@@ -43,14 +43,14 @@ export const SizeTokenList = () => {
           <tr>
             <th>Variabel navn</th>
             <th>Figma</th>
-            <th>Verdi</th>
+            <th>PX når md</th>
             <th>Forhåndsvisning</th>
           </tr>
         </thead>
         <tbody>
           {SIZES.map((size) => {
             const token = `--ds-size-${size}`
-            const value = `var(${token})`
+            const tokenVariable = `var(${token})`
 
             return (
               <tr key={size}>
@@ -59,8 +59,8 @@ export const SizeTokenList = () => {
                     type='button'
                     className={styles.copyButton}
                     aria-label={`Kopier ${token}`}
-                    data-tooltip={copiedToken === token ? COPIED_LABEL : token}
-                    onClick={() => handleCopy(value)}
+                    data-tooltip={copiedToken === tokenVariable ? COPIED_LABEL : tokenVariable}
+                    onClick={() => handleCopy(tokenVariable)}
                   >
                     {token}
                   </button>
@@ -73,7 +73,7 @@ export const SizeTokenList = () => {
                       barRefs.current[size] = el
                     }}
                     className={styles.bar}
-                    style={{ width: value }}
+                    style={{ width: tokenVariable }}
                   />
                 </td>
               </tr>
