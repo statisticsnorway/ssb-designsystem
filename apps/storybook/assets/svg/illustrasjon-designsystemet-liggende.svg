@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3087.64 1566.88">
   <defs>
-    <style>
+ <style>
       .cls-1 {
-        fill: var(--ds-color-magic-base-default);
+        fill: #7e5ee8;
       }
 
       .cls-2, .cls-3, .cls-4 {
@@ -11,19 +11,19 @@
       }
 
       .cls-2, .cls-5 {
-        fill: var(--ds-color-primary-surface-hover);
+        fill: #b6e8b8;
       }
 
       .cls-6 {
-        fill: #f2f0ff;// var(--ds-color-magic-surface-tinted);
+        fill: #f2f0ff;
       }
 
       .cls-7, .cls-3 {
-        fill: var(--ds-color-secondary-base-default);
+        fill: #274247;
       }
 
       .cls-8 {
-        fill: var(--ds-color-secondary-base-default);
+        fill: #274247;
       }
 
       .cls-9 {
@@ -31,23 +31,23 @@
       }
 
       .cls-9, .cls-10 {
-        fill: var(--ds-color-background-default);
+        fill: #fff;
       }
 
       .cls-11 {
-        fill: #d1e3e3;//var(--ds-color-secondary-surface-active);
+        fill: #d1e3e3;
       }
 
       .cls-12 {
-        fill: var(--ds-color-secondary-background-tinted);
+        fill: #f0f8f9;
       }
 
       .cls-4, .cls-13 {
-        fill: var(--ds-color-border-default);
+        fill: #00824d;
       }
 
       .cls-14 {
-        fill: #264348;//var(--ds-color-secondary-base-default);
+        fill: #264348;
       }
     </style>
   </defs>
