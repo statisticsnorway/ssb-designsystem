@@ -63,6 +63,13 @@ body {
   display: inline-block;
 }
 
+.sbdocs .illustration {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+}
+
 /* Story */
 .docs-story [scale='1'] {
   transform: none; /* Avoid conflicts with position: fixed <dialog> */
