@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #7e5ee8;
+        fill: var(--ds-color-magic-base-default);
       }
 
       .cls-2, .cls-3, .cls-4 {
@@ -11,19 +11,19 @@
       }
 
       .cls-2, .cls-5 {
-        fill: #b6e8b8;
+        fill: var(--ds-color-primary-surface-hover);
       }
 
       .cls-6 {
-        fill: #f2f0ff;
+        fill: #f2f0ff;// var(--ds-color-magic-surface-tinted);
       }
 
       .cls-7, .cls-3 {
-        fill: #274247;
+        fill: var(--ds-color-secondary-base-default);
       }
 
       .cls-8 {
-        fill: #274247;
+        fill: var(--ds-color-secondary-base-default);
       }
 
       .cls-9 {
@@ -31,23 +31,23 @@
       }
 
       .cls-9, .cls-10 {
-        fill: #fff;
+        fill: var(--ds-color-background-default);
       }
 
       .cls-11 {
-        fill: #d1e3e3;
+        fill: #d1e3e3;//var(--ds-color-secondary-surface-active);
       }
 
       .cls-12 {
-        fill: #f0f8f9;
+        fill: var(--ds-color-secondary-background-tinted);
       }
 
       .cls-4, .cls-13 {
-        fill: #00824d;
+        fill: var(--ds-color-border-default);
       }
 
       .cls-14 {
-        fill: #264348;
+        fill: #264348;//var(--ds-color-secondary-base-default);
       }
     </style>
   </defs>
