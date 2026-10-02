@@ -3,12 +3,11 @@ import { Badge, Button, Details, Divider, Heading, Link, Tabs, Paragraph } from 
 import { BranchingIcon } from '@navikt/aksel-icons'
 import { version, scrollToId } from '../.storybook/docs'
 import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
+import illustrationSvg from '../assets/svg/illustrasjon-storybook-token.svg?raw'
 
 <Meta title='Introduksjon' />
 
-<svg className='illustration' viewBox='0 0 3087.64 1566.88' aria-hidden='true'>
-  <use href='/svg/illustrasjon-storybook-token.svg#ssb-illustration' />
-</svg>
+<div dangerouslySetInnerHTML={{ __html: illustrationSvg }} />
 
 # SSB Designsystem
 
