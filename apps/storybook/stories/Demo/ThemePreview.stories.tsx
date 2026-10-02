@@ -29,10 +29,10 @@ export const Default: StoryFn = () => {
   return (
     <div data-color-scheme={colorSchemeMode} className={classes.wrapper} data-size={size} data-color={colorMode}>
       <div className={classes.innerWrapper}>
-        <div className={classes.controls} data-size='sm'>
+        <div className={classes.controls}>
           <Fieldset className={classes.controlFieldset}>
             <Fieldset.Legend>
-              Størrelse <code data-size='xs'>(data-size)</code>
+              Størrelse <code>(data-size)</code>
             </Fieldset.Legend>
             <ToggleGroup variant='secondary' value={size} onChange={(val) => setSize(val)}>
               {sizes.map((size) => (
@@ -45,7 +45,7 @@ export const Default: StoryFn = () => {
 
           <Fieldset className={classes.controlFieldset}>
             <Fieldset.Legend>
-              Fargemodus <code data-size='xs'>(data-color-scheme)</code>
+              Fargemodus <code>(data-color-scheme)</code>
             </Fieldset.Legend>
             <ToggleGroup variant='secondary' value={colorSchemeMode} onChange={setColorSchemeMode}>
               {colorSchemeModes.map((color) => (
@@ -58,7 +58,7 @@ export const Default: StoryFn = () => {
           </Fieldset>
           <Fieldset className={classes.controlFieldset}>
             <Fieldset.Legend>
-              Fargetema <code data-size='xs'>(data-color)</code>
+              Fargetema <code>(data-color)</code>
             </Fieldset.Legend>
             <ToggleGroup value={colorMode} onChange={setColorMode}>
               {colorModes.map((color) => (
@@ -84,9 +84,7 @@ export const Default: StoryFn = () => {
         <div className={classes.footerList}>
           {Array.from({ length: 5 }).map((_, index) => (
             <div key={index}>
-              <Heading level={3} data-size='sm'>
-                Lenkeliste
-              </Heading>
+              <Heading level={3}>Lenkeliste</Heading>
 
               <List.Unordered className={classes.footerLinks}>
                 {[1, 2, 3, 4].map((nr) => (
