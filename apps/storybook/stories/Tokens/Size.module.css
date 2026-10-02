@@ -1,0 +1,28 @@
+.sizeTokenList {
+  margin-top: var(--ds-size-8);
+}
+
+.copyButton {
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: monospace;
+  font-size: var(--ds-body-xs-font-size);
+  cursor: pointer;
+  color: var(--ds-color-text-default);
+}
+
+.copyButton:hover {
+  text-decoration: underline;
+}
+
+.bar {
+  box-sizing: border-box;
+  block-size: var(--ds-size-6);
+  background: var(--ds-color-surface-tinted);
+  outline: 1px solid var(--ds-color-border-subtle);
+  outline-offset: -1px;
+  border-radius: var(--ds-border-radius-sm);
+  font-size: var(--ds-body-sm-font-size);
+  max-inline-size: 100%;
+}

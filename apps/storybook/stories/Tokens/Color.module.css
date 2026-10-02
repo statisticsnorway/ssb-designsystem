@@ -1,25 +1,37 @@
-.colorTokenList section + section {
+.colorTokenList {
   margin-top: var(--ds-size-8);
 }
 
-.colorTokenList h3 {
-  font-size: var(--ds-heading-xs-font-size);
+.colorSection {
+  margin-top: var(--ds-size-12);
+}
+
+.colorSection h3 {
+  margin-block-end: var(--ds-size-8);
+}
+
+.colorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--ds-size-4);
+}
+
+.groupLabel {
+  align-items: center;
+  height: 50px;
+  display: flex;
+  flex: 0 0 10ch;
 }
 
 .group + .group {
   margin-top: var(--ds-size-6);
-}
-
-.groupLabel {
-  flex: 0 0 8ch;
-  font-size: var(--ds-body-sm-font-size);
-  font-weight: var(--ds-font-weight-medium);
 }
 
 .groupContent {
@@ -58,6 +70,5 @@
 }
 
 .hex {
-  color: var(--ds-color-text-subtle);
   text-transform: uppercase;
 }

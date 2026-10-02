@@ -21,7 +21,6 @@ body {
 }
 
 .sbdocs-content.sbdocs-content {
-  max-width: 50rem;
   padding-bottom: 200px;
 }
 
@@ -62,6 +61,13 @@ body {
   height: 1em;
   font-size: 1em;
   display: inline-block;
+}
+
+.sbdocs .illustration {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 3.5rem;
 }
 
 /* Story */

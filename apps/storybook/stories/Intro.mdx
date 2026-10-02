@@ -3,10 +3,11 @@ import { Badge, Button, Details, Divider, Heading, Link, Tabs, Paragraph } from 
 import { BranchingIcon } from '@navikt/aksel-icons'
 import { version, scrollToId } from '../.storybook/docs'
 import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
+import illustrationSvg from '../assets/svg/illustrasjon-storybook-token.svg?raw'
 
 <Meta title='Introduksjon' />
 
-<img className='illustration' src='/svg/illustrasjon-samarbeid.svg' alt='' />
+<div dangerouslySetInnerHTML={{ __html: illustrationSvg }} />
 
 # SSB Designsystem
 
@@ -64,32 +65,53 @@ Alternativt kan du importere dem fra hoved-CSS-filen din:
 <Details>
   <Details.Summary><Badge count={3} />Bruk komponentene</Details.Summary>
   <Details.Content>
-  ```tsx
-  import { Button } from '@statisticsnorway/design-react'
+    ```tsx
+    import { Button } from '@statisticsnorway/design-react'
 
 export function Example() {
   return <Button>Trykk her</Button>
 }
 
-```
+    ```
+
 </Details.Content>
 </Details>
 
-
 ## For Designere
 
-Vi bruker Figma som designverktøy. I Figma finner du komponenter, variabler og stiler fra SSB Designsystem som du kan bruke i produktet eller løsningen du jobber med. Komponentene er tilpasset SSBs identitet og behov og er i kontinuerlig utvikling.
+SSB bruker Figma som designverktøy. Her finner du SSBs designsystembibliotek, med komponenter, variabler og stiler som kan brukes i løsningene du jobber med. Komponentene er tilpasset SSBs identitet og behov, og utvikles og oppdateres fortløpende.
 
 <Details>
-  <Details.Summary><Badge count={1} />Ta i bruk komponentene i Figma</Details.Summary>
+  <Details.Summary>
+    <Badge count={1} />
+    {'Ta i bruk SSBs designsystem i Figma'}
+  </Details.Summary>
+  <Details.Content>
+    <Paragraph>
+      Når du åpner en fil, får du automatisk tilgang til designsystembiblioteket under
+      <strong>Assets</strong> i venstremenyen. I tillegg får du tilgang til <strong>Aksel Icons</strong>,
+      ikonbiblioteket vi bruker i SSB.
+    </Paragraph>
+    <ul>
+      <li>
+        De fleste komponentene har ulike egenskaper som du enkelt kan justere i høyremenyen, for eksempel{' '}
+        <strong>variant</strong>, <strong>state</strong> og <strong>icon</strong>.
+      </li>
+    </ul>
+  </Details.Content>
+</Details>
+<Details>
+  <Details.Summary>
+    <Badge count={2} />
+    {'Bruk mode for å justere størrelser og farger'}
+  </Details.Summary>
   <Details.Content>Kommer mer</Details.Content>
 </Details>
 <Details>
-  <Details.Summary><Badge count={2} />Bruk mode for å justere størrelser og fargepalett</Details.Summary>
-  <Details.Content>Kommer mer</Details.Content>
-</Details>
-<Details>
-  <Details.Summary><Badge count={3} />Bruk variabler og typografistiler i egne design</Details.Summary>
+  <Details.Summary>
+    <Badge count={3} />
+    {'Bruk variabler og typografistiler i designet ditt'}
+  </Details.Summary>
   <Details.Content>Kommer mer</Details.Content>
 </Details>
 
