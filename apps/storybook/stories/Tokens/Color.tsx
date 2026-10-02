@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import css from '../../../../packages/css/theme/ssb.css?raw'
+import { useEffect, useRef, useState } from 'react'
 import styles from './Color.module.css'
 import { Checkbox, Heading } from '@statisticsnorway/design-react'
 
@@ -15,19 +14,44 @@ const GROUPS = [
   ['base', ['default', 'hover', 'active', 'contrast-subtle', 'contrast-default']],
 ] as const
 
-// Only the first match per token is kept, which corresponds to the light color-scheme block in the CSS file.
-const HEX_BY_TOKEN = Object.fromEntries(
-  Array.from(css.matchAll(/--ds-color-([a-z0-9-]+):\s*(#[0-9a-fA-F]{3,8});/g)).reduce<[string, string][]>(
-    (entries, [, name, hex]) => (entries.some(([n]) => n === name) ? entries : [...entries, [name, hex]]),
-    []
-  )
-)
+const toHex = (color: string) => {
+  const channels = color
+    .match(/[\d.]+/g)
+    ?.slice(0, 3)
+    .map(Number)
+  if (channels?.length !== 3) return color
+  return `#${channels.map((channel) => Math.round(channel).toString(16).padStart(2, '0')).join('')}`
+}
 
 const COPIED_LABEL = 'Kopiert!'
 
 export const ColorTokenList = () => {
   const [copiedToken, setCopiedToken] = useState<string | null>(null)
   const [showColorCodes, setShowColorCodes] = useState(false)
+  const [hexByToken, setHexByToken] = useState<Record<string, string>>({})
+  const colorTokenListRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const updateHexValues = () => {
+      const root = colorTokenListRef.current
+      if (!root) return
+
+      const values = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-color-token]')).map((button) => [
+        button.dataset.colorToken!,
+        toHex(getComputedStyle(button).backgroundColor),
+      ])
+      setHexByToken(Object.fromEntries(values))
+    }
+
+    updateHexValues()
+    const observer = new MutationObserver(updateHexValues)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-color-scheme'],
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   const handleCopy = async (token: string) => {
     await navigator.clipboard.writeText(token)
@@ -37,7 +61,7 @@ export const ColorTokenList = () => {
     }, 1500)
   }
   return (
-    <div className={styles.colorTokenList}>
+    <div className={styles.colorTokenList} ref={colorTokenListRef}>
       <div className={styles.colorHeader}>
         <Heading level={2} data-size='lg'>
           Fargepalett
@@ -62,6 +86,7 @@ export const ColorTokenList = () => {
                   {variants.map((variant) => {
                     const colorPrefix = color === 'primary' ? '' : `${color}-`
                     const token = `var(--ds-color-${colorPrefix}${group}-${variant})`
+                    const tokenName = `${color}-${group}-${variant}`
 
                     return (
                       <button
@@ -70,6 +95,7 @@ export const ColorTokenList = () => {
                         type='button'
                         aria-label={`Kopier ${token}`}
                         data-tooltip={copiedToken === token ? COPIED_LABEL : token}
+                        data-color-token={tokenName}
                         onClick={() => handleCopy(token)}
                         style={{ background: token }}
                       />
@@ -83,7 +109,7 @@ export const ColorTokenList = () => {
                     return (
                       <div key={variant} className={styles.label}>
                         <span className={styles.variant}>{variant}</span>
-                        {showColorCodes && <span className={styles.hex}>{HEX_BY_TOKEN[tokenName]}</span>}
+                        {showColorCodes && <span className={styles.hex}>{hexByToken[tokenName]}</span>}
                       </div>
                     )
                   })}
