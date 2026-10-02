@@ -1,5 +1,21 @@
 # @statisticsnorway/design-css
 
+## 0.2.4
+
+### Patch Changes
+
+- Update dependencies, including Designsystemet packages
+
+### Designsystemet
+
+- Update `@digdir/designsystemet-css` from 1.21.0 to 1.23.0.
+
+  This includes support for forced-colors mode in the generated theme CSS.
+
+  See the Digdir release notes:
+  - [Release v1.22.0](https://github.com/digdir/designsystemet/releases/tag/v1.22.0)
+  - [Release v1.23.0](https://github.com/digdir/designsystemet/releases/tag/v1.23.0)
+
 ## 0.2.3
 
 ### Patch Changes
