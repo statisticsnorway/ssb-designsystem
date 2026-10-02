@@ -1,5 +1,17 @@
 # @statisticsnorway/design-css
 
+## 0.2.4
+
+### Patch Changes
+
+- 56a3319655a9674b7956ebb2f7d161cab4667bad: Updated @digdir/designsystemet dependency to 1.23.0.
+
+See the release notes: [Release v1.23.0](https://github.com/digdir/designsystemet/releases/tag/v1.23.0)
+
+- c1564c3216e407a100db2b869520af0b3d76c1f5: Updated @digdir/designsystemet dependency to 1.22.0.
+
+See the release notes: [Release v1.22.0 ](https://github.com/digdir/designsystemet/releases/tag/v1.22.0)
+
 ## 0.2.3
 
 ### Patch Changes
