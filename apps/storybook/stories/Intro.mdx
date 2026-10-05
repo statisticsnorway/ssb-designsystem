@@ -1,5 +1,5 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
-import { Badge, Button, Details, Divider, Heading, Link, Tabs, Paragraph } from '@statisticsnorway/design-react'
+import { Badge, Button, Details, Divider } from '@statisticsnorway/design-react'
 import { BranchingIcon } from '@navikt/aksel-icons'
 import { version, scrollToId } from '../.storybook/docs'
 import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
@@ -32,7 +32,10 @@ Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som 
 og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 
 <Details>
-  <Details.Summary><Badge count={1} />{'Installer pakkene'}</Details.Summary>
+  <Details.Summary>
+    <Badge count={1} />
+    {'Installer pakkene'}
+  </Details.Summary>
   <Details.Content>
     Installer React- og CSS-pakkene:
 
@@ -44,38 +47,44 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 </Details>
 
 <Details>
-  <Details.Summary><Badge count={2} />{'Last inn CSS'}</Details.Summary>
+  <Details.Summary>
+    <Badge count={2} />
+    {'Last inn CSS'}
+  </Details.Summary>
   <Details.Content>
-  Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel main.tsx:
+    Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel `main.tsx`:
 
-```tsx
-import '@statisticsnorway/design-css'
-import '@statisticsnorway/design-css/theme'
-```
+    ```tsx
+    import '@statisticsnorway/design-css'
+    import '@statisticsnorway/design-css/theme'
+    ```
 
-Alternativt kan du importere dem fra hoved-CSS-filen din:
+    Alternativt kan du importere dem fra hoved-CSS-filen din:
 
-```css
-@import '@statisticsnorway/design-css';
-@import '@statisticsnorway/design-css/theme.css';
-```
+    ```css
+    @import '@statisticsnorway/design-css';
+    @import '@statisticsnorway/design-css/theme.css';
+    ```
 
   </Details.Content>
-  </Details>
+</Details>
 
 <Details>
-  <Details.Summary><Badge count={3} />{'Bruk komponentene'}</Details.Summary>
+  <Details.Summary>
+    <Badge count={3} />
+    {'Bruk komponentene'}
+  </Details.Summary>
   <Details.Content>
+
     ```tsx
     import { Button } from '@statisticsnorway/design-react'
 
-export function Example() {
-  return <Button>Trykk her</Button>
-}
-
+    export function Example() {
+      return <Button>Trykk her</Button>
+    }
     ```
 
-</Details.Content>
+  </Details.Content>
 </Details>
 
 <Details>
@@ -84,45 +93,48 @@ export function Example() {
     {'Tilpass farge, størrelse og color scheme'}
   </Details.Summary>
   <Details.Content>
+    Du kan tilpasse **farge**, **størrelse** og **color scheme** ved å sette `data-color`, `data-size` og
+    `data-color-scheme`. Verdiene arves fra nærmeste forelder, slik at du kan sette en mode for en hel seksjon og
+    overstyre den på enkelte komponenter.
 
-Du kan tilpasse **farge**, **størrelse** og **color scheme** ved å sette `data-color`, `data-size` og `data-color-scheme`. Verdiene arves fra nærmeste forelder, slik at du kan sette en mode for en hel seksjon og overstyre den på enkelte komponenter.
+    **Farge**
 
-**Farge**
+    Bruk `data-color` for å velge fargepalett for komponentene i området.
 
-Bruk `data-color` for å velge fargepalett for komponentene i området.
+    ```tsx
+    <div data-color='secondary'>
+      <Button>Trykk her</Button>
+    </div>
+    ```
 
-```tsx
-<div data-color='secondary'>
-  <Button>Trykk her</Button>
-</div>
-```
+    **Størrelse**
 
-**Størrelse**
+    Bruk `data-size` for å velge størrelse. SSBs designsystem har størrelsene `sm`, `md` og `lg`.
 
-Bruk `data-size` for å velge størrelse. SSBs designsystem har størrelsene `sm`, `md` og `lg`.
+    ```tsx
+    <div data-size='md'>
+      <Button>Trykk her</Button>
+    </div>
+    ```
 
-```tsx
-<div data-size='md'>
-  <Button>Trykk her</Button>
-</div>
-```
+    **Color scheme**
 
-**Color scheme**
+    Bruk `data-color-scheme` for å velge mellom `light`, `dark` og `auto`.
 
-Bruk `data-color-scheme` for å velge mellom `light`, `dark` og `auto`.
-
-```tsx
-<div data-color-scheme='dark'>
-  <Button>Trykk her</Button>
-</div>
-```
+    ```tsx
+    <div data-color-scheme='dark'>
+      <Button>Trykk her</Button>
+    </div>
+    ```
 
   </Details.Content>
 </Details>
 
 ## For Designere
 
-SSB bruker Figma som designverktøy. Her finner du SSBs designsystembibliotek, med komponenter, variabler og stiler som kan brukes i løsningene du jobber med. Komponentene er tilpasset SSBs identitet og behov, og utvikles og oppdateres fortløpende.
+SSB bruker Figma som designverktøy. Her finner du SSBs designsystembibliotek, med komponenter, variabler og stiler som
+kan brukes i løsningene du jobber med. Komponentene er tilpasset SSBs identitet og behov, og utvikles og oppdateres
+fortløpende.
 
 <Details>
   <Details.Summary>
@@ -133,170 +145,185 @@ SSB bruker Figma som designverktøy. Her finner du SSBs designsystembibliotek, m
     Når du åpner en fil, får du automatisk tilgang til designsystembiblioteket under **Assets** i venstremenyen. I
     tillegg får du tilgang til **Aksel Icons**, ikonbiblioteket vi bruker i SSB.
 
-    De fleste komponentene har ulike egenskaper som du enkelt kan justere i høyremenyen, for eksempel **variant**, **state** og **icon**.
+    De fleste komponentene har ulike egenskaper som du enkelt kan justere i høyremenyen, for eksempel **variant**,
+    **state** og **icon**.
 
   </Details.Content>
 </Details>
+
 <Details>
   <Details.Summary>
     <Badge count={2} />
     {'Bruk modes i designet ditt'}
   </Details.Summary>
   <Details.Content>
-  Bruk **Modes** fra SSBs designsystem for å sikre at riktige farger, størrelser og andre verdier settes automatisk – og at designet forblir konsistent og enkelt å vedlikeholde.
-  
-  Modes lar deg raskt og enkelt tilpasse designet til ulike behov, uten å måtte gjøre endringer manuelt. Du kan sette en mode for en hel mal/frame, og overstyre den for enkelte komponenter eller elementer ved behov.
-  
-  Du finner modes for **Color**, **Color scheme** og **Size** under **Apply variable mode i Appearance**-seksjonen i høyremenyen i Figma.
+    Bruk **Modes** fra SSBs designsystem for å sikre at riktige farger, størrelser og andre verdier settes automatisk –
+    og at designet forblir konsistent og enkelt å vedlikeholde.
+
+    Modes lar deg raskt og enkelt tilpasse designet til ulike behov, uten å måtte gjøre endringer manuelt. Du kan sette
+    en mode for en hel mal/frame, og overstyre den for enkelte komponenter eller elementer ved behov.
+
+    Du finner modes for **Color**, **Color scheme** og **Size** under **Apply variable mode i Appearance**-seksjonen i
+    høyremenyen i Figma.
 
   </Details.Content>
 </Details>
+
 <Details>
   <Details.Summary>
     <Badge count={3} />
     {'Velg farger og bygg identitet med Color mode'}
   </Details.Summary>
   <Details.Content>
-  I **Color mode** velger du **fargepalett** for designet ditt.
-  
-  Du oppnår SSB-identitet ved å bruke en miks av palettene **Primary**, **Secondary** og **Magic**. Palettene har ulike roller i designet. De bør brukes konsekvent gjennom hele løsningen din for å oppnå en gjenkjennbar look & feel og et ryddig, tillitsfullt grensesnitt.
-  
-  Unngå å bruke bare én fargepalett i et grensesnitt. Det kan gjøre viktige komponenter og elementer mindre fremtredende, og gir ikke SSB-identitet. Dette gjelder også for illustrasjoner.
+    I **Color mode** velger du **fargepalett** for designet ditt.
 
-**Main colors**
+    Du oppnår SSB-identitet ved å bruke en miks av palettene **Primary**, **Secondary** og **Magic**. Palettene har
+    ulike roller i designet. De bør brukes konsekvent gjennom hele løsningen din for å oppnå en gjenkjennbar look & feel
+    og et ryddig, tillitsfullt grensesnitt.
 
-Main colors skal alltid prioriteres og være det visuelle utgangspunktet.
+    Unngå å bruke bare én fargepalett i et grensesnitt. Det kan gjøre viktige komponenter og elementer mindre
+    fremtredende, og gir ikke SSB-identitet. Dette gjelder også for illustrasjoner.
 
-<ul>
-  <li>
-    <strong>Primary</strong> er en grønn fargepalett.
+    **Main colors**
+
+    Main colors skal alltid prioriteres og være det visuelle utgangspunktet.
+
     <ul>
       <li>
-        Primary er førstevalget for de viktigste handlingene, for eksempel sentrale Buttons, Cards eller ToggleGroups.
+        <strong>Primary</strong> er en grønn fargepalett.
+        <ul>
+          <li>
+            Primary er førstevalget for de viktigste handlingene, for eksempel sentrale Buttons, Cards eller ToggleGroups.
+          </li>
+          <li>
+            Primary er tredjevalget for bakgrunner, etter de to bakgrunnene som finnes i Secondary-paletten (hvit og
+            blågrå), og bør brukes med måte.
+          </li>
+        </ul>
       </li>
       <li>
-        Primary er tredjevalget for bakgrunner, etter de to bakgrunnene som finnes i Secondary-paletten (hvit og
-        blågrå), og bør brukes med måte.
+        <strong>Secondary</strong> er en blågrå fargepalett.
+        <ul>
+          <li>Secondary er førstevalget for bakgrunner, og andrevalget for komponenter.</li>
+          <li>
+            Som bakgrunn fremhever Secondary komponenter som bruker Primary, samtidig som den underordner komponenter som
+            bruker Secondary.
+          </li>
+        </ul>
       </li>
     </ul>
-  </li>
-  <li>
-    <strong>Secondary</strong> er en blågrå fargepalett.
-    <ul>
-      <li>Secondary er førstevalget for bakgrunner, og andrevalget for komponenter.</li>
-      <li>
-        Som bakgrunn fremhever Secondary komponenter som bruker Primary, samtidig som den underordner komponenter som
-        bruker Secondary.
-      </li>
-    </ul>
-  </li>
-</ul>
 
-**Support colors**
+    **Support colors**
 
-Support colors brukes som et supplement til Main colors.
+    Support colors brukes som et supplement til Main colors.
 
-<ul>
-  <li>
-    <strong>Magic</strong> er en lilla fargepalett.
     <ul>
       <li>
-        Magic er tredjevalget for komponenter, og skal tilføre litt magi, liv eller ekstra fokus til løsningen din. Bruk
-        den først og fremst på mindre komponenter, som Tags, Badges og Avatars.
+        <strong>Magic</strong> er en lilla fargepalett.
+        <ul>
+          <li>
+            Magic er tredjevalget for komponenter, og skal tilføre litt magi, liv eller ekstra fokus til løsningen din.
+            Bruk den først og fremst på mindre komponenter, som Tags, Badges og Avatars.
+          </li>
+          <li>
+            Prioriter Primary og Secondary for større komponenter. Bruk Magic ved behov for å differensiere komponenter,
+            elementer eller grupper, som Cards eller grupper av Cards.
+          </li>
+          <li>Bruk Magic med måte. For mye, inkonsekvent eller feil bruk kan fort gi mer sirkus enn SSB 😊</li>
+        </ul>
       </li>
       <li>
-        Prioriter Primary og Secondary for større komponenter. Bruk Magic ved behov for å differensiere komponenter,
-        elementer eller grupper, som Cards eller grupper av Cards.
+        <strong>Neutral</strong> er en grå fargepalett.
+        <ul>
+          <li>Neutral brukes til innhold, struktur og detaljer som ikke skal konkurrere om oppmerksomheten.</li>
+          <li>
+            La Primary, Secondary og Magic stå for identitet, farge og fokus. Neutral skal støtte innholdet, ikke stjele
+            showet. For mye kan bli flatt, grått og trist.
+          </li>
+          <li>
+            Der du kan, prioriter å bruke Secondary i stedet for Neutral. Det gir mer særpreg til løsningen din, og riktig
+            SSB-identitet.
+          </li>
+        </ul>
       </li>
-      <li>Bruk Magic med måte. For mye, inkonsekvent eller feil bruk kan fort gi mer sirkus enn SSB 😊</li>
     </ul>
-  </li>
-  <li>
-    <strong>Neutral</strong> er en grå fargepalett.
-    <ul>
-      <li>Neutral brukes til innhold, struktur og detaljer som ikke skal konkurrere om oppmerksomheten.</li>
-      <li>
-        La Primary, Secondary og Magic stå for identitet, farge og fokus. Neutral skal støtte innholdet, ikke stjele
-        showet. For mye kan bli flatt, grått og trist.
-      </li>
-      <li>
-        Der du kan, prioriter å bruke Secondary i stedet for Neutral. Det gir mer særpreg til løsningen din, og riktig
-        SSB-identitet.
-      </li>
-    </ul>
-  </li>
-</ul>
 
-**Severity colors**
+    **Severity colors**
 
-Severity colors kommuniserer status, tilbakemeldinger og informasjon. Bruk dem konsekvent og i tråd med formålet. De skal ikke brukes som dekorasjon eller for å tilføre unødvendig farge til grensesnittet.
+    Severity colors kommuniserer status, tilbakemeldinger og informasjon. Bruk dem konsekvent og i tråd med formålet.
+    De skal ikke brukes som dekorasjon eller for å tilføre unødvendig farge til grensesnittet.
 
-<ul>
-  <li>
-    <strong>Success</strong> er en grønn fargepalett.
     <ul>
       <li>
-        Success brukes for å vise at noe er vellykket, bekreftet eller fullført, og skal gi en tydelig positiv
-        tilbakemelding.
+        <strong>Success</strong> er en grønn fargepalett.
+        <ul>
+          <li>
+            Success brukes for å vise at noe er vellykket, bekreftet eller fullført, og skal gi en tydelig positiv
+            tilbakemelding.
+          </li>
+          <li>Bruk Success der statusen i seg selv er viktig, for eksempel når en innsending eller lagring er fullført.</li>
+          <li>Typiske komponenter som brukes til formålet er Alerts, Badges, Tags eller validering.</li>
+        </ul>
       </li>
-      <li>Bruk Success der statusen i seg selv er viktig, for eksempel når en innsending eller lagring er fullført.</li>
-      <li>Typiske komponenter som brukes til formålet er Alerts, Badges, Tags eller validering.</li>
+      <li>
+        <strong>Warning</strong> er en gul fargepalett.
+        <ul>
+          <li>
+            Warning brukes når noe krever oppmerksomhet, men ikke nødvendigvis innebærer en feil eller krever umiddelbar
+            handling.
+          </li>
+          <li>
+            Bruk Warning der brukeren bør stoppe opp og være oppmerksom, for eksempel ved planlagt vedlikehold eller en
+            handling som kan få konsekvenser.
+          </li>
+          <li>Typiske komponenter som brukes til formålet er Alerts, Badges, Tags eller validering.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Info</strong> er en blå fargepalett.
+        <ul>
+          <li>Info brukes for å fremheve nyttig og nøytral informasjon som brukeren bør kjenne til.</li>
+          <li>
+            Bruk Info der informasjonen er relevant, men ikke nødvendigvis krever handling, for eksempel for å informere om
+            at en tjeneste er midlertidig utilgjengelig.
+          </li>
+          <li>Typiske komponenter som brukes til formålet er Alerts, Badges eller Tags.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Danger</strong> er en rød fargepalett.
+        <ul>
+          <li>
+            Danger brukes når noe er kritisk, feil eller krever handling, og skal tydelig signalisere at brukeren bør
+            reagere.
+          </li>
+          <li>
+            Bruk Danger der konsekvensen av en handling eller tilstand er viktig, for eksempel for handlinger som ikke kan
+            angres eller reverseres, som permanent sletting.
+          </li>
+          <li>Typiske komponenter som brukes til formålet er Alerts, Badges, Tags, Buttons eller validering.</li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li>
-    <strong>Warning</strong> er en gul fargepalett.
-    <ul>
-      <li>
-        Warning brukes når noe krever oppmerksomhet, men ikke nødvendigvis innebærer en feil eller krever umiddelbar
-        handling.
-      </li>
-      <li>
-        Bruk Warning der brukeren bør stoppe opp og være oppmerksom, for eksempel ved planlagt vedlikehold eller en
-        handling som kan få konsekvenser.
-      </li>
-      <li>Typiske komponenter som brukes til formålet er Alerts, Badges, Tags eller validering.</li>
-    </ul>
-  </li>
-  <li>
-    <strong>Info</strong> er en blå fargepalett.
-    <ul>
-      <li>Info brukes for å fremheve nyttig og nøytral informasjon som brukeren bør kjenne til.</li>
-      <li>
-        Bruk Info der informasjonen er relevant, men ikke nødvendigvis krever handling, for eksempel for å informere om
-        at en tjeneste er midlertidig utilgjengelig.
-      </li>
-      <li>Typiske komponenter som brukes til formålet er Alerts, Badges eller Tags.</li>
-    </ul>
-  </li>
-  <li>
-    <strong>Danger</strong> er en rød fargepalett.
-    <ul>
-      <li>
-        Danger brukes når noe er kritisk, feil eller krever handling, og skal tydelig signalisere at brukeren bør
-        reagere.
-      </li>
-      <li>
-        Bruk Danger der konsekvensen av en handling eller tilstand er viktig, for eksempel for handlinger som ikke kan
-        angres eller reverseres, som permanent sletting.
-      </li>
-      <li>Typiske komponenter som brukes til formålet er Alerts, Badges, Tags, Buttons eller validering.</li>
-    </ul>
-  </li>
-</ul>
+
   </Details.Content>
 </Details>
+
 <Details>
   <Details.Summary>
     <Badge count={4} />
     {'Velg Light eller Dark mode med Color scheme mode'}
   </Details.Summary>
   <Details.Content>
+    I **Color scheme mode** velger du **Light mode** eller **Dark mode** for designet ditt.
 
-I **Color scheme mode** velger du **Light mode** eller **Dark mode** for designet ditt.
+    Dette gjelder også for illustrasjoner, så lenge de bruker fargetokens fra designsystemet. Vær imidlertid oppmerksom
+    på at en illustrasjon som fungerer godt i Light mode, ikke nødvendigvis fungerer like godt når den oversettes til
+    Dark mode.
 
-Dette gjelder også for illustrasjoner, så lenge de bruker fargetokens fra designsystemet. Vær imidlertid oppmerksom på at en illustrasjon som fungerer godt i Light mode, ikke nødvendigvis fungerer like godt når den oversettes til Dark mode.
-
-Du kan også bruke Dark mode som en del av et Light mode-design, for eksempel dersom deler av løsningen skal ha mørk bakgrunn. Dette bør brukes med måte og konsekvent, og designes slik at det ivaretar SSBs identitet. Det er også viktig at løsningen implementeres korrekt i kode, slik at mode håndteres riktig [Lenke til det inn her].
+    Du kan også bruke Dark mode som en del av et Light mode-design, for eksempel dersom deler av løsningen skal ha mørk
+    bakgrunn. Dette bør brukes med måte og konsekvent, og designes slik at det ivaretar SSBs identitet. Det er også viktig
+    at løsningen implementeres korrekt i kode, slik at mode håndteres riktig [Lenke til det inn her].
 
   </Details.Content>
 </Details>
@@ -307,41 +334,57 @@ Du kan også bruke Dark mode som en del av et Light mode-design, for eksempel de
     {'Velg størrelser med Size mode'}
   </Details.Summary>
   <Details.Content>
-I **Size mode** velger du **størrelser** for designet ditt. Size mode påvirker komponenter, størrelsesvariabler og typografi.
+    I **Size mode** velger du **størrelser** for designet ditt. Size mode påvirker komponenter, størrelsesvariabler og
+    typografi.
 
-Vær oppmerksom på at komponentene er designet for å fungere godt sammen innenfor samme størrelse, for eksempel **Medium**. Hvis du overstyrer størrelsen på enkeltkomponenter, bør det ha en tydelig hensikt og gjøres konsekvent.
+    Vær oppmerksom på at komponentene er designet for å fungere godt sammen innenfor samme størrelse, for eksempel
+    **Medium**. Hvis du overstyrer størrelsen på enkeltkomponenter, bør det ha en tydelig hensikt og gjøres konsekvent.
 
-<ul>
-  <li>
-    <strong>Medium</strong> er standardstørrelse og passer i de fleste grensesnitt og situasjoner. Størrelsen er standard fordi den gir en god balanse mellom brukervennlighet, lesbarhet, effektiv bruk av plass og visuell tyngde.
     <ul>
       <li>
-        Komponentene får som regel tilstrekkelig store trykkflater, gir plass til innhold uten at grensesnittet blir unødvendig kompakt og passer godt på tvers av ulike skjermer og kontekster.
+        <strong>Medium</strong> er standardstørrelse og passer i de fleste grensesnitt og situasjoner. Størrelsen er
+        standard fordi den gir en god balanse mellom brukervennlighet, lesbarhet, effektiv bruk av plass og visuell tyngde.
+        <ul>
+          <li>
+            Komponentene får som regel tilstrekkelig store trykkflater, gir plass til innhold uten at grensesnittet blir
+            unødvendig kompakt og passer godt på tvers av ulike skjermer og kontekster.
+          </li>
+          <li>
+            Small og Large brukes når det er tydelig grunn til å avvike fra standardstørrelsen, på produkt-, mal- eller
+            komponentnivå.
+          </li>
+        </ul>
       </li>
       <li>
-        Small og Large brukes når det er tydelig grunn til å avvike fra standardstørrelsen, på produkt-, mal- eller komponentnivå.
+        <strong>Small</strong> passer best når du trenger å vise mye informasjon på begrenset plass, og når komponenten
+        skal være mindre fremtredende enn standardstørrelsen.
+        <ul>
+          <li>
+            Small kan blant annet brukes for å vise at en komponent har en sekundær rolle, eller når flere komponenter skal
+            vises side om side, for eksempel i en verktøylinje.
+          </li>
+          <li>
+            Unngå å bruke Small bare for å få plass til mer innhold, da det kan gjøre komponentene vanskeligere å lese og
+            bruke og grensesnittet mer kompakt enn nødvendig.
+          </li>
+        </ul>
       </li>
-    </ul>
-  </li>
-  <li>
-    <strong>Small</strong> passer best når du trenger å vise mye informasjon på begrenset plass, og når komponenten skal være mindre fremtredende enn standardstørrelsen.
-    <ul>
-      <li>Small kan blant annet brukes for å vise at en komponent har en sekundær rolle, eller når flere komponenter skal vises side om side, for eksempel i en verktøylinje.</li>
       <li>
-        Unngå å bruke Small bare for å få plass til mer innhold, da det kan gjøre komponentene vanskeligere å lese og bruke og grensesnittet mer kompakt enn nødvendig.
+        <strong>Large</strong> passer best når det er behov for større trykkflater, mer luft eller når komponenten skal
+        være mer fremtredende enn standardstørrelsen.
+        <ul>
+          <li>
+            Large kan blant annet brukes for å fremheve primærhandlinger, hovedinnhold eller sentrale, enkeltstående
+            komponenter som en CTA.
+          </li>
+          <li>
+            Unngå å bruke Large i grensesnitt med mange komponenter eller begrenset plass, da det kan gjøre grensesnittet
+            unødvendig stort, luftig og mindre effektivt.
+          </li>
+        </ul>
       </li>
     </ul>
-  </li>
-  <li>
-    <strong>Large</strong> passer best når det er behov for større trykkflater, mer luft eller når komponenten skal være mer fremtredende enn standardstørrelsen.
-    <ul>
-      <li>Large kan blant annet brukes for å fremheve primærhandlinger, hovedinnhold eller sentrale, enkeltstående komponenter som en CTA.</li>
-      <li>
-        Unngå å bruke Large i grensesnitt med mange komponenter eller begrenset plass, da det kan gjøre grensesnittet unødvendig stort, luftig og mindre effektivt.
-      </li>
-    </ul>
-  </li>
-</ul>
+
   </Details.Content>
 </Details>
 
@@ -351,67 +394,72 @@ Vær oppmerksom på at komponentene er designet for å fungere godt sammen innen
     {'Bruk variabler og typografistiler i designet ditt'}
   </Details.Summary>
   <Details.Content>
-Når du designer en mal, komponent eller annen løsning som ikke finnes i designsystemet, **bør du bruke variablene og stilene for typografi, farge, avstand og skygge fra SSBs designsystem**.
+    Når du designer en mal, komponent eller annen løsning som ikke finnes i designsystemet, **bør du bruke variablene og
+    stilene for typografi, farge, avstand og skygge fra SSBs designsystem**.
 
-Da sikrer du at designet følger SSBs identitet og henger visuelt og funksjonelt sammen med det som allerede er designet i og med designsystemet. Det gjør også designet mer konsistent med løsninger fra andre designere og team i SSB, og bidrar til en mer helhetlig brukeropplevelse.
+    Da sikrer du at designet følger SSBs identitet og henger visuelt og funksjonelt sammen med det som allerede er designet
+    i og med designsystemet. Det gjør også designet mer konsistent med løsninger fra andre designere og team i SSB, og
+    bidrar til en mer helhetlig brukeropplevelse.
 
-Ved å bruke variablene og stilene fra designsystemet kan du også enkelt og effektivt tilpasse designet ved hjelp av modes i SSBs designsystem.
+    Ved å bruke variablene og stilene fra designsystemet kan du også enkelt og effektivt tilpasse designet ved hjelp av
+    modes i SSBs designsystem.
 
-**Størrelsesvariabler**
+    **Størrelsesvariabler**
 
-Du finner størrelsesvariablene i høyremenyen i Figma.
+    Du finner størrelsesvariablene i høyremenyen i Figma.
 
-<ul>
-  <li>Størrelsesvariabler brukes til å sette både avstander og størrelser i og mellom komponenter.</li>
-  <li>
-    Size mode påvirker verdien på størrelsesvariablene. For eksempel er `size 4` `14px i Small mode`, `16px i Medium
-    mode` og `18px i Large mode`.
-  </li>
-  <li>
-    Ved å bruke størrelsesvariabler fremfor faste verdier blir det dermed enklere å tilpasse designet ditt til ulike
-    behov, som ulike skjermstørrelser, uten å måtte endre hver enkelt verdi manuelt.
-  </li>
-</ul>
+    <ul>
+      <li>Størrelsesvariabler brukes til å sette både avstander og størrelser i og mellom komponenter.</li>
+      <li>
+        Size mode påvirker verdien på størrelsesvariablene. For eksempel er `size 4` `14px i Small mode`, `16px i Medium
+        mode` og `18px i Large mode`.
+      </li>
+      <li>
+        Ved å bruke størrelsesvariabler fremfor faste verdier blir det dermed enklere å tilpasse designet ditt til ulike
+        behov, som ulike skjermstørrelser, uten å måtte endre hver enkelt verdi manuelt.
+      </li>
+    </ul>
 
-**Fargevariabler**
+    **Fargevariabler**
 
-Du finner fargevariablene i høyremenyen i Figma.
+    Du finner fargevariablene i høyremenyen i Figma.
 
-<ul>
-  <li>
-    Bruk fargene i tråd med deres semantiske formål, for eksempel `background` for bakgrunner, `surface` for flater,
-    `border` for kanter og `text` for tekst.
-  </li>
-  <li>Er du ute etter farger på border? Søk på `border`.</li>
-  <li>Er du ute etter en fyllfarge på et element? Søk på `surface` eller `base`.</li>
-  <li>Er du ute etter en farge for tekst eller ikon? Søk på `text` eller `base-contrast`.</li>
-</ul>
+    <ul>
+      <li>
+        Bruk fargene i tråd med deres semantiske formål, for eksempel `background` for bakgrunner, `surface` for flater,
+        `border` for kanter og `text` for tekst.
+      </li>
+      <li>Er du ute etter farger på border? Søk på `border`.</li>
+      <li>Er du ute etter en fyllfarge på et element? Søk på `surface` eller `base`.</li>
+      <li>Er du ute etter en farge for tekst eller ikon? Søk på `text` eller `base-contrast`.</li>
+    </ul>
 
-**Typografistiler**
+    **Typografistiler**
 
-Du finner typografistilene i høyremenyen i Figma.
+    Du finner typografistilene i høyremenyen i Figma.
 
-<ul>
-  <li>
-    SSB bruker en skala for overskriftsstørrelser basert på klesstørrelser, fra `[2xs] til [2xl]`.Dette gjør det lettere
-    å forstå relativ størrelse uten at navnet er bundet til en konkret verdi. For eksempel kan `md` være `30px` i én
-    kontekst og en annen verdi i en annen.
-  </li>
-  <li>Løpende tekst benytter semantisk navngitte stiler, som `[xx]`.</li>
-  <li>Size mode påvirker størrelsen på alle typografistiler.</li>
-  <li>
-    For all tekst bør du bruke typografikomponenter eller typografistiler. Slik sikrer du at designet ditt får riktige
-    verdier for avstander, størrelser og vekting, noe som gir et konsistent uttrykk i tråd med SSBs designsystem og
-    identitet.
-  </li>
-</ul>
+    <ul>
+      <li>
+        SSB bruker en skala for overskriftsstørrelser basert på klesstørrelser, fra `[2xs] til [2xl]`. Dette gjør det
+        lettere å forstå relativ størrelse uten at navnet er bundet til en konkret verdi. For eksempel kan `md` være
+        `30px` i én kontekst og en annen verdi i en annen.
+      </li>
+      <li>Løpende tekst benytter semantisk navngitte stiler, som `[xx]`.</li>
+      <li>Size mode påvirker størrelsen på alle typografistiler.</li>
+      <li>
+        For all tekst bør du bruke typografikomponenter eller typografistiler. Slik sikrer du at designet ditt får riktige
+        verdier for avstander, størrelser og vekting, noe som gir et konsistent uttrykk i tråd med SSBs designsystem og
+        identitet.
+      </li>
+    </ul>
 
   </Details.Content>
 </Details>
 
 ## Snakk med oss
 
-Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert på utviklingen av designsystemet? Vi er tilgjengelige i **Teams**.
+Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert på utviklingen av designsystemet? Vi er
+tilgjengelige i **Teams**.
 
 **Team:** Designsystemet
 
