@@ -32,7 +32,7 @@ Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som 
 og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 
 <Details>
-  <Details.Summary><Badge count={1} />Installer pakkene</Details.Summary>
+  <Details.Summary><Badge count={1} />{'Installer pakkene'}</Details.Summary>
   <Details.Content>
     Installer React- og CSS-pakkene:
 
@@ -44,7 +44,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 </Details>
 
 <Details>
-  <Details.Summary><Badge count={2} />Last inn CSS</Details.Summary>
+  <Details.Summary><Badge count={2} />{'Last inn CSS'}</Details.Summary>
   <Details.Content>
   Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel main.tsx:
 
@@ -64,7 +64,7 @@ Alternativt kan du importere dem fra hoved-CSS-filen din:
   </Details>
 
 <Details>
-  <Details.Summary><Badge count={3} />Bruk komponentene</Details.Summary>
+  <Details.Summary><Badge count={3} />{'Bruk komponentene'}</Details.Summary>
   <Details.Content>
     ```tsx
     import { Button } from '@statisticsnorway/design-react'
@@ -76,6 +76,48 @@ export function Example() {
     ```
 
 </Details.Content>
+</Details>
+
+<Details>
+  <Details.Summary>
+    <Badge count={4} />
+    {'Tilpass farge, størrelse og color scheme'}
+  </Details.Summary>
+  <Details.Content>
+
+Du kan tilpasse **farge**, **størrelse** og **color scheme** ved å sette `data-color`, `data-size` og `data-color-scheme`. Verdiene arves fra nærmeste forelder, slik at du kan sette en mode for en hel seksjon og overstyre den på enkelte komponenter.
+
+**Farge**
+
+Bruk `data-color` for å velge fargepalett for komponentene i området.
+
+```tsx
+<div data-color='secondary'>
+  <Button>Trykk her</Button>
+</div>
+```
+
+**Størrelse**
+
+Bruk `data-size` for å velge størrelse. SSBs designsystem har størrelsene `sm`, `md` og `lg`.
+
+```tsx
+<div data-size='md'>
+  <Button>Trykk her</Button>
+</div>
+```
+
+**Color scheme**
+
+Bruk `data-color-scheme` for å velge mellom `light`, `dark` og `auto`.
+
+```tsx
+<div data-color-scheme='dark'>
+  <Button>Trykk her</Button>
+</div>
+```
+
+  </Details.Content>
 </Details>
 
 ## For Designere
