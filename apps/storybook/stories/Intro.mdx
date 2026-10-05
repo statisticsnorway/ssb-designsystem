@@ -1,7 +1,7 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
-import { Badge, Button, Details, Divider } from '@statisticsnorway/design-react'
+import { Badge, Button, Details, Divider, Heading } from '@statisticsnorway/design-react'
 import { BranchingIcon } from '@navikt/aksel-icons'
-import { version, scrollToId } from '../.storybook/docs'
+import { version, openDetailsAndScrollToId } from '../.storybook/docs'
 import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
 import illustrationSvg from '../assets/svg/illustrasjon-storybook-token.svg?raw'
 
@@ -87,7 +87,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
   </Details.Content>
 </Details>
 
-<Details>
+<Details id='modes-in-code'>
   <Details.Summary>
     <Badge count={4} />
     {'Tilpass farge, størrelse og color scheme'}
@@ -97,7 +97,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
     `data-color-scheme`. Verdiene arves fra nærmeste forelder, slik at du kan sette en mode for en hel seksjon og
     overstyre den på enkelte komponenter.
 
-    **Farge**
+    <Heading level='3'>Farge</Heading>
 
     Bruk `data-color` for å velge fargepalett for komponentene i området.
 
@@ -107,7 +107,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
     </div>
     ```
 
-    **Størrelse**
+    <Heading level='3'>Størrelse</Heading>
 
     Bruk `data-size` for å velge størrelse. SSBs designsystem har størrelsene `sm`, `md` og `lg`.
 
@@ -117,13 +117,30 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
     </div>
     ```
 
-    **Color scheme**
+    <Heading level='3'>Color scheme</Heading>
 
-    Bruk `data-color-scheme` for å velge mellom `light`, `dark` og `auto`.
+    Bruk `data-color-scheme` for å velge mellom `light`, `dark` og `auto`. Verdien arves fra nærmeste forelder, slik at
+    du kan sette color scheme for en hel seksjon.
 
     ```tsx
     <div data-color-scheme='dark'>
       <Button>Trykk her</Button>
+    </div>
+    ```
+    <Heading level='4' id='dark-mode-footer-example'>Dark mode på deler av siden</Heading>
+
+    Du kan også bruke Dark mode på deler av en side som ellers bruker Light mode. Et vanlig eksempel er en footer med mørk bakgrunn:
+
+    <div id='dark-mode-footer-example' />
+
+    ```tsx
+    <div data-color-scheme='light'>
+      <main>{/* Innhold på siden */}</main>
+
+      <footer data-color-scheme='dark'>
+        <p>Informasjon om SSB</p>
+        <Button>Kontakt oss</Button>
+      </footer>
     </div>
     ```
 
@@ -184,7 +201,7 @@ fortløpende.
     Unngå å bruke bare én fargepalett i et grensesnitt. Det kan gjøre viktige komponenter og elementer mindre
     fremtredende, og gir ikke SSB-identitet. Dette gjelder også for illustrasjoner.
 
-    **Main colors**
+    <Heading level='3'>Main colors</Heading>
 
     Main colors skal alltid prioriteres og være det visuelle utgangspunktet.
 
@@ -213,7 +230,7 @@ fortløpende.
       </li>
     </ul>
 
-    **Support colors**
+    <Heading level='3'>Support colors</Heading>
 
     Support colors brukes som et supplement til Main colors.
 
@@ -248,7 +265,7 @@ fortløpende.
       </li>
     </ul>
 
-    **Severity colors**
+    <Heading level='3'>Severity colors</Heading>
 
     Severity colors kommuniserer status, tilbakemeldinger og informasjon. Bruk dem konsekvent og i tråd med formålet.
     De skal ikke brukes som dekorasjon eller for å tilføre unødvendig farge til grensesnittet.
@@ -323,7 +340,16 @@ fortløpende.
 
     Du kan også bruke Dark mode som en del av et Light mode-design, for eksempel dersom deler av løsningen skal ha mørk
     bakgrunn. Dette bør brukes med måte og konsekvent, og designes slik at det ivaretar SSBs identitet. Det er også viktig
-    at løsningen implementeres korrekt i kode, slik at mode håndteres riktig [Lenke til det inn her].
+    at løsningen implementeres korrekt i kode, slik at mode håndteres riktig. Se også{' '}
+    <a
+      href='#modes-in-code'
+      onClick={(event) => {
+        event.preventDefault()
+        openDetailsAndScrollToId('modes-in-code', 'dark-mode-footer-example')
+      }}
+    >
+      hvordan du setter modes i kode
+    </a>
 
   </Details.Content>
 </Details>
@@ -404,7 +430,7 @@ fortløpende.
     Ved å bruke variablene og stilene fra designsystemet kan du også enkelt og effektivt tilpasse designet ved hjelp av
     modes i SSBs designsystem.
 
-    **Størrelsesvariabler**
+    <Heading level='3'>Størrelsesvariabler</Heading>
 
     Du finner størrelsesvariablene i høyremenyen i Figma.
 
@@ -420,7 +446,7 @@ fortløpende.
       </li>
     </ul>
 
-    **Fargevariabler**
+    <Heading level='3'>Fargevariabler</Heading>
 
     Du finner fargevariablene i høyremenyen i Figma.
 
@@ -434,7 +460,7 @@ fortløpende.
       <li>Er du ute etter en farge for tekst eller ikon? Søk på `text` eller `base-contrast`.</li>
     </ul>
 
-    **Typografistiler**
+    <Heading level='3'>Typografistiler</Heading>
 
     Du finner typografistilene i høyremenyen i Figma.
 
