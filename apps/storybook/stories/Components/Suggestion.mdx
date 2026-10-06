@@ -8,42 +8,30 @@ import * as stories from './Suggestion.stories'
 
 > Suggestion er en søkbar "select" med mulighet for å velge flere alternativer.
 
-> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/suggestion/overview)
+> Dokumentasjon og retningslinjer for komponenten finner du på [designsystemet.no](https://designsystemet.no/no/components/docs/suggestion/overview)
 
 <Alert data-color='info'>Suggestion er under utvikling. Gi oss beskjed hvis du finner feil eller mangler.</Alert>
 
-## Kode
-
-- Bruk `<EXPERIMENTAL_Suggestion>` komponenten i React
+## Eksempler
 
 <Canvas of={stories.Default} />
 
-## Flere valg
-
-- Bruk `multiple` når brukeren skal kunne velge flere alternativer.
+### Flere valg
 
 <Canvas of={stories.Multiple} />
 
-## Tøm valget
-
-- Bruk `<EXPERIMENTAL_Suggestion.Clear />` for å la brukeren tømme valget.
+### Tøm valget
 
 <Canvas of={stories.Clear} />
 
-## Åpne og lukk liste
-
-- Bruk `<EXPERIMENTAL_Suggestion.Toggle />` for å la brukeren åpne og lukke listen.
+### Åpne og lukk liste
 
 <Canvas of={stories.ToggleList} />
 
-## Filtrering
-
-- Bruk `filter` for å tilpasse hvordan alternativene filtreres når brukeren skriver i input-feltet. Sett `filter={false}` dersom du vil vise alle alternativer, uavhengig av input.
+### Filtrering
 
 <Canvas of={stories.Filter} />
 
-## Legge til nye alternativer
-
-- Bruk `creatable` når brukeren skal kunne opprette nye alternativer ved å skrive inn tekst i input-feltet og trykke Enter.
+### Legge til nye alternativer
 
 <Canvas of={stories.Creatable} />
