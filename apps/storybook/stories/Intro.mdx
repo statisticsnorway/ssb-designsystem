@@ -379,16 +379,14 @@ fortløpende.
 
     Du kan også bruke Dark mode som en del av et Light mode-design, for eksempel dersom deler av løsningen skal ha mørk
     bakgrunn. Dette bør brukes med måte og konsekvent, og designes slik at det ivaretar SSBs identitet. Det er også viktig
-    at løsningen implementeres korrekt i kode, slik at mode håndteres riktig. Se også{' '}
+    at løsningen implementeres korrekt i kode, slik at mode håndteres riktig.
     <a
       href='#modes-in-code'
       onClick={(event) => {
         event.preventDefault()
         openDetailsAndScrollToId('modes-in-code', 'dark-mode-footer-example')
       }}
-    >
-      hvordan du setter modes i kode
-    </a>
+    >Hvordan kombinere dark mode og light mode i kode</a>
 
   </Details.Content>
 </Details>
@@ -459,8 +457,8 @@ fortløpende.
     {'Bruk variabler og typografistiler i designet ditt'}
   </Details.Summary>
   <Details.Content>
-    Når du designer en mal, komponent eller annen løsning som ikke finnes i designsystemet, **bør du bruke variablene og
-    stilene for typografi, farge, avstand og skygge fra SSBs designsystem**.
+    Når du designer en mal, komponent eller annen løsning som ikke finnes i designsystemet, bør du bruke **variablene og
+    stilene for typografi, farge, avstand og skygge** fra SSBs designsystem.
 
     Da sikrer du at designet følger SSBs identitet og henger visuelt og funksjonelt sammen med det som allerede er designet
     i og med designsystemet. Det gjør også designet mer konsistent med løsninger fra andre designere og team i SSB, og
@@ -504,18 +502,10 @@ fortløpende.
     Du finner typografistilene i høyremenyen i Figma.
 
     <ul>
-      <li>
-        SSB bruker en skala for overskriftsstørrelser basert på klesstørrelser, fra `[2xs] til [2xl]`. Dette gjør det
-        lettere å forstå relativ størrelse uten at navnet er bundet til en konkret verdi. For eksempel kan `md` være
-        `30px` i én kontekst og en annen verdi i en annen.
-      </li>
-      <li>Løpende tekst benytter semantisk navngitte stiler, som `[xx]`.</li>
-      <li>Size mode påvirker størrelsen på alle typografistiler.</li>
-      <li>
-        For all tekst bør du bruke typografikomponenter eller typografistiler. Slik sikrer du at designet ditt får riktige
-        verdier for avstander, størrelser og vekting, noe som gir et konsistent uttrykk i tråd med SSBs designsystem og
-        identitet.
-      </li>
+      <li>Du bør bruke typografikomponenter eller typografistiler for all tekst. Slik sikrer du at designet ditt får riktige verdier for avstander, størrelser og vekting.</li>
+      <li>Bruk typografien i tråd med deres semantiske formål, for eksempel `heading` for overskrifter, `body default` for løpende tekst med normal tekstlinje, `body short` for kort tekstlinje og `body long` for lang tekstlinje.</li>
+      <li>SSB bruker en skala for typografi basert på klesstørrelser, som `sm`, `md` og `lg`.</li>
+      <li>`Size mode` påvirker størrelsen på alle typografistiler.</li>
     </ul>
 
   </Details.Content>
