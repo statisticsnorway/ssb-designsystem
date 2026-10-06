@@ -7,26 +7,20 @@ import * as stories from './Checkbox.stories'
 
 > Checkbox gir brukerne mulighet til å velge ett eller flere alternativer. Den kan også brukes i tilfeller der brukeren skal bekrefte noe.
 
-> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/checkbox/overview)
+> Dokumentasjon og retningslinjer for komponenten finner du på [designsystemet.no](https://designsystemet.no/no/components/docs/checkbox/overview)
 
-## Kode
+## Eksempler
 
-- Bruk `<Checkbox>` komponenten i React
+<Canvas of={stories.Default} />
 
-  <Canvas of={stories.Default} />
+### Gruppe
 
-## Gruppe
+<Canvas of={stories.Group} />
 
-- Kombiner flere checkboxer i et feltsett når valgene hører sammen
+### Med feil
 
-  <Canvas of={stories.Group} />
+<Canvas of={stories.WithError} />
 
-## Med feil
-
-- Vis valideringsfeil sammen med gruppen når brukeren må ta et valg
-
-  <Canvas of={stories.WithError} />
-
-## Outline
+### Outline
 
 <Canvas of={stories.Outline} />

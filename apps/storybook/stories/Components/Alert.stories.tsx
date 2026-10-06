@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Alert, Heading, Paragraph } from '@statisticsnorway/design-react'
+import { Alert, Button, Heading, Paragraph } from '@statisticsnorway/design-react'
+import { XMarkIcon } from '@navikt/aksel-icons'
 
 const meta: Meta<typeof Alert> = {
   title: 'Komponenter/Alert',
@@ -34,8 +35,12 @@ export const Sizes: Story = {
       <Alert data-color='info' data-size='md'>
         Dette er en informasjonsmelding.
       </Alert>
-      <Alert data-color='info' data-size='lg'>
+      <Alert data-color='info' data-size='lg' style={{ display: 'flex', alignItems: 'center' }}>
         Dette er en informasjonsmelding.
+        {/* <Button data-color='secondary' variant='tertiary' icon style={{ marginLeft: 'auto' }}>
+          <XMarkIcon aria-hidden='true' focusable='false' />
+        </Button> */}
+        <button type='button' aria-label='Lukk'></button>
       </Alert>
     </div>
   ),

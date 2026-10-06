@@ -7,47 +7,32 @@ import * as stories from './Button.stories'
 
 > Button lar brukere utføre handlinger.
 
-> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/button/overview)
+> Dokumentasjon og retningslinjer for komponenten finner du på [designsystemet.no](https://designsystemet.no/no/components/docs/button/overview)
 
-## Kode
-
-- Bruk `<Button>` komponenten i React
+## Eksempler
 
 <Canvas of={stories.Default} />
 
-## Varianter
-
-- Bruk `variant='Primary' | secondary | tertiary'`
+### Varianter
 
 <Canvas of={stories.Variants} />
 
-## Størrelse
-
-- Bruk `data-size="sm | md | lg"`
+### Størrelse
 
 <Canvas of={stories.Sizes} />
 
-## Farger
-
-- Bruk `data-color`
+### Farger
 
 <Canvas of={stories.Colors} />
 
-## Ikoner
-
-- Ikoner kan legges før eller etter tekst
-- Kan også vise kun ikon, må da legge til tilgjengelig tekst i `aria-label`, `title` eller i en `Tooltip`
+### Ikoner
 
 <Canvas of={stories.Icons} />
 
-## Knapp med spinner
-
-- Bruk `loading={true}` for å vise spinner på knapp
+### Knapp med spinner
 
 <Canvas of={stories.WithSpinner} />
 
-## Knapp som lenke
-
-- Lenker kan se ut som knapp med å bruke `asChild`, men vurder først om det er mulig å heller bruke Link komponenten
+### Knapp som lenke
 
 <Canvas of={stories.AsLink} />

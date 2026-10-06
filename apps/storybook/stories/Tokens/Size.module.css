@@ -1,0 +1,25 @@
+.sizeTokenList {
+  margin-top: var(--ds-size-8);
+}
+
+.sizeModeControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--ds-size-2);
+}
+
+.sizeModeControls + .sizeTokenList {
+  margin-top: var(--ds-size-2);
+}
+
+.bar {
+  box-sizing: border-box;
+  block-size: var(--ds-size-6);
+  background: var(--ds-color-surface-tinted);
+  outline: 1px solid var(--ds-color-border-subtle);
+  outline-offset: -1px;
+  border-radius: var(--ds-border-radius-sm);
+  font-size: var(--ds-body-sm-font-size);
+  max-inline-size: 100%;
+}
