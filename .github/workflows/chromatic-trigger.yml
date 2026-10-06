@@ -1,0 +1,44 @@
+name: Chromatic
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+      - labeled
+
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: read
+  checks: write
+
+jobs:
+  chromatic:
+    if: |
+      github.event_name == 'push' ||
+      contains(github.event.pull_request.labels.*.name, 'chromatic')
+    uses: ./.github/workflows/chromatic.yml
+    secrets:
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+  skip-chromatic:
+    if: |
+      github.event_name == 'pull_request' &&
+      !contains(github.event.pull_request.labels.*.name, 'chromatic')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Skip Chromatic
+        uses: LouisBrunner/checks-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: chromatic
+          conclusion: skipped
