@@ -48,23 +48,23 @@ export const Colors: Story = {
   render: () => (
     <div style={{ display: 'grid', gap: '2rem' }}>
       <div style={{ display: 'flex', gap: '1rem' }}>
-        <Button>Primær</Button>
-        <Button data-color='secondary'>Sekundær</Button>
+        <Button>Primary</Button>
+        <Button data-color='secondary'>Secondary</Button>
         <Button data-color='danger'>Danger</Button>
       </div>
       <div style={{ display: 'flex', gap: '1rem' }}>
-        <Button variant='secondary'>Primær</Button>
+        <Button variant='secondary'>Primary</Button>
         <Button variant='secondary' data-color='secondary'>
-          Sekundær
+          Secondary
         </Button>
         <Button variant='secondary' data-color='danger'>
           Danger
         </Button>
       </div>
       <div style={{ display: 'flex', gap: '1rem' }}>
-        <Button variant='tertiary'>Primær</Button>
+        <Button variant='tertiary'>Primary</Button>
         <Button variant='tertiary' data-color='secondary'>
-          Sekundær
+          Secondary
         </Button>
         <Button variant='tertiary' data-color='danger'>
           Danger

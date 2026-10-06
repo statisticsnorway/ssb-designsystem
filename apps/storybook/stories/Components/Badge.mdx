@@ -7,37 +7,24 @@ import * as stories from './Badge.stories'
 
 > Badge er en ikke-interaktiv komponent som viser status med eller uten innhold. Bruk Tag dersom du skal ha tekst istedenfor tall.
 
-> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/badge/overview)
+> Dokumentasjon og retningslinjer for komponenten finner du på [designsystemet.no](https://designsystemet.no/no/components/docs/badge/overview)
 
-## Kode
-
-- Bruk `<Badge>` komponenten i React
-- Bruk `count` for antall og `maxCount` for øvre grense visning
-- Utelat `count` for badge uten tall
+## Eksempler
 
 <Canvas of={stories.Default} />
 
-## Farger
-
-- Bruk `data-color` for å endre farge
+### Farger
 
 <Canvas of={stories.Colors} />
 
-## Varianter
-
-- Bruk `variant='base | tinted'`
+### Varianter
 
 <Canvas of={stories.Variants} />
 
-## Flytende
-
-- Bruk `<Badge.Position>` for å ha flytende tall
-- placement="top-right | top-left | bottom-right | bottom-left"`
+### Flytende
 
 <Canvas of={stories.Floating} />
 
-## Uten tekst
-
-- Utelat `count` for badge uten tall
+### Uten tekst
 
 <Canvas of={stories.WithoutText} />

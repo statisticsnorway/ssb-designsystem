@@ -7,40 +7,28 @@ import * as stories from './Details.stories'
 
 > Details er en sammenleggbar komponent som lar brukeren vise eller skjule innhold.
 
-> Se full dokumentasjon for komponenten på [designsystemet.no](https://designsystemet.no/no/components/docs/details/overview)
+> Dokumentasjon og retningslinjer for komponenten finner du på [designsystemet.no](https://designsystemet.no/no/components/docs/details/overview)
 
-## Kode
+## Eksempler
 
-- Bruk `<Details>` komponenten i React
+<Canvas of={stories.Default} />
 
-  <Canvas of={stories.Default} />
+### Størrelser
 
-## Størrelser
+<Canvas of={stories.Sizes} />
 
-- Bruk `data-size="sm | md | lg"`
+### Farger
 
-  <Canvas of={stories.Sizes} />
+<Canvas of={stories.Colors} />
 
-## Farger
+### Varianter
 
-- Bruk `data-color="primary | secondary | neutral"`
+<Canvas of={stories.Variants} />
 
-  <Canvas of={stories.Colors} />
+### Med ramme
 
-## Varianter
+<Canvas of={stories.CardVariant} />
 
-- Bruk `variant="tinted"`
+### Åpen
 
-  <Canvas of={stories.Variants} />
-
-## Med ramme
-
-- Legg Details inn i Card for å få avrunnede kanter og bakgrunn
-
-  <Canvas of={stories.CardVariant} />
-
-## Åpen
-
-- Bruk `defaultOpen` for å ha vise den som åpen
-
-  <Canvas of={stories.OpenDetail} />
+<Canvas of={stories.OpenDetail} />

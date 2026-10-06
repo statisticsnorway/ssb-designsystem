@@ -49,10 +49,6 @@ export const Colors: Story = {
         <Details.Summary>Secondary</Details.Summary>
         <Details.Content>Dette er standard visning uten ramme.</Details.Content>
       </Details>
-      <Details data-color='neutral'>
-        <Details.Summary>Neutral</Details.Summary>
-        <Details.Content>Dette er standard visning uten ramme.</Details.Content>
-      </Details>
     </div>
   ),
 }
@@ -66,10 +62,6 @@ export const Variants: Story = {
       </Details>
       <Details data-color='secondary' data-variant='tinted'>
         <Details.Summary>Secondary - Tinted</Details.Summary>
-        <Details.Content>Dette er standard visning uten ramme.</Details.Content>
-      </Details>
-      <Details data-color='neutral' data-variant='tinted'>
-        <Details.Summary>Neutral - Tinted</Details.Summary>
         <Details.Content>Dette er standard visning uten ramme.</Details.Content>
       </Details>
     </div>
