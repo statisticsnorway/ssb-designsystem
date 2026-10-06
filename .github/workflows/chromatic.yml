@@ -1,21 +1,14 @@
 name: Chromatic
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      CHROMATIC_PROJECT_TOKEN:
+        required: true
 
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/**'
-      - 'apps/storybook/**'
-      - 'packages/react/src/**'
-      - 'packages/css/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - 'pnpm-workspace.yaml'
+concurrency:
+  group: chromatic-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -50,3 +43,4 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           workingDir: apps/storybook
+          onlyChanged: true
