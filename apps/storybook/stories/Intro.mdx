@@ -117,6 +117,22 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
     </div>
     ```
 
+    Du kan også sette størrelsesmodus med CSS-variabelen `--ds-size`. Dette kan være nyttig når størrelsesmodus skal styres dynamisk, for eksempel med en media query eller container query.
+
+    ```css
+    [data-size='auto'] {
+      --ds-size: var(--ds-size--sm);
+
+      @media (min-width: 600px) {
+        --ds-size: var(--ds-size--md);
+      }
+
+      @media (min-width: 992px) {
+        --ds-size: var(--ds-size--lg);
+      }
+    }
+    ```
+
     <Heading level='3'>Color scheme</Heading>
 
     Bruk `data-color-scheme` for å velge mellom `light`, `dark` og `auto`. Verdien arves fra nærmeste forelder, slik at
@@ -143,6 +159,28 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
       </footer>
     </div>
     ```
+
+  </Details.Content>
+</Details>
+
+<Details>
+  <Details.Summary>
+    <Badge count={5} />
+    {'Bruk designtokens'}
+  </Details.Summary>
+  <Details.Content>
+    Bruk designtokens når du lager egne elementer eller trenger styling som ikke håndteres av en komponent.
+
+    ```css
+    .info-section {
+      background: var(--ds-color-surface-default);
+      color: var(--ds-color-text-default);
+      font-size: var(--ds-font-size-3);
+      padding: var(--ds-size-4);
+    }
+    ```
+
+    Tokens kan brukes både i CSS og i egne komponenter. Se [Tokens] for en oversikt over tilgjengelige tokens.
 
   </Details.Content>
 </Details>
@@ -437,8 +475,8 @@ fortløpende.
     <ul>
       <li>Størrelsesvariabler brukes til å sette både avstander og størrelser i og mellom komponenter.</li>
       <li>
-        Size mode påvirker verdien på størrelsesvariablene. For eksempel er `size 4` `14px i Small mode`, `16px i Medium
-        mode` og `18px i Large mode`.
+        Size mode påvirker verdien på størrelsesvariablene. For eksempel er `size 4` `14px` i Small mode, `16px` i Medium
+        mode og `18px` i Large mode.
       </li>
       <li>
         Ved å bruke størrelsesvariabler fremfor faste verdier blir det dermed enklere å tilpasse designet ditt til ulike

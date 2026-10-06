@@ -2,18 +2,15 @@
   margin-top: var(--ds-size-8);
 }
 
-.copyButton {
-  border: none;
-  background: none;
-  padding: 0;
-  font-family: monospace;
-  font-size: var(--ds-body-xs-font-size);
-  cursor: pointer;
-  color: var(--ds-color-text-default);
+.sizeModeControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--ds-size-2);
 }
 
-.copyButton:hover {
-  text-decoration: underline;
+.sizeModeControls + .sizeTokenList {
+  margin-top: var(--ds-size-2);
 }
 
 .bar {
