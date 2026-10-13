@@ -35,12 +35,8 @@ export const Sizes: Story = {
       <Alert data-color='info' data-size='md'>
         Dette er en informasjonsmelding.
       </Alert>
-      <Alert data-color='info' data-size='lg' style={{ display: 'flex', alignItems: 'center' }}>
+      <Alert data-color='info' data-size='lg'>
         Dette er en informasjonsmelding.
-        {/* <Button data-color='secondary' variant='tertiary' icon style={{ marginLeft: 'auto' }}>
-          <XMarkIcon aria-hidden='true' focusable='false' />
-        </Button> */}
-        <button type='button' aria-label='Lukk'></button>
       </Alert>
     </div>
   ),
