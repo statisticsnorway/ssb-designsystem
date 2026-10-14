@@ -28,6 +28,31 @@ To run Storybook locally (from the root of the repository):
 
     pnpm storybook
 
+## Run locally with Docker
+
+To build the Docker image from the repository root:
+
+```bash
+docker build -t ssb-storybook .
+```
+
+To start Storybook:
+
+```bash
+docker run --rm --name ssb-storybook -p 8080:8080 ssb-storybook
+```
+
+Open [http://localhost:8080](http://localhost:8080) in your browser.
+
+Stop the container with `Ctrl + C`. The container is removed automatically when stopped, but the image is kept.
+
+To rebuild the image without using the build cache:
+
+```bash
+docker build --no-cache -t ssb-storybook .
+```
+
+
 ## Build locally (Chromatic equivalent)
 
 To verify that Storybook builds correctly (same step used by Chromatic):
@@ -51,3 +76,5 @@ It is still possible to publish manually if needed:
 ## Example preview URL
 
     https://<branch>--<project-id>.chromatic.com
+
+
