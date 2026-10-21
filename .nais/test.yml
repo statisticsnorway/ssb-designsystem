@@ -1,0 +1,28 @@
+apiVersion: nais.io/v1alpha1
+kind: Application
+metadata:
+  name: designsystem
+  namespace: ssbno
+spec:
+  image: { { image } }
+  ingresses:
+    - https://designsystem.intern.test.ssb.no
+  port: 8080
+  liveness:
+    failureThreshold: 3
+    initialDelay: 10
+    path: /
+    periodSeconds: 30
+    port: 8080
+    timeout: 5
+  readiness:
+    failureThreshold: 1
+    initialDelay: 5
+    path: /
+    periodSeconds: 60
+    port: 8080
+    timeout: 5
+  resources:
+    requests:
+      cpu: 200m
+      memory: 128Mi

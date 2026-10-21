@@ -30,6 +30,12 @@ To run Storybook locally (from the root of the repository):
 
 ## Run locally with Docker
 
+Start Colima if it is not already running:
+
+```bash
+colima start
+```
+
 To build the Docker image from the repository root:
 
 ```bash
@@ -51,7 +57,6 @@ To rebuild the image without using the build cache:
 ```bash
 docker build --no-cache -t ssb-storybook .
 ```
-
 
 ## Build locally (Chromatic equivalent)
 
@@ -76,5 +81,3 @@ It is still possible to publish manually if needed:
 ## Example preview URL
 
     https://<branch>--<project-id>.chromatic.com
-
-
