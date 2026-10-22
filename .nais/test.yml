@@ -4,7 +4,7 @@ metadata:
   name: designsystem
   namespace: ssbno
 spec:
-  image: { { image } }
+  image: '{{ image }}'
   ingresses:
     - https://designsystem.intern.test.ssb.no
   port: 8080
