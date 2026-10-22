@@ -23,7 +23,9 @@ COPY . .
 RUN pnpm build:css && pnpm storybook:build
 
 # Serve the static Storybook files
-FROM nginx:stable-alpine-slim AS runner
+# Unprivileged image runs as non-root and writes temp/pid files to /tmp,
+# which is required on NAIS (read-only root filesystem).
+FROM nginxinc/nginx-unprivileged:stable-alpine-slim AS runner
 
 COPY apps/storybook/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/apps/storybook/storybook-static /usr/share/nginx/html
