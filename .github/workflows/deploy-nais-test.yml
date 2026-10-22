@@ -1,0 +1,39 @@
+name: Deploy Storybook to TEST
+on:
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    name: Build, push and deploy
+    runs-on: ubuntu-latest
+    environment: test
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Generate vulnerability report
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: 'fs'
+          format: 'cyclonedx'
+          output: 'dependency-results.sbom.json'
+          scan-ref: '.'
+      - name: Build and push image and SBOM to OCI registry
+        uses: nais/docker-build-push@dd7421d5068057a020ca46ead966c26190c516b1 # v0
+        id: docker-build-push
+        with:
+          team: ssbno
+          tag: ${{ github.sha }}
+          byosbom: 'dependency-results.sbom.json'
+          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
+          project_id: ${{ secrets.NAIS_MANAGEMENT_PROJECT_ID }}
+      - name: Deploy to Nais
+        uses: nais/deploy/actions/deploy@849e900e3cfa7faf7ad1532bb3a3e6499c932199 # v2
+        env:
+          TEAM: ssbno
+          CLUSTER: test
+          RESOURCE: .nais/test.yml
+          VAR: image=${{ steps.docker-build-push.outputs.image }}
+          TELEMETRY: ${{ steps.docker-build-push.outputs.telemetry }}
+          DEPLOY_SERVER: deploy.ssb.cloud.nais.io:443
