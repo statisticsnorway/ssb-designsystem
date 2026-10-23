@@ -10,20 +10,20 @@
   },
   "devDependencies": {
     "@mdx-js/react": "^3.1.1",
-    "@storybook/addon-docs": "^10.6.2",
-    "@storybook/react-vite": "^10.6.2",
+    "@storybook/addon-docs": "^10.6.3",
+    "@storybook/react-vite": "^10.6.3",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "chromatic": "^18.12.0",
+    "chromatic": "^18.13.2",
     "concurrently": "^10.0.6",
-    "storybook": "^10.6.2"
+    "storybook": "^10.6.3"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^8.19.1",
+    "@navikt/aksel-icons": "^8.20.0",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
     "clsx": "^2.1.1",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }
