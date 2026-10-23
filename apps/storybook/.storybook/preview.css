@@ -21,6 +21,7 @@ body {
 }
 
 .sbdocs-content.sbdocs-content {
+  max-width: 50rem;
   padding-bottom: 200px;
 }
 
@@ -34,6 +35,23 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
+
+.sbdocs .universell-utforming-lists ul {
+  padding:0;
+}
+
+.sbdocs .universell-utforming-lists li {
+  margin-top: var(--ds-size-2);
+}
+
+.sbdocs .universell-utforming-lists .ds-alert[data-color='info'] code {
+  color: var(--ds-color-info-text-default);
+  background:var(--ds-color-info-background-tinted);
+  border-color: var(--ds-color-info-border-subtle);
+  display: inline;
+} 
+
+
 
 .sbdocs .anchor-links {
   columns: 13em;
