@@ -23,11 +23,13 @@ body {
 .sbdocs-content.sbdocs-content {
   max-width: 50rem;
   padding-bottom: 200px;
+  container-type: inline-size;
 }
 
 .sbdocs .intro-action {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: var(--ds-size-4);
 }
 
 .sbdocs .universell-utforming-lists {
@@ -37,7 +39,7 @@ body {
 }
 
 .sbdocs .universell-utforming-lists ul {
-  padding:0;
+  padding: 0;
 }
 
 .sbdocs .universell-utforming-lists li {
@@ -46,12 +48,10 @@ body {
 
 .sbdocs .universell-utforming-lists .ds-alert[data-color='info'] code {
   color: var(--ds-color-info-text-default);
-  background:var(--ds-color-info-background-tinted);
+  background: var(--ds-color-info-background-tinted);
   border-color: var(--ds-color-info-border-subtle);
   display: inline;
-} 
-
-
+}
 
 .sbdocs .anchor-links {
   columns: 13em;
@@ -81,11 +81,24 @@ body {
   display: inline-block;
 }
 
-.sbdocs .illustration {
+.sbdocs .intro-illustration {
+  width: calc(100% + 100px);
+  margin-inline: -50px;
+  margin-bottom: 3.5rem;
+  max-width: 900px;
+}
+
+.sbdocs .intro-illustration svg {
   display: block;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 3.5rem;
+  height: auto;
+}
+
+@container (max-width: 700px) {
+  .sbdocs .intro-illustration {
+    width: 100%;
+    margin-inline: 0;
+  }
 }
 
 .sbdocs ul li > .ds-paragraph,

@@ -1,23 +1,29 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
-import { Badge, Button, Details, Divider, Heading } from '@statisticsnorway/design-react'
-import { BranchingIcon } from '@navikt/aksel-icons'
+import { Badge, Button, Card, Details, Divider, Heading } from '@statisticsnorway/design-react'
+import { BranchingIcon, ComponentIcon } from '@navikt/aksel-icons'
 import { version, openDetailsAndScrollToId } from '../.storybook/docs'
 import { AnchorLinks } from '../.storybook/docs/ComponentOverrides'
 import illustrationSvg from '../assets/svg/illustrasjon-storybook-token.svg?raw'
 
-<Meta title='Introduksjon' />
+<Meta title='Kom i gang' />
 
-<div dangerouslySetInnerHTML={{ __html: illustrationSvg }} />
+<div className='intro-illustration' dangerouslySetInnerHTML={{ __html: illustrationSvg }} />
 
-# SSB Designsystem
+# Designsystem
 
-> SSBs designsystem bygger på [designsystemet.no](https://www.designsystemet.no/), men er tilpasset vår visuelle identitet. Det vil også bli utvidet med interne behov. Designsystemet fungerer som et felles språk mellom team og fagfelt, og lar oss skape effektive og gjenkjennbare brukeropplevelser for alle.
+> SSB Designsystem bygger på Digdirs Designsystemet, men er tilpasset SSBs visuelle identitet og behov. Det gir team et felles språk for å skape helhetlige, effektive og gjenkjennbare brukeropplevelser.
 
 <div className='intro-action'>
   <Button asChild data-variant='secondary'>
     <a href='https://github.com/statisticsnorway/ssb-designsystem/releases'>
       <BranchingIcon />
       {`Kode og versjonslogg (v${version})`}
+    </a>
+  </Button>
+  <Button asChild data-variant='secondary'>
+    <a href='https://github.com/statisticsnorway/ssb-designsystem/wiki/Figma-Changelog'>
+      <ComponentIcon />
+      {`Figma versjonslogg`}
     </a>
   </Button>
 </div>
@@ -29,13 +35,13 @@ import illustrationSvg from '../assets/svg/illustrasjon-storybook-token.svg?raw'
 ## For utviklere
 
 Designsystemet tilbyr ferdige React-komponenter, felles CSS og designtokens som gjør det enklere å bygge konsistente
-og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
+og tilgjengelige brukergrensesnitt.
 
+Slik kommer du i gang:
+
+<Card>
 <Details>
-  <Details.Summary>
-    <Badge count={1} />
-    {'Installer pakkene'}
-  </Details.Summary>
+  <Details.Summary>Installer pakkene</Details.Summary>
   <Details.Content>
     Installer React- og CSS-pakkene:
 
@@ -47,10 +53,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={2} />
-    {'Last inn CSS'}
-  </Details.Summary>
+  <Details.Summary>Last inn CSS</Details.Summary>
   <Details.Content>
     Importer grunnstilene og temaet i applikasjonens entrypoint, for eksempel `main.tsx`:
 
@@ -70,10 +73,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={3} />
-    {'Bruk komponentene'}
-  </Details.Summary>
+  <Details.Summary>Bruk komponentene</Details.Summary>
   <Details.Content>
 
     ```tsx
@@ -88,10 +88,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 </Details>
 
 <Details id='modes-in-code'>
-  <Details.Summary>
-    <Badge count={4} />
-    {'Tilpass farge, størrelse og color scheme'}
-  </Details.Summary>
+  <Details.Summary>Tilpass farge, størrelse og color scheme</Details.Summary>
   <Details.Content>
     Du kan tilpasse **farge**, **størrelse** og **color scheme** ved å sette `data-color`, `data-size` og
     `data-color-scheme`. Verdiene arves fra nærmeste forelder, slik at du kan sette en mode for en hel seksjon og
@@ -164,10 +161,7 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={5} />
-    {'Bruk designtokens'}
-  </Details.Summary>
+  <Details.Summary>Bruk designtokens</Details.Summary>
   <Details.Content>
     Bruk designtokens når du lager egne elementer eller trenger styling som ikke håndteres av en komponent.
 
@@ -185,18 +179,18 @@ og tilgjengelige brukergrensesnitt. Slik kommer du i gang:
 
   </Details.Content>
 </Details>
+</Card>
 
 ## For Designere
 
-SSB bruker Figma som designverktøy. Her finner du SSBs designsystembibliotek, med komponenter, variabler og stiler som
-kan brukes i løsningene du jobber med. Komponentene er tilpasset SSBs identitet og behov, og utvikles og oppdateres
-fortløpende.
+Designsystembiblioteket i Figma inneholder komponenter, variabler, stiler og modes du kan bruke i løsningene dine.
+Det videreutvikles løpende og er et felles grunnlag for designarbeidet i SSB.
 
+Slik kommer du i gang:
+
+<Card>
 <Details>
-  <Details.Summary>
-    <Badge count={1} />
-    {'Ta i bruk SSBs designsystem i Figma'}
-  </Details.Summary>
+  <Details.Summary>Ta i bruk designsystembiblioteket i Figma</Details.Summary>
   <Details.Content>
     Når du åpner en fil, får du automatisk tilgang til designsystembiblioteket under **Assets** i venstremenyen. I
     tillegg får du tilgang til **Aksel Icons**, ikonbiblioteket vi bruker i SSB.
@@ -208,10 +202,7 @@ fortløpende.
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={2} />
-    {'Bruk modes i designet ditt'}
-  </Details.Summary>
+  <Details.Summary>Bruk modes i løsningene dine</Details.Summary>
   <Details.Content>
     Bruk **Modes** fra SSBs designsystem for å sikre at riktige farger, størrelser og andre verdier settes automatisk –
     og at designet forblir konsistent og enkelt å vedlikeholde.
@@ -226,10 +217,7 @@ fortløpende.
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={3} />
-    {'Velg farger og bygg identitet med Color mode'}
-  </Details.Summary>
+  <Details.Summary>Velg farger og bygg identitet med Color Mode</Details.Summary>
   <Details.Content>
     I **Color mode** velger du **fargepalett** for designet ditt.
 
@@ -366,10 +354,7 @@ fortløpende.
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={4} />
-    {'Velg Light eller Dark mode med Color scheme mode'}
-  </Details.Summary>
+  <Details.Summary>Velg lyst eller mørkt tema med Colour Scheme Mode</Details.Summary>
   <Details.Content>
     I **Color scheme mode** velger du **Light mode** eller **Dark mode** for designet ditt.
 
@@ -392,10 +377,7 @@ fortløpende.
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={5} />
-    {'Velg størrelser med Size mode'}
-  </Details.Summary>
+  <Details.Summary>Velg størrelser med Size Mode</Details.Summary>
   <Details.Content>
     I **Size mode** velger du **størrelser** for designet ditt. Size mode påvirker komponenter, størrelsesvariabler og
     typografi.
@@ -452,10 +434,7 @@ fortløpende.
 </Details>
 
 <Details>
-  <Details.Summary>
-    <Badge count={6} />
-    {'Bruk variabler og typografistiler i designet ditt'}
-  </Details.Summary>
+  <Details.Summary>Bruk variabler og typografistiler i egne design</Details.Summary>
   <Details.Content>
     Når du designer en mal, komponent eller annen løsning som ikke finnes i designsystemet, bør du bruke **variablene og
     stilene for typografi, farge, avstand og skygge** fra SSBs designsystem.
@@ -510,6 +489,7 @@ fortløpende.
 
   </Details.Content>
 </Details>
+</Card>
 
 ## Snakk med oss
 
