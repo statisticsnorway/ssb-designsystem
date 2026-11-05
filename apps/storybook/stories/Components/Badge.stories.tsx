@@ -77,9 +77,9 @@ export const Floating: Story = {
 
 export const WithoutText: Story = {
   render: () => (
-    <>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
       <Badge data-color='success' style={{ marginInlineEnd: '0.5rem' }} />
       Aktiv
-    </>
+    </div>
   ),
 }
