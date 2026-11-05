@@ -12,8 +12,8 @@ export default create({
   // Typography
   fontBase: 'Roboto, sans-serif',
   fontCode: 'monospace',
-  brandTitle: 'SSB Designsystem',
-  brandUrl: 'https://github.com/statisticsnorway/ssb-designsystem',
+  brandTitle: 'Statistisk sentralbyrå',
+  brandUrl: '/?path=/docs/kom-i-gang--docs',
   brandTarget: '_self',
 
   colorPrimary: primary,

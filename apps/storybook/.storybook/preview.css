@@ -54,14 +54,15 @@ body {
 }
 
 .sbdocs .anchor-links {
-  columns: 13em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  margin-block: 2em;
+  margin-block: var(--ds-size-8);
   padding: 0;
 }
 
-.sbdocs .section-divider {
-  margin-block: var(--ds-size-10);
+.sbdocs .anchor-links li:last-child {
+  justify-self: end;
 }
 
 .sbdocs code {
