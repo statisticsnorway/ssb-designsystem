@@ -74,4 +74,31 @@
   .sidebar-container .sidebar-item:hover {
     background: #b6e8b8;
   }
+
+  /**
+   * Search
+   */
+  .search-field.search-field {
+    box-shadow: none;
+    position: relative;
+    min-width: 0;
+    width: auto;
+    margin-inline-end: var(--ds-size-2);
+    border-radius: var(--ds-border-radius-md);
+    border: var(--ds-border-width-default) solid var(--ds-color-secondary-border-subtle);
+    background: var(--ds-color-secondary-surface-default);
+  }
+  .search-field.search-field #storybook-explorer-searchfield {
+    font: inherit;
+    min-width: 0;
+  }
+  .search-field.search-field #storybook-explorer-searchfield::placeholder {
+    color: transparent;
+  }
+  .search-field.search-field:has(#storybook-explorer-searchfield:placeholder-shown)::before {
+    content: 'Søk';
+    margin-left: 2em;
+    opacity: 0.8;
+    position: absolute;
+  }
 </style>
