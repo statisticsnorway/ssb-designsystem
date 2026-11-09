@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
-  "outDir": "./design-tokens",
+  "output": [{ "type": "design-tokens", "dir": "./design-tokens", "cleanDir": true }],
   "themes": {
     "ssb": {
       "colors": {

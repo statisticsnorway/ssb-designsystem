@@ -43,10 +43,10 @@
     "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && postcss \"theme/*.css\" --dir dist/theme && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.23.0"
+    "@digdir/designsystemet-css": "^1.24.0"
   },
   "devDependencies": {
-    "@digdir/designsystemet-types": "^1.23.0",
+    "@digdir/designsystemet-types": "^1.24.0",
     "postcss": "^8.5.32",
     "postcss-cli": "^11.0.1"
   }

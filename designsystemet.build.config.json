@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
+  "output": [
+    {
+      "type": "css",
+      "dir": "./packages/css/theme",
+      "tokensDir": "./design-tokens",
+      "cleanDir": true
+    },
+    {
+      "type": "types",
+      "dir": "./packages/css/theme",
+      "tokensDir": "./design-tokens",
+      "cleanDir": true
+    }
+  ]
+}
