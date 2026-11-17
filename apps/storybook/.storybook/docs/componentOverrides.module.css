@@ -22,7 +22,7 @@
   margin-block: var(--ds-size-13);
 }
 
-.paragraph {
+.paragraph:not(:global(.ds-alert) .paragraph) {
   margin-block: var(--ds-size-2) var(--ds-size-5);
 }
 
