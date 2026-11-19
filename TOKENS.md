@@ -25,9 +25,7 @@ pnpm tokens:build
 
 Current overrides include:
 
-- adding `font-weight.bold` to SSB typography primitives
-- setting heading typography in `design-tokens/semantic/style.json` to use `{font-weight.bold}`
-- exposing `font-weight.bold` in `design-tokens/themes/ssb.json`
+- setting heading typography in `design-tokens/semantic/style.json` to use the existing `{font-weight.semibold}` token (600)
 
 ## Build CSS theme
 

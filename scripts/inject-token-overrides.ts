@@ -4,13 +4,7 @@ import { dirname, resolve } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const PRIMARY_FILE = resolve(__dirname, '../design-tokens/primitives/modes/typography/primary/ssb.json')
-
-const SECONDARY_FILE = resolve(__dirname, '../design-tokens/primitives/modes/typography/secondary/ssb.json')
-
 const SEMANTIC_FILE = resolve(__dirname, '../design-tokens/semantic/style.json')
-
-const THEME_FILE = resolve(__dirname, '../design-tokens/themes/ssb.json')
 
 type TypographyToken = {
   $value?: {
@@ -22,31 +16,9 @@ type TypographyToken = {
  * Make sure to run this script after `designsystemet tokens create`,
  * but before `designsystemet tokens build`.
  *
- * Injects a bold font-weight token and updates heading typography
- * to use it.
+ * Updates heading typography to use semibold font-weight token.
  */
 function injectTypography(): void {
-  for (const file of [PRIMARY_FILE, SECONDARY_FILE]) {
-    const raw = readFileSync(file, 'utf8')
-    const tokens = JSON.parse(raw)
-
-    const updatedTokens = {
-      ...tokens,
-      ssb: {
-        ...tokens.ssb,
-        'font-weight': {
-          ...tokens.ssb['font-weight'],
-          bold: {
-            $type: 'fontWeights',
-            $value: 'Bold',
-          },
-        },
-      },
-    }
-
-    writeFileSync(file, JSON.stringify(updatedTokens, null, 2) + '\n', 'utf8')
-  }
-
   const semanticRaw = readFileSync(SEMANTIC_FILE, 'utf8')
   const semanticTokens = JSON.parse(semanticRaw)
 
@@ -54,26 +26,13 @@ function injectTypography(): void {
 
   for (const heading of headings) {
     if (heading.$value?.fontWeight) {
-      heading.$value.fontWeight = '{font-weight.bold}'
+      heading.$value.fontWeight = '{font-weight.semibold}'
     }
   }
 
   writeFileSync(SEMANTIC_FILE, JSON.stringify(semanticTokens, null, 2) + '\n', 'utf8')
 
-  const themeRaw = readFileSync(THEME_FILE, 'utf8')
-  const themeTokens = JSON.parse(themeRaw)
-
-  themeTokens['font-weight'] = {
-    ...themeTokens['font-weight'],
-    bold: {
-      $type: 'fontWeights',
-      $value: '{ssb.font-weight.bold}',
-    },
-  }
-
-  writeFileSync(THEME_FILE, JSON.stringify(themeTokens, null, 2) + '\n', 'utf8')
-
-  console.log('Injected bold font-weight token')
+  console.log('Updated heading typography to use semibold')
 }
 
 injectTypography()
