@@ -1,5 +1,4 @@
 {
-  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
   "output": [
     {
       "type": "css",

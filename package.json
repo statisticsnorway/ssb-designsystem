@@ -15,7 +15,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "tokens:create": "designsystemet",
     "tokens:inject": "node scripts/inject-token-overrides.ts",
-    "tokens:build": "designsystemet --config designsystemet.build.config.json",
+    "tokens:build": "designsystemet --config build-tokens.json",
     "tokens:update": "pnpm tokens:create && pnpm tokens:inject && pnpm tokens:build",
     "storybook": "pnpm --filter @statisticsnorway/storybook dev",
     "storybook:build": "pnpm --filter @statisticsnorway/storybook build-storybook",
