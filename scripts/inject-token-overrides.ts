@@ -13,8 +13,8 @@ type TypographyToken = {
 }
 
 /**
- * Make sure to run this script after `designsystemet tokens create`,
- * but before `designsystemet tokens build`.
+ * Make sure to run this script after `tokens:create`,
+ * but before `tokens:build`.
  *
  * Updates heading typography to use semibold font-weight token.
  */

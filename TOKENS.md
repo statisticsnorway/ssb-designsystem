@@ -3,7 +3,7 @@
 ## Configuration files
 
 - `designsystemet.config.json` contains the Designsystemet configuration, including theme configuration and token sources.
-- `build-token.json` builds CSS and TypeScript types from Design Tokens. The `types` output generates `types.d.ts`
+- `build-tokens.json` builds CSS and TypeScript types from Design Tokens. The `types` output generates `types.d.ts`
 
 ## Update tokens
 
