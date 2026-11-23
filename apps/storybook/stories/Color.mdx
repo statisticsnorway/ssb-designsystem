@@ -1,12 +1,18 @@
 import { Meta } from '@storybook/addon-docs/blocks'
+import { Paragraph } from '@statisticsnorway/design-react'
 import { ColorTokenList } from './Tokens/Color'
 
 <Meta title='Farger' />
 
 # Farger
 
-> Fargevariabler som brukes til å definere fargepaletten i designsystemet.
+> Fargene i designsystemet er organisert etter bruksområde. Velg farge ut fra funksjon, ikke utseende. Utviklere skal bruke designtokens fremfor hardkodede fargeverdier for å sikre konsistens og enklere vedlikehold.
 
-> Når du bruker farger, skal du bruke designtokens fremfor å hardkode fargeverdier. Dette gjør det enklere å bruke fargene konsekvent og vedlikeholde løsningen.
+<Paragraph data-size='md'>
+  Hvert fargenavn består av tre deler, som sammen beskriver fargens funksjonalitet og bruksområde. For eksempel
+  «primary/background/default».
+</Paragraph>
+
+[Les mer om farger hos Digdir](https://designsystemet.no/no/fundamentals/theme/colors).
 
 <ColorTokenList />
