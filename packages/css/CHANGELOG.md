@@ -1,5 +1,11 @@
 # @statisticsnorway/design-css
 
+## 0.3.0
+
+### Minor Changes
+
+- fda37eb1964ad82627f081c92a1cfe3fa8162a8a: Update Digdir dependencies from 1.23.0 to v1.24.1 and regenerate design tokens.
+
 ## 0.2.4
 
 ### Patch Changes
