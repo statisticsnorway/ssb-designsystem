@@ -43,7 +43,7 @@ export {
   ErrorSummaryItem,
   ErrorSummaryLink,
   ErrorSummaryList,
-  EXPERIMENTAL_AvatarStack,
+  AvatarStack,
   EXPERIMENTAL_FileUpload,
   EXPERIMENTAL_Suggestion,
   EXPERIMENTAL_SuggestionClear,

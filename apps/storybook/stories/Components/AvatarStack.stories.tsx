@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Avatar, EXPERIMENTAL_AvatarStack } from '@statisticsnorway/design-react'
+import { Avatar, AvatarStack } from '@statisticsnorway/design-react'
 import { BriefcaseIcon } from '@navikt/aksel-icons'
 
-const meta: Meta<typeof EXPERIMENTAL_AvatarStack> = {
+const meta: Meta<typeof AvatarStack> = {
   title: 'Komponenter/AvatarStack',
-  component: EXPERIMENTAL_AvatarStack,
+  component: AvatarStack,
   parameters: {
     customStyles: {
       display: 'flex',
@@ -18,11 +18,11 @@ const meta: Meta<typeof EXPERIMENTAL_AvatarStack> = {
 
 export default meta
 
-type Story = StoryObj<typeof EXPERIMENTAL_AvatarStack>
+type Story = StoryObj<typeof AvatarStack>
 
 export const Default: Story = {
   render: () => (
-    <EXPERIMENTAL_AvatarStack>
+    <AvatarStack>
       <li>
         <Avatar aria-label='Cat'>
           <img src='/img/animals/cat-portrait.jpg' alt='' />
@@ -42,13 +42,13 @@ export const Default: Story = {
       <li>
         <Avatar aria-label='Ola Nordman'>on</Avatar>
       </li>
-    </EXPERIMENTAL_AvatarStack>
+    </AvatarStack>
   ),
 }
 
 export const Variants: Story = {
   render: () => (
-    <EXPERIMENTAL_AvatarStack
+    <AvatarStack
       aria-label='example of square avatars'
       style={
         {
@@ -75,6 +75,6 @@ export const Variants: Story = {
       <li>
         <Avatar aria-label='Ola Nordman'>on</Avatar>
       </li>
-    </EXPERIMENTAL_AvatarStack>
+    </AvatarStack>
   ),
 }

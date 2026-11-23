@@ -21,22 +21,22 @@ type Story = StoryObj<typeof Popover>
 
 export const Default: Story = {
   render: () => (
-    <Popover.TriggerContext>
-      <Popover.Trigger>Åpne popover</Popover.Trigger>
-      <Popover placement='top'>
+    <>
+      <Button popovertarget='defaul-popover'>Åpne popover</Button>
+      <Popover id='defaul-popover' placement='top'>
         Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
       </Popover>
-    </Popover.TriggerContext>
+    </>
   ),
 }
 
 export const Interactive: Story = {
   render: () => (
-    <Popover.TriggerContext>
-      <Popover.Trigger data-color='danger' aria-label='Slett rad'>
+    <>
+      <Button data-color='danger' aria-label='Slett rad' popovertarget='interactive-popover'>
         <TrashIcon title='Slett rad' />
-      </Popover.Trigger>
-      <Popover data-color='danger'>
+      </Button>
+      <Popover id='interactive-popover' data-color='danger'>
         <Paragraph>Er du sikker på at du vil slette raden? Handlingen kan ikke angres.</Paragraph>
         <div
           style={{
@@ -51,17 +51,21 @@ export const Interactive: Story = {
           </Button>
         </div>
       </Popover>
-    </Popover.TriggerContext>
+    </>
   ),
 }
 
 export const DottedUnderline: Story = {
   render: () => (
-    <Popover.TriggerContext>
+    <>
       <Paragraph>
-        Vi bruker <Popover.Trigger inline>design tokens</Popover.Trigger> for å sikre at vi har en konsistent design.
+        Vi bruker{' '}
+        <Button popovertarget='inline-popover' data-popover='inline'>
+          design tokens
+        </Button>{' '}
+        for å sikre at vi har en konsistent design.
       </Paragraph>
-      <Popover data-color='neutral'>
+      <Popover id='inline-popover' data-color='neutral'>
         <Paragraph>
           <strong
             style={{
@@ -73,74 +77,40 @@ export const DottedUnderline: Story = {
           <span>Design tokens er en samling av variabler som definerer designet i et designsystem.</span>
         </Paragraph>
       </Popover>
-    </Popover.TriggerContext>
+    </>
   ),
 }
 
 export const Placement: Story = {
   render: () => (
     <>
-      <Popover.TriggerContext>
-        <Popover.Trigger>Top</Popover.Trigger>
-        <Popover placement='top'>
+      <>
+        <Button popoverTarget='popover-top'>Top</Button>
+        <Popover id='popover-top' placement='top'>
           <Paragraph>Vises over knappen</Paragraph>
         </Popover>
-      </Popover.TriggerContext>
+      </>
 
-      <Popover.TriggerContext>
-        <Popover.Trigger>Bottom</Popover.Trigger>
-        <Popover placement='bottom'>
+      <>
+        <Button popoverTarget='popover-bottom'>Bottom</Button>
+        <Popover id='popover-bottom' placement='bottom'>
           <Paragraph>Vises under knappen</Paragraph>
         </Popover>
-      </Popover.TriggerContext>
+      </>
 
-      <Popover.TriggerContext>
-        <Popover.Trigger>Left</Popover.Trigger>
-        <Popover placement='left'>
+      <>
+        <Button popoverTarget='popover-left'>Left</Button>
+        <Popover id='popover-left' placement='left'>
           <Paragraph>Vises til venstre</Paragraph>
         </Popover>
-      </Popover.TriggerContext>
+      </>
 
-      <Popover.TriggerContext>
-        <Popover.Trigger>Right</Popover.Trigger>
-        <Popover placement='right'>
+      <>
+        <Button popoverTarget='popover-right'>Right</Button>
+        <Popover id='popover-right' placement='right'>
           <Paragraph>Vises til høyre</Paragraph>
         </Popover>
-      </Popover.TriggerContext>
-    </>
-  ),
-}
-
-export const Variant: Story = {
-  render: () => (
-    <>
-      <Popover.TriggerContext>
-        <Popover.Trigger variant='primary'>Primary</Popover.Trigger>
-        <Popover placement='top'>
-          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
-        </Popover>
-      </Popover.TriggerContext>
-
-      <Popover.TriggerContext>
-        <Popover.Trigger variant='secondary'>Secondary</Popover.Trigger>
-        <Popover placement='top'>
-          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
-        </Popover>
-      </Popover.TriggerContext>
-
-      <Popover.TriggerContext>
-        <Popover.Trigger variant='tertiary'>Tertiary</Popover.Trigger>
-        <Popover placement='top'>
-          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
-        </Popover>
-      </Popover.TriggerContext>
-
-      <Popover.TriggerContext>
-        <Popover.Trigger>Tinted Popover</Popover.Trigger>
-        <Popover variant='tinted'>
-          Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.
-        </Popover>
-      </Popover.TriggerContext>
+      </>
     </>
   ),
 }

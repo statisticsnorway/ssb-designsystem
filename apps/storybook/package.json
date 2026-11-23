@@ -10,16 +10,16 @@
   },
   "devDependencies": {
     "@mdx-js/react": "^3.1.1",
-    "@storybook/addon-docs": "^10.6.5",
-    "@storybook/react-vite": "^10.6.5",
+    "@storybook/addon-docs": "^10.6.8",
+    "@storybook/react-vite": "^10.6.8",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "chromatic": "^18.14.1",
-    "concurrently": "^10.0.6",
-    "storybook": "^10.6.5"
+    "chromatic": "^18.15.1",
+    "concurrently": "^10.0.7",
+    "storybook": "^10.6.8"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^8.22.1",
+    "@navikt/aksel-icons": "^8.23.0",
     "@statisticsnorway/design-css": "workspace:^",
     "@statisticsnorway/design-react": "workspace:^",
     "clsx": "^2.1.1",

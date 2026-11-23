@@ -1,6 +1,6 @@
 {
   "name": "@statisticsnorway/design-css",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Styles and theme for SSB Designsystem",
   "license": "MIT",
   "author": "Statistics Norway",
@@ -43,11 +43,11 @@
     "dev": "mkdir -p dist/src/fonts && cp src/fonts/*.woff2 dist/src/fonts && postcss \"theme/*.css\" --dir dist/theme && postcss \"src/**/*.css\" --base src --dir dist/src --watch"
   },
   "dependencies": {
-    "@digdir/designsystemet-css": "^1.23.0"
+    "@digdir/designsystemet-css": "^1.24.1"
   },
   "devDependencies": {
-    "@digdir/designsystemet-types": "^1.23.0",
-    "postcss": "^8.5.32",
+    "@digdir/designsystemet-types": "^1.24.1",
+    "postcss": "^8.5.33",
     "postcss-cli": "^11.0.1"
   }
 }

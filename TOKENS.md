@@ -1,5 +1,10 @@
 # Design tokens
 
+## Configuration files
+
+- `designsystemet.config.json` contains the Designsystemet configuration, including theme configuration and token sources.
+- `build-tokens.json` builds CSS and TypeScript types from Design Tokens. The `types` output generates `types.d.ts`
+
 ## Update tokens
 
 When `designsystemet.config.json` changes, run:
@@ -25,9 +30,7 @@ pnpm tokens:build
 
 Current overrides include:
 
-- adding `font-weight.bold` to SSB typography primitives
-- setting heading typography in `design-tokens/semantic/style.json` to use `{font-weight.bold}`
-- exposing `font-weight.bold` in `design-tokens/themes/ssb.json`
+- Setting heading typography in `design-tokens/semantic/style.json` to use the existing `{font-weight.semibold}` token (600).
 
 ## Build CSS theme
 
