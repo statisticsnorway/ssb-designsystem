@@ -32,24 +32,26 @@ body {
   gap: var(--ds-size-4);
 }
 
-.sbdocs .universell-utforming-lists {
+.sbdocs .uu-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: var(--ds-size-2);
 }
 
-.sbdocs .universell-utforming-lists ul {
-  padding: 0;
-}
-
-.sbdocs .universell-utforming-lists li {
+.sbdocs .uu-content__items {
+  display: grid;
+  gap: var(--ds-size-3);
   margin-top: var(--ds-size-2);
 }
 
-.sbdocs .universell-utforming-lists .ds-alert[data-color='info'] code {
-  color: var(--ds-color-info-text-default);
-  background: var(--ds-color-info-background-tinted);
-  border-color: var(--ds-color-info-border-subtle);
+.sbdocs .uu-content__items > .ds-paragraph {
+  margin: 0;
+}
+
+.sbdocs .uu-content .ds-alert[data-color='warning'] code {
+  color: var(--ds-color-warning-text-default);
+  background: var(--ds-color-warning-background-tinted);
+  border-color: var(--ds-color-warning-border-subtle);
   display: inline;
 }
 
