@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@digdir/designsystemet-types": "^1.24.1",
-    "postcss": "^8.5.32",
+    "postcss": "^8.5.33",
     "postcss-cli": "^11.0.1"
   }
 }
