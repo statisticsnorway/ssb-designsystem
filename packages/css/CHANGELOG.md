@@ -1,5 +1,20 @@
 # @statisticsnorway/design-css
 
+## 0.3.0
+
+### Minor Changes
+
+- Update Digdir dependencies from 1.23.0 to 1.24.1.
+- Regenerate design tokens using the updated CLI.
+- Change the font weight for headings from bold to semibold.
+
+### Designsystemet
+
+See the Digdir release notes for details about the updates:
+
+- [Release v1.24.0](https://github.com/digdir/designsystemet/releases/tag/v1.24.0)
+- [Release v1.24.1](https://github.com/digdir/designsystemet/releases/tag/v1.24.1)
+
 ## 0.2.4
 
 ### Patch Changes

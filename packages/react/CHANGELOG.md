@@ -1,5 +1,25 @@
 # @statisticsnorway/design-react
 
+## 0.3.0
+
+### Minor Changes
+
+- Update Digdir dependencies from 1.23.0 to 1.24.1.
+- Replace `EXPERIMENTAL_AvatarStack` with `AvatarStack`.
+- Update component stories to reflect changes and deprecations in Digdir v1.24.0 and v1.24.1.
+
+### Deprecations
+
+- Digdir has deprecated `Search`, `Search.Input`, `Search.Clear` and `Search.Button`. Use `Input` with the CSS-based search pattern instead.
+- Digdir has deprecated `TriggerContext` and `Trigger` for Dialog, Dropdown and Popover. These will be removed in the next major version.
+
+### Designsystemet
+
+See the Digdir release notes for details about the updates:
+
+- [Release v1.24.0](https://github.com/digdir/designsystemet/releases/tag/v1.24.0)
+- [Release v1.24.1](https://github.com/digdir/designsystemet/releases/tag/v1.24.1)
+
 ## 0.2.4
 
 ### Patch Changes
