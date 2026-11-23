@@ -4,7 +4,16 @@
 
 ### Minor Changes
 
-- fda37eb1964ad82627f081c92a1cfe3fa8162a8a: Update Digdir dependencies from 1.23.0 to v1.24.1 and regenerate design tokens.
+- Update Digdir dependencies from 1.23.0 to 1.24.1.
+- Regenerate design tokens using the updated CLI.
+- Change the font weight for headings from bold to semibold.
+
+### Designsystemet
+
+See the Digdir release notes for details about the updates:
+
+- [Release v1.24.0](https://github.com/digdir/designsystemet/releases/tag/v1.24.0)
+- [Release v1.24.1](https://github.com/digdir/designsystemet/releases/tag/v1.24.1)
 
 ## 0.2.4
 
