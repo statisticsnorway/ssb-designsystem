@@ -4,3 +4,5 @@ packages:
 
 allowBuilds:
   esbuild: false
+
+minimumReleaseAge: 4320 # 3 dager

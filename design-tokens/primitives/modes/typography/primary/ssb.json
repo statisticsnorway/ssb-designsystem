@@ -16,10 +16,6 @@
       "regular": {
         "$type": "fontWeights",
         "$value": "Regular"
-      },
-      "bold": {
-        "$type": "fontWeights",
-        "$value": "Bold"
       }
     }
   }

@@ -72,7 +72,13 @@ export const Drawer: Story = {
       <Button command='show-modal' commandfor='my-dialog-drawer'>
         Åpne dialog til høyre
       </Button>
-      <Dialog id='my-dialog-drawer' closedby='any' placement='right' style={{ zIndex: '10' }}>
+      <Dialog
+        id='my-dialog-drawer'
+        closedby='any'
+        placement='right'
+        aria-label='Drawer dialog til høyre'
+        style={{ zIndex: '10' }}
+      >
         <Dialog.Block>
           <Paragraph>
             Dette er en modal dialog med <code>placement='right'</code>

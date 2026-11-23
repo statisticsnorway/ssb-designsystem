@@ -1,0 +1,16 @@
+{
+  "output": [
+    {
+      "type": "css",
+      "dir": "./packages/css/theme",
+      "tokensDir": "./design-tokens",
+      "cleanDir": true
+    },
+    {
+      "type": "types",
+      "dir": "./packages/css/theme",
+      "tokensDir": "./design-tokens",
+      "cleanDir": true
+    }
+  ]
+}
