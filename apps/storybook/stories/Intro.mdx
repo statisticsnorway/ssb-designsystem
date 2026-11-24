@@ -43,12 +43,22 @@ Slik kommer du i gang:
 <Details>
   <Details.Summary>Installer pakkene</Details.Summary>
   <Details.Content>
+    **React**
+
     Installer React- og CSS-pakkene:
 
     ```bash
     npm install @statisticsnorway/design-css @statisticsnorway/design-react
     ```
+    **For andre rammeverk**
 
+    For løsninger som ikke bruker React, kan du bruke Digdirs Web Components-pakke sammen med SSBs CSS-pakke:
+
+    ```bash
+    npm install @statisticsnorway/design-css @digdir/designsystemet-web
+    ```
+
+    Les mer om bruk av [Web Components uavhengig av rammeverk](https://designsystemet.no/no/blog/designsystemet-web-release)
   </Details.Content>
 </Details>
 
@@ -62,7 +72,7 @@ Slik kommer du i gang:
     import '@statisticsnorway/design-css/theme'
     ```
 
-    Alternativt kan du importere dem fra hoved-CSS-filen din:
+    Alternativt kan du importere stilarkene i en CSS-fil, for eksempel `style.css`
 
     ```css
     @import '@statisticsnorway/design-css';
@@ -77,10 +87,18 @@ Slik kommer du i gang:
   <Details.Content>
 
     ```tsx
-    import { Button } from '@statisticsnorway/design-react'
+    import { Button, Field, Input, Label } from '@statisticsnorway/design-react'
 
     export function Example() {
-      return <Button>Trykk her</Button>
+      return (
+        <>
+          <Field>
+            <Label>Navn</Label>
+            <Input type="text" />
+          </Field>
+          <Button>Send inn</Button>
+        </>
+      )
     }
     ```
 
@@ -179,9 +197,30 @@ Slik kommer du i gang:
 
   </Details.Content>
 </Details>
+
+<Details>
+  <Details.Summary>Typescript</Details.Summary>
+  <Details.Content>
+    Typene følger med pakkene. For å få TypeScript-støtte for SSBs temafarger og komponentattributter må du legge til nødvendige typeoppføringer i tsconfig.json.
+    Designsystemet tilbyr TypeScript-støtte for komponentattributter og temafarger. Typene følger med pakkene.
+
+    Legg til følgende i compilerOptions.types i tsconfig.json:
+
+    ```json
+    {
+      "compilerOptions": {
+        "types": [
+          "@statisticsnorway/design-react",
+          "@statisticsnorway/design-css/theme"
+        ]
+      }
+    }
+    ```
+  </Details.Content>
+</Details>
 </Card>
 
-## For Designere
+## For designere
 
 Designsystembiblioteket i Figma inneholder komponenter, variabler, stiler og modes du kan bruke i løsningene dine.
 Det videreutvikles løpende og er et felles grunnlag for designarbeidet i SSB.
@@ -493,13 +532,10 @@ Slik kommer du i gang:
 
 ## Snakk med oss
 
-Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert på utviklingen av designsystemet? Vi er
-tilgjengelige i **Teams**.
+Har du spørsmål, ønsker å melde inn et behov eller vil holde deg oppdatert på utviklingen av designsystemet, kan du legge til teamet «Designsystemet» i Teams.
 
-**Team:** Designsystemet
+Vi har tre kanaler:
 
-**Kanaler:**
-
-- **Info fra teamet** – nyheter, oppdateringer og informasjon.
-- **Innmelding av behov** – forslag til nye komponenter, forbedringer og endringer.
-- **Spørsmål og svar** – spør om alt fra bruk av komponenter til implementasjon og design.
+- Info fra teamet<br/>Følg med på oppdateringer i Figma, kode og annet viktig som skjer i designsystemet.
+- Innmelding av behov<br/>Meld inn forslag til endringer eller behov som ikke dekkes av designsystemet.
+- Spørsmål og svar<br/>Still spørsmål om bruk av komponenter, kode, design, uu og annet relatert til designsystemet.
