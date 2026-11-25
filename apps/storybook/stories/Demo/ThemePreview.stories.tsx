@@ -7,7 +7,7 @@ import classes from './ThemePreview.module.css'
 
 const meta = {
   title: 'Demosider/Theme Preview',
-  tags: ['!autodocs'],
+  tags: ['!autodocs', '!dev'],
   parameters: {
     layout: 'fullscreen',
   },

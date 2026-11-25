@@ -76,7 +76,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduksjon', 'Design tokens', 'Komponenter', 'Hooks', 'Demosider'],
+        order: ['Kom i gang', 'Universell utforming', 'Farger', 'Størrelser', 'Komponenter', 'Hooks'],
         method: 'alphabetical',
       },
     },

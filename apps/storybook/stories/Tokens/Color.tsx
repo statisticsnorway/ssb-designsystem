@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './Color.module.css'
-import { Checkbox, Heading } from '@statisticsnorway/design-react'
+import { Heading, Field, Input, Label } from '@statisticsnorway/design-react'
 
 const toUpper = (str: string) => str.replace(/\b./g, (m) => m.toUpperCase())
 
@@ -62,22 +62,25 @@ export const ColorTokenList = () => {
   }
   return (
     <div className={styles.colorTokenList} ref={colorTokenListRef}>
-      <div className={styles.colorHeader}>
-        <Heading level={2} data-size='lg'>
-          Fargepalett
-        </Heading>
-        <Checkbox
-          label='Vis fargekoder'
-          checked={showColorCodes}
-          value='value'
-          onChange={(event) => setShowColorCodes(event.target.checked)}
-        />
-      </div>
       {COLORS.map((color) => (
         <section key={color} className={styles.colorSection}>
-          <Heading level={3} data-size='md'>
-            {toUpper(color)}
-          </Heading>
+          <div className={styles.sectionHeader}>
+            <Heading level={2} data-size='lg'>
+              {toUpper(color)}
+            </Heading>
+
+            {color === COLORS[0] && (
+              <Field position='end' style={{ alignItems: 'center' }}>
+                <Label>Vis fargekoder</Label>
+                <Input
+                  type='checkbox'
+                  role='switch'
+                  checked={showColorCodes}
+                  onChange={(event) => setShowColorCodes(event.target.checked)}
+                />
+              </Field>
+            )}
+          </div>
           {GROUPS.map(([group, variants]) => (
             <div key={group} className={styles.group}>
               <span className={styles.groupLabel}>{toUpper(group)}</span>
@@ -97,7 +100,10 @@ export const ColorTokenList = () => {
                         data-tooltip={copiedToken === token ? COPIED_LABEL : token}
                         data-color-token={tokenName}
                         onClick={() => handleCopy(token)}
-                        style={{ background: token }}
+                        style={{
+                          background: token,
+                          borderColor: `var(--ds-color-${colorPrefix}border-subtle)`,
+                        }}
                       />
                     )
                   })}
