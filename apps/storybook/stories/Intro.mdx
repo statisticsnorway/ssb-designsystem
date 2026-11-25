@@ -180,6 +180,22 @@ Slik kommer du i gang:
 </Details>
 
 <Details>
+  <Details.Summary>Typografi</Details.Summary>
+  <Details.Content>
+   SSB Designsystem bruker Roboto som font. Fontfilene følger med CSS-pakken og lastes inn automatisk når du importerer den.
+
+Roboto brukes ikke automatisk på hele nettsiden. For å bruke den som standardfont i applikasjonen, legg til følgende i den globale CSS-en:
+
+    ```css
+    body {
+      font-family: var(--ds-font-family);
+    }
+    ```
+
+  </Details.Content>
+</Details>
+
+<Details>
   <Details.Summary>TypeScript-støtte</Details.Summary>
   <Details.Content>
    For å få autofullføring av SSBs temafarger og størrelser i TypeScript, legg til typedefinisjonene fra CSS-pakken i tsconfig.json.
