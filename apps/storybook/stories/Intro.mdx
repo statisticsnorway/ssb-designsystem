@@ -59,6 +59,7 @@ Slik kommer du i gang:
     ```
 
     Les mer om bruk av [Web Components uavhengig av rammeverk](https://designsystemet.no/no/blog/designsystemet-web-release)
+
   </Details.Content>
 </Details>
 
@@ -179,6 +180,25 @@ Slik kommer du i gang:
 </Details>
 
 <Details>
+  <Details.Summary>TypeScript-støtte</Details.Summary>
+  <Details.Content>
+   For å få autofullføring av SSBs temafarger og størrelser i TypeScript, legg til typedefinisjonene fra CSS-pakken i tsconfig.json.
+
+    ```json
+    {
+      "compilerOptions": {
+        "types": [
+          // Behold eventuelle eksisterende oppføringe
+          "@statisticsnorway/design-css/theme"
+        ]
+      }
+    }
+    ```
+
+  </Details.Content>
+</Details>
+
+<Details>
   <Details.Summary>Bruk designtokens</Details.Summary>
   <Details.Content>
     Bruk designtokens når du lager egne elementer eller trenger styling som ikke håndteres av en komponent.
@@ -198,26 +218,6 @@ Slik kommer du i gang:
   </Details.Content>
 </Details>
 
-<Details>
-  <Details.Summary>Typescript</Details.Summary>
-  <Details.Content>
-    Typene følger med pakkene. For å få TypeScript-støtte for SSBs temafarger og komponentattributter må du legge til nødvendige typeoppføringer i tsconfig.json.
-    Designsystemet tilbyr TypeScript-støtte for komponentattributter og temafarger. Typene følger med pakkene.
-
-    Legg til følgende i compilerOptions.types i tsconfig.json:
-
-    ```json
-    {
-      "compilerOptions": {
-        "types": [
-          "@statisticsnorway/design-react",
-          "@statisticsnorway/design-css/theme"
-        ]
-      }
-    }
-    ```
-  </Details.Content>
-</Details>
 </Card>
 
 ## For designere
